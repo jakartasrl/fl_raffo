@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?><Esb version="12.3.14">
+  <InternalConfig>
+    <SystemProperties>
+      <max.wait>30</max.wait>
+      <max.threads>1</max.threads>
+      <esb.port>61616</esb.port>
+      <datasul.pool.size>20</datasul.pool.size>
+      <jms.provider.type>Internal</jms.provider.type>
+	  <reprocess.interval>60</reprocess.interval>
+      <mail.smtp.host/>
+      <queue.memorylimit.size>64</queue.memorylimit.size>
+      <queue.memorylimit>true</queue.memorylimit>
+      <queue.jdbc.persistence>false</queue.jdbc.persistence>
+      <queue.default.system.usage>true</queue.default.system.usage>
+      <queue.store.usage.limit>3</queue.store.usage.limit>
+      <queue.temp.usage.limit>1</queue.temp.usage.limit>
+      <queue.system.usage.fail.timeout>3000</queue.system.usage.fail.timeout>
+      <cluster.node.ha>false</cluster.node.ha>
+    </SystemProperties>
+    <DatabaseConfig currentDay="10" frequency="00:00" frequencyDay="30" keepdatatime="60"/>
+    <HTTPServerConfig enabled="true" port="8085" ssl="false" ssl.port="443" ssl.password="senha" ssl.keyStore="conf/esb.jks" ssl.keyPassword="senha">
+      <Services>
+        <HTTPChannel enabled="true" name="/servlet/ESBHTTPChannel"/>
+        <WSChannel enabled="true" name="ws" namespace="http://www.totvs.com/ws/esb" selectedServices="23" servicename="esb" timeout="30"/>
+      </Services>
+    </HTTPServerConfig>
+    <ContactInfo>
+      <CompanyName>Company</CompanyName>
+      <ContactPersonCol>
+        <ContactPerson>
+          <Name>name</Name>
+          <Email>e-mail</Email>
+          <Phone>phone</Phone>
+        </ContactPerson>
+      </ContactPersonCol>
+    </ContactInfo>
+  </InternalConfig>
+  
+  <!-- 01_QAD_FLU_CambioEstado -->
+<FILEReceiver DELETEFILE="true" DIRECTORY="raffo/Entrada" FILTERMASK="*.csv" bigMessage="false" comments="" diagramName="QAD_FLU_CambioEstado.esb" enabled="true" errorinterval="600" interval="60" name="QAD_FLU_CambioEstado">
+    <OnError SEND_TYPE="0" name="QAD_FLU_CambioEstadoOnError">
+		<FILESender APPEND="false" DIRECTORY="raffo/Error" FILENAME="" errorinterval="5" name="QAD_FLU_CambioEstadoFileSender" persist="false" retry="1" />
+    </OnError>
+	<FILESender APPEND="false" DIRECTORY="raffo/Procesado" FILENAME="" errorinterval="5" name="QAD_FLU_CambioEstadoFileSenderProcesados" persist="false" retry="1" />
+	<CUSTOMSender CLASS="com.arquimeda.raf.esb.custom.util.FileWrapperCustomSender" errorinterval="5" jarsFolder="lib/custom" name="QAD_FLU_CambioEstadoFileWrapperCustomSender" persist="false" retry="1">
+		<DOCIdentifier fromDoc="QAD" groupType="" name="QAD_FLU_CambioEstadoFWDocIdentifier" nrDoc="/file/name" toDoc="FLU" typeDoc="'Archivo CSV'">
+			<CUSTOMSender CLASS="com.arquimeda.raf.esb.custom.util.FileUnwrapperCustomSender" errorinterval="5" jarsFolder="lib/custom" name="QAD_FLU_CambioEstadoFileUnwrapperCustomSender" persist="false" retry="1">
+			    <TCLTransformer name="QAD_FLU_CambioEstadoTCLTransformer" output="XML" source="raffo/diagrams/01_QAD_FLU_CambioEstado/QAD_FLU_CambioEstado.tcl" type="TCL">
+ 		 			<Transformer name="QAD_FLU_CambioEstadoTransformer" output="XML" source="raffo/diagrams/01_QAD_FLU_CambioEstado/QAD_FLU_CambioEstado.xsl" type="XSL" xsltProcessor="0">
+						<Splitter enablePool="false" name="QAD_FLU_CambioEstadoSplitter" type="1" xpath="/ROOT/item">
+							<DOCIdentifier fromDoc="QAD" groupType="concat('Estado PCO', ' [',//estadoPCO, ']')" name="QAD_FLU_CambioEstadoDocIdentifier" nrDoc="//solicitud" toDoc="FLU" typeDoc="concat('Línea', ' [',//linea, ']')">
+								<CUSTOMSender CLASS="com.arquimeda.raf.esb.custom.diagrama01.QAD_FLU_CambioEstadoCustomSender" PROPS="raffo/diagrams/01_QAD_FLU_CambioEstado/QAD_FLU_CambioEstado.properties" errorinterval="5" jarsFolder="lib/custom" name="QAD_FLU_CambioEstadoCustomSender" persist="false" retry="1" threads="1">
+									<!-- Se vuelve a poner el docIdentifier porque al reprocesar solo reprocesa desde el QAD_FLU_CambioEstadoCustomSender y se pierde la info del monitor -->
+									<DOCIdentifier fromDoc="QAD" groupType="concat('Estado PCO', ' [',//estadoPCO, ']')" name="QAD_FLU_CambioEstadoDocIdentifier2" nrDoc="//solicitud" toDoc="FLU" typeDoc="concat('Línea', ' [',//linea, ']')">
+										<CUSTOMSender CLASS="com.arquimeda.raf.esb.custom.diagrama01.QAD_FLU_FakeCustomSender" PROPS="" jarsFolder="lib/custom" name="QAD_FLU_FakeCustomSender" persist="false" retry="1"/>	
+									</DOCIdentifier>
+								</CUSTOMSender>	
+							</DOCIdentifier>
+						</Splitter>
+					</Transformer>
+					<!--<FILESender APPEND="false" DIRECTORY="raffo/Procesado" FILENAME="csv_${date:now:yyyyMMdd}${date:now:HHmmssSSS}.xml" errorinterval="5" name="QAD_FLU_CambioEstadoAuxFileSender" persist="false" retry="1" />-->
+				</TCLTransformer>
+			</CUSTOMSender>
+		</DOCIdentifier>
+	</CUSTOMSender>
+</FILEReceiver>
+
+  <!-- 02_FLU_FLU_PasajeHistoricoArchivo -->
+  <WSCHANNELReceiver comments="" diagramName="FLU_FLU_PasajeHistoricoArchivo.esb" enabled="true" errorinterval="600" interval="60" name="FLU_FLU_PasajeHistoricoArchivo">
+    <DOCIdentifier fromDoc="FLU" groupType="concat('Carpeta', ' [',//carpeta, ']',' - Reemplazos', ' [',//reemplazos, ']')" name="FLU_FLU_PasajeHistoricoArchivoDocIdentifier" nrDoc="//solicitud" toDoc="FLU" typeDoc="concat('Línea', ' [',//linea, ']')">
+      <CUSTOMSender CLASS="com.arquimeda.raf.esb.custom.diagrama02.FLU_FLU_PasajeHistoricoArchivoCustomSender" PROPS="raffo/diagrams/02_FLU_FLU_PasajeHistoricoArchivo/FLU_FLU_PasajeHistoricoArchivo.properties" errorinterval="5" jarsFolder="lib/custom" name="FLU_FLU_PasajeHistoricoArchivoCustomSender" persist="false" retry="1" />
+    </DOCIdentifier>
+    <OnError SEND_TYPE="2" name="FLU_FLU_PasajeHistoricoArchivoOnError">
+		<FILESender APPEND="false" DIRECTORY="raffo/Error" FILENAME="" errorinterval="5" name="FLU_FLU_PasajeHistoricoArchivoFileSender" persist="false" retry="1" />    
+    </OnError>
+  </WSCHANNELReceiver>
+  
+    <!-- 03_QAD_FLU_PublicacionArchivo -->
+  <WSCHANNELReceiver comments="" diagramName="QAD_FLU_PublicacionArchivo.esb" enabled="true" errorinterval="600" interval="60" name="QAD_FLU_PublicacionArchivo">
+    <DOCIdentifier fromDoc="FLU" groupType="//archivo" name="QAD_FLU_PublicacionArchivoDocIdentifier" nrDoc="//solicitud" toDoc="FLU" typeDoc="concat('Carpeta', ' [',//carpeta, ']')">
+      <CUSTOMSender CLASS="com.arquimeda.raf.esb.custom.diagrama03.QAD_FLU_PublicacionArchivoCustomSender" PROPS="raffo/diagrams/03_QAD_FLU_PublicacionArchivo/QAD_FLU_PublicacionArchivo.properties" errorinterval="5" jarsFolder="lib/custom" name="QAD_FLU_PublicacionArchivoCustomSender" persist="false" retry="1" />
+    </DOCIdentifier>
+    <OnError SEND_TYPE="2" name="QAD_FLU_PublicacionArchivoOnError">
+		<FILESender APPEND="false" DIRECTORY="raffo/Error" FILENAME="" errorinterval="5" name="QAD_FLU_PublicacionArchivoFileSender" persist="false" retry="1" />    
+    </OnError>
+  </WSCHANNELReceiver>
+  
+</Esb>

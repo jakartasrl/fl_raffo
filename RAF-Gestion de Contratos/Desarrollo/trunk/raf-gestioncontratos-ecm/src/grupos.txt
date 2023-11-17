@@ -1,0 +1,13 @@
+UN0-DIRE: Directorio
+UN1-GENE: Gerencia General
+UN2-OPER: Gerencia de Operaciones
+UN3-OPER-COMP: Gerencia de Compras
+ST1-LEGA: Área de Legales
+
+ROL-COR: Comprador
+ROL-ADO: Abogado
+ROL-JFE: Jefe
+ROL-GTE-N0: Gerente General
+ROL-GTE-N1: Gerente de Nivel 1
+ROL-GTE-N2: Gerente de Nivel 2
+ROL-PTE: Presidente del Directorio

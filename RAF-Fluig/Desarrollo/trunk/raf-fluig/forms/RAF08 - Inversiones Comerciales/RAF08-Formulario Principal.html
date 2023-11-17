@@ -1,0 +1,1135 @@
+<html lang="en">
+<head>
+
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+ 	
+	<!-- Links Custom -->
+	<script type="text/javascript" src="congresosearch.js"></script>
+	<script type="text/javascript" src="custom.js"></script>	
+
+	<style type="text/css">
+		textarea {
+			resize: vertical;
+		}
+		fieldset {
+			padding-top: 20px !important;
+		}
+		legend{
+			border-bottom: 1px solid #bbb !important;
+			margin-bottom: 25px !important;
+		}	
+		
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #7F201C !important;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 5px !important;
+			margin-top: 40px !important;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		
+		.table-responsive{
+			overflow: visible !important;
+		}
+		
+		table td{
+			padding: 15px 10px !important;
+		}
+
+		table td .form-group:last-child {
+			margin-bottom: 0;
+		}
+		
+		.parsley-required {
+		    color: red;
+		}
+		
+		.origen_Fluig{
+			color: #7F201C;
+			font-weight: bold;
+		}
+	</style>
+	
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+	
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-2" style="text-align: center;">
+				<h2>Inversi&oacute;n Comercial</h2> 
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">
+			<input type="hidden"  id="__error" name="__error">
+			<input type="hidden" id="nroSolicitud" name="nroSolicitud">
+			<input type="hidden" id="fechaSolicitud" name="fechaSolicitud">
+			<input type="hidden" id="matriculaSolicitante" name="matriculaSolicitante">
+			<input type="hidden" id="esAPM" name="esAPM">
+			<input type="hidden" id="solicitudCartaAcuerdo" name="solicitudCartaAcuerdo">
+
+			<input type="hidden" id="areaCodigo" name="areaCodigo">  
+			<input type="hidden" id="distritoCodigo" name="distritoCodigo"> 
+			<input type="hidden" id="codGrupoGteArea" name="codGrupoGteArea">  
+			<input type="hidden" id="codGrupoGteDistrito" name="codGrupoGteDistrito">  
+			<input type="hidden" id="codGrupoAsistDistrito" name="codGrupoAsistDistrito">  
+			<input type="hidden" id="codGrupoGtePromocion" name="codGrupoGtePromocion">  
+			<input type="hidden" id="limiteAprGtePromo" name="limiteAprGtePromo">
+			<input type="hidden" id="notificacionGte" name="notificacionGte">
+			
+			<input type="hidden" id="matriculaGteDistrito" name="matriculaGteDistrito">
+			
+			<input type="hidden" id="carpetaAdjuntosId" name="carpetaAdjuntosId">
+			<input type="hidden" id="tarea" name="tarea">
+			<input type="hidden" id="delegado" name="delegado">
+			
+			<div class="divNotificacion" style="display:none">							
+				<p style="text-align: left; color:red; font-weight: bolder;">Esta solicitud ya fue aprobada y solicita una modificaci&oacute;n.</p>
+			</div>
+			
+			<fieldset>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="solicitante" class="col-md-3 control-label">Solicitante</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="solicitante" id="solicitante" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="area" class="col-md-3 control-label">&Aacute;rea</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="area" name="area" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="distrito" class="col-md-3 control-label">Distrito</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="distrito" name="distrito" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="form-group esAPMRO">
+					<div class="label-field">
+						<label for="apm" class="col-md-3 control-label">APM</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="nombreAPM" name="nombreAPM">  
+							<input type="hidden" class="form-control" id="matriculaAPM" name="matriculaAPM"> 
+							<input type="hidden" class="form-control" id="emailAPM" name="emailAPM">   
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="tipoInversion" class="col-md-3 control-label">Tipo de Inversi&oacute;n</label>
+						<div class="col-md-5">
+							<select class="form-control" name="tipoInversion" id="tipoInversion" data-parsley-required="true">
+								<option></option>
+								<option value="alojamientos">ALOJAMIENTO CONGRESO O EVENTO CIENTIFICO</option>
+								<option value="aereosNac">AEREO CONGRESO NACIONAL</option>
+								<option value="aereosInt">AEREO CONGRESO INTERNACIONAL</option>
+								<option value="inscripciones">INSCRIPCION A CONGRESO</option>
+								<!-- <option value="equipamientos">EQUIPAMIENTO MEDICO</option> -->
+								<option value="patrocinio">PATROCINIO EDUCACION MEDICA</option>
+								<option value="becaNac">BECA COMPLETA/PARCIAL NACIONAL</option>
+								<option value="becaInt">BECA COMPLETA/PARCIAL INTERNACIONAL</option>
+							</select>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="mesInversion" class="col-md-3 control-label">Mes de la Inversi&oacute;n</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="mesInversion" id="mesInversion">									
+						</div>
+					</div>
+				</div>	
+				<div class="divSeleccion" style="display:none;">
+					<div class="form-group">
+						<div class="label-field">
+							<label for="incluyeAlojamiento" class="col-md-3 control-label">Alojamiento</label>
+							<div class="col-md-2">
+								<select class="form-control incluyeAlojamiento" name="incluyeAlojamiento" id="incluyeAlojamiento">
+									<option value=""></option>
+									<option value="SI">SI</option>
+									<option value="NO">NO</option>
+								</select>					
+							</div>
+							<div class="col-md-2">
+								  <select class="form-control selAlojamientoPresupuesto" name="selAlojamientoPresupuesto" id="selAlojamientoPresupuesto">
+									<option value=""></option>
+									<option value="MARKETING">Marketing</option>
+									<option value="DELEGADO">Delegado</option>
+								</select>	
+							</div>						
+						</div>
+					</div>	
+					<div class="form-group">
+						<div class="label-field">
+							<label for="seleccionTraslado" class="col-md-3 control-label">Medio de Transporte</label>
+							<div class="col-md-2">
+								<select class="form-control incluyeTraslado" name="incluyeTraslado" id="incluyeTraslado">
+									<option value=""></option>
+									<option value="SI">SI</option>
+									<option value="NO">NO</option>
+								</select>					
+							</div>
+							<div class="col-md-2">
+								  <select class="form-control selTrasladoPresupuesto" name="selTrasladoPresupuesto" id="selTrasladoPresupuesto">
+									<option value=""></option>
+									<option value="MARKETING">Marketing</option>
+									<option value="DELEGADO">Delegado</option>
+								</select>							
+							</div>						
+						</div>
+					</div>						
+					<div class="form-group">
+						<div class="label-field">
+							<label for="seleccionInscripcion" class="col-md-3 control-label">Inscripci&oacute;n</label>
+							<div class="col-md-2">
+								<select class="form-control incluyeInscripcion" name="incluyeInscripcion" id="incluyeInscripcion">
+									<option value=""></option>
+									<option value="SI">SI</option>
+									<option value="NO">NO</option>
+								</select>					
+							</div>
+							<div class="col-md-2">
+								  <select class="form-control selInscripcionPresupuesto" name="selInscripcionPresupuesto" id="selInscripcionPresupuesto">
+									<option value=""></option>
+									<option value="MARKETING">Marketing</option>
+									<option value="DELEGADO">Delegado</option>
+								</select>							
+							</div>							
+						</div>
+					</div>	
+				</div>
+				 
+				<div>
+					<br>
+					<legend>Datos de la Inversi&oacute;n</legend>
+					<br>
+				</div>
+
+				<div class="form-group esAPMRO">
+					<div class="label-field">
+						<label for="apellido" class="col-md-3 control-label">Apellido</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="apellido" id="apellido" data-parsley-required="true">									
+						</div>
+						<div class="aereosInt equipamientos patrocinio">							
+							<p>(Como figura en el pasaporte o DNI)</p>
+						</div>
+						<div class="alojamientos inscripciones becaNac becaInt">							
+							<p>(Como figura en el DNI)</p>
+						</div>
+						<div class="aereosNac">							
+							<p>(Como figura en el pasaporte)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group esAPMRO">
+					<div class="label-field">
+						<label for="nombre" class="col-md-3 control-label">Nombre</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nombre" id="nombre" data-parsley-required="true">									
+						</div>
+						<div class="aereosInt equipamientos patrocinio">							
+							<p>(Como figura en el pasaporte o DNI)</p>
+						</div>
+						<div class="alojamientos inscripciones becaNac becaInt">							
+							<p>(Como figura en el DNI)</p>
+						</div>
+						<div class="aereosNac">							
+							<p>(Como figura en el pasaporte)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="cuit" class="col-md-3 control-label">CUIT</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="cuit" id="cuit" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac equipamientos patrocinio">
+					<div class="label-field">
+						<label for="dni" class="col-md-3 control-label">DNI</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="dni" id="dni" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos">
+					<div class="label-field">
+						<label for="ciudad" class="col-md-3 control-label">Ciudad</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="ciudad" id="ciudad" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group inscripciones becaNac becaInt">
+					<div class="label-field">
+						<label for="tipoDocumento" class="col-md-3 control-label">Tipo de Documento</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="tipoDocumento" id="tipoDocumento" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>		
+				<div class="form-group inscripciones becaNac becaInt">
+					<div class="label-field">
+						<label for="numeroDocumento" class="col-md-3 control-label">N&uacute;mero de Documento</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="numeroDocumento" id="numeroDocumento" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group aereosInt">
+					<div class="label-field">
+						<label for="numeroPasaporte" class="col-md-3 control-label">N&uacute;mero de Pasaporte</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="numeroPasaporte" id="numeroPasaporte" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>					
+				<div class="form-group aereosInt">
+					<div class="label-field">
+						<label for="fechaVtoPasaporte" class="col-md-3 control-label">Fecha Vto. Pasaporte</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fechaVtoPasaporte" id="fechaVtoPasaporte" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>		
+				<div class="form-group inscripciones becaNac becaInt">
+					 <div class="col-md-3 col-md-offset-3" style="padding-left:15px">			
+						<div class="panel panel-default">
+							<div class="panel-heading">Sexo</div>
+							<div class="panel-body">
+								<div class="form-group">
+									<div class="radio col-md-offset-2"><label><input name="sexo" value="FEMENINO" type="radio" data-parsley-required="true">FEMENINO </label></div>						
+								</div>
+								<div class="form-group">
+									<div class="radio col-md-offset-2"><label><input name="sexo" value="MASCULINO" type="radio" data-parsley-required="true">MASCULINO </label></div>						
+								</div>
+							</div>
+						</div>			
+					</div>	
+			    </div>						
+				<div class="form-group inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="fechaNacimiento" class="col-md-3 control-label">Fecha de Nacimiento</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fechaNacimiento" id="fechaNacimiento" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>	
+				<div class="form-group aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="nacionalidad" class="col-md-3 control-label">Nacionalidad</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nacionalidad" id="nacionalidad" data-parsley-required="true">
+						</div>
+					</div>
+				</div>	
+				<div class="form-group inscripciones becaNac becaInt">
+					<div class="label-field">
+						<label for="domicilio" class="col-md-3 control-label">Domicilio</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="domicilio" id="domicilio" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>		
+				<div class="form-group inscripciones becaNac becaInt">
+					<div class="label-field">
+						<label for="localidad" class="col-md-3 control-label">Localidad</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="localidad" id="localidad" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>					
+				<div class="form-group inscripciones becaNac becaInt">
+					<div class="label-field">
+						<label for="provincia" class="col-md-3 control-label">Provincia</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="provincia" id="provincia" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>						
+				<div class="form-group inscripciones becaNac becaInt">
+					<div class="label-field">
+						<label for="pais" class="col-md-3 control-label">Pa&iacute;s</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="pais" id="pais" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>						
+				<div class="form-group inscripciones becaNac becaInt">
+					<div class="label-field">
+						<label for="codigoPostal" class="col-md-3 control-label">C&oacute;digo Postal</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="codigoPostal" id="codigoPostal" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>						
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="telefonoContacto" class="col-md-3 control-label">Tel&eacute;fono de Contacto</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="telefonoContacto" id="telefonoContacto" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt patrocinio">
+					<div class="label-field">
+						<label for="celular" class="col-md-3 control-label">Celular</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="celular" id="celular" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt patrocinio">
+					<div class="label-field">
+						<label for="mailContacto" class="col-md-3 control-label">Mail de Contacto</label>
+						<div class="col-md-5">
+							<input type="email" class="form-control" name="mailContacto" id="mailContacto" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac aereosInt">
+					<div class="label-field">
+						<label for="motivoViaje" class="col-md-3 control-label">Motivo del Viaje</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="motivoViaje" id="motivoViaje" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt patrocinio">
+					<div class="label-field">
+						<label for="especialidadProfesional" class="col-md-3 control-label">Especialidad del Profesional</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="especialidadProfesional" id="especialidadProfesional" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>
+				
+				<div class="alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<br>
+					<legend>Congreso / Evento</legend>
+					<br>
+				</div>	
+				<fieldset class="alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+				
+					<script type="text/template" id="multisearchCongresoFilters">
+					<div class="form-group">
+						<div class="label-field">
+							<label for="filterNombre" class="col-md-2 control-label">Nombre</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="nombre" id="filterNombre"/>	
+							</div>
+						</div>
+						<div class="label-field">
+							<label for="filterlugar" class="col-md-2 control-label">Lugar</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="lugar" id="filterlugar"/>	
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="label-field">
+							<label for="filterFechaDesde" class="col-md-2 control-label">Fecha Desde</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="fechaDesde" id="filterFechaDesde"/>	
+							</div>
+						</div>
+
+						<div class="label-field">
+							<label for="filterFechaHasta" class="col-md-2 control-label">Fecha Hasta</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="fechaHasta" id="filterFechaHasta"/>	
+							</div>
+						</div>
+					</div>
+					</script>
+					
+					<div class='row hidden-print'>
+						<div class="col-sm-12 multisearchHeader">
+							<button type="button" class="btn btn-primary" id="btnMultiSearchCongreso">Buscar</button>
+							<!--  button type="button" class="btn btn-default" id="btnCleanAllCongreso">Limpiar</button-->
+							<button type="button" class="btn btn-primary" id="btnNewCongreso">Nuevo Evento</button>
+						</div>
+						<br/><br/>
+					</div>
+				</fieldset>	
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="nombreCongreso" class="col-md-3 control-label">Nombre</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nombreCongreso" id="nombreCongreso" data-parsley-required="true" readonly>	
+							<input type="hidden" id="idCongreso" name="idCongreso">
+							<input type="hidden" id="diasLimiteCarga" name="diasLimiteCarga">
+							<input type="hidden" id="presupuestoHabilitado" name="presupuestoHabilitado">
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="lugarCongreso" class="col-md-3 control-label">Lugar</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="lugarCongreso" id="lugarCongreso" data-parsley-required="true" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="web" class="col-md-3 control-label">Sitio Web del Evento</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="web" id="web" readonly>									
+						</div>
+					</div>
+				</div>	
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="fechaDesdeCongreso" class="col-md-3 control-label">Fecha Desde</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fechaDesdeCongreso" id="fechaDesdeCongreso" data-parsley-required="true" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="label-field">
+						<label for="fechaHastaCongreso" class="col-md-3 control-label">Fecha Hasta</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fechaHastaCongreso" id="fechaHastaCongreso" data-parsley-required="true" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt">
+					<div class="col-md-10 col-md-offset-1 label-field">
+						<div class="col-md-12">
+						    <label for="comentariosCongreso" class="col-md-2 control-label">Comentarios</label>
+							<div class="col-md-8">
+								<textarea rows="8" class="form-control" name="comentariosCongreso" id="comentariosCongreso" placeholder="Detallar..." data-parsley-maxlength="4000"></textarea>									
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="isInscripcion" style="display:none;">
+					<div class="inscripciones becaNac becaInt">	
+						<br>
+						<legend>Inscripci&oacute;n: Datos del M&eacute;dico</legend>
+						<br>
+					</div>
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="tituloGrado" class="col-md-3 control-label">T&iacute;tulo de Grado</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="tituloGrado" id="tituloGrado" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>						
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="institucionDondeObtuvo" class="col-md-3 control-label">Instituci&oacute;n de donde lo obtuvo</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="institucionDondeObtuvo" id="institucionDondeObtuvo" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>					
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="anioEgreso" class="col-md-3 control-label">A&ntilde;o de Egreso</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" name="anioEgreso" id="anioEgreso" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>					
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="matricula" class="col-md-3 control-label">Matr&iacute;cula</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="matricula" id="matricula" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>					
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="institucionQueTrabaja" class="col-md-3 control-label">Instituci&oacute;n en la que trabaja</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="institucionQueTrabaja" id="institucionQueTrabaja" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>					
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="cargoPosicion" class="col-md-3 control-label">Cargo/Posici&oacute;n</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="cargoPosicion" id="cargoPosicion" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>		
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="tipoInscripcion" class="col-md-3 control-label">Tipo de Incripci&oacute;n</label>
+							<div class="col-md-2">
+								<select class="form-control" name="tipoInscripcion" id="tipoInscripcion" data-parsley-required="true">
+									<option value=""></option>
+									<option value="RESIDENTE">Residente</option>
+									<option value="SOCIO">Socio</option>
+									<option value="NOSOCIO">No Socio</option>
+								</select>					
+							</div>		
+						</div>
+					</div>
+					<div class="form-group socio inscripciones becaNac becaInt" style="display:none;">
+						<div class="label-field">
+							<label for="nombreSociedad" class="col-md-3 control-label">Nombre de la Sociedad</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="nombreSociedad" id="nombreSociedad">									
+							</div>
+						</div>
+					</div>					
+					<div class="form-group socio inscripciones becaNac becaInt" style="display:none;">
+						<div class="label-field">
+							<label for="numeroSocio" class="col-md-3 control-label">N&uacute;mero de Socio</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="numeroSocio" id="numeroSocio">									
+							</div>
+						</div>
+					</div>	
+					<div class="form-group inscripciones becaNac becaInt">
+						<div class="label-field">
+							<label for="membresia" class="col-md-3 control-label">Membres&iacute;a</label>
+							<div class="col-md-2">
+								<select class="form-control" name="membresia" id="membresia">
+									<option value="NO">NO</option>
+									<option value="SI">SI</option>
+								</select>
+							</div>
+						</div>
+				    </div>
+			    </div>
+				<div class="isAlojamiento" style="display:none;">
+				
+					<div class="alojamientos becaNac becaInt">
+						<br>
+						<legend>Alojamiento Congreso – Hotel</legend>
+						<br>
+					</div>	
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="nombreHotel" class="col-md-3 control-label">Nombre</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="nombreHotel" id="nombreHotel">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="contactoHotel" class="col-md-3 control-label">Contacto</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="contactoHotel" id="contactoHotel">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="telefonoHotel" class="col-md-3 control-label">Tel&eacute;fono</label>
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="telefonoHotel" id="telefonoHotel">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="checkinHotel" class="col-md-3 control-label">Check-in</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" name="checkinHotel" id="checkinHotel">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="checkoutHotel" class="col-md-3 control-label">Check-out</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" name="checkoutHotel" id="checkoutHotel">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+							    <label for="comentariosAlojamiento" class="col-md-2 control-label">Comentarios</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control" name="comentariosAlojamiento" id="comentariosAlojamiento" placeholder="Detallar..." data-parsley-maxlength="4000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="comparteHabitacion" class="col-md-3 control-label">Comparte Habitaci&oacute;n</label>
+							<div class="col-md-2">
+								<select class="form-control" name="comparteHabitacion" id="comparteHabitacion">
+									<option value=""></option>
+									<option value="SI">SI</option>
+									<option value="NO">NO</option>
+								</select>					
+							</div>		
+						</div>
+					</div>
+					
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="tipoHabitacion" class="col-md-3 control-label">Tipo de Habitaci&oacute;n</label>
+							<div class="col-md-2">
+								<select class="form-control" name="tipoHabitacion" id="tipoHabitacion">
+									<option value=""></option>
+									<option value="SIMPLE">Simple</option>
+									<option value="MATRIMONIAL">Matrimonial</option>
+									<option value="TWIN">Twin</option>
+									<option value="TRIPLE">Triple</option>
+								</select>						
+							</div>
+						</div>
+					</div>	
+					<div class="form-group nombreMedico1 alojamientos becaNac becaInt" style="display:none;">
+						<div class="label-field">
+							<label for="nombreMedico1" class="col-md-3 control-label">Nombre del M&eacute;dico Acompa&ntilde;ante</label>
+							<div class="col-md-4">
+								<input type="text" class="form-control" name="nombreMedico1" id="nombreMedico1">									
+							</div>
+						</div>
+						<div class="label-field">
+							<label for="contactoMedico1" class="col-md-1 control-label">Contacto</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" name="contactoMedico1" id="contactoMedico1">									
+							</div>
+						</div>						
+					</div>					
+					<div class="form-group nombreMedico2 alojamientos becaNac becaInt" style="display:none;">
+						<div class="label-field">
+							<label for="nombreMedico2" class="col-md-3 control-label">Nombre del M&eacute;dico Acompa&ntilde;ante</label>
+							<div class="col-md-4">
+								<input type="text" class="form-control" name="nombreMedico2" id="nombreMedico2">									
+							</div>
+						</div>
+						<div class="label-field">
+							<label for="contactoMedico2" class="col-md-1 control-label">Contacto</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" name="contactoMedico2" id="contactoMedico2">									
+							</div>
+						</div>		
+					</div>	
+					
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="cantidadNoche" class="col-md-3 control-label">Cantidad de Noches</label>
+							<div class="col-md-2">
+								<input type="number" class="form-control" name="cantidadNoche" id="cantidadNoche" data-parsley-required="true" readonly>									
+							</div>
+						</div>
+					</div>					
+					<div class="form-group alojamientos becaNac becaInt">
+						<div class="label-field">
+							<label for="cochera" class="col-md-3 control-label">Cochera</label>
+							<div class="col-md-2">
+								<select class="form-control" name="cochera" id="cochera">
+									<option value="NO">NO</option>
+									<option value="SI">SI</option>
+								</select>
+							</div>
+						</div>
+				    </div>	
+				    
+				</div>
+				<div class="isTraslado" style="display:none;">
+					
+					<div class="aereosNac aereosInt becaNac becaInt">
+						<br>
+						<legend>Congreso – Ida</legend>
+						<br>
+					</div>	
+					<div class="form-group becaNac becaInt">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+							    <label for="itinerarioIda" class="col-md-2 control-label">Itinerario</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control" name="itinerarioIda" id="itinerarioIda" placeholder="Detallar..." data-parsley-maxlength="1000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group aereosNac aereosInt becaNac becaInt">
+						<div class="label-field">
+							<label for="fechaIda" class="col-md-3 control-label">Fecha</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" name="fechaIda" id="fechaIda" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group aereosNac aereosInt becaNac becaInt">
+						<div class="label-field">
+							<label for="nroVueloIda" class="col-md-3 control-label">Nro. De Vuelo</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" name="nroVueloIda" id="nroVueloIda">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group becaNac becaInt">
+						<div class="label-field">
+							<label for="horaSalidaIda" class="col-md-3 control-label">Hora de Salida</label>
+							<div class="input-group date col-md-2">
+						        <input type="text" class="form-control" name="horaSalidaIda" id="horaSalidaIda">	
+						        <span class="input-group-addon">
+						            <span class="fluigicon fluigicon-time"></span>
+						        </span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group becaNac becaInt">
+						<div class="label-field">
+							<label for="tipoTrasladoIda" class="col-md-3 control-label">Tipo de Traslado</label>
+							<div class="col-md-2">
+								<select class="form-control" name="tipoTrasladoIda" id="tipoTrasladoIda">
+									<option value=""></option>
+									<option value="AEREO">A&eacute;reo</option>
+									<option value="TERRESTRE">Terrestre</option>
+								</select>						
+							</div>
+						</div>
+					</div>
+					<div class="form-group aereosNac aereosInt becaNac becaInt">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+							    <label for="comentariosIda" class="col-md-2 control-label">Comentarios</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control" name="comentariosIda" id="comentariosIda" placeholder="Detallar..." data-parsley-maxlength="4000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="aereosNac aereosInt becaNac becaInt">
+						<br>
+						<legend>Congreso – Regreso</legend>
+						<br>
+					</div>	
+					<div class="form-group becaNac becaInt">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+							    <label for="itinerarioRegreso" class="col-md-2 control-label">Itinerario</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control" name="itinerarioRegreso" id="itinerarioRegreso" placeholder="Detallar..." data-parsley-maxlength="1000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group aereosNac aereosInt becaNac becaInt">
+						<div class="label-field">
+							<label for="fechaRegreso" class="col-md-3 control-label">Fecha</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" name="fechaRegreso" id="fechaRegreso" data-parsley-required="true">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group aereosNac aereosInt becaNac becaInt">
+						<div class="label-field">
+							<label for="nroVueloRegreso" class="col-md-3 control-label">Nro. De Vuelo</label>
+							<div class="col-md-2">
+								<input type="text" class="form-control" name="nroVueloRegreso" id="nroVueloRegreso">									
+							</div>
+						</div>
+					</div>
+					<div class="form-group becaNac becaInt">
+						<div class="label-field">
+							<label for="horaSalidaRegreso" class="col-md-3 control-label">Hora de Salida</label>
+							<div class="input-group date col-md-2">
+						        <input type="text" class="form-control" name="horaSalidaRegreso" id="horaSalidaRegreso">	
+						        <span class="input-group-addon">
+						            <span class="fluigicon fluigicon-time"></span>
+						        </span>
+							</div>
+							
+						</div>
+					</div>
+					<div class="form-group becaNac becaInt">
+						<div class="label-field">
+							<label for="tipoTrasladoRegreso" class="col-md-3 control-label">Tipo de Traslado</label>
+							<div class="col-md-2">
+								<select class="form-control" name="tipoTrasladoRegreso" id="tipoTrasladoRegreso">
+									<option value=""></option>
+									<option value="AEREO">A&eacute;reo</option>
+									<option value="TERRESTRE">Terrestre</option>
+								</select>						
+							</div>
+						</div>
+					</div>
+					<div class="form-group aereosNac aereosInt becaNac becaInt">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+							    <label for="comentariosRegreso" class="col-md-2 control-label">Comentarios</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control" name="comentariosRegreso" id="comentariosRegreso" placeholder="Detallar..." data-parsley-maxlength="4000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+
+				
+				<div class="form-group equipamientos patrocinio">
+					<div class="col-md-10 col-md-offset-1 label-field">
+						<div class="col-md-12">
+						    <label for="equipamiento" class="col-md-2 control-label equipamientos">Equipamiento</label>
+						    <label for="detalle" class="col-md-2 control-label patrocinio">Detalle</label>
+							<div class="col-md-8">
+								<textarea rows="8" class="form-control" name="equipamiento" id="equipamiento" placeholder="Detallar..." data-parsley-maxlength="1000" data-parsley-required="true"></textarea>									
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="montoInversion alojamientos inscripciones aereosNac aereosInt becaNac becaInt equipamientos">	
+					<br>
+					<legend>Monto de Inversi&oacute;n</legend>
+					<br>
+					
+					<div class="form-group">
+						<div class="label-field">
+							<label for="montoInversion" class="col-md-3 control-label">Monto</label>
+							<div class="col-md-3">
+								<div class="input-group">
+									<span class="input-group-addon">ARS</span>
+									<input type="text" class="form-control" name="montoInversion" id="montoInversion">	
+								</div>							
+							</div>
+						</div>
+					</div>
+				</div>				
+				
+				<div class="alojamientos aereosNac inscripciones aereosInt becaNac becaInt patrocinio">
+					<br>
+					<legend>Documentos</legend>
+					<br>
+				</div>	
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt patrocinio">
+					<div class="label-field">
+						<label for="cartaPetitorio" class="col-md-3 control-label">Carta Petitorio</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="cartaPetitorio" id="cartaPetitorio">	
+							<input type="hidden" id="cartaPetitorioDocumentId" name="cartaPetitorioDocumentId">								
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt patrocinio">
+					<div class="label-field">
+						<label for="cartaAcuerdo" class="col-md-3 control-label">Carta Acuerdo</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="cartaAcuerdo" id="cartaAcuerdo">	
+							<input type="hidden" id="cartaAcuerdoDocumentId" name="cartaAcuerdoDocumentId">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group alojamientos aereosNac inscripciones aereosInt becaNac becaInt patrocinio">
+					<div class="label-field">
+						<label for="flyer" class="col-md-3 control-label">Flyer</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="flyer" id="flyer">		
+							<input type="hidden" id="flyerDocumentId" name="flyerDocumentId">							
+						</div>
+					</div>
+				</div>	
+				
+				<br>
+				
+				<div class="inversion" style="display:none;">
+					<fieldset class="apm">	
+						<br>
+						<legend>Importe de la Inversi&oacute;n</legend>
+						<br>
+					
+						<div class="form-group">
+							<div class="label-field">
+								<label for="importe" class="col-md-3 control-label">Importe</label>
+								<div class="col-md-2">
+									<input type="text" class="form-control" name="importe" id="importe" data-parsley-required="true">									
+								</div>
+								<div class="col-md-2">
+									<div class="input-group">
+										<span class="input-group-addon">ARS</span>
+										<input type="text" class="form-control" name="importeARS" id="importeARS" readonly>	
+									</div>							
+								</div>
+								<div class="col-md-2">
+									<div class="input-group">
+										<span class="input-group-addon">USD</span>
+										<input type="text" class="form-control" name="importeUSD" id="importeUSD" readonly>
+									</div>																
+								</div>						
+							</div>
+						</div>				
+						<div class="form-group">
+							<div class="label-field">
+								<label for="moneda" class="col-md-3 control-label">Moneda</label>
+								<div class="col-md-3">
+									<input type="text" class="form-control" name="moneda" id="moneda">
+									<input type="hidden" class="form-control" name="codMoneda" id="codMoneda">									
+								</div>
+							</div>
+						</div>				
+						<div class="form-group">
+							<div class="label-field">
+								<label for="tipoCambio" class="col-md-3 control-label">Tipo de Cambio</label>
+								<div class="col-md-2">
+									<div class="input-group">
+										<span class="input-group-addon">ARS</span>
+										<input type="text" class="form-control" name="tipoCambioARS" id="tipoCambioARS" readonly>	
+									</div>							
+								</div>
+								<div class="col-md-2">
+									<div class="input-group">
+										<span class="input-group-addon">USD</span>
+										<input type="text" class="form-control" name="tipoCambioUSD" id="tipoCambioUSD" readonly>
+									</div>																
+								</div>
+							</div>
+						</div>				
+						<div class="form-group">
+							<div class="label-field">
+								<label for="formaPago" class="col-md-3 control-label">Forma de Pago</label>
+								<div class="col-md-3">
+									<input type="text" class="form-control" name="formaPago" id="formaPago">
+									<input type="hidden" class="form-control" name="codFormaPago" id="codFormaPago">									
+								</div>
+							</div>
+						</div>
+					</fieldset>
+					
+					<fieldset class="apm">	
+						<br>
+						<legend>Imputaciones</legend>
+						<br>
+						
+						<div class='row'>
+							<div class="table-responsive col-sm-10 col-sm-offset-1">
+								<table class="table table-bordered table-condensed" id="tblImputaciones" tablename="tblImputaciones" noaddbutton="true" nodeletebutton="true">
+									<thead>
+										<tr>
+											<th width="65%"><label class="control-label">Producto</label></th>
+											<th width="30%"><label class="control-label">Porcentaje</label></th>
+											<th width="5%" class="hidden-print">
+												<span class="fluigicon fluigicon-plus action-fluigicon" title="Nuevo" id="newImputaciones"></span>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="label-field">
+												<input type="text" class="form-control newProd" id="newProd" name="newProd" data-parsley-required="true"/>
+												<input type="hidden" class="codigoProducto" id="codigoProducto" name="codigoProducto"/>	
+												<input type="hidden" class="presupuestoARS" id="presupuestoARS" name="presupuestoARS"/>	
+											</td>
+											<td class="label-field">
+												<div class="col-md-12">
+													<div class="input-group">
+														<span class="input-group-addon">%</span>
+														<input type="text" class="form-control porcentajeImputado" id="porcentajeImputado" name="porcentajeImputado" data-parsley-required="true"/>
+														<input type="hidden" class="consumidoARS" id="consumidoARS" name="consumidoARS"/>
+													</div>
+													<div class="divFueraPresupuesto" style="display:none">							
+														<p style="text-align: left; color:#ffc107; font-weight: bolder;">Fuera de presupuesto.</p>
+													</div>
+												</div>
+											</td>
+											<td class="hidden-print label-field">					
+												<span class="fluigicon fluigicon-trash action-fluigicon deleteRow" title="Eliminar"></span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="table" style="border: 0px !important">
+									<tbody>
+										<tr>
+											<td width="65%" class="label-field" style="border: 0px !important">
+											<label for="formaPago" class="col-md-3 col-md-offset-9 control-label">Porcentaje Total</label>
+											</td>
+											<td width="30%" class="label-field" style="border: 0px !important">
+												<div class="col-md-12 col-sm-offset-1">
+													<div class="input-group">
+														<span class="input-group-addon">%</span>
+														<input type="text" class="form-control porcentajeImputadoTotal" id="porcentajeImputadoTotal" name="porcentajeImputadoTotal" readonly/>
+													</div>
+													<div class="divPresupuesto" style="display:none">							
+														<p style="text-align: left; color:red; font-weight: bolder;">Debe ser igual a 100.</p>
+													</div>
+												</div>
+											</td>
+											<td width="5%" style="border: 0px !important">					
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</fieldset>	
+				</div>
+				
+				<br>
+				
+				<fieldset class="motivoRechazo" style="display:none;">	
+					<br>
+					<legend>Motivo de Rechazo</legend>
+					<br>
+
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+								<label for="motivoRechazo" class="col-md-2 control-label">Motivo de Rechazo</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control motivoRechazo" name="motivoRechazo" id="motivoRechazo" placeholder="Detallar motivo" data-parsley-maxlength="1000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>	
+				</fieldset>
+			
+			</fieldset>		
+						
+		</form>
+		<br>
+	</div> 
+</div>
+</body>
+</html>

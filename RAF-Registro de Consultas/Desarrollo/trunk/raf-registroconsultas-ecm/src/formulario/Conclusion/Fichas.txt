@@ -1,0 +1,18 @@
+05
+Cancelada por Otros Motivos
+
+
+04
+Cancelada por Error de Datos
+
+
+03
+Cancelada por Duplicación
+
+
+02
+Cancelada por Imposibilidad de Contacto
+
+
+01
+Satisfactoria

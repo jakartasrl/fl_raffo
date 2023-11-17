@@ -1,0 +1,13 @@
+/* Coloque aqui seu codigo CSS */
+.message{
+    margin-top: 10px;
+}
+
+.sublabel {
+	margin-top: -5px !important;
+	margin-bottom: 5px !important;
+}
+
+textarea {
+	resize: vertical !important;
+}

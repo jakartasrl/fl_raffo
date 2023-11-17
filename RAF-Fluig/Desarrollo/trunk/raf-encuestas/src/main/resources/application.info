@@ -1,0 +1,16 @@
+application.type=widget
+application.code=raf_encuestas
+application.title=Encuestas
+application.description=Crea un listado con las encuestas a responder por el usuario logueado.
+application.category=Portal Web
+application.renderer=freemarker
+application.icon=icon.png
+developer.code=ARQ
+developer.name=Arquimeda S.R.L.
+developer.url=http://www.arquimeda.com/
+application.uiwidget=true
+application.mobileapp=true
+view.file=view.ftl
+edit.file=edit.ftl
+locale.file.base.name=raf-encuestas
+application.resource.component.1=social/socialformanswer

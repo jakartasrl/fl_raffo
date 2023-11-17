@@ -1,0 +1,7 @@
+<project name="RAFv1.0.0">
+	<ged>
+		<folder name="Portal Intranet">
+			<document name="Tableros Y Aplicaciones" dataset="TablerosYAplicaciones" descriptor="docName" type="form"></document>
+		</folder>
+	</ged>
+</project>

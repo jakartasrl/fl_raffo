@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Custom -->
+	<style>
+	</style>
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>Grupo de Motivos</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="groupName" class="col-md-4 control-label">Nombre del Grupo</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="groupName" id="groupName" data-parsley-required="true">									
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="groupType" class="col-md-4 control-label">Tipo</label>
+					<div class="col-md-3">
+						<select type="text" class="form-control" name="groupType" id="groupType" data-parsley-required="true">
+							<option value=""></option>
+							<option value="cambioDisenio">Cambio de diseño</option>
+							<option value="nuevoDisenio">Nuevo diseño</option>
+						</select>									
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="breakDateRequired" class="col-md-4 control-label">Fecha de corte obligatoria</label>
+					<div class="col-md-3">
+						<select type="text" class="form-control" name="breakDateRequired" id="breakDateRequired" data-parsley-required="true">
+							<option value=""></option>
+							<option value="si">Si</option>
+							<option value="no">No</option>
+						</select>									
+					</div>
+				</div>
+			</div>
+			
+		</form>
+
+		<br>
+	</div> 
+</div> 
+</body>
+</html>

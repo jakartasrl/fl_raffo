@@ -1,0 +1,66 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Fluig</title>
+    <link href="${SERVER_URL!''}/globalmailsender/resources/global.css" type="text/css" rel="stylesheet" />    
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+	
+	<div style="margin-left: 25px;">
+		
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+			El siguiente Petitorio y Carta Acuerdo fue rechazado.
+		</p>
+		
+		<br/>
+		
+		<table style="border: 1px solid #8E1345;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+			<tbody>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">NRO. DE SOLICITUD</td>
+					<td style="padding: 0.5em;"> ${numeroSolicitud!}</td>
+				</tr>					
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">SOLICITANTE </td>
+					<td style="padding: 0.5em;"> ${solicitante!}</td>
+				</tr>				
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">LINEA/REGION </td>
+					<td style="padding: 0.5em;"> ${lineaRegion!}</td>
+				</tr>	
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">TIPO DE INVERSION</td>
+					<td style="padding: 0.5em;"> ${tipoInversion!}</td>
+				</tr>	
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">MES DE LA INVERSION </td>
+					<td style="padding: 0.5em;"> ${mesInversion!}</td>
+				</tr>			
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">NOMBRE Y APELLIDO DEL MEDICO </td>
+					<td style="padding: 0.5em;"> ${nombre!} ${apellido!}</td>
+				</tr>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">TIPO DE PRODUCTO</td>
+					<td style="padding: 0.5em;"> ${tipoProducto!}</td>
+				</tr>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">DETALLE DE LA INVERSION/OBSERVACION</td>
+					<td style="padding: 0.5em;"> ${detalleInversion!}</td>
+				</tr>	
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#8E1345;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em; color: white">MOTIVO DEL RECHAZO</td>
+					<td style="padding: 0.5em;"> ${motivoRechazo!}</td>
+				</tr>						
+			</tbody>
+		</table>
+		<br />
+	</div>	
+	<br/>
+	<div style="margin-left: 25px;">
+ 	     <span style="color: grey;font-size: 13px;"><br>Este es un mail autom&aacute;tico generado por el Sistema Fluig. <br>
+    		No responder sobre este mail. Cualquier duda comunicarse con el Administrador.
+         </span>
+	</div>
+</body>
+</html>

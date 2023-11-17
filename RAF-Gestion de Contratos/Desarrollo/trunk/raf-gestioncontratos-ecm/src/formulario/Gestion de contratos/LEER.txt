@@ -1,0 +1,7 @@
+custom.min.js:
+ En ambiente de desarrollo local, reemplazar por custom.js. Para instalar en el cliente, con la ayuda de la página http://jscompress.com/ generar el custom.min.js definitivo.
+
+
+
+query.number.js:
+

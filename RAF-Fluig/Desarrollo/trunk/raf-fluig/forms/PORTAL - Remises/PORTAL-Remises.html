@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.js"></script>
+	<style>
+	.sublabel {
+		display: inline-block;
+		padding-top: 7px;
+		text-align: justify;
+	}
+	
+	textarea {
+		resize: vertical !important;
+	}
+	
+	td{
+		padding: 10px 5px !important;
+	}
+	
+	.fluigicon-plus {
+		display: block !important;
+		top: -6px !important;
+		cursor: pointer;
+		text-align: center;
+	}
+	
+	.fluigicon-trash {
+		cursor: pointer;
+		padding-top: 6px;
+	}
+	
+	.fluigicon-plus:hover{
+		color: #aec90a;	
+	}
+	
+	.table-responsive{
+		overflow: visible !important;
+	}
+	
+	.input-group-addon{
+		padding: 6px !important;
+	}
+	
+	thead {
+		background-color: #f8f8f8;
+	}
+	
+	#tablaSeguridad .form-group {
+		margin-bottom:0 !important;
+	}
+		
+	</style>
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<fieldset id="item">
+				<legend>Item</legend>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="docName" class="col-md-3 control-label">Nombre de la ficha</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="docName" id="docName" required>									
+						</div>		
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="title" class="col-md-3 control-label">Titulo</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="title" id="title">									
+						</div>		
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="description" class="col-md-3 control-label">Descripci&oacute;n</label>
+						<div class="col-md-5">
+							<textarea class="form-control" name="description" id="description"></textarea>								
+						</div>		
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="logo" class="col-md-3 control-label">Logo</label>
+						<div class="col-md-5">
+							<span class="sublabel">Para adjuntar la foto ingrese a la secci&oacute;n Anexos, suba la foto y modifique en image.jpg el campo Utilizar Est&aacute;ndar por el nombre de la imagen subida.</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="targetLink" class="col-md-3 control-label">Link</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="targetLink" id="targetLink">									
+						</div>		
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="targetMode" class="col-md-3 control-label">Target</label>
+						<div class="col-md-5">
+							<select class="form-control" name="targetMode" id="targetMode">	
+								<option value="newTab">Nueva Pestaña</option>
+								<option value="embedded">Embebido</option>
+							</select>								
+						</div>		
+					</div>
+				</div>
+			</fieldset>
+			
+			<fieldset id="seguridad">
+				<legend>Seguridad</legend>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="visibleLegajo" class="col-md-6 control-label">Visible en Formulario de Legajo</label>
+						<div class="col-md-1">
+							<select class="form-control" name="visibleLegajo" id="visibleLegajo">	
+								<option value="SI">SI</option>
+								<option value="NO">NO</option>
+							</select>								
+						</div>		
+					</div>
+				</div>
+				
+				<div class="table-responsive col-md-offset-2 col-md-7">
+					<table class="table table-bordered table-condensed" id="tablaSeguridad" tablename="tablaSeguridad" noaddbutton="true" nodeletebutton="true">
+						<thead>
+							<tr>
+								<th width="97%"><label for="grupo">Grupo</label></th>
+								<th width="3%"><span class="fluigicon fluigicon-plus" id="btnNuevoGrupo"></span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="form-group">
+										<div class="col-sm-12">
+											<input type="text" class="form-control grupoDesc" name="grupoDesc" id="grupoDesc" data-parsley-required>
+											<input type="hidden" class="grupoCod" name="grupoCod" id="grupoCod">
+										</div>
+									</div>
+								</td>
+								<td>							
+									<div>
+										<div class="pull-right">
+											<span class="fluigicon fluigicon-trash deleteRow" style="margin-bottom:5px" title="Eliminar"></span>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</fieldset>
+			
+		</form>
+
+		<br>
+	</div> 
+</div> 
+</body>
+</html>

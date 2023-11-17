@@ -1,0 +1,24 @@
+1. Grupos:
+SYS08: Grupo que inicia solicitudes
+
+2. Mecanismos de atribución custom:
+RAF09-Solicitante: RAF08-GTE-DIST- y RAF08-GTOR-PROCESO.
+
+3. Reporte:
+Puede ser visualizado por
+RAF08-ADM	Administrador del Proceso
+RAF08-GTE-AREA-*	Gerente de Área
+RAF08-GTE-DIST-*	Gerente de Distrito
+RAF08-ASIST-DIST-*	Asistente de Distrito
+RAF08-GTE-PROMO-*	Gerente de Promoción
+RAF09-AUDITORIA: Usuarios del Auditoría Interna
+RAF09-GTOR-PROCESO
+
+
+Exportación de Templates:
+Código: RAF09-Auditada
+Código: RAF09-Rechazada
+Exportar: Se deben subir desde el fuig los templates.
+
+Versión IC > 45060 (PRODUCCION)
+Versión IC > 5670 (DESARROLLO)

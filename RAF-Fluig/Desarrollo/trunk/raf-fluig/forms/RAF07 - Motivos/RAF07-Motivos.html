@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Custom -->
+	<script type="text/javascript" src="custom.min.js"></script>
+	
+	<style>
+		.fluigicon-trash {
+		    margin-top: 4px;
+		}
+	</style>
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-12 text-center">
+				<h3>Motivo</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="reasonName" class="col-md-4 control-label">Nombre</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="reasonName" id="reasonName" data-parsley-required="true">									
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="reasonName" class="col-md-4 control-label">Grupo</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="reasonGroup" id="reasonGroup" data-parsley-required="true">									
+					</div>
+				</div>
+			</div>
+			
+			<div class='row'>
+				<div class="table-responsive col-sm-5 col-sm-offset-4">
+					<table class="table table-bordered table-condensed" id="tblUserGroups" tablename="tblUserGroups" noaddbutton="true" nodeletebutton="true">
+						<thead>
+							<tr>
+								<th width="90%"><label class="control-label">Grupos de Usuarios</label></th>
+								<th width="10%" class="hidden-print">
+									<span class="fluigicon fluigicon-plus action-fluigicon" title="Nuevo" id="newUserGroup"></span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="label-field">
+									<input type="text" class="form-control userGroup" id="userGroup" name="userGroup"/>
+									<input type="hidden" class="userGroupId" id="userGroupId" name="userGroupId"/>
+								</td>
+								<td class="hidden-print label-field">					
+									<span class="fluigicon fluigicon-trash action-fluigicon deleteRow" title="Eliminar"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="col-md-4 control-label">Avisos/Reportes</label>
+				<div class="col-md-5" id="avisosReportes">
+					<div class="checkbox">
+						<label><input type="checkbox" name="avisoGeneracion" id="avisoGeneracion">Generación</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name="avisoAceptacion" id="avisoAceptacion">Aceptación</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name="avisoRevision" id="avisoRevision">Revisión</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" name="visualizaReporte" id="visualizaReporte">Visualiza Reporte</label>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+		</form>
+
+		<br>
+	</div> 
+</div> 
+</body>
+</html>

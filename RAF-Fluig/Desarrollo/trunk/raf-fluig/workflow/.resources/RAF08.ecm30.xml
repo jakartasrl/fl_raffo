@@ -1,0 +1,2664 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>RAF08</processId>
+    </processDefinitionPK>
+    <processDescription>Inversión Comercial</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>Comercial</categoryId>
+    <managerEngineAllocationId>Grupo</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;RAF08-GTOR-PROCESO&lt;/Group&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>1</complementsLevel>
+    <notifyRequisitionerComplements>true</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>true</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>Inversión Comercial</processId>
+      <version>22</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>13463</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>true</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>2</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>false</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Iniciar Solicitud</stateName>
+      <stateDescription>Iniciar Solicitud</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF08-Solicitante</engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>110</positionX>
+      <positionY>192</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>7</sequence>
+      </processStatePK>
+      <stateName>Revisar y Aprobar Inversión Comercial (Gte. Distrito)</stateName>
+      <stateDescription>Revisar y Aprobar Inversión Comercial (Gte. Distrito)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>144000</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF08-GerenteDistrito</engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>510</positionX>
+      <positionY>154</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>true</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>28800</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>9</sequence>
+      </processStatePK>
+      <stateName>Aprobar Inversión Comercial (Gte. Área)</stateName>
+      <stateDescription>Aprobar Inversión Comercial (Gte. Área)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>144000</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF08-GerenteArea</engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>700</positionX>
+      <positionY>420</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>true</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>28800</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>12</sequence>
+      </processStatePK>
+      <stateName>Completar Inversión Comercial</stateName>
+      <stateDescription>Completar Inversión Comercial</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>144000</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;matriculaAPM&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>390</positionX>
+      <positionY>36</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>true</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>28800</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>19</sequence>
+      </processStatePK>
+      <stateName>Aprobar Inversión Comercial (Gte. Promoción)</stateName>
+      <stateDescription>Aprobar Inversión Comercial (Gte. Promoción)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>144000</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF08-GerentePromocion</engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>930</positionX>
+      <positionY>557</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>true</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>28800</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>41</sequence>
+      </processStatePK>
+      <stateName>Ejecutar Inversión</stateName>
+      <stateDescription>Ejecutar Inversión</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>144000</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF08-AsistenteDistrito</engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1190</positionX>
+      <positionY>320</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>true</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>28800</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>53</sequence>
+      </processStatePK>
+      <stateName>Cotizar Inversión Comercial</stateName>
+      <stateDescription>Cotizar Inversión Comercial</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>144000</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF08-GerenteDistrito</engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1110</positionX>
+      <positionY>160</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>true</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>28800</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>63</sequence>
+      </processStatePK>
+      <stateName>Cerrar Inversión Comercial</stateName>
+      <stateDescription>Cerrar Inversión Comercial</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>144000</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF08-GerenteDistrito</engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1380</positionX>
+      <positionY>160</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>true</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>28800</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>69</sequence>
+      </processStatePK>
+      <stateName>Medical</stateName>
+      <stateDescription>Medical</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1010</positionX>
+      <positionY>324</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </processStatePK>
+      <stateName>Es APM?</stateName>
+      <stateDescription>Es APM?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>250</positionX>
+      <positionY>166</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>25</sequence>
+      </processStatePK>
+      <stateName>Requiere Aprobación Gerente de Promoción?</stateName>
+      <stateDescription>Requiere Aprobación Gerente de Promoción?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>910</positionX>
+      <positionY>423</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>35</sequence>
+      </processStatePK>
+      <stateName>Solicitud Rechazada</stateName>
+      <stateDescription>Solicitud Rechazada</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>980</positionX>
+      <positionY>60</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>44</sequence>
+      </processStatePK>
+      <stateName>Solicitud Finalizada</stateName>
+      <stateDescription>Solicitud Finalizada</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1240</positionX>
+      <positionY>100</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>55</sequence>
+      </processStatePK>
+      <stateName>Carta Acuerdo Rechazada</stateName>
+      <stateDescription>Carta Acuerdo Rechazada</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1220</positionX>
+      <positionY>20</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>22</version>
+        <sequence>5</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;esAPM&quot;) == &apos;true&apos;</condition>
+      <destinationSequenceId>7</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>22</version>
+        <sequence>5</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>9</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>22</version>
+        <sequence>25</sequence>
+      </conditionProcessStatePK>
+      <condition>parseFloat(hAPI.getCardValue(&quot;importeUSD&quot;)) &gt;= parseFloat(hAPI.getCardValue(&quot;limiteAprGtePromo&quot;))</condition>
+      <destinationSequenceId>19</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>22</version>
+        <sequence>25</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>69</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>8</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>5</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>SI</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>10</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>5</initialStateSequence>
+      <finalStateSequence>9</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>NO</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>13</linkSequence>
+      </processLinkPK>
+      <actionLabel>Devolver</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>12</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Devolver</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>16</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>26</linkSequence>
+      </processLinkPK>
+      <actionLabel>Aprobar</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Aprobar</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>28</linkSequence>
+      </processLinkPK>
+      <actionLabel>Devolver</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Devolver</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>29</linkSequence>
+      </processLinkPK>
+      <actionLabel>Devolver</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>19</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Devolver</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>36</linkSequence>
+      </processLinkPK>
+      <actionLabel>Rechazar</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>35</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Rechazar</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>37</linkSequence>
+      </processLinkPK>
+      <actionLabel>Rechazar</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>19</initialStateSequence>
+      <finalStateSequence>35</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Rechazar</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel>Rechazar</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>35</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Rechazar</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>39</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>40</linkSequence>
+      </processLinkPK>
+      <actionLabel>Aprobar</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>9</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Aprobar</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>54</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>53</initialStateSequence>
+      <finalStateSequence>41</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>56</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>53</initialStateSequence>
+      <finalStateSequence>55</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>59</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>53</initialStateSequence>
+      <finalStateSequence>44</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>60</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>25</initialStateSequence>
+      <finalStateSequence>19</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>66</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>41</initialStateSequence>
+      <finalStateSequence>63</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>67</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>63</initialStateSequence>
+      <finalStateSequence>44</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>68</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>63</initialStateSequence>
+      <finalStateSequence>55</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>70</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>25</initialStateSequence>
+      <finalStateSequence>69</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>71</linkSequence>
+      </processLinkPK>
+      <actionLabel>Aprobar</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>19</initialStateSequence>
+      <finalStateSequence>69</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>Aprobar</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>72</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>69</initialStateSequence>
+      <finalStateSequence>53</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>76</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>69</initialStateSequence>
+      <finalStateSequence>55</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list>
+    <ProcessAttachmentSecurity>
+      <processAttachmentSecurityPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </processAttachmentSecurityPK>
+      <engineAllocationId>Todos os Usuários</engineAllocationId>
+      <accessLevel>PRMOED</accessLevel>
+      <editionMode>true</editionMode>
+    </ProcessAttachmentSecurity>
+  </list>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessCreate</eventId>
+        <processId>RAF08</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessCreate(processId){
+
+	log.error(&apos;**** afterProcessCreate &apos;);
+	hAPI.setCardValue(&quot;nroSolicitud&quot;, processId);
+
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeCancelProcess</eventId>
+        <processId>RAF08</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeCancelProcess(colleagueId,processId){&#xd;	&#xd;	var tarea = getValue(&quot;WKNumState&quot;);&#xd;	&#xd;	var tareas = {&#xd;			&apos;IniciarSolicitud&apos;: 0,&#xd;			&apos;Inicial&apos;: 4&#xd;		};&#xd;	&#xd;	if (tarea != tareas.IniciarSolicitud &amp;&amp; tarea != tareas.Inicial) {&#xd;		&#xd;		throw &quot;No se puede cancelar la solicitud.&quot;;&#xd;	&#xd;	}else{&#xd;		&#xd;		var ejb = new javax.naming.InitialContext().lookup(&quot;java:global/raf-inversioncomercial-backend/InversionComercialEJB&quot;);&#xd;		&#xd;		log.error(&apos;**** beforeCancelProcess &apos;);&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;SOLICITUD CANCELADA&quot;);&#xd;&#xd;		ejb.actualizarEstado(java.lang.Integer.parseInt(processId), &quot;SOLICITUD CANCELADA&quot;, &quot;CANCELADA&quot;);&#xd;	}&#xd;	&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessFinish</eventId>
+        <processId>RAF08</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessFinish(processId){&#xd;
+	&#xd;
+	var companyId = getValue(&quot;WKCompany&quot;);&#xd;
+	var carpetaAdjuntosId = hAPI.getCardValue(&quot;carpetaAdjuntosId&quot;);&#xd;
+		&#xd;
+	var arq = arqMarvinLoad(&quot;v1&quot;, {&#xd;
+		prop: &quot;com.arquimeda.marvin.server.js.Properties-v1&quot;&#xd;
+	});&#xd;
+	arq.prop.load({&#xd;
+		datasetName: &quot;parametros&quot;&#xd;
+	});&#xd;
+	&#xd;
+	var login = arq.prop.get(&quot;RAF08.usuarioSistema.login&quot;);&#xd;
+	var password = arq.prop.get(&quot;RAF08.usuarioSistema.pass&quot;);&#xd;
+	var sysCollegueId = arq.prop.get(&quot;RAF08.usuarioSistema.id&quot;);&#xd;
+		&#xd;
+	ged.updateFolder({&#xd;
+		user: login,&#xd;
+		password: password,&#xd;
+		colleagueId: sysCollegueId,&#xd;
+		companyId: companyId,&#xd;
+		&#xd;
+		docId: carpetaAdjuntosId,&#xd;
+		security: [&#xd;
+		    {&#xd;
+				permission: true, &#xd;
+				attributionType: &quot;ALL&quot;, &#xd;
+				attributionValue: &quot;all&quot;, &#xd;
+				securityLevel: &quot;NONE&quot;&#xd;
+		    }&#xd;
+		]&#xd;
+	});&#xd;
+&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeTaskSave</eventId>
+        <processId>RAF08</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+	&#xd;
+	var nroProceso = getValue(&quot;WKNumProces&quot;);&#xd;
+	var completo = getValue(&apos;WKCompletTask&apos;);&#xd;
+	var tarea = getValue(&quot;WKNumState&quot;);&#xd;
+	var userId = getValue(&quot;WKUser&quot;);&#xd;
+	var comentarios = getValue(&quot;WKUserComment&quot;);&#xd;
+	&#xd;
+	var ejb = new javax.naming.InitialContext().lookup(&quot;java:global/raf-inversioncomercial-backend/InversionComercialEJB&quot;);&#xd;
+	&#xd;
+	log.error(&apos;**** BeforeTaskSave RAF08; userId: &apos; + userId + &apos;; tarea: &apos; + tarea + &apos;; completo? : &apos; + completo + &apos;; nextSequenceId:&apos; + nextSequenceId);&#xd;
+	&#xd;
+	var tareas = {&#xd;
+			&apos;IniciarSolicitud&apos;: 0,&#xd;
+			&apos;Inicial&apos;: 4,&#xd;
+			&apos;esAPM&apos;: 5,&#xd;
+			&apos;RevisarAprobarIC&apos; : 7,&#xd;
+			&apos;AprobarICGteArea&apos; : 9,&#xd;
+			&apos;CompletarIC&apos; : 12,&#xd;
+			&apos;AprobarICGtePromo&apos; : 19,&#xd;
+			&apos;EjecutarInversion&apos; : 41,&#xd;
+			&apos;CotizarIC&apos; : 53,&#xd;
+			&apos;Rechazada&apos; : 35,&#xd;
+			&apos;Finalizada&apos; : 44,&#xd;
+			&apos;CartaAcuerdoRechazada&apos; : 55,&#xd;
+			&apos;CerrarInversionComercial&apos; : 63,&#xd;
+			&apos;Medical&apos; : 69&#xd;
+		};&#xd;
+	&#xd;
+	&#xd;
+	if (tarea == tareas.Inicial &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		var dateParser = new java.text.SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xd;
+&#xd;
+		log.error(&apos;**** BeforeTaskSave Inicial  &apos;);&#xd;
+		hAPI.setCardValue(&quot;fechaSolicitud&quot;, dateParser.format(new Date()));&#xd;
+&#xd;
+		validarPresupuesto();&#xd;
+		validarFechaCorte();&#xd;
+		&#xd;
+	}&#xd;
+	&#xd;
+	if (tarea == tareas.Inicial &amp;&amp; completo == &apos;false&apos;) {&#xd;
+		&#xd;
+		validarPresupuesto();&#xd;
+		validarFechaCorte();&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;INICIAR SOLICITUD&quot;);&#xd;
+		saveInversionComercial(ejb, nroProceso, &quot;PENDIENTE&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.RevisarAprobarIC &amp;&amp; completo == &quot;true&quot;) {&#xd;
+&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;REVISAR Y APROBAR (GTE DISTRITO)&quot;);&#xd;
+		saveInversionComercial(ejb, nroProceso, &quot;PENDIENTE&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.AprobarICGteArea &amp;&amp; completo == &quot;true&quot;) {&#xd;
+&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;APROBAR (GTE AREA)&quot;);&#xd;
+		hAPI.setCardValue(&quot;matriculaGteDistrito&quot;, userId);&#xd;
+		saveInversionComercial(ejb, nroProceso, &quot;PENDIENTE&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.CompletarIC &amp;&amp; completo == &quot;true&quot;) {&#xd;
+&#xd;
+		validarPresupuesto();&#xd;
+		validarFechaCorte();&#xd;
+			&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;COMPLETAR (APM)&quot;);&#xd;
+		saveInversionComercial(ejb, nroProceso, &quot;PENDIENTE&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.AprobarICGtePromo &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;APROBAR (GTE PROMOCION)&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;APROBAR (GTE PROMOCION)&quot;, &quot;PENDIENTE&quot;);&#xd;
+		&#xd;
+	}else if(nextSequenceId == tareas.Medical &amp;&amp; completo == &quot;true&quot;){&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;MEDICAL&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;MEDICAL&quot;, &quot;APROBADA&quot;);&#xd;
+		log.info(&quot;######### Iniciando proceso RAF-09. &quot;);&#xd;
+		iniciarProcesoCartaAcuerdo(ejb, nroProceso);&#xd;
+		log.info(&quot;######### Fin proceso RAF-09. &quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.CotizarIC &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;COTIZAR INVERSION&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;COTIZAR INVERSION&quot;, &quot;APROBADA&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.EjecutarInversion &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;EJECUTAR INVERSION&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;EJECUTAR INVERSION&quot;, &quot;APROBADA&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.CerrarInversionComercial &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;CERRAR INVERSION COMERCIAL&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;CERRAR INVERSION COMERCIAL&quot;, &quot;APROBADA&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.Rechazada &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;SOLICITUD RECHAZADA&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;SOLICITUD RECHAZADA&quot;, &quot;RECHAZADA&quot;);&#xd;
+		&#xd;
+		var motivoRechazo = hAPI.getCardValue(&quot;motivoRechazo&quot;);&#xd;
+		if (motivoRechazo == &quot;&quot;){&#xd;
+			throw &quot;El motivo de rechazo es obligatorio.&quot;;&#xd;
+		}&#xd;
+		ejb.actualizarMotivoRechazo(java.lang.Integer.parseInt(nroProceso), motivoRechazo);&#xd;
+		&#xd;
+		sendMail(&quot;RAF08-Rechazada&quot;);&#xd;
+		&#xd;
+	}else if (nextSequenceId == tareas.CartaAcuerdoRechazada &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;CARTA ACUERDO RECHAZADA&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;CARTA ACUERDO RECHAZADA&quot;, &quot;CARTA_ACUERDO_RECHAZADA&quot;);&#xd;
+	&#xd;
+	}else if (nextSequenceId == tareas.Finalizada &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;tarea&quot;, &quot;SOLICITUD FINALIZADA&quot;);&#xd;
+		ejb.actualizarEstado(java.lang.Integer.parseInt(nroProceso), &quot;SOLICITUD FINALIZADA&quot;, &quot;FINALIZADA&quot;);&#xd;
+		&#xd;
+		var requestFolderId = createRequestFolder();&#xd;
+		uploadAttachmentsToGed(requestFolderId);&#xd;
+	&#xd;
+	}&#xd;
+&#xd;
+	// Para chequear que exista al menos 1 imputacion &#xd;
+	if(nextSequenceId != tareas.Rechazada &amp;&amp; nextSequenceId != tareas.CompletarIC &amp;&amp; completo == &apos;true&apos;){&#xd;
+		&#xd;
+		if(hAPI.getCardValue(&quot;esAPM&quot;) != &apos;true&apos; || (hAPI.getCardValue(&quot;esAPM&quot;) == &apos;true&apos; &amp;&amp; hAPI.getCardValue(&quot;tipoInversion&quot;) != &apos;becaNac&apos; &amp;&amp; hAPI.getCardValue(&quot;tipoInversion&quot;) != &apos;becaInt&apos;)){&#xd;
+			&#xd;
+			if(&#xd;
+					hAPI.getCardValue(&quot;selAlojamientoPresupuesto&quot;) == &quot;DELEGADO&quot; ||&#xd;
+					hAPI.getCardValue(&quot;selTrasladoPresupuesto&quot;) == &quot;DELEGADO&quot; ||&#xd;
+					hAPI.getCardValue(&quot;selInscripcionPresupuesto&quot;) == &quot;DELEGADO&quot; &#xd;
+			){&#xd;
+				&#xd;
+				if(hAPI.getCardValue(&quot;porcentajeImputado___1&quot;) == null &amp;&amp; completo == &apos;true&apos;){&#xd;
+					throw &quot;Debe cargar al menos una imputación.&quot;;&#xd;
+				}&#xd;
+				&#xd;
+				if (!new java.math.BigDecimal(formatBigDecimal(hAPI.getCardValue(&quot;porcentajeImputadoTotal&quot;))).setScale(2,java.math.RoundingMode.HALF_UP).equals(new java.math.BigDecimal(&quot;100.00&quot;))){&#xd;
+					throw &quot;La suma de las imputaciones debe ser igual al 100%.&quot;;&#xd;
+				}	&#xd;
+			}&#xd;
+				&#xd;
+		}&#xd;
+&#xd;
+	}&#xd;
+	&#xd;
+	// validar que al devolver la solicitud agreguen un comentario&#xd;
+	if(((tarea == tareas.RevisarAprobarIC &amp;&amp; nextSequenceId == tareas.CompletarIC) ||&#xd;
+			(tarea == tareas.AprobarICGteArea  &amp;&amp; nextSequenceId == tareas.RevisarAprobarIC) ||&#xd;
+			(tarea == tareas.AprobarICGtePromo &amp;&amp; nextSequenceId == tareas.RevisarAprobarIC))&#xd;
+			&amp;&amp; completo == &apos;true&apos;) {&#xd;
+		&#xd;
+		if (comentarios == &quot;&quot;){&#xd;
+			throw &quot;Debe realizar una observación para devolver la solicitud.&quot;;&#xd;
+		}&#xd;
+		&#xd;
+	}&#xd;
+	&#xd;
+	//Gte De promoción: devuelve al Gte de Distrito avisar al Gte de Área un campo con leyenda &quot;Esta solicitud ya fue aprobada y solicita una modificación&quot;.&#xd;
+	if(tarea == tareas.AprobarICGtePromo &amp;&amp; nextSequenceId == tareas.RevisarAprobarIC &amp;&amp; completo == &apos;true&apos;) {&#xd;
+		hAPI.setCardValue(&quot;notificacionGte&quot;, &apos;true&apos;);&#xd;
+	}&#xd;
+	&#xd;
+	if (tarea == tareas.CotizarIC &amp;&amp; completo == &apos;true&apos;) {&#xd;
+		ejb.actualizarFormaPago(java.lang.Integer.parseInt(nroProceso), hAPI.getCardValue(&quot;formaPago&quot;), hAPI.getCardValue(&quot;codFormaPago&quot;));&#xd;
+	}&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function validarFechaCorte(){&#xd;
+	&#xd;
+	if(hAPI.getCardValue(&quot;diasLimiteCarga&quot;) != &quot;&quot;){&#xd;
+		&#xd;
+		var diasLimiteCarga = java.lang.Integer.parseInt(hAPI.getCardValue(&quot;diasLimiteCarga&quot;));&#xd;
+		var fechaDesdeCongreso = hAPI.getCardValue(&quot;fechaDesdeCongreso&quot;).split(&quot;/&quot;);&#xd;
+		&#xd;
+		var timeDesdeCongreso = new Date(fechaDesdeCongreso[2],fechaDesdeCongreso[1],fechaDesdeCongreso[0]).getTime();&#xd;
+		var timeCorte = timeDesdeCongreso - diasLimiteCarga*1000*60*60*24;&#xd;
+		var currentDate = new Date();&#xd;
+	&#xd;
+		log.info(&quot;fechaCorte: &quot; + new Date().setTime(timeCorte) + &quot;; currentDate: &quot; + currentDate);&#xd;
+		log.info(&quot;timeCorte: &quot; + timeCorte + &quot;; currentDate: &quot; + currentDate.getTime());&#xd;
+		&#xd;
+		if (timeCorte &lt; currentDate.getTime()){&#xd;
+			throw &quot;No es posible iniciar la solicitud para la fecha del evento solicitado.&quot;;&#xd;
+		}&#xd;
+	}&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function validarPresupuesto(){&#xd;
+	&#xd;
+	var presupuestoHabilitado = hAPI.getCardValue(&quot;presupuestoHabilitado&quot;);&#xd;
+	var incluyeAlojamiento = hAPI.getCardValue(&quot;incluyeAlojamiento&quot;);&#xd;
+	var incluyeTraslado = hAPI.getCardValue(&quot;incluyeTraslado&quot;);&#xd;
+	var incluyeInscripcion = hAPI.getCardValue(&quot;incluyeInscripcion&quot;);&#xd;
+	var selAlojamientoPresupuesto = hAPI.getCardValue(&quot;selAlojamientoPresupuesto&quot;);&#xd;
+	var selTrasladoPresupuesto = hAPI.getCardValue(&quot;selTrasladoPresupuesto&quot;);&#xd;
+	var selInscripcionPresupuesto = hAPI.getCardValue(&quot;selInscripcionPresupuesto&quot;);&#xd;
+	&#xd;
+	if(presupuestoHabilitado == &quot;MARKETING&quot; || presupuestoHabilitado == &quot;DELEGADO&quot;){&#xd;
+		if(&#xd;
+			(incluyeAlojamiento == &quot;NO&quot; || (incluyeAlojamiento == &quot;SI&quot; &amp;&amp; selAlojamientoPresupuesto == presupuestoHabilitado)) &amp;&amp;&#xd;
+			(incluyeTraslado == &quot;NO&quot; || (incluyeTraslado == &quot;SI&quot; &amp;&amp; selTrasladoPresupuesto == presupuestoHabilitado)) &amp;&amp;&#xd;
+			(incluyeInscripcion == &quot;NO&quot; || (incluyeInscripcion == &quot;SI&quot; &amp;&amp; selInscripcionPresupuesto == presupuestoHabilitado)) &#xd;
+		){&#xd;
+			&#xd;
+			log.info(&quot;Presupuesto correcto. &quot;);&#xd;
+			&#xd;
+		}else{&#xd;
+			throw &quot;El presupuesto seleccionado no está habilitado para el evento.&quot;;&#xd;
+		}&#xd;
+&#xd;
+	}else{&#xd;
+		log.info(&quot;Presupuesto correcto COMBINADO. &quot;);&#xd;
+	}&#xd;
+}&#xd;
+&#xd;
+function createRequestFolder() {&#xd;
+	&#xd;
+	var arq = arqMarvinLoad(&quot;v1&quot;, {&#xd;
+		prop: &quot;com.arquimeda.marvin.server.js.Properties-v1&quot;&#xd;
+	});&#xd;
+	arq.prop.load({&#xd;
+		datasetName: &quot;parametros&quot;&#xd;
+	});&#xd;
+	&#xd;
+	var companyId = getValue(&quot;WKCompany&quot;),&#xd;
+		nroProceso = getValue(&quot;WKNumProces&quot;),&#xd;
+		userId = getValue(&quot;WKUser&quot;);&#xd;
+	&#xd;
+	log.info(&quot;**** Creando carpeta de la solicitud: &quot; + nroProceso + &quot; userId: &quot; + userId + &quot; companyId: &quot; + companyId);&#xd;
+	&#xd;
+	var login = arq.prop.get(&quot;RAF08.usuarioSistema.login&quot;);&#xd;
+	var password = arq.prop.get(&quot;RAF08.usuarioSistema.pass&quot;);&#xd;
+	var sysCollegueId = arq.prop.get(&quot;RAF08.usuarioSistema.id&quot;);&#xd;
+	var carpetaAdjuntosId = arq.prop.get(&quot;RAF08.carpetaAdjuntos.docId&quot;);&#xd;
+	&#xd;
+	var requestFolder = &quot;&quot;;	&#xd;
+&#xd;
+	var codGrupoGteDistrito = hAPI.getCardValue(&quot;codGrupoGteDistrito&quot;);&#xd;
+	var codGrupoGteArea = hAPI.getCardValue(&quot;codGrupoGteArea&quot;);&#xd;
+	var codGrupoGtePromocion = hAPI.getCardValue(&quot;codGrupoGtePromocion&quot;);&#xd;
+	&#xd;
+		var securityArr = [];&#xd;
+		&#xd;
+		securityArr.push({&#xd;
+			permission: true, &#xd;
+			attributionType: &quot;GROUP&quot;, &#xd;
+			attributionValue: codGrupoGteDistrito, &#xd;
+			securityLevel: &quot;READING&quot;&#xd;
+		});&#xd;
+		&#xd;
+		securityArr.push({&#xd;
+			permission: true, &#xd;
+			attributionType: &quot;GROUP&quot;, &#xd;
+			attributionValue: codGrupoGteArea, &#xd;
+			securityLevel: &quot;READING&quot;&#xd;
+		});&#xd;
+		&#xd;
+		securityArr.push({&#xd;
+			permission: true, &#xd;
+			attributionType: &quot;GROUP&quot;, &#xd;
+			attributionValue: codGrupoGtePromocion, &#xd;
+			securityLevel: &quot;READING&quot;&#xd;
+		});&#xd;
+		&#xd;
+		securityArr.push({&#xd;
+			permission: true, &#xd;
+			attributionType: &quot;GROUP&quot;, &#xd;
+			attributionValue: &quot;RAF08-GTOR-PROCESO&quot;, &#xd;
+			securityLevel: &quot;READING&quot;&#xd;
+		});&#xd;
+		&#xd;
+		securityArr.push({&#xd;
+			permission: true, &#xd;
+			attributionType: &quot;ALL&quot;, &#xd;
+			attributionValue: &quot;all&quot;, &#xd;
+			securityLevel: &quot;ALL&quot;&#xd;
+		});&#xd;
+&#xd;
+		requestFolder = ged.createFolderIfNotExist({&#xd;
+			user: login,&#xd;
+			password: password,&#xd;
+			colleagueId: sysCollegueId,&#xd;
+			publisherId: userId,&#xd;
+			companyId: companyId,			&#xd;
+			searchName: nroProceso,&#xd;
+			name: nroProceso,&#xd;
+			additionalComments: &quot;&quot;,&#xd;
+			parentId: carpetaAdjuntosId,&#xd;
+			inheritSecurity: false,&#xd;
+			security: securityArr&#xd;
+		});&#xd;
+		&#xd;
+		log.info(&quot;**** Carpeta de la solicitud &quot; + nroProceso + &quot; creada. DocId: &quot; + requestFolder.getDocumentId());&#xd;
+		&#xd;
+		hAPI.setCardValue(&quot;carpetaAdjuntosId&quot;, requestFolder.getDocumentId());&#xd;
+	&#xd;
+	return requestFolder.getDocumentId();&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function uploadAttachmentsToGed(parentFolderId){&#xd;
+	&#xd;
+	log.info(&quot;**** Cargando los documentos adjuntos al GED. Carpeta: &quot; + parentFolderId);&#xd;
+	&#xd;
+	var calendar = java.util.Calendar.getInstance().getTime();&#xd;
+    var docs = hAPI.listAttachments();&#xd;
+    var attachmentsData = []&#xd;
+    &#xd;
+    for (var i = 0; i &lt; docs.size(); i++) {&#xd;
+        var doc = docs.get(i);&#xd;
+        &#xd;
+        if (doc.getDocumentType() != &quot;7&quot;) {&#xd;
+            continue;&#xd;
+        }&#xd;
+          &#xd;
+        doc.setParentDocumentId(java.lang.Integer.parseInt(parentFolderId));&#xd;
+        doc.setVersionDescription(&quot;RAF08: &quot; + getValue(&quot;WKNumProces&quot;));&#xd;
+        doc.setExpires(false);&#xd;
+        doc.setCreateDate(calendar);&#xd;
+        doc.setInheritSecurity(true);&#xd;
+        doc.setTopicId(1);&#xd;
+        doc.setUserNotify(false);&#xd;
+        doc.setValidationStartDate(calendar);&#xd;
+        doc.setVersionOption(&quot;0&quot;);&#xd;
+        doc.setUpdateIsoProperties(true);&#xd;
+        &#xd;
+        log.info(&quot;****** Subiendo el archivo: &quot; + doc.getDocumentDescription());&#xd;
+        hAPI.publishWorkflowAttachment(doc);&#xd;
+        attachmentsData.push(doc.getDocumentId()+&quot;___:___&quot;+doc.getDocumentDescription());&#xd;
+    }&#xd;
+    &#xd;
+    return attachmentsData;&#xd;
+       &#xd;
+}&#xd;
+&#xd;
+function saveInversionComercial(ejb, nroProceso, estado){&#xd;
+	&#xd;
+	log.info(&quot;****** save IC &quot;);&#xd;
+&#xd;
+	var cardData = hAPI.getCardData(nroProceso);&#xd;
+	var qtyImputaciones = howManyChildsOf(&quot;newProd&quot;,cardData);&#xd;
+	&#xd;
+	log.info(&quot;****** save IC cant child: &quot; + qtyImputaciones);&#xd;
+	&#xd;
+	var inversionComercialDTO = ejb.newInversionComercial();&#xd;
+	var sdf = new java.text.SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xd;
+	var simpleDateFormat = new java.text.SimpleDateFormat(&quot;dd/MM/yyyy&quot;);&#xd;
+	&#xd;
+	var fechaSolicitud = hAPI.getCardValue(&quot;fechaSolicitud&quot;) != &quot;&quot; ? sdf.parse(hAPI.getCardValue(&quot;fechaSolicitud&quot;)) : null;&#xd;
+	&#xd;
+	log.info(&quot;****** fechaSolicitud: &quot; + fechaSolicitud);&#xd;
+	&#xd;
+	log.info(&quot;****** fechaVtoPasaporte: &quot;+ hAPI.getCardValue(&quot;fechaVtoPasaporte&quot;));&#xd;
+	log.info(&quot;****** fechaNacimiento: &quot;+ hAPI.getCardValue(&quot;fechaNacimiento&quot;));&#xd;
+	&#xd;
+	inversionComercialDTO.setNumeroSolicitud(java.lang.Integer.parseInt(nroProceso));&#xd;
+	inversionComercialDTO.setFechaSolicitud(fechaSolicitud);&#xd;
+	inversionComercialDTO.setMatriculaSolicitante(hAPI.getCardValue(&quot;matriculaSolicitante&quot;));&#xd;
+	inversionComercialDTO.setEsAPM(hAPI.getCardValue(&quot;esAPM&quot;) == &quot;true&quot;? true: false);&#xd;
+	inversionComercialDTO.setAreaCodigo(hAPI.getCardValue(&quot;areaCodigo&quot;));&#xd;
+	inversionComercialDTO.setAreaDescripcion(hAPI.getCardValue(&quot;area&quot;));&#xd;
+	inversionComercialDTO.setDistritoCodigo(hAPI.getCardValue(&quot;distritoCodigo&quot;));&#xd;
+	inversionComercialDTO.setDistritoDescripcion(hAPI.getCardValue(&quot;distrito&quot;));&#xd;
+	inversionComercialDTO.setCodGrupoGteArea(hAPI.getCardValue(&quot;codGrupoGteArea&quot;));&#xd;
+	inversionComercialDTO.setCodGrupoGteDistrito(hAPI.getCardValue(&quot;codGrupoGteDistrito&quot;));   &#xd;
+	inversionComercialDTO.setCodGrupoAsistenteDistrito(hAPI.getCardValue(&quot;codGrupoAsistDistrito&quot;));&#xd;
+	inversionComercialDTO.setCodGrupoGtePromocion(hAPI.getCardValue(&quot;codGrupoGtePromocion&quot;));&#xd;
+	inversionComercialDTO.setLimiteAprGtePromo(new java.math.BigDecimal(hAPI.getCardValue(&quot;limiteAprGtePromo&quot;) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;limiteAprGtePromo&quot;)) : 0))&#xd;
+	inversionComercialDTO.setNotificacionGte(hAPI.getCardValue(&quot;notificacionGte&quot;));&#xd;
+	inversionComercialDTO.setSolicitante(hAPI.getCardValue(&quot;solicitante&quot;));&#xd;
+	inversionComercialDTO.setGrupoGteDistrito(hAPI.getCardValue(&quot;grupoGteDistrito&quot;));&#xd;
+	inversionComercialDTO.setNombreAPM(hAPI.getCardValue(&quot;nombreAPM&quot;));&#xd;
+	inversionComercialDTO.setMatriculaAPM(hAPI.getCardValue(&quot;matriculaAPM&quot;));&#xd;
+	inversionComercialDTO.setEmailAPM(hAPI.getCardValue(&quot;emailAPM&quot;));&#xd;
+	inversionComercialDTO.setTipoInversion(hAPI.getCardValue(&quot;tipoInversion&quot;));&#xd;
+	inversionComercialDTO.setCiudad(hAPI.getCardValue(&quot;ciudad&quot;));&#xd;
+	inversionComercialDTO.setApellido(hAPI.getCardValue(&quot;apellido&quot;));&#xd;
+	inversionComercialDTO.setNombre(hAPI.getCardValue(&quot;nombre&quot;));&#xd;
+	inversionComercialDTO.setDni(hAPI.getCardValue(&quot;dni&quot;));&#xd;
+	inversionComercialDTO.setTipoDocumento(hAPI.getCardValue(&quot;tipoDocumento&quot;));&#xd;
+	inversionComercialDTO.setNumeroDocumento(hAPI.getCardValue(&quot;numeroDocumento&quot;));&#xd;
+	inversionComercialDTO.setNumeroPasaporte(hAPI.getCardValue(&quot;numeroPasaporte&quot;));&#xd;
+	inversionComercialDTO.setFechaVtoPasaporte(hAPI.getCardValue(&quot;fechaVtoPasaporte&quot;) != &quot;&quot; ? simpleDateFormat.parse(hAPI.getCardValue(&quot;fechaVtoPasaporte&quot;)) : null);&#xd;
+	inversionComercialDTO.setSexo(hAPI.getCardValue(&quot;sexo&quot;) != &quot;&quot;? hAPI.getCardValue(&quot;sexo&quot;) : &quot;&quot;);&#xd;
+	inversionComercialDTO.setFechaNacimiento(hAPI.getCardValue(&quot;fechaNacimiento&quot;) != &quot;&quot; ? simpleDateFormat.parse(hAPI.getCardValue(&quot;fechaNacimiento&quot;)) : null);&#xd;
+	inversionComercialDTO.setNacionalidad(hAPI.getCardValue(&quot;nacionalidad&quot;));&#xd;
+	inversionComercialDTO.setDomicilio(hAPI.getCardValue(&quot;domicilio&quot;));&#xd;
+	inversionComercialDTO.setLocalidad(hAPI.getCardValue(&quot;localidad&quot;));&#xd;
+	inversionComercialDTO.setProvincia(hAPI.getCardValue(&quot;provincia&quot;));&#xd;
+	inversionComercialDTO.setPais(hAPI.getCardValue(&quot;pais&quot;));&#xd;
+	inversionComercialDTO.setCodigoPostal(hAPI.getCardValue(&quot;codigoPostal&quot;));&#xd;
+	inversionComercialDTO.setTelefonoContacto(hAPI.getCardValue(&quot;telefonoContacto&quot;));&#xd;
+	inversionComercialDTO.setCelular(hAPI.getCardValue(&quot;celular&quot;));&#xd;
+	inversionComercialDTO.setMailContacto(hAPI.getCardValue(&quot;mailContacto&quot;));&#xd;
+	inversionComercialDTO.setMotivoViaje(hAPI.getCardValue(&quot;motivoViaje&quot;));&#xd;
+	inversionComercialDTO.setEspecialidadProfesional(hAPI.getCardValue(&quot;especialidadProfesional&quot;));&#xd;
+	inversionComercialDTO.setNombreCongreso(hAPI.getCardValue(&quot;nombreCongreso&quot;));&#xd;
+	inversionComercialDTO.setLugarCongreso(hAPI.getCardValue(&quot;lugarCongreso&quot;));&#xd;
+	inversionComercialDTO.setFechaDesdeCongreso(hAPI.getCardValue(&quot;fechaDesdeCongreso&quot;) != &quot;&quot; ? simpleDateFormat.parse(hAPI.getCardValue(&quot;fechaDesdeCongreso&quot;)) : null);&#xd;
+	inversionComercialDTO.setFechaHastaCongreso(hAPI.getCardValue(&quot;fechaHastaCongreso&quot;) != &quot;&quot; ? simpleDateFormat.parse(hAPI.getCardValue(&quot;fechaHastaCongreso&quot;)) : null);&#xd;
+	inversionComercialDTO.setIdCongreso(hAPI.getCardValue(&quot;idCongreso&quot;) != &quot;&quot; ? java.lang.Integer.parseInt(hAPI.getCardValue(&quot;idCongreso&quot;)) : null);&#xd;
+	inversionComercialDTO.setNombreHotel(hAPI.getCardValue(&quot;nombreHotel&quot;));&#xd;
+	inversionComercialDTO.setContactoHotel(hAPI.getCardValue(&quot;contactoHotel&quot;));&#xd;
+	inversionComercialDTO.setTelefonoHotel(hAPI.getCardValue(&quot;telefonoHotel&quot;));&#xd;
+	inversionComercialDTO.setCheckinHotel(hAPI.getCardValue(&quot;checkinHotel&quot;));&#xd;
+	inversionComercialDTO.setCheckoutHotel(hAPI.getCardValue(&quot;checkoutHotel&quot;));&#xd;
+	inversionComercialDTO.setTipoHabitacion(hAPI.getCardValue(&quot;tipoHabitacion&quot;));&#xd;
+	inversionComercialDTO.setCantidadNoche(java.lang.Integer.parseInt(hAPI.getCardValue(&quot;cantidadNoche&quot;) != &quot;&quot; ? hAPI.getCardValue(&quot;cantidadNoche&quot;) : 0));&#xd;
+	inversionComercialDTO.setCochera(hAPI.getCardValue(&quot;cochera&quot;));&#xd;
+	inversionComercialDTO.setItinerarioIda(hAPI.getCardValue(&quot;itinerarioIda&quot;));&#xd;
+	inversionComercialDTO.setFechaIda(hAPI.getCardValue(&quot;fechaIda&quot;) != &quot;&quot; ? simpleDateFormat.parse(hAPI.getCardValue(&quot;fechaIda&quot;)) : null);&#xd;
+	inversionComercialDTO.setNroVueloIda(hAPI.getCardValue(&quot;nroVueloIda&quot;));&#xd;
+	inversionComercialDTO.setHoraSalidaIda(hAPI.getCardValue(&quot;horaSalidaIda&quot;));&#xd;
+	inversionComercialDTO.setItinerarioRegreso(hAPI.getCardValue(&quot;itinerarioRegreso&quot;));&#xd;
+	inversionComercialDTO.setFechaRegreso(hAPI.getCardValue(&quot;fechaRegreso&quot;) != &quot;&quot; ? simpleDateFormat.parse(hAPI.getCardValue(&quot;fechaRegreso&quot;)) : null);&#xd;
+	inversionComercialDTO.setNroVueloRegreso(hAPI.getCardValue(&quot;nroVueloRegreso&quot;));&#xd;
+	inversionComercialDTO.setHoraSalidaRegreso(hAPI.getCardValue(&quot;horaSalidaRegreso&quot;));&#xd;
+	inversionComercialDTO.setTituloGrado(hAPI.getCardValue(&quot;tituloGrado&quot;));&#xd;
+	inversionComercialDTO.setInstitucionDondeObtuvo(hAPI.getCardValue(&quot;institucionDondeObtuvo&quot;));&#xd;
+	inversionComercialDTO.setAnioEgreso(hAPI.getCardValue(&quot;anioEgreso&quot;));&#xd;
+	inversionComercialDTO.setMatricula(hAPI.getCardValue(&quot;matricula&quot;));&#xd;
+	inversionComercialDTO.setInstitucionQueTrabaja(hAPI.getCardValue(&quot;institucionQueTrabaja&quot;));&#xd;
+	inversionComercialDTO.setCargoPosicion(hAPI.getCardValue(&quot;cargoPosicion&quot;));&#xd;
+	inversionComercialDTO.setTipoInscripcion(hAPI.getCardValue(&quot;tipoInscripcion&quot;));&#xd;
+	inversionComercialDTO.setNombreSociedad(hAPI.getCardValue(&quot;nombreSociedad&quot;));&#xd;
+	inversionComercialDTO.setNumeroSocio(hAPI.getCardValue(&quot;numeroSocio&quot;));&#xd;
+	inversionComercialDTO.setEquipamiento(hAPI.getCardValue(&quot;equipamiento&quot;));&#xd;
+	inversionComercialDTO.setImporte(new java.math.BigDecimal(hAPI.getCardValue(&quot;importe&quot;) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;importe&quot;)) : 0));&#xd;
+	inversionComercialDTO.setImporteARS(new java.math.BigDecimal(hAPI.getCardValue(&quot;importeARS&quot;) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;importeARS&quot;)) : 0));&#xd;
+	inversionComercialDTO.setImporteUSD(new java.math.BigDecimal(hAPI.getCardValue(&quot;importeUSD&quot;) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;importeUSD&quot;)) : 0));&#xd;
+	inversionComercialDTO.setMoneda(hAPI.getCardValue(&quot;moneda&quot;));&#xd;
+	inversionComercialDTO.setCodMoneda(hAPI.getCardValue(&quot;codMoneda&quot;));&#xd;
+	inversionComercialDTO.setTipoCambioARS(new java.math.BigDecimal(hAPI.getCardValue(&quot;tipoCambioARS&quot;) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;tipoCambioARS&quot;)): 0));&#xd;
+	inversionComercialDTO.setTipoCambioUSD(new java.math.BigDecimal(hAPI.getCardValue(&quot;tipoCambioUSD&quot;) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;tipoCambioUSD&quot;)): 0));&#xd;
+	inversionComercialDTO.setFormaPago(hAPI.getCardValue(&quot;formaPago&quot;));&#xd;
+	inversionComercialDTO.setCodFormaPago(hAPI.getCardValue(&quot;codFormaPago&quot;));&#xd;
+	inversionComercialDTO.setMotivoRechazo(hAPI.getCardValue(&quot;motivoRechazo&quot;));&#xd;
+	inversionComercialDTO.setTarea(hAPI.getCardValue(&quot;tarea&quot;));&#xd;
+	inversionComercialDTO.setMatriculaGteDistrito(hAPI.getCardValue(&quot;matriculaGteDistrito&quot;));&#xd;
+	inversionComercialDTO.setMembresia(hAPI.getCardValue(&quot;membresia&quot;));&#xd;
+	inversionComercialDTO.setComentariosAlojamiento(hAPI.getCardValue(&quot;comentariosAlojamiento&quot;));&#xd;
+	inversionComercialDTO.setDiasRequeridos(hAPI.getCardValue(&quot;diasRequeridos&quot;) != &quot;&quot;? java.lang.Integer.parseInt(hAPI.getCardValue(&quot;diasRequeridos&quot;)) : null);&#xd;
+	inversionComercialDTO.setNombreMedico1(hAPI.getCardValue(&quot;nombreMedico1&quot;));&#xd;
+	inversionComercialDTO.setNombreMedico2(hAPI.getCardValue(&quot;nombreMedico2&quot;));&#xd;
+	inversionComercialDTO.setComparteHabitacion(hAPI.getCardValue(&quot;comparteHabitacion&quot;));&#xd;
+	inversionComercialDTO.setComentariosIda(hAPI.getCardValue(&quot;comentariosIda&quot;));&#xd;
+	inversionComercialDTO.setComentariosRegreso(hAPI.getCardValue(&quot;comentariosRegreso&quot;));&#xd;
+	inversionComercialDTO.setTipoTrasladoIda(hAPI.getCardValue(&quot;tipoTrasladoIda&quot;));&#xd;
+	inversionComercialDTO.setTipoTrasladoRegreso(hAPI.getCardValue(&quot;tipoTrasladoRegreso&quot;));&#xd;
+	inversionComercialDTO.setCuit(hAPI.getCardValue(&quot;cuit&quot;));&#xd;
+	inversionComercialDTO.setDiasLimiteCarga(hAPI.getCardValue(&quot;diasLimiteCarga&quot;) != &quot;&quot;? java.lang.Integer.parseInt(hAPI.getCardValue(&quot;diasLimiteCarga&quot;)) : null);&#xd;
+	&#xd;
+	log.info(&quot;################### presupuestoHabilitado: &quot; + hAPI.getCardValue(&quot;presupuestoHabilitado&quot;));&#xd;
+	&#xd;
+	inversionComercialDTO.setPresupuestoHabilitado(hAPI.getCardValue(&quot;presupuestoHabilitado&quot;));&#xd;
+	inversionComercialDTO.setIncluyeAlojamiento(hAPI.getCardValue(&quot;incluyeAlojamiento&quot;));&#xd;
+	inversionComercialDTO.setIncluyeTraslado(hAPI.getCardValue(&quot;incluyeTraslado&quot;));&#xd;
+	inversionComercialDTO.setIncluyeInscripcion(hAPI.getCardValue(&quot;incluyeInscripcion&quot;));&#xd;
+	inversionComercialDTO.setSeleccionAlojamientoPresupuesto(hAPI.getCardValue(&quot;selAlojamientoPresupuesto&quot;));&#xd;
+	inversionComercialDTO.setSeleccionTrasladoPresupuesto(hAPI.getCardValue(&quot;selTrasladoPresupuesto&quot;));&#xd;
+	inversionComercialDTO.setSeleccionInscripcionoPresupuesto(hAPI.getCardValue(&quot;selInscripcionPresupuesto&quot;));&#xd;
+	&#xd;
+		//Instancio las imputaciones&#xd;
+		for(var i=1; i&lt;=qtyImputaciones; i++){&#xd;
+			var imputacionDTO = inversionComercialDTO.newImputacionDTO();&#xd;
+			&#xd;
+			log.info(&quot;****** Producto: &quot; + hAPI.getCardValue(&quot;newProd___&quot;+i));&#xd;
+			&#xd;
+			imputacionDTO.setProducto(hAPI.getCardValue(&quot;newProd___&quot;+i));&#xd;
+			imputacionDTO.setCodigoProducto(hAPI.getCardValue(&quot;codigoProducto___&quot;+i));&#xd;
+			imputacionDTO.setPorcentaje(new java.math.BigDecimal(hAPI.getCardValue(&quot;porcentajeImputado___&quot;+i) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;porcentajeImputado___&quot;+i)) : 0));&#xd;
+			imputacionDTO.setPresupuestoARS(new java.math.BigDecimal(hAPI.getCardValue(&quot;presupuestoARS___&quot;+i) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;presupuestoARS___&quot;+i)) : 0));&#xd;
+			imputacionDTO.setConsumidoARS(new java.math.BigDecimal(hAPI.getCardValue(&quot;consumidoARS___&quot;+i) != &quot;&quot; ? formatBigDecimal(hAPI.getCardValue(&quot;consumidoARS___&quot;+i)) : 0));&#xd;
+&#xd;
+		}&#xd;
+		&#xd;
+		log.info(&quot;****** Previo al save EJB&quot;);&#xd;
+		ejb.save(inversionComercialDTO, estado);&#xd;
+		log.info(&quot;****** Fin del save Inversion Comercial. Solicitud nro:&quot;+getValue(&quot;WKNumProces&quot;));&#xd;
+&#xd;
+}&#xd;
+&#xd;
+function iniciarProcesoCartaAcuerdo(ejb, nroProceso){&#xd;
+	ejb.iniciarBPM(java.lang.Integer.parseInt(nroProceso));&#xd;
+}&#xd;
+&#xd;
+function sendMail(mailTemplate, comment) {&#xd;
+	var companyId = getValue(&quot;WKCompany&quot;);&#xd;
+	var nroProceso = getValue(&quot;WKNumProces&quot;);&#xd;
+	var changeReasonId = hAPI.getCardValue(&quot;changeReasonId&quot;);&#xd;
+	&#xd;
+	var mailTemplatesData = {&#xd;
+		&quot;RAF08-Rechazada&quot;: {&#xd;
+			getSubject: function() {&#xd;
+				return &quot;Solicitud &quot; + nroProceso + &quot; de Inversiones Comerciales fue rechazada&quot;;&#xd;
+			},&#xd;
+			getDestinatarios: function() {&#xd;
+				return getNotificationEmails(changeReasonId, &quot;avisoRechazada&quot;);&#xd;
+			}&#xd;
+		}&#xd;
+	};&#xd;
+	&#xd;
+	var mailTemplateData = mailTemplatesData[mailTemplate];&#xd;
+	var subject = mailTemplateData.getSubject();&#xd;
+	var destinatarios = mailTemplateData.getDestinatarios();&#xd;
+	&#xd;
+	var cardData = hAPI.getCardData(nroProceso);&#xd;
+	&#xd;
+	var tipoInversion;&#xd;
+	&#xd;
+	log.info(&quot; ########################## RAF08-bts tipoInversion: &quot; + cardData.get(&quot;tipoInversion&quot;));&#xd;
+	&#xd;
+	if(cardData.get(&quot;tipoInversion&quot;) == &quot;alojamientos&quot;) {&#xd;
+		tipoInversion = &quot;ALOJAMIENTO CONGRESO O EVENTO CIENTIFICO&quot;;&#xd;
+	}else if(cardData.get(&quot;tipoInversion&quot;) == &quot;aereosNac&quot;) {&#xd;
+		tipoInversion = &quot;AEREO CONGRESO NACIONAL&quot;;&#xd;
+	}else if(cardData.get(&quot;tipoInversion&quot;) == &quot;inscripciones&quot;) {&#xd;
+		tipoInversion = &quot;INSCRIPCION A CONGRESO&quot;;&#xd;
+	}else if(cardData.get(&quot;tipoInversion&quot;) == &quot;aereosInt&quot;) {&#xd;
+		tipoInversion = &quot;AEREO CONGRESO INTERNACIONAL&quot;;&#xd;
+	}else if(cardData.get(&quot;tipoInversion&quot;) == &quot;equipamientos&quot;) {&#xd;
+		tipoInversion = &quot;EQUIPAMIENTO MEDICO&quot;;&#xd;
+	}else if(cardData.get(&quot;tipoInversion&quot;) == &quot;becaNac&quot;) {&#xd;
+		tipoInversion = &quot;BECA COMPLETA/PARCIAL NACIONAL&quot;;&#xd;
+	}else if(cardData.get(&quot;tipoInversion&quot;) == &quot;becaInt&quot;) {&#xd;
+		tipoInversion = &quot;BECA COMPLETA/PARCIAL INTERNACIONAL&quot;;&#xd;
+	}else if(cardData.get(&quot;tipoInversion&quot;) == &quot;patrocinio&quot;) {&#xd;
+		tipoInversion = &quot;PATROCINIO EDUCACION MEDICA&quot;;&#xd;
+	}	&#xd;
+&#xd;
+	var data = {		&#xd;
+		&quot;numeroSolicitud&quot;: cardData.get(&quot;nroSolicitud&quot;),&#xd;
+		&quot;area&quot;: cardData.get(&quot;area&quot;),&#xd;
+		&quot;distrito&quot;: cardData.get(&quot;distrito&quot;),&#xd;
+		&quot;nombreAPM&quot;: capitalize(cardData.get(&quot;nombreAPM&quot;)),&#xd;
+		&quot;tipoInversion&quot;: tipoInversion,&#xd;
+		&quot;nombre&quot;: cardData.get(&quot;nombre&quot;),&#xd;
+		&quot;apellido&quot;: cardData.get(&quot;apellido&quot;),&#xd;
+		&quot;formaPago&quot;: cardData.get(&quot;formaPago&quot;),&#xd;
+		&quot;motivoRechazo&quot;: cardData.get(&quot;motivoRechazo&quot;)&#xd;
+&#xd;
+	}&#xd;
+	&#xd;
+	// Aca se envia el mail a los destinatarios.&#xd;
+	log.info(&quot;***** Enviando mail a destinatarios: &quot; + destinatarios);&#xd;
+	for(var j in destinatarios){&#xd;
+		var mail = destinatarios[j];&#xd;
+		try{&#xd;
+			sendCustomEmail({&#xd;
+				companyId: companyId, &#xd;
+				subject: subject, &#xd;
+				from: &quot;procesobpm@raffo.com.ar&quot;, &#xd;
+				to: mail, &#xd;
+				templateId: mailTemplate,&#xd;
+				templateDialect: &quot;es&quot;,&#xd;
+				templateHtml: mailTemplate + &quot;.html&quot;,&#xd;
+				datos: data&#xd;
+			});&#xd;
+		} catch (e){&#xd;
+			log.error(&quot;RAF08-beforeTaskSave - Error enviando mail a &quot;+mail + &quot; template: &quot; + mailTemplate);&#xd;
+		}&#xd;
+	}&#xd;
+}&#xd;
+&#xd;
+function getNotificationEmails(reasonName, fieldName){&#xd;
+	var mails = [];&#xd;
+	&#xd;
+	var usuariosGrupoGteDistrito = getUserList(hAPI.getCardValue(&quot;codGrupoGteDistrito&quot;));&#xd;
+    &#xd;
+    for(var i = 0; i &lt; usuariosGrupoGteDistrito.size(); i++) { &#xd;
+    	var mailsAux = getMailList(usuariosGrupoGteDistrito.get(i));&#xd;
+    	 for(var j = 0; j &lt; mailsAux.size(); j++) {  &#xd;
+    		 mails.push(mailsAux.get(j));&#xd;
+    	}&#xd;
+    }&#xd;
+&#xd;
+    &#xd;
+    log.info(&quot;*** usuariosGrupoGteDistrito: &quot; + &quot; mails: &quot;+ mails);&#xd;
+	&#xd;
+    log.info(&quot;*** getNotificationEmails: &quot; + hAPI.getCardValue(&quot;areaCodigo&quot;) + &quot; mails:&quot;+mails);&#xd;
+    &#xd;
+    return mails;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>onNotify</eventId>
+        <processId>RAF08</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function onNotify(subject, receivers, template, params){&#xd;
+&#xd;
+	log.info(&quot;*****Ejecutando RAF08.onNotify(&quot; + subject + &quot;, &quot; + receivers + &quot;,  &quot; + template + &quot; , &quot; + params + &quot;);&quot;);&#xd;
+	&#xd;
+	if(template == &quot;TPLCOMPLEMENT_AUTHORITY_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLCOMPLEMENT_MANAGER_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLCOMPLEMENT_REQUISITIONER_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLCOMPLEMENT_AUTHORITY&quot; ||&#xd;
+			template == &quot;TPLCOMPLEMENT_MANAGER&quot; ||&#xd;
+			template == &quot;TPLCOMPLEMENT_REQUISITIONER&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_WATCH_MODIFY_CONTENT&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_MEETING_ENDED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_MEETING_CREATED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_VERSION_REMOVED_YOU_APPROVED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_YOU_APPROVED_BEFORE_NEW_VERSION&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_ALL_VERSION_REMOVED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_YOUR_RESPONSABILITY_WILL_EXPIRE&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_UPDATED_SUBJECT_INTEREST&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_REMOVED_SUBJECT_INTEREST&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_GROUPED_REPROVED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_REPROVED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_GROUPED_APPROVED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_APPROVED&quot; ||&#xd;
+			template == &quot;TPLDOCUMENT_APPROVAL_PENDING&quot; ||&#xd;
+			template == &quot;TPLATTACHMENT_AUTHORITY_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLATTACHMENT_MANAGER_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLATTACHMENT_REQUISITIONER_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLATTACHMENT_AUTHORITY&quot; ||&#xd;
+			template == &quot;TPLATTACHMENT_MANAGER&quot; ||&#xd;
+			template == &quot;TPLATTACHMENT_REQUISITIONER&quot; ||&#xd;
+			template == &quot;TPLUPDATE_ATTACHMENT_REQUISITIONER&quot; ||&#xd;
+			template == &quot;TPLUPDATE_ATTACHMENT_AUTHORITY_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLUPDATE_ATTACHMENT_MANAGER_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLUPDATE_ATTACHMENT_REQUISITIONER_TO_SUBSTITUTE&quot; ||&#xd;
+			template == &quot;TPLUPDATE_ATTACHMENT_AUTHORITY&quot; ||&#xd;
+			template == &quot;TPLNEW_DOCUMENT_SUBJECT_INTEREST&quot; ||&#xd;
+			template == &quot;TPLNEW_DOCUMENT_VERSION_SUBJECT_INTEREST&quot; ||&#xd;
+			template == &quot;TPLTPLDOCUMENT_VERSION_REMOVED&quot; ||&#xd;
+			template == &quot;TPLBOARDSDOCUMENTAPPROVED&quot; ||&#xd;
+			template == &quot;TPLBOARDSDOCUMENTREPROVED&quot; ||&#xd;
+			template == &quot;TPLOVERDUE_TASK_TO_MANAGER&quot;){ &#xd;
+		&#xd;
+		log.info(&quot;***** RAF08.onNotify:&quot; + template + &quot; eliminando receivers..&quot;);&#xd;
+		receivers.clear();&#xd;
+		log.info(&quot;***** RAF08.onNotify: &quot; + template + &quot; receivers eliminados..&quot;);&#xd;
+	}&#xd;
+	&#xd;
+	log.info(&quot;*****Fin Ejecucion RAF08.onNotify con receivers: &quot; + receivers);&#xd;
+}&#xd;
+&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>ged</eventId>
+        <processId>RAF08</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>var ged = {&#xd;
+	attributionTypes: {&#xd;
+		&quot;USER&quot;: 1,&#xd;
+		&quot;GROUP&quot;: 2,&#xd;
+		&quot;ALL&quot;: 3 &#xd;
+	},&#xd;
+	securityLevels: {&#xd;
+		&quot;NONE&quot;: null,&#xd;
+		&quot;READING&quot;: 0,&#xd;
+		&quot;RECORDING&quot;: 1,&#xd;
+		&quot;MODIFICATION&quot;: 2,&#xd;
+		&quot;ALL&quot;: 3		&#xd;
+	},&#xd;
+	&#xd;
+	createSimpleFolder: function(params){&#xd;
+		var opts = this.simpleMerge({&#xd;
+			name: &quot;Nueva Carpeta&quot;,&#xd;
+			additionalComments: &quot;Nueva Carpeta&quot;,&#xd;
+			parentId: &quot;0&quot;,&#xd;
+			inheritSecurity: true,&#xd;
+			security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+		}, params);&#xd;
+		&#xd;
+		//Instancia um novo documento e define as propriedades básicas&#xd;
+    	var dto = docAPI.newDocumentDto();&#xd;
+        dto.setDocumentDescription(opts.name);&#xd;
+        dto.setAdditionalComments(opts.additionalComments);&#xd;
+        dto.setDocumentType(&quot;1&quot;);&#xd;
+        dto.setParentDocumentId(parseInt(opts.parentId));&#xd;
+        dto.setInheritSecurity(opts.inheritSecurity);&#xd;
+        &#xd;
+        //Definindo permissãos&#xd;
+    	var dtosSecurity = [];&#xd;
+    	&#xd;
+    	for(var i=0; i&lt;opts.security.length; i++){&#xd;
+    		var dtoConfigSecurity = docAPI.newDocumentSecurityConfigDto();&#xd;
+    		&#xd;
+    		dtoConfigSecurity.setPermission(opts.security[i].permission);&#xd;
+    		dtoConfigSecurity.setShowContent(true);&#xd;
+    		dtoConfigSecurity.setAttributionType(this.attributionTypes[opts.security[i].attributionType]);&#xd;
+    		dtoConfigSecurity.setAttributionValue(opts.security[i].attributionValue);&#xd;
+    		dtoConfigSecurity.setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);    &#xd;
+    		&#xd;
+    		dtosSecurity.push(dtoConfigSecurity); &#xd;
+    	}  	&#xd;
+        log.info(&quot;DEBUG - parentId &quot; + opts.parentId);&#xd;
+        log.info(&quot;DEBUG - name &quot; + opts.name);&#xd;
+        return docAPI.createFolder(dto, dtosSecurity, null);&#xd;
+	},&#xd;
+	&#xd;
+	// Busca si existe una carpeta y si no la crea&#xd;
+	// Busca por nombre de carpeta y &quot;padre&quot;&#xd;
+	// Si se define serchName busca por ese valor&#xd;
+	createFolderIfNotExist: function(params){&#xd;
+		var opts = this.simpleMerge({&#xd;
+			user: &quot;adm&quot;, //login do usuário.&#xd;
+			password: &quot;adm&quot;, //senha do usuário.&#xd;
+			companyId: &quot;1&quot;, //código da empresa.&#xd;
+			colleagueId: &quot;adm&quot;,&#xd;
+			publisherId: &quot;adm&quot;,&#xd;
+		&#xd;
+			searchName: false,  // patrón del nombre&#xd;
+			&#xd;
+			name: &quot;Nueva Carpeta&quot;,&#xd;
+			additionalComments: &quot;Nueva Carpeta&quot;,&#xd;
+			parentId: &quot;0&quot;,&#xd;
+			inheritSecurity: true,&#xd;
+			security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+			&#xd;
+			workflowPackage: &quot;com.totvs.technology.ecm.dm.ws&quot;,&#xd;
+			workflowServiceName: &quot;ECMFolderService&quot;,&#xd;
+		}, params);&#xd;
+		&#xd;
+		log.info(&quot;*** ged createFolderIfNotExist: buscando carpeta parentId:&quot; + opts.parentId &#xd;
+					+ &quot; name:&quot; + opts.name &#xd;
+					+ &quot; searchName:&quot; + opts.searchName);&#xd;
+		&#xd;
+		var ret = ged.findFolder({&#xd;
+			companyId: opts.companyId,&#xd;
+			name: opts.searchName? opts.searchName : opts.name,&#xd;
+			parentId: opts.parentId&#xd;
+		});&#xd;
+		&#xd;
+		if (ret != null) {&#xd;
+			log.info(&quot;*** ged createFolderIfNotExist: carpeta encontrada ! parentId:&quot; + opts.parentId &#xd;
+					+ &quot; name:&quot; + opts.name &#xd;
+					+ &quot; searchName:&quot; + opts.searchName&#xd;
+					+ &quot; documentId:&quot; + ret.getDocumentId()&#xd;
+					);&#xd;
+			return ret;&#xd;
+		} else {&#xd;
+			log.info(&quot;*** ged createFolderIfNotExist: carpeta NO encontrada ! parentId:&quot; + opts.parentId &#xd;
+					+ &quot; name:&quot; + opts.name &#xd;
+					+ &quot; searchName:&quot; + opts.searchName&#xd;
+					+ &quot; - Creando carpeta ...&quot;&#xd;
+					);			&#xd;
+			return ged.createFolder(params);&#xd;
+		}&#xd;
+		&#xd;
+	},&#xd;
+	findFolder: function(params){&#xd;
+		var opts = this.simpleMerge({&#xd;
+			companyId: &quot;1&quot;, //código da empresa.&#xd;
+			name: &quot;Nombre&quot;, // nombre del &#xd;
+			parentId: &quot;0&quot;,&#xd;
+			jndiName: &quot;java:/jdbc/FluigDS&quot;,&#xd;
+		}, params);&#xd;
+		&#xd;
+		var conn = null,&#xd;
+			pstmt = null,&#xd;
+			documentId = null,&#xd;
+			version = null;&#xd;
+		&#xd;
+		try {&#xd;
+			&#xd;
+			if (opts.log) log.info(&quot;** Obteniendo conexion &quot; + opts.jndiName);&#xd;
+			&#xd;
+			conn = new javax.naming.InitialContext().lookup(opts.jndiName).getConnection();   &#xd;
+	        &#xd;
+			var sql =	&quot;SELECT [NR_DOCUMENTO] AS documentId,&quot; +&#xd;
+						&quot;       [NR_VERSAO] AS version&quot; +&#xd;
+						&quot;  FROM [dbo].[DOCUMENTO] d &quot; +&#xd;
+						&quot; WHERE [d].[COD_EMPRESA] = ? &quot; +&#xd;
+						&quot;   AND [d].[LOG_DELETE] = 0 &quot; +&#xd;
+						&quot;   AND [d].[NR_DOCUMENTO_PAI] = ?&quot; +&#xd;
+						&quot;   AND [d].[VERSAO_ATIVA] = 1&quot; +&#xd;
+						&quot;   AND [d].[TP_DOCUMENTO] = 1&quot; +&#xd;
+						&quot;   AND [DS_PRINCIPAL_DOCUMENTO] LIKE ?&quot; +&#xd;
+						&quot;  ORDER BY [NR_DOCUMENTO] DESC&quot;;&#xd;
+			&#xd;
+						&#xd;
+			pstmt = conn.prepareStatement(sql);&#xd;
+			pstmt.setString(1, opts.companyId);&#xd;
+			pstmt.setString(2, opts.parentId);&#xd;
+			pstmt.setString(3, opts.name);&#xd;
+			&#xd;
+			var rs = pstmt.executeQuery();&#xd;
+			while (rs.next()) {&#xd;
+				documentId = rs.getString(&quot;documentId&quot;);&#xd;
+				version = rs.getString(&quot;version&quot;);	&#xd;
+			}&#xd;
+&#xd;
+		} catch (ex) {&#xd;
+			log.error(&quot;*** ged findFolder: &quot; + ex);&#xd;
+	    } finally {&#xd;
+	        if (pstmt != null) { pstmt.close(); }&#xd;
+	        if (conn != null) { conn.close(); }&#xd;
+	    }&#xd;
+		&#xd;
+	    if (documentId == null){&#xd;
+	    	return null;&#xd;
+	    } else {&#xd;
+	    	return {&#xd;
+	    		getDocumentId: function(){return documentId;},&#xd;
+	    		getVersion: function(){return version;}&#xd;
+	    	};&#xd;
+	    }&#xd;
+		&#xd;
+	},	&#xd;
+	createFolder: function(params){&#xd;
+		var opts = this.simpleMerge({&#xd;
+			user: &quot;adm&quot;, //login do usuário.&#xd;
+			password: &quot;adm&quot;, //senha do usuário.&#xd;
+			companyId: &quot;1&quot;, //código da empresa.&#xd;
+			colleagueId: &quot;adm&quot;,&#xd;
+			publisherId: &quot;adm&quot;,&#xd;
+			&#xd;
+			name: &quot;Nueva Carpeta&quot;,&#xd;
+			additionalComments: &quot;Nueva Carpeta&quot;,&#xd;
+			parentId: &quot;0&quot;,&#xd;
+			inheritSecurity: true,&#xd;
+			security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+			&#xd;
+			workflowPackage: &quot;com.totvs.technology.ecm.dm.ws&quot;,&#xd;
+			workflowServiceName: &quot;ECMFolderService&quot;,&#xd;
+		}, params);&#xd;
+		&#xd;
+		var serviceHelper = ServiceManager.getService(opts.workflowServiceName).getBean(),&#xd;
+		serviceLocator = serviceHelper.instantiate(opts.workflowPackage + &quot;.ECMFolderServiceService&quot;),&#xd;
+		service = serviceLocator.getFolderServicePort();&#xd;
+		&#xd;
+		// Configuro el documento&#xd;
+		var documentDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentDtoArray&quot;);&#xd;
+		&#xd;
+		var documentDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentDto&quot;);&#xd;
+		documentDto.setColleagueId(opts.colleagueId);&#xd;
+		documentDto.setCompanyId(parseInt(opts.companyId));&#xd;
+		documentDto.setDeleted(false);&#xd;
+		documentDto.setDocumentDescription(opts.name);&#xd;
+		documentDto.setAdditionalComments(opts.additionalComments);&#xd;
+		documentDto.setDownloadEnabled(true);&#xd;
+		documentDto.setInheritSecurity(opts.inheritSecurity);&#xd;
+		documentDto.setParentDocumentId(parseInt(opts.parentId));&#xd;
+		documentDto.setPublisherId(opts.publisherId);&#xd;
+		documentDto.setDocumentType(&quot;1&quot;);&#xd;
+		documentDto.setIconId(0);&#xd;
+	&#xd;
+		documentDtoArr.getItem().add(documentDto);&#xd;
+&#xd;
+		// Configuro seguridad&#xd;
+		var securityDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentSecurityConfigDtoArray&quot;);;&#xd;
+		for (var i=0; i&lt;opts.security.length; i++) {&#xd;
+			var securityDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentSecurityConfigDto&quot;);&#xd;
+			securityDto.setPermission(opts.security[i].permission);&#xd;
+			securityDto.setShowContent(true);&#xd;
+			securityDto.setAttributionType(this.attributionTypes[opts.security[i].attributionType]);&#xd;
+			securityDto.setAttributionValue(opts.security[i].attributionValue);&#xd;
+			securityDto.setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);  &#xd;
+			securityDtoArr.getItem().add(securityDto);					&#xd;
+		}&#xd;
+		&#xd;
+		// Configuro Aprobadores&#xd;
+		var approversDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.ApproverDtoArray&quot;);&#xd;
+&#xd;
+		var webServiceMessageArray = serviceHelper.instantiate(opts.workflowPackage + &quot;.WebServiceMessageArray&quot;);&#xd;
+		webServiceMessageArray = service.createFolder(opts.user, opts.password, parseInt(opts.companyId), documentDtoArr, securityDtoArr, approversDtoArr);&#xd;
+		return webServiceMessageArray.getItem().get(0);&#xd;
+	},&#xd;
+	&#xd;
+	updateFolder: function(params){&#xd;
+		var opts = this.simpleMerge({&#xd;
+			user: &quot;adm&quot;, //login do usuário.&#xd;
+			password: &quot;adm&quot;, //senha do usuário.&#xd;
+			companyId: &quot;1&quot;, //código da empresa.&#xd;
+			colleagueId: &quot;adm&quot;,&#xd;
+			docId: &quot;0&quot;,&#xd;
+			&#xd;
+			name: &quot;&quot;,&#xd;
+			additionalComments: &quot;&quot;,&#xd;
+			parentId: &quot;0&quot;,&#xd;
+			inheritSecurity: true,&#xd;
+			security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+			&#xd;
+			workflowPackage: &quot;com.totvs.technology.ecm.dm.ws&quot;,&#xd;
+			workflowServiceName: &quot;ECMFolderService&quot;,&#xd;
+		}, params);&#xd;
+		&#xd;
+		var serviceHelper = ServiceManager.getService(opts.workflowServiceName).getBean(),&#xd;
+		serviceLocator = serviceHelper.instantiate(opts.workflowPackage + &quot;.ECMFolderServiceService&quot;),&#xd;
+		service = serviceLocator.getFolderServicePort();&#xd;
+		&#xd;
+		var documentDtoArr = service.getFolder(opts.user, opts.password, parseInt(opts.companyId), parseInt(opts.docId), opts.colleagueId);&#xd;
+		var securityDtoArr = service.getSecurity(opts.user, opts.password, parseInt(opts.companyId), parseInt(opts.docId));&#xd;
+		var approversDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.ApproverDtoArray&quot;);&#xd;
+		&#xd;
+		var itemsToRemove = [];&#xd;
+		for (var i=0; i&lt;opts.security.length; i++) {&#xd;
+			var index = null;&#xd;
+			for (var j=0; j&lt;securityDtoArr.getItem().size(); j++) {&#xd;
+				var exists = opts.security[i].permission == securityDtoArr.getItem().get(j).isPermission() &amp;&amp;&#xd;
+							 this.attributionTypes[opts.security[i].attributionType] == securityDtoArr.getItem().get(j).getAttributionType() &amp;&amp;&#xd;
+							 opts.security[i].attributionValue == securityDtoArr.getItem().get(j).getAttributionValue();&#xd;
+				if (exists) index = j;&#xd;
+			}&#xd;
+				&#xd;
+			if (index != null) {&#xd;
+				if(this.securityLevels[opts.security[i].securityLevel] == null) {&#xd;
+					itemsToRemove.push(securityDtoArr.getItem().get(index));&#xd;
+				} else {&#xd;
+					securityDtoArr.getItem().get(index).setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);&#xd;
+				}&#xd;
+			} else {&#xd;
+				if(this.securityLevels[opts.security[i].securityLevel] != null) {&#xd;
+					var securityDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentSecurityConfigDto&quot;);&#xd;
+					securityDto.setPermission(opts.security[i].permission);&#xd;
+					securityDto.setShowContent(true);&#xd;
+					securityDto.setAttributionType(this.attributionTypes[opts.security[i].attributionType]);&#xd;
+					securityDto.setAttributionValue(opts.security[i].attributionValue);&#xd;
+					securityDto.setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);  &#xd;
+					securityDtoArr.getItem().add(securityDto);					&#xd;
+				}&#xd;
+			}&#xd;
+		}&#xd;
+		for (var i=0; i&lt;itemsToRemove.length; i++) {&#xd;
+			securityDtoArr.getItem().remove(itemsToRemove[i]);&#xd;
+		}&#xd;
+		&#xd;
+		var webServiceMessageArray = serviceHelper.instantiate(opts.workflowPackage + &quot;.WebServiceMessageArray&quot;);&#xd;
+		webServiceMessageArray = service.updateFolder(opts.user, opts.password, parseInt(opts.companyId), documentDtoArr, securityDtoArr, approversDtoArr);&#xd;
+		return webServiceMessageArray.getItem().get(0);&#xd;
+	},&#xd;
+	&#xd;
+	simpleMerge: function (obj1,obj2) {&#xd;
+		// realizar merge solo del 1er nivel de atributos&#xd;
+		var obj3 = {};    &#xd;
+		for (attrname in obj1) { &#xd;
+			obj3[attrname] = obj1[attrname]; &#xd;
+		}    &#xd;
+		for (attrname in obj2) { &#xd;
+			obj3[attrname] = obj2[attrname]; &#xd;
+		}    &#xd;
+		return obj3;&#xd;
+	}&#xd;
+};&#xd;
+&#xd;
+/*! arqMarvinLoad - v1 - All rights reserverd */&#xd;
+function arqMarvinLoad(a,h){var b={};if(h==null){return b}var d=new javax.naming.InitialContext().lookup(&quot;java:global/arq-marvin-&quot;+a+&quot;/MarvinLibLoaderEJB&quot;);for(var c in h){try{var g=new Function(&quot;lib&quot;,&quot;return &quot;+d.getLib(h[c]));b[c]=g(b)}catch(i){log.error(&quot;*** Error compilando libreria &quot;+lib+&quot;:&quot;+i)}}return b};&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>customizaciones</eventId>
+        <processId>RAF08</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function formatBigDecimal(value) {&#xd;
+	&#xd;
+	if(value != null){&#xd;
+		return value.toString().replace(&quot;,&quot;,&quot;.&quot;)&#xd;
+	}&#xd;
+	&#xd;
+	return &quot;&quot;;&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function howManyChildsOf(field,cardData) {&#xd;
+	var it = cardData.keySet().iterator();&#xd;
+	var qty = 0;&#xd;
+	while (it.hasNext()) {&#xd;
+	    var key = it.next();&#xd;
+	    if(key.contains(field+&quot;___&quot;)) {&#xd;
+			qty++;&#xd;
+		}&#xd;
+	}&#xd;
+	return qty;&#xd;
+}&#xd;
+&#xd;
+function getUserList(codigoGrupo){&#xd;
+&#xd;
+    var userList = new java.util.HashSet(); &#xd;
+    var c1 = DatasetFactory.createConstraint(&quot;colleagueGroupPK.groupId&quot;, codigoGrupo, codigoGrupo, ConstraintType.MUST);          &#xd;
+    var dataset = DatasetFactory.getDataset(&quot;colleagueGroup&quot;, null, [c1], null);&#xd;
+&#xd;
+	for(var i = 0; i &lt; dataset.rowsCount; i++) {         &#xd;
+      var colleagueId = dataset.getValue(i, &quot;colleagueGroupPK.colleagueId&quot;);            &#xd;
+      userList.add(colleagueId);&#xd;
+    }&#xd;
+	&#xd;
+	return new java.util.ArrayList(userList);&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function getMailList(colleagueId){&#xd;
+&#xd;
+    var mailList = new java.util.HashSet(); &#xd;
+    var c1 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, colleagueId, colleagueId, ConstraintType.MUST);          &#xd;
+    var dataset = DatasetFactory.getDataset(&quot;colleague&quot;, null, [c1], null);&#xd;
+&#xd;
+	for(var i = 0; i &lt; dataset.rowsCount; i++) {         &#xd;
+      var mail = dataset.getValue(i, &quot;mail&quot;);            &#xd;
+      mailList.add(mail);&#xd;
+    }&#xd;
+	&#xd;
+	return new java.util.ArrayList(mailList);&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function sendCustomEmail(params) {&#xd;
+	 &#xd;
+	var mimeType = &quot;text/html&quot;, &#xd;
+	    data = new java.util.HashMap(), &#xd;
+	    separador = java.io.File.separator,&#xd;
+	    globalParam = new javax.naming.InitialContext().lookup(&quot;java:global/fluig/ecm-ejb/wdk/GlobalParam&quot;),&#xd;
+	    templatesFolder = globalParam.read(params.companyId).getTemplatesFolder() + separador + &quot;tplmail&quot; + separador + params.templateId + separador + params.templateDialect,&#xd;
+	    sdk = new javax.naming.InitialContext().lookup(&quot;java:global/fluig/wcm-core/service/SDK&quot;);&#xd;
+	  &#xd;
+	 // Valores default&#xd;
+	data.put(&quot;SERVER_URL&quot;, sdk.getServerURL());&#xd;
+	data.put(&quot;SERVER_EXTERNAL_URL&quot;, sdk.getServerContextURL());&#xd;
+	data.put(&quot;SERVER_PROTECTED_URL&quot;, sdk.getProtectedTenantContextPath());&#xd;
+	data.put(&quot;COMPANY_ID&quot;, params.companyId);&#xd;
+	data.put(&quot;TENANT_ID&quot;,sdk.getCurrentTenantID());&#xd;
+	 &#xd;
+	// Copio datos propios del template&#xd;
+	if (params.datos) {&#xd;
+		for(param in params.datos) {&#xd;
+			data.put(param, params.datos[param]);&#xd;
+		}&#xd;
+	}&#xd;
+	 &#xd;
+	com.fluig.foundation.mail.EMailSenderFactory.getEMailSender().customEmail(new java.lang.Long(params.companyId), params.subject, params.from, params.to, templatesFolder, params.templateHtml, mimeType, data);&#xd;
+	log.info(&quot;**** Mail enviado a: &quot;+ params.to);&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function capitalize(str) {&#xd;
+	var jsStr = str+&quot;&quot;;&#xd;
+	return jsStr[0] ? jsStr[0].toUpperCase() + jsStr.slice(1) : jsStr;&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFFFF</color>
+      <height>661</height>
+      <width>1580</width>
+      <positionX>10</positionX>
+      <positionY>10</positionY>
+      <stateName>RAF08</stateName>
+      <type>1</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FF8080</color>
+      <height>132</height>
+      <width>1550</width>
+      <positionX>40</positionX>
+      <positionY>142</positionY>
+      <stateName>APM / Gerente de Distrito</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFF80</color>
+      <height>132</height>
+      <width>1550</width>
+      <positionX>40</positionX>
+      <positionY>406</positionY>
+      <stateName>Gerente de Área</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>82b0b7</color>
+      <height>132</height>
+      <width>1550</width>
+      <positionX>40</positionX>
+      <positionY>10</positionY>
+      <stateName>APM</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>80FF80</color>
+      <height>133</height>
+      <width>1550</width>
+      <positionX>40</positionX>
+      <positionY>538</positionY>
+      <stateName>Gerente de Promoción</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>adc9ac</color>
+      <height>132</height>
+      <width>1550</width>
+      <positionX>40</positionX>
+      <positionY>274</positionY>
+      <stateName>Asistente de Distrito</stateName>
+      <type>2</type>
+      <parentSequence>1</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <sequence>6</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>850</positionX>
+      <positionY>19</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <componGrafSequence>46</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Solicitud Rechazada</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>1460</positionX>
+      <positionY>90</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <componGrafSequence>47</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Solicitud Finalizada</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>90</positionX>
+      <positionY>50</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <componGrafSequence>51</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Iniciar Solicitud</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>1400</positionX>
+      <positionY>22</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <componGrafSequence>57</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Carta Acuerdo Rechazada</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>1230</positionX>
+      <positionY>420</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <componGrafSequence>73</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Inicia CA</stateName>
+    </ProcessComponGraf>
+  </list>
+  <list>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>48</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>46</initialStateSequence>
+      <finalStateSequence>35</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>49</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>47</initialStateSequence>
+      <finalStateSequence>44</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>52</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>51</initialStateSequence>
+      <finalStateSequence>4</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>58</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>57</initialStateSequence>
+      <finalStateSequence>55</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>74</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>73</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>1</version>
+        <linkSequence>75</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>73</initialStateSequence>
+      <finalStateSequence>19</finalStateSequence>
+    </ProcessLinkAssoc>
+  </list>
+  <list>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>10</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>277</positionX>
+      <positionY>492</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>10</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>633</positionX>
+      <positionY>492</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>13</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>560</positionX>
+      <positionY>76</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>28</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>560</positionX>
+      <positionY>468</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>29</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>560</positionX>
+      <positionY>604</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>39</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>517</positionX>
+      <positionY>200</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>40</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>752</positionX>
+      <positionY>245</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <version>22</version>
+        <linkSequence>76</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1063</positionX>
+      <positionY>37</positionY>
+    </ProcessLinkBend>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF08</processId>
+        <fieldId>apellido</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Apellido</fieldDescription>
+      <slotId>1</slotId>
+    </ProcessFormField>
+  </list>
+  <list/>
+  <list/>
+  <list>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>RAF08</processId>
+      <processVersion>22</processVersion>
+      <stateSequence>53</stateSequence>
+      <appKey>approval</appKey>
+      <appField>title</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>RAF08</processId>
+      <processVersion>22</processVersion>
+      <stateSequence>53</stateSequence>
+      <appKey>approval</appKey>
+      <appField>description</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>RAF08</processId>
+      <processVersion>22</processVersion>
+      <stateSequence>53</stateSequence>
+      <appKey>approval</appKey>
+      <appField>highlight</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>RAF08</processId>
+      <processVersion>22</processVersion>
+      <stateSequence>53</stateSequence>
+      <appKey>approval</appKey>
+      <appField>approve</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+    <ProcessAppConfiguration>
+      <id>0</id>
+      <tenantId>0</tenantId>
+      <processId>RAF08</processId>
+      <processVersion>22</processVersion>
+      <stateSequence>53</stateSequence>
+      <appKey>approval</appKey>
+      <appField>reject</appField>
+      <description></description>
+    </ProcessAppConfiguration>
+  </list>
+  <list/>
+  <list/>
+</list>

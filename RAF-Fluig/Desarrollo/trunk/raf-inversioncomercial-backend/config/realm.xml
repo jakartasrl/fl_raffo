@@ -1,0 +1,14 @@
+<!-- Esto va en el domain.xml / standalone.xml -->
+                <security-domain name="raf-inversioncomercial-realm" cache-type="default">
+                    <authentication>
+                        <login-module code="Database" flag="required">
+                            <module-option name="dsJndiName" value="java:/jdbc/FluigDS"/>
+                            <module-option name="principalsQuery" value="select PASSWORD from Z_FDN_USUARIO where EMAIL = ? AND ACTIVO=1"/>
+                            <module-option name="rolesQuery" value="select 'portal-user','Roles' from Z_FDN_USUARIO where EMAIL = ? AND ACTIVO=1"/>
+                            <module-option name="hashAlgorithm" value="SHA-256"/>
+                            <module-option name="hashEncoding" value="BASE64"/>
+                            <module-option name="unauthenticatedIdentity" value="guest"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+                        

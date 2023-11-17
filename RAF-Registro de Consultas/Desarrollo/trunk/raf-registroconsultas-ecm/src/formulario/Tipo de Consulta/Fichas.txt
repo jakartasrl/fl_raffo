@@ -1,0 +1,51 @@
+01
+Evento adverso / Caso de interés especial
+
+
+02
+Falta de eficacia
+
+
+03
+Falta de producto
+
+
+04
+Consulta médica
+
+
+05
+Reclamo
+
+
+06
+Consulta técnica
+
+
+07
+Acceso a la salud
+
+
+08
+Material promocional
+
+
+09
+Pedido APM
+
+
+10
+Apto Celíacos
+
+
+11
+Originalidad
+
+
+12
+Otros
+
+
+13
+Error de Medicación
+

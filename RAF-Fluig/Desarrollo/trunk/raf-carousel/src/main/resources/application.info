@@ -1,0 +1,15 @@
+application.type=widget
+application.code=raf_carousel
+application.title=Carousel
+application.description=Carousel de fotos con título y descripción.
+application.category=Portal Web
+application.renderer=freemarker
+application.icon=icon.png
+developer.code=ARQ
+developer.name=Arquimeda S.R.L.
+developer.url=http://www.arquimeda.com/
+application.uiwidget=true
+application.mobileapp=true
+view.file=view.ftl
+edit.file=edit.ftl
+locale.file.base.name=raf-carousel

@@ -1,0 +1,291 @@
+<html lang="en">
+<head>
+
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.js"></script>
+
+	<style type="text/css">
+		textarea {
+			resize: vertical;
+		}
+		fieldset {
+			padding-top: 20px !important;
+		}
+		legend{
+			border-bottom: 1px solid #bbb !important;
+			margin-bottom: 25px !important;
+		}	
+		
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #7F201C !important;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 5px !important;
+			margin-top: 40px !important;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		
+		.table-responsive{
+			overflow: visible !important;
+		}
+		
+		table td{
+			padding: 15px 10px !important;
+		}
+
+		table td .form-group:last-child {
+			margin-bottom: 0;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+	
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-4">
+				<h3>Carta Acuerdo</h3> 
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">
+			<input type="hidden" id="__error" name="__error">	
+			<input type="hidden" id="nroSolicitud" name="nroSolicitud">
+			<input type="hidden" id="fechaSolicitud" name="fechaSolicitud">
+			<input type="hidden" id="fechaFinSolicitud" name="fechaFinSolicitud">
+			<input type="hidden" id="matriculaSolicitante" name="matriculaSolicitante">
+			<input type="hidden" id="matriculaAPM" name="matriculaAPM"> 
+			<input type="hidden" id="emailAPM" name="emailAPM">  
+			<input type="hidden" id="nroInversionComercial" name="nroInversionComercial">
+			
+			<input type="hidden" id="areaCodigo" name="areaCodigo"> 
+			<input type="hidden" id="distritoCodigo" name="distritoCodigo"> 
+			<input type="hidden" id="codGrupoGteDistrito" name="codGrupoGteDistrito">
+			<input type="hidden" id="mailGteDistrito" name="mailGteDistrito"> 
+			<input type="hidden" id="codGrupoGteArea" name="codGrupoGteArea">  
+			<input type="hidden" id="codGrupoGtePromocion" name="codGrupoGtePromocion">  
+			<input type="hidden" id="codGrupoAsistDistrito" name="codGrupoAsistDistrito"> 
+			<input type="hidden" id="carpetaAdjuntosId" name="carpetaAdjuntosId">
+			<input type="hidden" id="tarea" name="tarea">
+			<input type="hidden" id="delegado" name="delegado">
+			
+			<input type="hidden" id="incluyeAlojamiento" name="incluyeAlojamiento">
+			<input type="hidden" id="incluyeTraslado" name="incluyeTraslado">
+			<input type="hidden" id="incluyeInscripcion" name="incluyeInscripcion">
+			
+			<input type="hidden" id="selAlojamientoPresupuesto" name="selAlojamientoPresupuesto">
+			<input type="hidden" id="selTrasladoPresupuesto" name="selTrasladoPresupuesto">
+			<input type="hidden" id="selInscripcionPresupuesto" name="selInscripcionPresupuesto">
+			
+			<fieldset>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="solicitante" class="col-md-3 control-label">Solicitante</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="solicitante" id="solicitante" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="area" class="col-md-3 control-label">&Aacute;rea</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="area" name="area" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="distrito" class="col-md-3 control-label">Distrito</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="distrito" name="distrito" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="gteDistrito" class="col-md-3 control-label">Gerente de Distrito</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="gteDistrito" name="gteDistrito" readonly>  
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="apm" class="col-md-3 control-label">APM</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="nombreAPM" name="nombreAPM" readonly>  
+ 						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="fecha" class="col-md-3 control-label">Fecha</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fecha" id="fecha" readonly>									
+						</div>
+					</div>
+				</div>		
+				<div class="form-group">
+					<div class="label-field">
+						<label for="apellido" class="col-md-3 control-label">Apellido</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="apellido" id="apellido" readonly>									
+						</div>
+						<div>							
+							<p>(Como figura en el DNI)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="nombre" class="col-md-3 control-label">Nombre</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nombre" id="nombre" readonly>									
+						</div>
+						<div>							
+							<p>(Como figura en el DNI)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="tipoInversion" class="col-md-3 control-label">Tipo de Inversi&oacute;n</label>
+						<div class="col-md-5">
+							<select class="form-control" name="tipoInversion" id="tipoInversion">
+								<option></option>
+								<option value="alojamientos">ALOJAMIENTO CONGRESO O EVENTO CIENTIFICO</option>
+								<option value="aereosNac">AEREO CONGRESO NACIONAL</option>
+								<option value="inscripciones">INSCRIPCION A CONGRESO</option>
+								<option value="aereosInt">AEREO CONGRESO INTERNACIONAL</option>
+								<option value="equipamientos">EQUIPAMIENTO MEDICO</option>
+								<option value="patrocinio">PATROCINIO EDUCACION MEDICA</option>
+								<option value="becaNac">BECA COMPLETA/PARCIAL NACIONAL</option>
+								<option value="becaInt">BECA COMPLETA/PARCIAL INTERNACIONAL</option>
+							</select>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group becaNac becaInt">
+					<div class="label-field">
+						<label for="nombreCongreso" class="col-md-3 control-label">Congreso</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nombreCongreso" id="nombreCongreso" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="mesInversion" class="col-md-3 control-label">Mes de la Inversi&oacute;n</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="mesInversion" id="mesInversion" readonly>									
+						</div>
+					</div>
+				</div>		
+				<div class="form-group">
+					<div class="label-field">
+						<label for="formaPago" class="col-md-3 control-label">Forma de Pago</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control formaPago" name="formaPago" id="formaPago" readonly>
+							<input type="hidden" class="form-control" name="codFormaPago" id="codFormaPago">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="web" class="col-md-3 control-label">Sitio Web del Evento</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="web" id="web" readonly>									
+						</div>
+					</div>
+				</div>	
+				<div class="form-group">
+					<div class="col-md-10 col-md-offset-1 label-field">
+						<div class="col-md-12">
+						    <label for="comentariosCongreso" class="col-md-2 control-label">Comentarios</label>
+							<div class="col-md-8">
+								<textarea rows="8" class="form-control" name="comentariosCongreso" id="comentariosCongreso" readonly></textarea>									
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="cartaPetitorio" class="col-md-3 control-label">Carta Petitorio</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="cartaPetitorio" id="cartaPetitorio" readonly>	
+							<input type="hidden" id="cartaPetitorioDocumentId" name="cartaPetitorioDocumentId">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="cartaAcuerdo" class="col-md-3 control-label">Carta Acuerdo</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="cartaAcuerdo" id="cartaAcuerdo" readonly>	
+							<input type="hidden" id="cartaAcuerdoDocumentId" name="cartaAcuerdoDocumentId">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="flyer" class="col-md-3 control-label">Flyer</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="flyer" id="flyer" readonly>	
+							<input type="hidden" id="flyerDocumentId" name="flyerDocumentId">									
+						</div>
+					</div>
+				</div>	
+				
+				<br>
+				
+				<fieldset class="motivoRechazo" style="display:none;">	
+					<br>
+					<legend>Motivo de Rechazo</legend>
+					<br>
+
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+								<label for="motivoRechazo" class="col-md-2 control-label">Motivo de Rechazo</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control motivoRechazo" name="motivoRechazo" id="motivoRechazo" placeholder="Detallar motivo" data-parsley-maxlength="1000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>	
+				</fieldset>
+			</fieldset>		
+						
+		</form>
+		<br>
+	</div> 
+</div>
+</body>
+</html>

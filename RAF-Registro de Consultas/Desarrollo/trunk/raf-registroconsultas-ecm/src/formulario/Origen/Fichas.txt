@@ -1,0 +1,38 @@
+01
+Teléfono
+
+
+02
+Mail
+
+
+03
+WEB
+
+
+04
+Correo Postal
+
+
+05
+Red Social
+
+
+06
+APM
+
+
+07
+Presencial
+
+
+08
+Carta Documento
+
+
+09
+Contestador Telefónico
+
+
+10
+Otro

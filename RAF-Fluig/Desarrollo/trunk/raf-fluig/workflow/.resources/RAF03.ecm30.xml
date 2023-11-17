@@ -1,0 +1,818 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>RAF03</processId>
+    </processDefinitionPK>
+    <processDescription>RAF-Registro de Consultas</processDescription>
+    <instruction>&amp;nbsp;</instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>Registro de Consultas</categoryId>
+    <managerEngineAllocationId>Associado</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssociatedController ConditionAssociated=&quot;OR&quot;&gt;&lt;ControlXML TypeAssociated=&quot;Usuário&quot;&gt;&lt;AssignmentController&gt;&lt;User&gt;procesobpm&lt;/User&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;ControlXML TypeAssociated=&quot;Usuário&quot;&gt;&lt;AssignmentController&gt;&lt;User&gt;SYS02&lt;/User&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;/AssociatedController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>0</complementsLevel>
+    <notifyRequisitionerComplements>false</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <notifyAuthorityComplements>false</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>RAF-Registro de Consultas</processId>
+      <version>18</version>
+    </processDefinitionVersionPK>
+    <versionDescription></versionDescription>
+    <formId>142</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>1</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>true</inheritFormSecurity>
+    <mobileReady>false</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <sequence>9</sequence>
+      </processStatePK>
+      <stateName>Registrar Consulta</stateName>
+      <stateDescription>Registrar Consulta</stateDescription>
+      <instruction>&lt;ul&gt;&lt;li&gt;Adjuntar un documento - Ir a la solapa Adjuntos y elegir las opciones “Nuevo Adjunto Upload” – “Upload”,  seleccionar el documento y elegir la opción “Confirmar”. &lt;/li&gt;&#xd;
+&lt;li&gt;“Salvar” o “Cerrar” – Si eligió dicha opción,  la consulta se podrá visualizar dirigiéndose a la pantalla de Inicio - Procesos – Central de Tareas – Tareas a Concluir. Si elige la opción “Cerrar” los datos cargados o modificados se perderán.&lt;/li&gt;&lt;/ul&gt;</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;RC_ATE_FCIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>230</positionX>
+      <positionY>230</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <sequence>10</sequence>
+      </processStatePK>
+      <stateName>Consulta Abierta</stateName>
+      <stateDescription>Consulta Abierta</stateDescription>
+      <instruction>&lt;ul&gt;&lt;li&gt;Adjuntar un documento - Ir a la solapa Adjuntos y elegir las opciones “Nuevo Adjunto Upload” – “Upload”,  seleccionar el documento y elegir la opción “Confirmar”. &lt;/li&gt;&#xd;
+&lt;li&gt;“Salvar” o “Cerrar” – Si eligió dicha opción,  la consulta se podrá visualizar dirigiéndose a la pantalla de Inicio - Procesos – Central de Tareas – Tareas a Concluir. Si elige la opción “Cerrar” los datos cargados o modificados se perderán.&lt;/li&gt;&lt;/ul&gt;</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;RC_ATE_FCIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>440</positionX>
+      <positionY>210</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <sequence>8</sequence>
+      </processStatePK>
+      <stateName>Consulta Cerrada?</stateName>
+      <stateDescription>Consulta Cerrada?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>800</positionX>
+      <positionY>187</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <sequence>6</sequence>
+      </processStatePK>
+      <stateName>Consulta Cerrada</stateName>
+      <stateDescription>Consulta Cerrada</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1050</positionX>
+      <positionY>230</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>18</version>
+        <sequence>8</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;cerrarConsulta&quot;) == &quot;1&quot;</condition>
+      <destinationSequenceId>6</destinationSequenceId>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>18</version>
+        <sequence>8</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>10</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;RC_ATE_FCIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>15</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>8</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>16</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>8</initialStateSequence>
+      <finalStateSequence>6</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>17</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>9</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>18</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>10</initialStateSequence>
+      <finalStateSequence>8</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeCancelProcess</eventId>
+        <processId>RAF03</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeCancelProcess(colleagueId,processId){&#xd;&#xd;	var activeStates = hAPI.getActiveStates();	&#xd;	if (!(activeStates.size() == 1 &amp;&amp; activeStates.get(0) == 1)) {&#xd;		throw &quot;No se puede cancelar la solicitud en esta tarea.&quot;;&#xd;	}&#xd;	&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeTaskSave</eventId>
+        <processId>RAF03</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+&#xd;
+	var tareaActual = getValue(&quot;WKNumState&quot;);&#xd;
+	var completo = getValue(&quot;WKCompletTask&quot;);&#xd;
+	var comentarios = getValue(&quot;WKUserComment&quot;);&#xd;
+	var nroSolicitudPadre = getValue(&quot;WKNumProces&quot;);&#xd;
+	var companyId = getValue(&quot;WKCompany&quot;);&#xd;
+	var matricula = getValue(&quot;WKUser&quot;);&#xd;
+	&#xd;
+	var c1 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, matricula, matricula, ConstraintType.MUST);&#xd;
+	var obsDts = DatasetFactory.getDataset(&quot;colleague&quot;, null, [c1], null); &#xd;
+	var userName = obsDts.getValue(0, &quot;colleagueName&quot;);&#xd;
+	&#xd;
+	var anexoPrincipal = &quot;&quot;;&#xd;
+&#xd;
+	var telefono = hAPI.getCardValue(&quot;telefono&quot;);&#xd;
+	var mail = hAPI.getCardValue(&quot;mail&quot;);&#xd;
+	var otro = hAPI.getCardValue(&quot;otro&quot;);&#xd;
+	var direccion = hAPI.getCardValue(&quot;direccion&quot;);	&#xd;
+	var cerrarConsulta = hAPI.getCardValue(&quot;cerrarConsulta&quot;);&#xd;
+	&#xd;
+	if(telefono == &quot;&quot; &amp;&amp; mail == &quot;&quot; &amp;&amp; otro == &quot;&quot; &amp;&amp; direccion == &quot;&quot;){&#xd;
+		throw &quot;Alguno de los campos Teléfono, Mail, Otro o Dirección deben ser completados.&quot;;&#xd;
+	}&#xd;
+	//Inicia la solicitud automaticamente&#xd;
+	var tareas = {&#xd;
+			REGISTRAR_CONSULTA : 9,	&#xd;
+			MODIFICAR_CONSULTA : 10,&#xd;
+			VERIF_CONSULTA_CERRADA : 8&#xd;
+	}&#xd;
+	&#xd;
+	if (tareaActual == tareas.REGISTRAR_CONSULTA &amp;&amp; completo == &quot;true&quot;) {&#xd;
+		&#xd;
+		if(hAPI.getCardValue(&quot;subindicesHijos&quot;) == &quot;&quot;){&#xd;
+			throw &quot;Debe cargar al menos una consulta.&quot;; &#xd;
+		}&#xd;
+		&#xd;
+		try {&#xd;
+			&#xd;
+			var subindicesHijos = hAPI.getCardValue(&quot;subindicesHijos&quot;).split(&quot;,&quot;);&#xd;
+			&#xd;
+			for(i = 0 ; i &lt; subindicesHijos.length ; i++){&#xd;
+				&#xd;
+				var numeroConsulta = proximoNumero(&quot;R03_NRO_CONSULTA&quot;);&#xd;
+				 &#xd;
+				var tipoConsulta = hAPI.getCardValue(&quot;cons_tipo___&quot; + subindicesHijos[i]);&#xd;
+				var descripcionProducto = hAPI.getCardValue(&quot;cons_producto___&quot; + subindicesHijos[i]);&#xd;
+				&#xd;
+				var arq = arqLoadLib([&quot;com.arquimeda.fluig.js.ws.BPM-v1&quot;,&quot;com.arquimeda.fluig.js.Properties-v1&quot;]);&#xd;
+				arq.prop.load({&#xd;
+					datasetName: &quot;parametros&quot;&#xd;
+				});&#xd;
+				&#xd;
+				var cardData = {&#xd;
+					&quot;padre_nroSolicitud&quot; : java.lang.String.valueOf(nroSolicitudPadre),&#xd;
+					&quot;nroHijo&quot; : subindicesHijos[i],&#xd;
+					&quot;derivacionCodigoGrupo&quot; : hAPI.getCardValue(&quot;cons_derivacion_grupo___&quot; + subindicesHijos[i]),&#xd;
+					&quot;anexoPrincipal&quot; : descripcionProducto + &quot; - &quot; + tipoConsulta + &quot; - &quot; + numeroConsulta,&#xd;
+					&quot;solicitante&quot; : userName,&#xd;
+					&#xd;
+					//agregar datos cabecera&#xd;
+					&quot;padre_fecha&quot; : hAPI.getCardValue(&quot;fecha&quot;),&#xd;
+					&quot;padre_hora&quot; : hAPI.getCardValue(&quot;hora&quot;),&#xd;
+					&quot;padre_origen&quot; : hAPI.getCardValue(&quot;origen&quot;),&#xd;
+					&quot;padre_nombre&quot; : hAPI.getCardValue(&quot;nombre&quot;),&#xd;
+					&quot;padre_telefono&quot; : hAPI.getCardValue(&quot;telefono&quot;),&#xd;
+					&quot;padre_mail&quot; : hAPI.getCardValue(&quot;mail&quot;),&#xd;
+					&quot;padre_direccion&quot; : hAPI.getCardValue(&quot;direccion&quot;),&#xd;
+					&quot;padre_otro&quot; : hAPI.getCardValue(&quot;otro&quot;),&#xd;
+					&quot;padre_observaciones&quot; : hAPI.getCardValue(&quot;observaciones&quot;),&#xd;
+					&#xd;
+					&quot;aten_nroConsulta&quot; : numeroConsulta,&#xd;
+					&quot;aten_producto&quot; : hAPI.getCardValue(&quot;cons_producto___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_activo&quot; : hAPI.getCardValue(&quot;cons_activo___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_nroLote&quot; : hAPI.getCardValue(&quot;cons_nroLote___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_vencimiento&quot; : hAPI.getCardValue(&quot;cons_vencimiento___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_tipo&quot; : hAPI.getCardValue(&quot;cons_tipo___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_observacion&quot; : hAPI.getCardValue(&quot;cons_observacion___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_derivacion&quot; : hAPI.getCardValue(&quot;cons_derivacion___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_rellamada&quot; : &quot;&quot;&#xd;
+				}&#xd;
+				&#xd;
+				&#xd;
+				var processId = arq.bpm.startProcess({&#xd;
+					username: arq.prop.get(&quot;RAF03.usuarioSistema.login&quot;),&#xd;
+					password: arq.prop.get(&quot;RAF03.usuarioSistema.pass&quot;),&#xd;
+					companyId: getValue(&quot;WKCompany&quot;),&#xd;
+					processId: &quot;RAF04&quot;,		&#xd;
+					choosedState: 6,&#xd;
+					colleagueIds: [hAPI.getCardValue(&quot;cons_derivacion_grupo___&quot; + subindicesHijos[i])],&#xd;
+					comments: &quot;&quot;,&#xd;
+					userId: arq.prop.get(&quot;RAF03.usuarioSistema.id&quot;),&#xd;
+					completeTask: true, &#xd;
+					attachments: [],&#xd;
+			        cardData: cardData,&#xd;
+			        managerMode: true,&#xd;
+			        workflowServiceName: &quot;ECMWorkflowEngineService&quot;,&#xd;
+			        log: 1,&#xd;
+				});&#xd;
+				&#xd;
+				hAPI.setCardValue(&quot;cons_nroSolicitud___&quot; + subindicesHijos[i], processId);&#xd;
+				hAPI.setCardValue(&quot;cons_nroConsulta___&quot; + subindicesHijos[i], numeroConsulta);&#xd;
+				&#xd;
+				anexoPrincipal = anexoPrincipal + &quot; - &quot; + numeroConsulta + &quot;(&quot; + hAPI.getCardValue(&quot;cons_nroSolicitud___&quot; + subindicesHijos[i]) + &quot;)&quot;;&#xd;
+&#xd;
+			}&#xd;
+			&#xd;
+			anexoPrincipal = anexoPrincipal.substring(2);&#xd;
+			&#xd;
+			hAPI.setCardValue(&quot;anexoPrincipal&quot;, anexoPrincipal);&#xd;
+			&#xd;
+		} catch(e) {&#xd;
+			log.info(&quot;***** Erro startProcess: &quot; + e);&#xd;
+			throw &quot;Se produjo un error al iniciar la solicitud de Atención de Consultas. Por favor, consulte con el administrador del sistema.&quot;;&#xd;
+		}&#xd;
+         &#xd;
+    }else if(tareaActual == tareas.MODIFICAR_CONSULTA &amp;&amp; completo == &quot;true&quot; &amp;&amp; cerrarConsulta != &quot;1&quot;){&#xd;
+	&#xd;
+		// Enviar correo electronico custom para notificar a los usuarios que tienen asignadas las tareas hijas.&#xd;
+		&#xd;
+		var subindicesHijos = hAPI.getCardValue(&quot;subindicesHijos&quot;).split(&quot;,&quot;);&#xd;
+		&#xd;
+		for(i = 0 ; i &lt; subindicesHijos.length ; i++){&#xd;
+		&#xd;
+			var nroSolicitudHija = hAPI.getCardValue(&quot;cons_nroSolicitud___&quot; + subindicesHijos[i]);&#xd;
+			var tareaHija = hAPI.getCardValue(&quot;cons_tarea___&quot; + subindicesHijos[i]);&#xd;
+			var rellamado = hAPI.getCardValue(&quot;rellamado___&quot; + subindicesHijos[i]);&#xd;
+			var modificacionDatos = hAPI.getCardValue(&quot;modificacionDatos&quot;);&#xd;
+			&#xd;
+			var destinatarios = new Array();&#xd;
+			&#xd;
+			log.info(&quot;***** nroSolicitudHija: &quot; + nroSolicitudHija + &quot; rellamado: &quot; + rellamado);&#xd;
+			&#xd;
+			if(tareaHija != &quot;CONSULTA CERRADA&quot; &amp;&amp; tareaHija != &quot;CONSULTA CANCELADA&quot; &amp;&amp; (rellamado == &quot;1&quot; || modificacionDatos == &quot;1&quot;)){&#xd;
+			&#xd;
+				var c1 = DatasetFactory.createConstraint(&quot;processTaskPK.processInstanceId&quot;, nroSolicitudHija, nroSolicitudHija, ConstraintType.MUST); &#xd;
+				var c2 = DatasetFactory.createConstraint(&quot;active&quot;, &quot;true&quot;, &quot;true&quot;, ConstraintType.MUST); 					&#xd;
+				var processTaskDataset = DatasetFactory.getDataset(&quot;processTask&quot;, null, [c1,c2], null); &#xd;
+				var colleagueId = processTaskDataset.getValue(0, &quot;processTaskPK.colleagueId&quot;);  &#xd;
+				&#xd;
+				log.info(&quot;***** colleagueId: &quot; + colleagueId);&#xd;
+					&#xd;
+				var c3 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, colleagueId, colleagueId, ConstraintType.MUST); &#xd;
+				var colleagueDataset = DatasetFactory.getDataset(&quot;colleague&quot;, null, [c3], null);&#xd;
+				&#xd;
+				// Lo busco en el dataset de usuarios &#xd;
+				if(colleagueDataset.rowsCount == 1){&#xd;
+				&#xd;
+					var mail = colleagueDataset.getValue(0,&quot;mail&quot;);	&#xd;
+					destinatarios.push(mail);&#xd;
+					log.info(&quot;***** mail: &quot; + mail);&#xd;
+				&#xd;
+				}else{&#xd;
+				&#xd;
+					// Si no esta en el dataset de usuarios entonces es un pool&#xd;
+					// Busco los usuarios en el dataset de usuarios por grupo &#xd;
+					&#xd;
+					var group = colleagueId.substring(11);&#xd;
+					log.info(&quot;***** group: &quot; + group);&#xd;
+				&#xd;
+					var c4 = DatasetFactory.createConstraint(&quot;colleagueGroupPK.groupId&quot;, group, group, ConstraintType.MUST); &#xd;
+					var colleagueGroupDataset = DatasetFactory.getDataset(&quot;colleagueGroup&quot;, null, [c4], null); &#xd;
+				&#xd;
+					for(var j=0; j&lt;colleagueGroupDataset.rowsCount; j++){&#xd;
+						&#xd;
+						var member = colleagueGroupDataset.getValue(j,&quot;colleagueGroupPK.colleagueId&quot;);&#xd;
+						log.info(&quot;***** member: &quot; + member);&#xd;
+						&#xd;
+						var c5 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, member, member, ConstraintType.MUST); &#xd;
+						colleagueDataset = DatasetFactory.getDataset(&quot;colleague&quot;, null, [c5], null);&#xd;
+						&#xd;
+						var mail = colleagueDataset.getValue(0,&quot;mail&quot;);	&#xd;
+						destinatarios.push(mail);&#xd;
+						log.info(&quot;***** mail: &quot; + mail);&#xd;
+						&#xd;
+					}&#xd;
+					&#xd;
+				}	&#xd;
+				&#xd;
+				&#xd;
+				var subject = &quot;&quot;;&#xd;
+				var descripcion = &quot;&quot;;&#xd;
+				&#xd;
+				if(modificacionDatos == &quot;1&quot;){&#xd;
+					subject = &quot;Modificación de Datos del Cliente en Consulta: &quot; + hAPI.getCardValue(&quot;cons_nroConsulta___&quot; + subindicesHijos[i]);&#xd;
+					descripcion = &quot;En la siguiente consulta se han modificado datos del cliente.&quot;;&#xd;
+				}else{&#xd;
+					subject = &quot;Llamada Reiterada en Consulta: &quot; + hAPI.getCardValue(&quot;cons_nroConsulta___&quot; + subindicesHijos[i]);	&#xd;
+					descripcion = &quot;En la siguiente consulta se ha producido una llamada reiterada.&quot;;&#xd;
+				}				&#xd;
+&#xd;
+				var idTemplate = &quot;raf_tpl_atencionconsultas&quot;;&#xd;
+				var archivoTemplate = &quot;raf_tpl_atencionconsultas.html&quot;;&#xd;
+				var mimeType = &quot;text/html&quot;;&#xd;
+				&#xd;
+				var data = {		&#xd;
+					&quot;descripcion&quot;: descripcion,&#xd;
+					&quot;padre_nroSolicitud&quot;: nroSolicitudPadre,&#xd;
+					&quot;padre_fecha&quot;: hAPI.getCardValue(&quot;fecha&quot;),&#xd;
+					&quot;padre_hora&quot;: hAPI.getCardValue(&quot;hora&quot;),&#xd;
+					&quot;padre_origen&quot;: hAPI.getCardValue(&quot;origen&quot;),&#xd;
+					&quot;padre_nombre&quot;: hAPI.getCardValue(&quot;nombre&quot;),&#xd;
+					&quot;padre_telefono&quot;: hAPI.getCardValue(&quot;telefono&quot;),&#xd;
+					&quot;padre_mail&quot;: hAPI.getCardValue(&quot;mail&quot;),&#xd;
+					&quot;padre_direccion&quot;: hAPI.getCardValue(&quot;direccion&quot;),&#xd;
+					&quot;padre_otro&quot;: hAPI.getCardValue(&quot;otro&quot;),&#xd;
+					&quot;padre_observaciones&quot;: hAPI.getCardValue(&quot;observaciones&quot;),&#xd;
+					&#xd;
+					&quot;aten_nroSolicitud&quot;: hAPI.getCardValue(&quot;cons_nroSolicitud___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_nroConsulta&quot;: hAPI.getCardValue(&quot;cons_nroConsulta___&quot; + subindicesHijos[i]),				&#xd;
+					&quot;aten_producto&quot;: hAPI.getCardValue(&quot;cons_producto___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_activo&quot;: hAPI.getCardValue(&quot;cons_activo___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_nroLote&quot;: hAPI.getCardValue(&quot;cons_nroLote___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_vencimiento&quot;: hAPI.getCardValue(&quot;cons_vencimiento___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_tipo&quot;: hAPI.getCardValue(&quot;cons_tipo___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_observacion&quot;: hAPI.getCardValue(&quot;cons_observacion___&quot; + subindicesHijos[i]),&#xd;
+					&quot;aten_derivacion&quot;: hAPI.getCardValue(&quot;cons_derivacion___&quot; + subindicesHijos[i]),					&#xd;
+					&quot;aten_rellamada&quot;: hAPI.getCardValue(&quot;cons_rellamada___&quot; + subindicesHijos[i]),				&#xd;
+				}&#xd;
+				&#xd;
+				&#xd;
+				// Aca se envia el mail a los destinatarios.&#xd;
+				log.info(&quot;***** enviando mail a destinatarios: &quot; + destinatarios);&#xd;
+				for(var j in destinatarios){&#xd;
+					sendCustomEmail({&#xd;
+						 companyId: companyId, &#xd;
+						 subject: subject, &#xd;
+						 //from: &quot;procesobpm@raffo.com.ar&quot;, &#xd;
+						 from: &quot;admin@totvsecm.com.ar&quot;, &#xd;
+						 to: destinatarios[j], &#xd;
+						 templateId: idTemplate,&#xd;
+						 templateDialect: &quot;es&quot;,&#xd;
+						 templateHtml: archivoTemplate,&#xd;
+						 datos: data&#xd;
+					});&#xd;
+				}&#xd;
+				hAPI.setCardValue(&quot;rellamado___&quot; + subindicesHijos[i], &quot;0&quot;);&#xd;
+			&#xd;
+			}		&#xd;
+			&#xd;
+		}	&#xd;
+			&#xd;
+	}&#xd;
+	&#xd;
+	hAPI.setCardValue(&quot;modificacionDatos&quot;, &quot;0&quot;);&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+//arqLoadLib - v1.0&#xd;
+function arqLoadLib(e){var t={};if(e==null){return t}var n=function(e,t){for(var n=0;n&lt;e.length;n++){if(e[n]==t)return true}return false};var r=DatasetFactory.getDataset(&quot;arq_libreriaJS&quot;,null,null,null);for(var i=0;i&lt;r.rowsCount;i++){var s=r.getValue(i,&quot;lib&quot;);if(n(e,s)){var o=r.getValue(i,&quot;src&quot;);var u=r.getValue(i,&quot;name&quot;);try{var a=new Function(&quot;lib&quot;,&quot;return &quot;+o);t[u]=a(t)}catch(f){log.error(&quot;*** Error compilando libreria &quot;+s+&quot;:&quot;+f)}}}return t}&#xd;
+&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>customizaciones</eventId>
+        <processId>RAF03</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function proximoNumero(codigoNumerador) {&#xd;	&#xd;	var currentDate = new Date();&#xd;	var year = currentDate.getFullYear();&#xd;&#xd;	codigoNumerador = codigoNumerador + &quot;_&quot; + year;&#xd;	&#xd;	&#xd;    var connection, preparedStatement, resultSet;&#xd;    var proximoNumero = 0;&#xd;&#xd;    try {&#xd;		connection = new javax.naming.InitialContext().lookup(&quot;java:/jdbc/FluigDS&quot;).getConnection();   &#xd;		&#xd;		preparedStatement = connection.prepareStatement(&quot;SELECT CODIGO, PROXIMONUMERO FROM CUSTOM_NUMERADOR WITH (UPDLOCK) WHERE CODIGO = ? &quot;, java.sql.ResultSet.TYPE_SCROLL_SENSITIVE, java.sql.ResultSet.CONCUR_UPDATABLE);&#xd;		preparedStatement.setString(1, codigoNumerador);&#xd;		resultSet = preparedStatement.executeQuery();&#xd;		&#xd;		if (resultSet.next()) {&#xd;	&#xd;			proximoNumero = resultSet.getLong(&quot;PROXIMONUMERO&quot;);&#xd;			resultSet.updateLong(&quot;PROXIMONUMERO&quot;, proximoNumero + 1);&#xd;			resultSet.updateRow();&#xd;				&#xd;		}               &#xd;	  } finally {&#xd;	    if (preparedStatement != null) { preparedStatement.close(); }&#xd;        if (connection != null) { connection.close(); }&#xd;    }&#xd;&#xd;    return proximoNumero + &quot;/&quot; + year;&#xd;&#xd;}&#xd;&#xd;function sendCustomEmail(params) {&#xd; &#xd;	var mimeType = &quot;text/html&quot;, &#xd;	    data = new java.util.HashMap(), &#xd;	    separador = java.io.File.separator,&#xd;	    globalParam = new javax.naming.InitialContext().lookup(&quot;java:global/fluig/ecm-ejb/wdk/GlobalParam&quot;),&#xd;	    templatesFolder = globalParam.read(params.companyId).getTemplatesFolder() + separador + &quot;tplmail&quot; + separador + params.templateId + separador + params.templateDialect,&#xd;	    sdk = new javax.naming.InitialContext().lookup(&quot;java:global/fluig/wcm-core/service/SDK&quot;);&#xd;	  &#xd;	 // Valores default&#xd;	data.put(&quot;SERVER_URL&quot;, sdk.getServerURL());&#xd;	data.put(&quot;SERVER_EXTERNAL_URL&quot;, sdk.getServerContextURL());&#xd;	data.put(&quot;SERVER_PROTECTED_URL&quot;, sdk.getProtectedTenantContextPath());&#xd;	data.put(&quot;COMPANY_ID&quot;, params.companyId);&#xd;	data.put(&quot;TENANT_ID&quot;,sdk.getCurrentTenantID());&#xd;	 &#xd;	// Copio datos propios del template&#xd;	if (params.datos) {&#xd;		for(param in params.datos) {&#xd;			data.put(param, params.datos[param]);&#xd;		}&#xd;	}&#xd;	 &#xd;	com.fluig.foundation.mail.EMailSenderFactory.getEMailSender().customEmail(new java.lang.Long(params.companyId), params.subject, params.from, params.to, templatesFolder, params.templateHtml, mimeType, data);&#xd;	log.info(&quot;**** Mail enviado a: &quot;+ params.to);&#xd;	&#xd;}&#xd;</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessCreate</eventId>
+        <processId>RAF03</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessCreate(processId){&#xd;&#xd;	hAPI.setCardValue(&quot;nroSolicitud&quot;, processId);&#xd;&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFFCC</color>
+      <height>478</height>
+      <width>1051</width>
+      <positionX>120</positionX>
+      <positionY>33</positionY>
+      <stateName>Asistente de Farmacovigilancia</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>200</positionX>
+      <positionY>320</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <componGrafSequence>5</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>El asistente de Farmacovigilancia da de alta la solicitud con N consultas. Al hacer click en &apos;Enviar&apos; se crean N solicitudes del proceso de Atención de Consultas.</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>490</positionX>
+      <positionY>50</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <componGrafSequence>7</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Se asigna la tarea al pool de asistentes 
+de farmacovigilancia para modificar 
+datos del cliente o agregar comentarios 
+por llamadas reiteradas.</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>490</positionX>
+      <positionY>323</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <componGrafSequence>11</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Cuando se modifican los datos del cliente o se agrega una llamada reiterada se envia un mail a cada usuario que tenga asignada una solicitud del proceso de Atención de Consultas.</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>790</positionX>
+      <positionY>330</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <componGrafSequence>12</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Si todas las consultas del llamado &#xd;
+fueron atendidas y revisadas se &#xd;
+cierra el proceso de Registro de &#xd;
+Consultas.</stateName>
+    </ProcessComponGraf>
+  </list>
+  <list>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>13</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>14</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>20</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>8</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <version>1</version>
+        <linkSequence>21</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>5</initialStateSequence>
+      <finalStateSequence>9</finalStateSequence>
+    </ProcessLinkAssoc>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>direccion</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Dirección</fieldDescription>
+      <slotId>1</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>fecha</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Fecha</fieldDescription>
+      <slotId>2</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>hora</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Hora</fieldDescription>
+      <slotId>3</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>mail</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Mail</fieldDescription>
+      <slotId>4</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>nombre</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nombre y Apellido</fieldDescription>
+      <slotId>5</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>nroSolicitud</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nro de Solicitud</fieldDescription>
+      <slotId>6</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>observaciones</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Observaciones</fieldDescription>
+      <slotId>7</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>origen</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Origen</fieldDescription>
+      <slotId>8</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>otro</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Otro</fieldDescription>
+      <slotId>9</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF03</processId>
+        <fieldId>telefono</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Teléfono</fieldDescription>
+      <slotId>10</slotId>
+    </ProcessFormField>
+  </list>
+</list>

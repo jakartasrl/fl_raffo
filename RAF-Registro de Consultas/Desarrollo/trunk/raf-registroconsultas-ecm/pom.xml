@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.arquimeda.raf</groupId>
+	<artifactId>raf-registroconsultas-ecm</artifactId>
+	<version>1.1.2-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>RAF - Registro de Consultas ECM</name>
+  
+ 	<parent>
+		<groupId>com.arquimeda.maven</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>1.3</version>
+	</parent>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <scm>
+		<connection>scm:svn:svn://192.168.0.5:43467/svn/arquimeda/Proyectos/RAFFO/RAF-Registro de Consultas/Desarrollo/trunk/raf-registroconsultas-ecm</connection>
+		<developerConnection>scm:svn:svn://192.168.0.5:43467/svn/arquimeda/Proyectos/RAFFO/RAF-Registro de Consultas/Desarrollo/trunk/raf-registroconsultas-ecm</developerConnection>
+	  	<url>scm:svn:svn://192.168.0.5:43467/svn/arquimeda/Proyectos/RAFFO/RAF-Registro de Consultas/Desarrollo/trunk/raf-registroconsultas-ecm</url>
+  </scm>
+  
+  <build>
+      <plugins>
+		  <plugin>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<version>2.2.2</version>
+			<configuration>
+				<finalName>${project.artifactId}-${project.version}</finalName>
+				<appendAssemblyId>false</appendAssemblyId>	
+				<descriptors>
+					<descriptor>assembly.xml</descriptor>
+				</descriptors>			  
+			</configuration>
+			<executions>
+			  <execution>
+				<id>make-assembly</id> <!-- this is used for inheritance merges -->
+				<phase>package</phase> <!-- bind to the packaging phase -->
+				<goals>
+				  <goal>single</goal>
+				</goals>
+			  </execution>
+			</executions>			
+			</plugin>
+		</plugins>
+  </build>
+
+</project>

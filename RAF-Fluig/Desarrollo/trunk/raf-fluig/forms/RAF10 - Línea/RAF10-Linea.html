@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+	
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+    <title>L&iacute;nea</title>
+</head>
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>L&iacute;nea</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="codigo" class="col-md-4 control-label">C&oacute;digo:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="codigo" name="codigo" data-parsley-required>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="descripcion" class="col-md-4 control-label">Descripci&oacute;n:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="descripcion" name="descripcion"  data-parsley-required> 
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="grupoSolicitante" class="col-md-4 control-label">Grupo de Solicitante:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="grupoSolicitante" name="grupoSolicitante" data-parsley-required>  
+						<input type="hidden" class="form-control" id="codGrupoSolicitante" name="codGrupoSolicitante">  
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="grupoGteMKT" class="col-md-4 control-label">Grupo de Gerente de MKT:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="grupoGteMKT" name="grupoGteMKT" data-parsley-required>  
+						<input type="hidden" class="form-control" id="codGrupoGteMKT" name="codGrupoGteMKT">  
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+		<br>
+	</div> 
+</div> 
+</body>
+</html>

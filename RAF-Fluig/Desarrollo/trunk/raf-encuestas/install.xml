@@ -1,0 +1,6 @@
+<project name="RAFv1.0.0">
+	<datasets>
+		<dataset name="raf-allDocumentsIntoFolderRecursive" file="raf-allDocumentsIntoFolderRecursive.js"></dataset>
+		<dataset name="raf-encuestas" file="raf-encuestas.js"></dataset>
+	</datasets>
+</project>

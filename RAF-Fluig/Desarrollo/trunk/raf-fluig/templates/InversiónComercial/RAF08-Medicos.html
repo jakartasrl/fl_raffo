@@ -1,0 +1,77 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Fluig</title>
+    <link href="${SERVER_URL!''}/globalmailsender/resources/global.css" type="text/css" rel="stylesheet" />    
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+
+        <div align="center">
+            <p class="DescrMsgForum">
+                <div>
+                    <b>Congreso: ${nombreCongreso!}</b>
+                </div>
+                <div>
+                    <b>${fechaDesdeCongreso} - ${fechaHastaCongreso}</b>
+                </div>
+                <div>
+                    <b>${lugarCongreso!}</b>
+                </div>
+            </p>
+        </div>
+	
+	<div style="margin-left: 25px;">
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+			Estimado Dr. ${nombreMedico!},
+		</p>
+		
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+			Le detallamos a continuaci&oacute;n los servicios que tendr&aacute; cubiertos por <b>Laboratorios Raffo</b> para asistir al
+			${nombreCongreso!}, que se llevar&aacute; a cabo del ${fechaDesdeCongreso} - ${fechaHastaCongreso} en ${lugarCongreso!}.
+		</p>
+
+		
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+			<b>Servicios cubiertos por Laboratorio Raffo</b>
+		</p>
+
+		<#if incluyeInscripcion == "SI">
+			<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin-left: 25px;">
+				<b>- Inscripción al evento:</b> ${nombreCongreso!}.
+			</p>
+		</#if>	
+		<#if incluyeAlojamiento == "SI">
+			<h4 style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin-left: 25px;">- Alojamiento:</h4>
+
+	        <p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+                <div style="margin-left: 45px;">
+                    Base: ${tipoHabitacion!}
+                </div>
+                <div style="margin-left: 45px;">
+                    Check in:  ${checkinHotel!}
+                </div>
+                <div style="margin-left: 45px;">
+                    Check out: ${checkoutHotel!}
+                </div>
+                <div style="margin-left: 45px;">
+                     ${cantidadNoche!} noches de alojamiento.
+                </div>
+            </p>
+		</#if>
+		<#if incluyeTraslado == "SI">
+			<h4 style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin-left: 25px;">- Pasaje a&eacute;reo para asistir al congreso</h4>
+			<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin-left: 45px;">
+				Recibir&aacute; detalles por parte de nuestra agencia de viajes.
+			</p>
+		</#if>
+
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+			Pronto ser&aacute; contactado por nuestra agencia de viajes.
+		</p>
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+				Saludos cordiales,<br/>
+				Laboratorios Raffo
+		</p>
+	</div>		
+</body>
+</html>

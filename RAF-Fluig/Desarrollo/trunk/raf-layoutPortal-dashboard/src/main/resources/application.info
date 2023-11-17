@@ -1,0 +1,14 @@
+application.type=layout
+application.code=raf_layoutPortal_dashboard
+application.title=Portal Raffo Dashboard
+application.description=Layout de la intranet de Raffo con diseño dashboard.
+application.category=SYSTEM
+application.renderer=freemarker
+application.icon=icon.png
+developer.code=ARQ
+developer.name=Arquimeda S.R.L.
+developer.url=http://www.arquimeda.com/
+layout.defaultSlot=SlotA
+layout.file=layout.ftl
+locale.file.base.name=raf-layoutPortal-dashboard
+slot.SlotLogin=sociallogin

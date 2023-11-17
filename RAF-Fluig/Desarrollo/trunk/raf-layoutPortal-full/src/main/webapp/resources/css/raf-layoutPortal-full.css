@@ -1,0 +1,378 @@
+
+/* CSS Document */
+@charset "utf-8";
+
+/* GENERAL */
+html, body, p, span, a, h1, h2, h3, h4, h5, h6, div, table {margin:0; padding:0;}
+body {font:10pt/12pt 'Flama', sans-serif; font-weight:500;}
+a {text-decoration:none;}
+
+/* BACKGROUNDS */
+.bg_bordo {background:#720023;}
+.bg_bordo2 {background:#720023;}
+
+.bg_gris {background:#edebeb;}
+
+/* COLORES */
+.blanco {color:#FFFFFF;}
+.blanco:visited {color:#FFFFFF;}
+.bordo {color:#720023;}
+.grisoo {color:#444444;}
+.griso {color:#646464;}
+.gris {color:#808080;}
+.grisc {color:#ededed;}
+
+/* ALIGN */
+.left {text-align:left;}
+.center {text-align:center;}
+.right {text-align:right;}
+
+/* FONTS */
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Thin.otf') format('opentype');
+   font-weight: 100;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama ThinItalic.otf') format('opentype');
+   font-weight: 100;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Ultralight.otf') format('opentype');
+   font-weight: 200;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama UltralightItalic.otf') format('opentype');
+   font-weight: 200;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Light.otf') format('opentype');
+   font-weight: 300;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama LightItalic.otf') format('opentype');
+   font-weight: 300;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Book.otf') format('opentype');
+   font-weight: 400;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama BookItalic.otf') format('opentype');
+   font-weight: 400;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Basic.otf') format('opentype');
+   font-weight: 500;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama BasicItalic.otf') format('opentype');
+   font-weight: 500;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Medium.otf') format('opentype');
+   font-weight: 600;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama MediumItalic.otf') format('opentype');
+   font-weight: 600;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Bold.otf') format('opentype');
+   font-weight: 700;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama BoldItalic.otf') format('opentype');
+   font-weight: 700;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Extrabold.otf') format('opentype');
+   font-weight: 800;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama ExtraboldItalic.otf') format('opentype');
+   font-weight: 800;
+   font-style: italic;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama Black.otf') format('opentype');
+   font-weight: 900;
+   font-style: normal;
+}
+@font-face {
+   font-family: 'Flama';
+      src: url('../fonts/Flama BlackItalic.otf') format('opentype');
+   font-weight: 900;
+   font-style: italic;
+}
+
+.f8 {font:8pt/10pt 'Flama', sans-serif;}
+.f10 {font:10pt/12pt 'Flama', sans-serif;}
+.f12 {font:12pt/14pt 'Flama', sans-serif;}
+.f14 {font:14pt/16pt 'Flama', sans-serif;}
+.f16 {font:16pt/18pt 'Flama', sans-serif;}
+.f18 {font:18pt/20pt 'Flama', sans-serif;}
+.f20 {font:20pt/22pt 'Flama', sans-serif;}
+.f22 {font:22pt/24pt 'Flama', sans-serif;}
+.f24 {font:24pt/26pt 'Flama', sans-serif;}
+.f26 {font:26pt/28pt 'Flama', sans-serif;}
+.f28 {font:28pt/30pt 'Flama', sans-serif;}
+.f30 {font:30pt/32pt 'Flama', sans-serif;}
+.f32 {font:32pt/34pt 'Flama', sans-serif;}
+.f34 {font:34pt/36pt 'Flama', sans-serif;}
+.f36 {font:36pt/38pt 'Flama', sans-serif;}
+.f38 {font:38pt/40pt 'Flama', sans-serif;}
+.f40 {font:40pt/42pt 'Flama', sans-serif;}
+
+.thin {font-weight:100;}
+.ultralight {font-weight:200;}
+.light {font-weight:300;}
+.book {font-weight:400;}
+.basic {font-weight:500;}
+.medium {font-weight:600;}
+.bold {font-weight:700;}
+.extrabold {font-weight:800;}
+.black {font-weight:900;}
+
+.fFlama {font-family:'Flama', sans-serif;}
+
+/* ANCHOS */
+.w1280 {position:relative; width:95%; max-width:1280px; margin:0 auto; display:table}
+.w1200 {position:relative; width:95%; max-width:1200px; margin:0 auto; display:table}
+.w1024 {position:relative; width:95%; max-width:1024px; margin:0 auto; display:table}
+.w960 {position:relative; width:95%; max-width:960px; margin:0 auto; display:table}
+.w100 {position:relative; width:100%; display:table}
+.w75 {position:relative; width:75%; display:table-cell; vertical-align:top;}
+.w66 {position:relative; width:66%; display:table-cell; vertical-align:top;}
+.w50 {position:relative; width:50%; display:table-cell; vertical-align:top;}
+.w33 {position:relative; width:33%; display:table-cell; vertical-align:top;}
+.w25 {position:relative; width:25%; display:table-cell; vertical-align:top;}
+.w20 {position:relative; width:20%; display:table-cell; vertical-align:top;}
+
+/* GENERAL */
+* {
+	font-family:'Flama', sans-serif;
+}
+body {background:#f5f5f5; overflow-y: scroll;}
+
+
+/* TOP */
+#topMenu {position:fixed; width:100%; height:120px; background:#f5f5f5; z-index:1;}
+	#topMenu a {text-decoration:none;}
+	#topMenu .padding {width:80%; padding:40px 0 20px; margin: 0 10%; height:100%; border-bottom:1px solid #edebeb; background:#f5f5f5; z-index:1;}
+	#topMenu #logo {position:relative; background:url(../images/logo.png) no-repeat center; background-size:auto 100%; width:132px; height:40px; float:left;}
+	#topMenu #logoi {position:relative; background:url(../images/logo.png) no-repeat top center; background-size:auto 100%; width:18.75%; height:72px; float:left; display:block; bottom:10px; cursor:pointer;}
+	#topMenu .menu {position:relative; float:left; padding-top:5px}
+		#topMenu .menu .boton {position:relative; color:#888888; font: 12pt/14pt 'Flama', sans-serif; font-weight:700; display:inline-block; margin:0 5px; padding:5px 10px; cursor:pointer;}
+		#topMenu .menu .boton:hover {color:#FFFFFF; background:#720023}
+		#topMenu .menu .boton.active {color:#FFFFFF; background:#720023}
+			#topMenu .menu .boton .sub {position:absolute; width:159px; top:35px; left:0px; border:0px solid #720023; background:none; display:none; z-index:100;}
+				#topMenu .menu .boton .sub .flechita {position:absolute; width:18px; height:8px; top:-8px; left:50%; margin-left:-9px; background:url(../images/flechita.png) no-repeat center center}
+				#topMenu .menu .boton .sub .botoncito{color:#FFFFFF; font:9pt/9pt 'Flama', sans-serif; font-weight:500; display:block; margin:0; padding:8px 10px; background:#720023; margin-bottom:5px}
+				#topMenu .menu .boton .sub .botoncito:hover {background:#B30155}
+				#topMenu .menu .boton .sub .botoncito.active {background:#B30155}
+	#topMenu .loggedUser {position:relative; float:right; top: -14px;}
+		#topMenu .loggedUser #encuestas {display:block; float:left; margin:14px;}
+			#topMenu .loggedUser #encuestas .counter {margin-right:-4px;}		
+		#topMenu .loggedUser #SlotLogin {margin-right:0;}
+		#topMenu .loggedUser .slotLogin {border-radius: 5px; border: 1px solid #ccc; margin-top: 14px;}
+		#topMenu .loggedUser .slotLoginName {display: inline-block; background-color: white; padding: 6px 12px; border-bottom-right-radius:5px; border-top-right-radius:5px;}
+		#topMenu .loggedUser .slotLoginImage {width:32px; height:32px; margin-top:-2px; border-bottom-left-radius:5px; border-top-left-radius:5px; border-right:1px solid #ccc;}
+		
+	#topMenu #contacto {position:relative; float:right;  padding-top:10px; color:#A56977; font-size:8pt; font-weight:600}
+		#topMenu #contacto img {margin: 0 5px;}
+/*
+	#topMenu .menu_mobile_icon {position:absolute; top:40px; right:10px; color:#A56977; font-size:8pt; font-weight:600; display:none; cursor:pointer}
+	#topMenu .menu_mobile {position:fixed; left:0; top:0; width:100%; height:100%; background:#eeeeee; display:none; z-index:5000}	
+		#topMenu .menu_mobile .boton {position:relative; color:#888888; font:12pt/12pt 'Flama', sans-serif; font-weight:800; display:block; padding:20px;}
+		#topMenu .menu_mobile .boton:hover {color:#FFFFFF; background:#720023}
+		#topMenu .menu_mobile .boton.active {color:#FFFFFF; background:#720023}		
+			#topMenu .menu_mobile .boton .sub {position:relative; display:none; z-index:100;}
+				#topMenu .menu_mobile .boton .sub .botoncito{color:#808080; font:12pt/12pt 'Flama', sans-serif; font-weight:800; display:block; margin:0; padding:8px 0px;}
+				#topMenu .menu_mobile .boton .sub .botoncito:hover {color:#FFFFFF}
+				#topMenu .menu_mobile .boton .sub .botoncito.active {color:#FFFFFF}
+*/
+		
+/* VERTICAL MENU */
+#verticalMenu {position:fixed; top:120px; width:25%; height:100%; border-bottom:1px solid #edebeb; background:#f5f5f5; z-index:1; margin: 0;}
+	#verticalMenu a {text-decoration:none;}
+	#verticalMenu .menu-wrapper {margin-left: 40%; padding: 0; width: 60%; height: 0; padding-bottom: 85.7%; margin-bottom: 0; height: 0; position: relative;}
+	#verticalMenu .menu { list-style-type: none; position: absolute; top: 0; bottom: 0; right: 0; left: 0;}
+		#verticalMenu .menu .boton {position:relative; background-color: #720023; color:#FFFFFF; margin-bottom: 9.5%; font: 12pt/14pt 'Flama', sans-serif; font-weight:700;display:inline-block; padding: 11.5% 6%; width:100%; height: 20.7%; cursor:pointer;}
+		#verticalMenu .menu .boton:hover {color:#FFFFFF; background:#B30155}
+		#verticalMenu .menu .boton.active {color:#FFFFFF; background:#B30155}
+			#verticalMenu .menu .boton .sub {position:absolute; width:159px; top:0px; padding: 5px 0 0 5px; left:100%; border:0px solid #720023; background:none; display:none; z-index:100;}
+				#verticalMenu .menu .boton .sub .flechita {position:absolute; width:18px; height:8px; top:-8px; left:50%; margin-left:-9px; background:url(../images/flechita.png) no-repeat center center}
+				#verticalMenu .menu .boton .sub .botoncito{color:#FFFFFF; font:12pt/14pt 'Flama', sans-serif; font-weight:500; display:block; margin:0; padding:8px 10px; background:#720023; margin-bottom:5px}
+				#verticalMenu .menu .boton .sub .botoncito:hover {background:#B30155}
+				#verticalMenu .menu .boton .sub .botoncito.active {background:#B30155}
+			#verticalMenu .menu .boton .sinSubMenu {color:inherit; height: 100%; width: 100%;}
+			
+		
+	#verticalMenu #contacto {position:relative; float:right;  padding-top:10px; color:#A56977; font-size:8pt; font-weight:600}
+		#verticalMenu #contacto img {margin: 0 5px;}
+	
+	#verticalMenu .menu_mobile_icon {position:absolute; top:40px; right:10px; color:#A56977; font-size:8pt; font-weight:600; display:none; cursor:pointer}
+	#verticalMenu .menu_mobile {position:fixed; left:0; top:0; width:100%; height:100%; background:#eeeeee; display:none; z-index:5000}	
+		#verticalMenu .menu_mobile .boton {position:relative; color:#888888; font:12pt/12pt 'Flama', sans-serif; font-weight:800; display:block; padding:20px;}
+		#verticalMenu .menu_mobile .boton:hover {color:#FFFFFF; background:#720023}
+		#verticalMenu .menu_mobile .boton.active {color:#FFFFFF; background:#720023}		
+			#verticalMenu .menu_mobile .boton .sub {position:relative; display:none; z-index:100;}
+				#verticalMenu .menu_mobile .boton .sub .botoncito{color:#808080; font:12pt/12pt 'Flama', sans-serif; font-weight:800; display:block; margin:0; padding:8px 0px;}
+				#verticalMenu .menu_mobile .boton .sub .botoncito:hover {color:#FFFFFF}
+				#verticalMenu .menu_mobile .boton .sub .botoncito.active {color:#FFFFFF}
+				
+/* CONTENT */
+#content {position:relative; top:120px; left:25%; width:65%; padding:0 0 0 10px; background-color:#f5f5f5;}
+	#content .padding {width:100%; background-color:#f5f5f5;}
+	#content #edicaoPagina .editable-slot {background-color:#720023; margin: 0.5%; padding: 0.5%;}
+		#content #edicaoPagina .editable-slot .slotint {margin: 0;}
+	#content .slotfull .slotint {background:#F5F5F5}
+		#content #visualizacaoPagina .slotfull {padding:0;}
+	#content .layout-1-2right {display:inline-block; float: none; width:50%;}
+		#content #visualizacaoPagina .layout-1-2right {width:30% !important;}
+	#content #visualizacaoPagina .layout-1-2left {width:70% !important;}
+
+/* MEDIA QUERYS */
+@media screen and (max-device-width: 1480px), screen and (max-width: 1480px) {
+	#topMenu .menu .boton { font: 10pt/12pt 'Flama', sans-serif;  font-weight:700 }
+	#verticalMenu .menu .boton { font:10pt/12pt 'Flama', sans-serif;  font-weight:700 }
+		#verticalMenu .menu .boton .sub .botoncito { font:10pt/12pt 'Flama', sans-serif; font-weight: 500; }
+}
+
+@media screen and (max-device-width: 1190px), screen and (max-width: 1190px) {
+	#topMenu .menu .boton { font: 8pt/10pt 'Flama', sans-serif;  font-weight:700 }
+	#verticalMenu .menu .boton { font:8pt/10pt 'Flama', sans-serif;  font-weight:700 }
+		#verticalMenu .menu .boton .sub .botoncito { font:8pt/10pt 'Flama', sans-serif; font-weight: 500; }
+}
+
+@media screen and (max-device-width: 1000px), screen and (max-width: 1000px) {
+	#topMenu #contacto {position:absolute; float:none; top:-60px; right:0px;}
+}
+
+@media screen and (max-device-width: 750px), screen and (max-width: 750px) {
+	
+	.linea_modulos {position:relative; margin-bottom:10px; display:block; width:100%;}
+	
+		.moduloitxt {position:relative; padding:30px 0;}
+	
+		.moduloi {position:relative; width:100%; display:block; margin-bottom:10px;}
+		.moduloi2 {position:relative; width:100%; display:block; margin-bottom:10px;}
+		.moduloi3 {position:relative; width:100%; display:block; margin-bottom:10px;}
+	
+	#topMenu {position:relative; width:100%; padding:40px 0 20px; border-bottom:1px solid #edebeb; background:#f5f5f5; z-index:1}
+	#topMenu #logo {position:relative; background:url(../images/logo.png) no-repeat; background-size:auto 100%; width:132px; height:40px; float:left;}
+	#topMenu .menu {display:none;}
+	
+	#topMenu .menu_mobile_icon {display:block;}
+		
+	#topMenu #contacto {display:none}
+	
+	.inst_cuadro { background:none !important; padding:20px 0; margin-bottom:0px; border-bottom:1px solid #eeeeee}
+	.inst_cuadro .w50 {width:95%; display:block; margin:0; padding:20px 0; height:auto}
+	.inst_cuadro .titulo {font:16pt/18pt 'Flama', sans-serif; color:#720023;}
+	.inst_cuadro .negrita {font:20pt/22pt 'Flama', sans-serif; color:#720023; font-weight:700}
+	#slide-sjuan {display:none !important}
+	#slide-tortuguitas {display:none !important}
+
+	.magnific-gallery a {width:50%;}
+	
+	
+	.cuadros .cuadro {width:36%; margin:0 10px 10px}
+	.cuadros .cuadro .leermas {display:none;}
+	.cuadros .cuadro .categoria {position:relative; bottom:auto; right:auto; width:auto; height:15px; padding:10px; opacity:0.2}
+	.cuadros .cuadro .linea {bottom:20px; right:auto; left:20px; width:50%;}
+	.cuadros .cuadro .fecha {bottom:20px; right:20px;}
+
+	.eventos .evento {width:45%; margin:0 10px 10px;}
+	.eventos .evento .categoria {position:relative; bottom:auto; right:auto; width:auto; height:15px; padding:10px;}
+	.eventos .evento .linea {bottom:20px; right:auto; left:20px; width:50%;}
+	.eventos .evento .fecha {bottom:20px; right:20px;}
+	
+	.archivos .archivo {width:45%; margin:0 10px 20px; }
+	.archivos .archivo .categoria {position:relative; bottom:auto; right:auto; width:auto; height:15px; padding:10px;}
+	.archivos .archivo .linea {bottom:20px; right:auto; left:20px; width:50%;}
+	.archivos .archivo .fecha {bottom:20px; right:20px;}
+	
+	
+	.sep {display:none;}
+	
+	
+	.w75 {width:66%}
+	.w25 {width:33%;}
+	
+}
+
+@media screen and (max-device-width: 540px), screen and (max-width: 540px) {
+	.magnific-gallery a {width:100%;}
+
+	.icampo01, .icampo02, .ccampo01, .ccampo02 {margin:0px; display:block; padding:10px 0; width:100%; text-indent:10px;}
+
+	#paginador {text-align:center;}	
+	#paginador .boton {	display:inline-table; padding:8px; border:0; cursor:pointer; color:#FFFFFF; font:14pt/14pt 'Flama', sans-serif; text-align:center; margin:0 5px 10px; background:#720023; width:20px;}
+	#paginador .boton:hover {color:#FFFFFF;}
+	
+	.buscador {display:none;}
+	.buscador_mobile {display:block;}
+	
+	.alfabeto {display:none;}
+	.search_b {display:none;}
+	
+	.resultados .producto .cuadro {position:relative; padding:10px;}
+			
+	.producto_encabezado {display:none;}
+	.producto_foto {float:none;}
+	
+	.cuadros .cuadro {width:80%; display:block; margin:0 auto 20px; padding:20px;}
+	.eventos .evento {width:95%; margin:0 10px 20px; display:block}
+	.archivos .archivo {width:95%; margin:0 10px 20px; display:block}
+	
+	.index_cuadro {padding:20px !important; width:auto;}
+	
+	.index_cuadro .w50 {width:auto; display:block; padding:0; padding-bottom:10px;}
+	
+	.inst_cuadro {height:auto;}
+	.inst_cuadro .w33 {width:auto; padding:20px; }
+	.inst_cuadro .w50 {width:auto; padding:20px; height:auto; }
+	.inst_cuadro .w66 {width:auto; padding:20px; }
+	
+	.w100 {width:95%; display:block; margin:0 auto 10px;}
+	.w75 {width:95%; display:block; margin:0 auto 10px;}
+	.w66 {width:95%; display:block; margin:0 auto 10px;}
+	.w50 {width:95%; display:block; margin:0 auto 10px;}
+	.w33 {width:95%; display:block; margin:0 auto 10px;}
+	.w25 {width:95%; display:block; margin:0 auto 10px;}
+	.w20 {width:95%; display:block; margin:0 auto 10px;}	
+
+}

@@ -1,0 +1,174 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Fluig</title>
+    <link href="${SERVER_URL!''}/globalmailsender/resources/global.css" type="text/css" rel="stylesheet" />    
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+	
+	<div style="margin-left: 25px;">
+		
+		<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+			<tbody>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">GRUPO SOLICITANTE</td>
+					<td style="padding: 0.5em;"> ${userGroup!}</td>
+				</tr>					
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">MOTIVO DEL CAMBIO </td>
+					<td style="padding: 0.5em;"> ${changeReason!}</td>
+				</tr>				
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">TIPO DE IMPLEMENTACIÓN </td>
+					<td style="padding: 0.5em;"> ${implementationType!}</td>
+				</tr>					
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">TÍTULO </td>
+					<td style="padding: 0.5em;"> ${title!}</td>
+				</tr>					
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">DETALLE DEL CAMBIO </td>
+					<td style="padding: 0.5em;"> ${changeDetail!}</td>
+				</tr>					
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">FECHA DE CORTE </td>
+					<td style="padding: 0.5em;"> ${breakDate!}</td>
+				</tr>					
+			</tbody>
+		</table>
+		<br />
+		
+		<#if changeGroupReasonType == "nuevoDisenio">
+			<h3 style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">Detalle</h3>
+			
+			
+			<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+				<tbody>
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">MARCA </td>
+						<td style="padding: 0.5em;"> ${marca!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">PRINCIPIO ACTIVO 1 </td>
+						<td style="padding: 0.5em;"> ${prActivo1!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">CONCENTRACIÓN 1 </td>
+						<td style="padding: 0.5em;"> ${concentracion1!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">UNIDAD DE MEDIDA 1 </td>
+						<td style="padding: 0.5em;"> ${um1!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">PRINCIPIO ACTIVO 2 </td>
+						<td style="padding: 0.5em;"> ${prActivo2!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">CONCENTRACIÓN 2 </td>
+						<td style="padding: 0.5em;"> ${concentracion2!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">UNIDAD DE MEDIDA 2 </td>
+						<td style="padding: 0.5em;"> ${um2!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">PRINCIPIO ACTIVO 3 </td>
+						<td style="padding: 0.5em;"> ${prActivo3!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">CONCENTRACIÓN 3 </td>
+						<td style="padding: 0.5em;"> ${concentracion3!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">UNIDAD DE MEDIDA 3 </td>
+						<td style="padding: 0.5em;"> ${um3!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">PRINCIPIO ACTIVO 4 </td>
+						<td style="padding: 0.5em;"> ${prActivo4!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">CONCENTRACIÓN 4 </td>
+						<td style="padding: 0.5em;"> ${concentracion4!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">UNIDAD DE MEDIDA 4 </td>
+						<td style="padding: 0.5em;"> ${um4!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">GRUPO DE PRODUCTO </td>
+						<td style="padding: 0.5em;"> ${grupoProd!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">PRESENTACIÓN </td>
+						<td style="padding: 0.5em;"> ${presentacion!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">PAÍS </td>
+						<td style="padding: 0.5em;"> ${pais!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">TITULARIDAD </td>
+						<td style="padding: 0.5em;"> ${titularidad!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">ELABORADOR </td>
+						<td style="padding: 0.5em;"> ${elaborador!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">ACONDICIONADOR </td>
+						<td style="padding: 0.5em;"> ${acondicionador!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">FICHA TÉCNICA </td>
+						<td style="padding: 0.5em;"> ${fichaTecnica!}</td>
+					</tr>					
+					<tr>
+						<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">TIPOS DE PRODUCTO </td>
+						<td style="padding: 0.5em;">
+							<ul  style="padding: 0; margin: 0">
+								<#list prodTypes as prodType>
+									<li>${prodType!}</li>
+								</#list>
+							</ul>
+						</td>
+					</tr>					
+					
+				</tbody>
+			</table>
+			
+		<#else>
+			<h3 style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">Productos</h3>
+			
+			<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+				<tbody>
+					<#list prods as prod>
+						<tr>
+							<td style="border: 1px solid #d5d2ca; padding: 8px;">
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Codigo:</strong> ${prod.cod!} </p>
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Descripción:</strong> ${prod.descr!} </p>
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Tipo de Producto:</strong> ${prod.tipoProd!} </p>
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Marca:</strong> ${prod.marcaProd!} </p>
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Principios Activos:</strong> ${prod.prActivos!} </p>
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Grupo de Producto:</strong> ${prod.grupoProd!} </p>
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Presentación:</strong> ${prod.presentacion!} </p>
+								<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;margin:0;"><strong>Pais:</strong> ${prod.pais!} </p>
+							</td>
+						</tr>	
+					</#list>
+				</tbody>
+			</table>
+		</#if>
+		
+		<br/>
+		
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+			<!-- Texto Libre Footer -->
+			Muchas gracias por sus gestiones.
+			<br/>
+		</p>
+		
+	</div>	
+</body>
+</html>

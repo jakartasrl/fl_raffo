@@ -1,0 +1,10 @@
+<!-- Esto va en standalone.xml / domain.xml -->
+                <mail-session jndi-name="java:jboss/mail/schPortalSession" name="schPortalSession">
+                    <smtp-server outbound-socket-binding-ref="sch-mail-smtp" password="usuario1" tls="false" username="usuario1@totvsecm.com.ar"/>
+                </mail-session>
+                
+<!-- Esto va en standalone.xml / domain.xml              
+            <outbound-socket-binding name="sch-mail-smtp">
+                <remote-destination host="192.168.62.7" port="25"/>
+            </outbound-socket-binding>
+ -->                               

@@ -1,0 +1,16 @@
+Mecanismos de atribución custom:
+	*Completar remuneraciones y beneficios: RAF06-CompYAdmPersonal
+	*Revisar alta de empleado: RAF06-SeleccionPersonal
+	*Notificar ingreso de empleado: RAF06-SeleccionPersonal
+
+Para la Tarea Ingresar Nuevo Usuario se creó un nuevo Grupo ROL-SIS que hace referencia al área de sistemas.
+
+Campos para filtrar el formulario:
+	* Pendiente de analizar
+	
+Exportacion de Templates
+	Codigo: RAF06-MailNotificaAlta
+	Descripcion: RAF06-MailNotificaAlta
+	Exportar:
+		*RAF06-MailNotificaAlta.html
+		*logoSelecion.png

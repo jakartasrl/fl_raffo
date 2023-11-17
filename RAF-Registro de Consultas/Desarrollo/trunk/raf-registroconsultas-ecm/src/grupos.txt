@@ -1,0 +1,27 @@
+RC_ATE_FCIA:Asistentes de Farmacovigilancia
+RC_ROR_FCIA:Revisores de Farmacovigilancia
+
+RC_DER_FCIA: Farmacovigilancia
+RC_DER_AMED: Asesoría Médica
+RC_DER_GCAL: Garantía de Calidad
+RC_DER_VTAF: Ventas Farma
+RC_DER_VTAO: Ventas OLE
+RC_DER_APTE: Asistencia Paciente
+RC_DER_FCAR: Gerencia Farma Cardiología
+RC_DER_FGIN: Gerencia Farma Ginecología
+RC_DER_FFLE: Gerencia Farma Flebología
+RC_DER_FNEU: Gerencia Farma Neurología
+RC_DER_FOTC: Gerencia Farma OTC
+RC_DER_FDOR: Gerencia Farma Dolor
+RC_DER_OURO: Gerencia Ole Urología
+RC_DER_OINM: Gerencia Ole Inmunología
+RC_DER_OHEM: Gerencia Ole Hematología
+RC_DER_OONC: Gerencia Ole Oncología
+RC_DER_OESP: Gerencia Ole Especiales
+RC_DER_OTRO: Generales
+RC_DER_DTEC: Dirección Técnica
+
+RC_DER_FGAS: Gerencia Farma Gastroenterología
+RC_DER_FVIA : Gerencia Farma Vias Respiratorias
+RC_DER_FDER : Gerencia Farma Dermatología
+

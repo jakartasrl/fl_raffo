@@ -1,0 +1,7 @@
+<project name="SFIv1.0.0">
+	<controlPanel>
+		<roles>
+			<role name="ADM-PORTAL" description="Administrador del Portal Intranet"></role>
+		</roles>
+	</controlPanel>
+</project>

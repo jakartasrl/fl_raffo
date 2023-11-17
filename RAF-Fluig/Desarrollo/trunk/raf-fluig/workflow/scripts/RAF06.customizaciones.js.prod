@@ -1,0 +1,93 @@
+function sendCustomEmail(params) {
+ 
+	var mimeType = "text/html", 
+	    data = new java.util.HashMap(), 
+	    separador = java.io.File.separator,
+	    globalParam = new javax.naming.InitialContext().lookup("java:global/fluig/ecm-ejb/wdk/GlobalParam"),
+	    templatesFolder = globalParam.read(params.companyId).getTemplatesFolder() + separador + "tplmail" + separador + params.templateId + separador + params.templateDialect,
+	    sdk = new javax.naming.InitialContext().lookup("java:global/fluig/wcm-core/service/SDK");
+	  
+	 // Valores default
+	data.put("SERVER_URL", sdk.getServerURL());
+	data.put("SERVER_EXTERNAL_URL", sdk.getServerContextURL());
+	data.put("SERVER_PROTECTED_URL", sdk.getProtectedTenantContextPath());
+	data.put("COMPANY_ID", params.companyId);
+	data.put("TENANT_ID",sdk.getCurrentTenantID());
+	 
+	// Copio datos propios del template
+	if (params.datos) {
+		for(param in params.datos) {
+			data.put(param, params.datos[param]);
+		}
+	}
+	 
+	com.fluig.foundation.mail.EMailSenderFactory.getEMailSender().customEmail(new java.lang.Long(params.companyId), params.subject, params.from, params.to, templatesFolder, params.templateHtml, mimeType, data);
+	log.info("**** Mail enviado a: "+ params.to);
+	
+}
+
+function existeColleague(constraintrKey, constraintValue){
+	var c1 = DatasetFactory.createConstraint(constraintrKey, constraintValue, constraintValue, ConstraintType.MUST);
+	var dts = DatasetFactory.getDataset("colleague", null, [c1], null);
+	return dts.rowsCount > 0;
+}
+
+function existeCarpetaLegajo(legajo){
+	var arq = arqMarvinLoad("v1", {
+		prop: "com.arquimeda.marvin.server.js.Properties-v1"
+	});
+	arq.prop.load({
+		datasetName: "parametros"
+	});
+	
+	var carpetaLegajosId = arq.prop.get("RAF06.carpetaLegajos.docId");
+	
+	var c1 = DatasetFactory.createConstraint("parentDocumentId", carpetaLegajosId, carpetaLegajosId, ConstraintType.MUST);
+	var c2 = DatasetFactory.createConstraint("documentDescription", "%"+legajo+" ", "%"+legajo+" ", ConstraintType.MUST);
+	c2.setLikeSearch(true);
+	var dts = DatasetFactory.getDataset("document", null, [c1,c2], null);
+	return (dts.rowsCount > 0 ? dts.getValue(0, "documentPK.documentId") : false);
+}
+
+function corregirCamposFecha(nombreCampo){
+	
+	if (hAPI.getCardValue(nombreCampo) != null && hAPI.getCardValue(nombreCampo) != ""){
+		var fechaArray = hAPI.getCardValue(nombreCampo).split("/");
+		if (fechaArray.length > 1) {
+			hAPI.setCardValue(nombreCampo, fechaArray[2]+"-"+fechaArray[1]+"-"+fechaArray[0]);
+			log.error("*** Fue modificado el campo " + nombreCampo + " valor: " + hAPI.getCardValue(nombreCampo) + " solicitud: " + hAPI.getCardValue("nroSolicitud"));
+		}		
+	}
+	
+}
+
+
+function getUserList(codigoGrupo){
+
+    var userList = new java.util.HashSet(); 
+    var c1 = DatasetFactory.createConstraint('colleagueGroupPK.groupId', codigoGrupo, codigoGrupo, ConstraintType.MUST);          
+    var dataset = DatasetFactory.getDataset('colleagueGroup', null, [c1], null);
+
+	for(var i = 0; i < dataset.rowsCount; i++) {         
+      var colleagueId = dataset.getValue(i, 'colleagueGroupPK.colleagueId');            
+      userList.add(colleagueId);
+    }
+	
+	return new java.util.ArrayList(userList);
+	
+}
+
+function getMailList(colleagueId){
+
+    var mailList = new java.util.HashSet(); 
+    var c1 = DatasetFactory.createConstraint('colleaguePK.colleagueId', colleagueId, colleagueId, ConstraintType.MUST);          
+    var dataset = DatasetFactory.getDataset('colleague', null, [c1], null);
+
+	for(var i = 0; i < dataset.rowsCount; i++) {         
+      var mail = dataset.getValue(i, 'mail');            
+      mailList.add(mail);
+    }
+	
+	return new java.util.ArrayList(mailList);
+	
+}

@@ -1,0 +1,36 @@
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.username','STRING','adm');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.userId','STRING','adm');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.password','STRING','adm');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.endpoint','STRING','http://192.168.0.9:8080/webdesk/ECMWorkflowEngineService');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.companyId','INTEGER','1');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.processId','STRING','RAF09');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.datasetservice.endpoint','STRING','http://192.168.0.9:8080/webdesk/ECMDatasetService');
+
+
+-- DESA
+
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.username','STRING','SYS08');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.userId','STRING','SYS08');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.password','STRING','80SYS');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.endpoint','STRING','http://192.168.0.138:9080/webdesk/ECMWorkflowEngineService');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.companyId','INTEGER','1');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.processId','STRING','RAF09');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.datasetservice.endpoint','STRING','http://192.168.0.138:9080/webdesk/ECMDatasetService');
+
+ALTER TABLE  [dbo].[Z_RAF_PRESUPUESTO] ADD DESCRIPCION_PRODUCTO varchar(255);
+
+UPDATE [dbo].[Z_RAF_PRESUPUESTO] SET DESCRIPCION_PRODUCTO = 'AEROTINA 10 mg X 30 COMPRIMIDOS' WHERE [CODIGO_PRODUCTO] = 90000;
+UPDATE [dbo].[Z_RAF_PRESUPUESTO] SET DESCRIPCION_PRODUCTO = 'PANKREOFLAT X 20 COMP. REC.' WHERE [CODIGO_PRODUCTO] = 93120;
+UPDATE [dbo].[Z_RAF_PRESUPUESTO] SET DESCRIPCION_PRODUCTO = 'PARACETAMOL FORTE X 30 COMPRIMIDOS' WHERE [CODIGO_PRODUCTO] = 93280;
+UPDATE [dbo].[Z_RAF_PRESUPUESTO] SET DESCRIPCION_PRODUCTO = 'RAFFOLUTIL 150 MG X  30 COMP. REC.' WHERE [CODIGO_PRODUCTO] = 93670;
+
+
+-- PRODUCCION
+
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.username','STRING','SYS08');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.userId','STRING','SYS08');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.password','STRING','80SYS');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.endpoint','STRING','http://192.168.0.104:8080/webdesk/ECMWorkflowEngineService');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.companyId','INTEGER','1');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.workflowengineservice.processId','STRING','RAF09');
+INSERT INTO [FLUIG_RAFFO].[dbo].[Z_FDN_PARAMETER] (NAME,DATATYPE,VALUE) VALUES ('fluig.datasetservice.endpoint','STRING','http://192.168.0.104:8080/webdesk/ECMDatasetService');

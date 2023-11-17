@@ -1,0 +1,143 @@
+FCIA
+Farmacovigilancia
+RC_DER_FCIA
+Derivación - Farmacovigilancia
+
+
+
+AMED
+Asesoría Médica Farma
+RC_DER_AMED
+Derivación - Asesoría Médica
+
+
+GCAL
+Garantía de Calidad
+RC_DER_GCAL
+Derivación - Garantía de Calidad
+
+
+VTAF
+Ventas Farma
+RC_DER_VTAF
+Derivación - Ventas Farma
+
+
+VTAO
+Ventas OLE
+RC_DER_VTAO
+Derivación - Ventas OLE
+
+
+APTE
+Asistencia Paciente
+RC_DER_APTE
+Derivación - Asistencia Paciente
+
+
+FCAR
+Gerencia Farma Cardiología
+RC_DER_FCAR
+Derivación - Gerencia Farma Cardiología
+
+
+FGIN
+Gerencia Farma Ginecología
+RC_DER_FGIN
+Derivación - Gerencia Farma Ginecología
+
+
+FFLE
+Gerencia Farma Flebología
+RC_DER_FFLE
+Derivación - Gerencia Farma Flebología
+
+
+FNEU
+Gerencia Farma Neurología
+RC_DER_FNEU
+Derivación - Gerencia Farma Neurología
+
+
+FOTC
+Gerencia Farma OTC
+RC_DER_FOTC
+Derivación - Gerencia Farma OTC
+
+
+FDOR
+Gerencia Farma Dolor
+RC_DER_FDOR
+Derivación - Gerencia Farma Dolor
+
+
+OURO
+Gerencia Ole Urología
+RC_DER_OURO
+Derivación - Gerencia Ole Urología
+
+
+OINM
+Gerencia Ole Inmunología
+RC_DER_OINM
+Derivación - Gerencia Ole Inmunología
+
+
+OHEM
+Gerencia Ole Hematología
+RC_DER_OHEM
+Derivación - Gerencia Ole Hematología
+
+
+OONC
+Gerencia Ole Oncología
+RC_DER_OONC
+Derivación - Gerencia Ole Oncología
+
+
+OESP
+Gerencia Ole Especiales
+RC_DER_OESP
+Derivación - Gerencia Ole Especiales
+
+
+OTRO
+Generales
+RC_DER_OTRO
+Derivación - Generales
+
+
+DTEC
+Dirección Técnica
+RC_DER_DTEC
+Derivación - Dirección Técnica
+
+
+AMOL
+Asesoría Médica Ole
+RC_DER_AMOL
+Derivación - Asesoría Médica Ole
+
+
+BPAP
+Bonos PAP
+RC_DER_BPAP
+Bonos PAP
+
+
+FGAS
+Gerencia Farma Gastroenterología
+RC_DER_FGAS 
+Gerencia Farma Gastroenterología
+
+
+FVIA
+Gerencia Farma Vias Respiratorias
+RC_DER_FVIA
+Gerencia Farma Vias Respiratorias
+
+
+FDER
+Gerencia Farma Dermatología
+RC_DER_FDER
+Gerencia Farma Dermatología

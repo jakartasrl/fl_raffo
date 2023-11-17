@@ -1,0 +1,254 @@
+var rafNovedadesFactory = SuperWidget.extend({
+	hashParams: {
+		type: '',
+	},
+	
+    bindings: {
+        local: {
+            'save-preferences': ['click_savePreferences']
+        }
+    },
+	
+	onView: function(){
+		var that = this;
+		this.DOM.before('<style>'+this.customCss.replace(/\{{container}}/g,'div#'+this.DOM.attr('id'))+'</style>');
+		var template = $('.raf-novedades-template',this.DOM).html();
+		
+		this.forEachDocumentInto(this.folderId, function(datasetValues){
+				console.log('datasetValues',datasetValues);
+				for(var i=0; i<datasetValues.length; i++){
+					console.log('template',template);
+					var row = template
+								.replace(/\{{title}}/g,datasetValues[i].documentDescription)
+								.replace(/\{{description}}/g,datasetValues[i].additionalComments);
+					$('.raf-novedades-list',that.DOM).append(row);
+				}
+			}, [
+			    {
+			    	_field: "documentType",
+					_initialValue: 8,
+					_finalValue: 8,
+					_type: 1
+			    }
+        ]);
+    },
+	
+    onEdit: function(){
+    	if (!$('.raf-novedades-widgetId',this.DOM).val()){
+    		$('.raf-novedades-widgetId',this.DOM).val('rafNovedades1');
+    	}
+    	if (!$('.raf-novedades-customCss',this.DOM).val()){
+    		$('.raf-novedades-customCss',this.DOM).val(
+				'{{container}} {\n' +
+				'    width: 100%;\n' +
+				'    margin: auto;\n' +
+				'}'
+    		);
+    	}
+    },
+	
+	onHashParamsChange: function() {
+		var that = this;
+		var template = $('.raf-novedades-template',this.DOM).html();
+		console.log('template',template);
+		var constraints = [
+		      {
+				  _field: "documentType",
+				  _initialValue: 8,
+				  _finalValue: 8,
+				  _type: 1
+		      }
+        ];
+		if(this.hashParams.type){
+			constraints.push({
+				  _field: "documentTypeId",
+				  _initialValue: this.hashParams.type,
+				  _finalValue: this.hashParams.type,
+				  _type: 1
+			});
+		}
+		$('.raf-novedades-list',that.DOM).html('');
+		this.forEachDocumentInto(this.folderId, function(datasetValues){
+			for(var i=0; i<datasetValues.length; i++){
+				var row = template
+							.replace(/\{{title}}/g,datasetValues[i].documentDescription)
+							.replace(/\{{description}}/g,datasetValues[i].additionalComments);
+				$('.raf-novedades-list',that.DOM).append(row);
+			}
+		}, constraints);
+	},
+	
+    forEachDocumentInto : function(parentDocumentId, action, cts){
+    	$.ajax({
+    		type: "POST",
+    		url: window.location.protocol + "//" + window.location.host + "/ecm/api/rest/ecm/dataset/datasets/",
+    		contentType: "application/json; charset=utf-8",
+    		dataType: "json",				
+    		data: JSON.stringify({
+    			name : 'document',
+    			constraints: [
+		              {
+		            	  _field: "parentDocumentId",
+		            	  _initialValue: parentDocumentId,
+		            	  _finalValue: parentDocumentId,
+		            	  _type: 1
+		              },{
+		            	  _field: "deleted",
+		            	  _initialValue: "false",
+		            	  _finalValue: "false",
+		            	  _type: 1
+		              }
+                ].concat(cts),
+                order: ["documentDescription"]
+    		})
+    	})
+    	.done(function(dataset) {	
+    		action(dataset.values);
+    	})
+    	.fail(function(jqXHR, textStatus, errorThrown) {
+    		alert('No se pudo cargar la galería.');
+    	});		
+    },
+	
+    getPreferences: function () {
+    	var preferences = {
+			widgetId: $('.raf-novedades-widgetId',this.DOM).val(),
+			customCss: $('.raf-novedades-customCss',this.DOM).val(),
+    	};
+    	return preferences;
+    },
+    
+    validateForm: function() {
+		if($('.raf-novedades-widgetId',this.DOM).val().includes('-')){
+			return 'El campo Widget Id no puede contener "-".'
+		} else if(!$('.raf-novedades-widgetId',this.DOM).val()){
+			return 'El campo Widget Id no puede ser vacío.'
+	    }
+		return 'OK';
+	},
+
+    savePreferences: function () {
+        var that = this;
+        var message = this.validateForm();
+        if(message=='OK'){
+        	var preferences = this.getPreferences();
+        	WCMSpaceAPI.PageService.UPDATEPREFERENCES(
+        			{
+        				async: true,
+        				success: function (data) {
+        					that.showSuccessMessage(data.message, '')
+        				},
+        				fail: function (xhr, message, errorData) {
+        					that.showErrorMessage(
+        							'ERROR',
+        							errorData.message);
+        				}
+        			}, this.id, preferences);
+        } else {
+        	this.showErrorMessage('Formulario no válido:',message);
+        }
+    },
+    
+    showSuccessMessage: function (titleMsg, msg) {
+        FLUIGC.toast({title: titleMsg, message: msg, type: 'success'});
+    },
+
+    showErrorMessage: function (titleMsg, msg) {
+        FLUIGC.toast({
+            title: titleMsg,
+            message: msg,
+            type: 'danger'
+        });
+    },
+    
+    /**
+     * ==================================================================================================================================================
+     * =============================================================  SuperMarvin Widget Library  =======================================================
+     * ==================================================================================================================================================
+     */
+    
+    init: function () {
+    	var that = this;
+    	$.extend(this,this.DOM.data('arqParams'));
+    	if(this.isEditMode){
+    		this.onEdit();
+    	} else {
+    		that.urlHashChanged();
+    		$(window).on('hashchange', function() {
+    			that.urlHashChanged();
+    		});
+    		this.onView();
+    	}
+    },
+    
+    changeHashParams: function(newHashParams){
+    	var hashParams = this.simpleMerge(this.hashParams, newHashParams);
+    	for (param in hashParams){
+    		var strParam = this.id + '-' + param  + '=' + hashParams[param];
+    		
+    		if (window.location.hash) {
+    			var allHashParams = window.location.hash.substr(1).split(';'),
+    				paramExists = false;
+    				
+    			for (var i=0; i<allHashParams.length; i++){
+    				if (allHashParams[i].split('-')[0] == this.id) {
+    					allHashParams[i] = strParam;
+    					paramExists = true;
+    					break;
+    				}
+    			}
+    			
+    			if (paramExists) {
+    				window.location.hash = '#' + allHashParams.join(';');
+    			} else {
+    				window.location.hash += ';' + strParam;
+    			}
+    		}
+    		else {
+    			window.location.hash = '#' + strParam;
+    		}
+    	}
+    },
+    
+//    onHashParamsChange(): function(){
+//    	//SOBREESCRIBIR
+//    },
+    
+    urlHashChanged: function() {
+    	if (window.location.hash) {
+			
+    		var allHashParams = window.location.hash.substr(1).split(';'),
+				instanceHashParams = {},
+				hashParam, hashParamData;
+			
+			for (var i=0; i<allHashParams.length; i++){
+				hashParam = allHashParams[i].split('-');
+				if(hashParam[0] == this.id) {
+					hashParamData = hashParam[1].split('=');
+					instanceHashParams[hashParamData[0]] = hashParamData[1]; 
+				}
+			}
+			
+			if (JSON.stringify(this.hashParams) != JSON.stringify(instanceHashParams)) {
+				this.hashParams = instanceHashParams;
+				this.onHashParamsChange();
+			}
+			
+		} else {
+			// nothing here
+		}
+	},
+	
+	simpleMerge: function (obj1,obj2) {
+		// realizar merge solo del 1er nivel de atributos
+		var obj3 = {};    
+		for (attrname in obj1) { 
+			obj3[attrname] = obj1[attrname]; 
+		}
+		for (attrname in obj2) { 
+			obj3[attrname] = obj2[attrname]; 
+		}    
+		return obj3;
+	}
+    
+});

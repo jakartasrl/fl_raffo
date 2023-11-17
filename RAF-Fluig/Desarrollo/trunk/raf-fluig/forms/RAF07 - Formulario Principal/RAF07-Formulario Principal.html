@@ -1,0 +1,541 @@
+<html lang="en">
+<head>
+
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.min.js"></script>
+
+	<style type="text/css">
+		textarea {
+			resize: vertical;
+		}
+		fieldset {
+			padding-top: 20px !important;
+		}
+		.input-group-addon{
+			padding: 6px !important;
+		}
+		legend{
+			border-bottom: 1px solid #bbb !important;
+			margin-bottom: 25px !important;
+		}	
+		
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #7F201C !important;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 5px !important;
+			margin-top: 40px !important;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		
+		.table-responsive{
+			overflow: visible !important;
+		}
+		
+		table td{
+			padding: 15px 10px !important;
+		}
+
+		table td .form-group:last-child {
+			margin-bottom: 0;
+		}
+		
+		.no-padding-top {
+			padding-top:0 !important;
+		}
+		
+		.masterdetail-label {
+		    padding-top: 7px;
+		}
+		
+		.popover-content .btn {
+			height: 34px;
+		}
+		
+		.subtitle {
+			text-align: center;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+	
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>Solicitud de Dise&ntilde;o</h3> 
+			</div>
+		</div>
+		<div class="row subtitle">
+			<p>Las instrucciones para esta actividad se encuentran en la solapa Detalles.</p>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">
+			<input type="hidden"  id="__error" name="__error">
+			<input type="hidden"  id="nroSolicitud" name="nroSolicitud">
+			<input type="hidden"  id="requestantName" name="requestantName">
+			<input type="hidden"  id="requestantCode" name="requestantCode">
+			<input type="hidden"  id="isApproved" name="isApproved">
+			<input type="hidden"  id="folderId" name="folderId">
+			<input type="hidden"  id="attachmentsData" name="attachmentsData">
+			<input type="hidden"  id="creationDate" name="creationDate">
+			<input type="hidden"  id="approvalDate" name="approvalDate">
+			
+			<fieldset>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="userGroup" class="col-md-2 control-label">Grupo Solicitante</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="userGroup" id="userGroup" readonly>									
+							<input type="hidden" name="userGroupCode" id="userGroupCode">									
+							<input type="hidden" name="userGroupPool" id="userGroupPool">									
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="currentState" class="col-md-3 control-label">Estado</label>
+						<div class="col-md-3">
+							<input type="text" class="form-control" name="currentState" id="currentState" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="changeReason" class="col-md-2 control-label">Motivo del Cambio</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="changeReason" id="changeReason" data-parsley-required="true">							
+							<input type="hidden" name="changeReasonId" id="changeReasonId">							
+							
+							<input type="hidden" name="changeGroupReasonType" id="changeGroupReasonType">
+							<input type="hidden" name="breakDateRequired" id="breakDateRequired">
+							
+							<input type="hidden" name="avisoAceptacion" id="avisoAceptacion">
+							<input type="hidden" name="avisoGeneracion" id="avisoGeneracion">
+							<input type="hidden" name="avisoRevision" id="avisoRevision">
+							<input type="hidden" name="visualizaReporte" id="visualizaReporte">
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="implementationType" class="col-md-3 control-label">Tipo de Implementaci&oacute;n</label>
+						<div class="col-md-3">
+							<select class="form-control" name="implementationType" id="implementationType">
+								<option value=""></option>
+								<option value="individual">Individual</option>
+								<option value="grupal">Grupal</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="title" class="col-md-2 control-label">T&iacute;tulo</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="title" id="title" data-parsley-required="true">									
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="breakDate" class="col-md-3 control-label">Fecha de Corte</label>
+						<div class="col-md-3">
+							<input type="text" class="form-control datetimepicker" name="breakDate" id="breakDate">									
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label-field">
+						<label for="changeDetail" class="col-md-2 control-label">Detalle del cambio</label>
+						<div class="col-md-10">
+							<textarea class="form-control" name="changeDetail" id="changeDetail" data-parsley-required="true"></textarea>								
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label-field">
+						<label for="comments" class="col-md-2 control-label">Observaciones</label>
+						<div class="col-md-10">
+							<textarea class="form-control" name="comments" id="comments"></textarea>								
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset class="onlyNewDesign">
+				<legend>Detalle</legend>
+			
+				<div class="form-group">
+					<div class="label-field">
+						<label for="marcaProd" class="col-md-2 control-label">Marca</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control marcaProd" id="marcaNewProd" name="marcaNewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="marcaProd" class="col-md-2 control-label">Forma Farmac&eacute;utica</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control formaFarmaceuticaProd" id="formaFarmaceuticaNewProd" name="formaFarmaceuticaNewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="prActivo1NewProd" class="col-md-2 control-label">Principio Activo 1</label>
+						<div class="col-md-3">
+							<input type="text" class="form-control prActivo1NewProd" id="prActivo1NewProd" name="prActivo1NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="concentracion1NewProd" class="col-md-2 control-label">Concentraci&oacute;n 1</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control concentracion1NewProd" id="concentracion1NewProd" name="concentracion1NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="unidadMedida1NewProd" class="col-md-1 control-label">UM 1</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control unidadMedida1NewProd" id="unidadMedida1NewProd" name="unidadMedida1NewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="prActivo2NewProd" class="col-md-2 control-label">Principio Activo 2</label>
+						<div class="col-md-3">
+							<input type="text" class="form-control prActivo2NewProd" id="prActivo2NewProd" name="prActivo2NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="concentracion2NewProd" class="col-md-2 control-label">Concentraci&oacute;n 2</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control concentracion2NewProd" id="concentracion2NewProd" name="concentracion2NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="unidadMedida2NewProd" class="col-md-1 control-label">UM 2</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control unidadMedida2NewProd" id="unidadMedida2NewProd" name="unidadMedida2NewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="prActivo3NewProd" class="col-md-2 control-label">Principio Activo 3</label>
+						<div class="col-md-3">
+							<input type="text" class="form-control prActivo3NewProd" id="prActivo3NewProd" name="prActivo3NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="concentracion3NewProd" class="col-md-2 control-label">Concentraci&oacute;n 3</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control concentracion3NewProd" id="concentracion3NewProd" name="concentracion3NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="unidadMedida3NewProd" class="col-md-1 control-label">UM 3</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control unidadMedida3NewProd" id="unidadMedida3NewProd" name="unidadMedida3NewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="prActivo4NewProd" class="col-md-2 control-label">Principio Activo 4</label>
+						<div class="col-md-3">
+							<input type="text" class="form-control prActivo4NewProd" id="prActivo4NewProd" name="prActivo4NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="concentracion4NewProd" class="col-md-2 control-label">Concentraci&oacute;n 4</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control concentracion4NewProd" id="concentracion4NewProd" name="concentracion4NewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="unidadMedida4NewProd" class="col-md-1 control-label">UM 4</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control unidadMedida4NewProd" id="unidadMedida4NewProd" name="unidadMedida4NewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="grupoNewProd" class="col-md-2 control-label">Grupo de Producto</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control grupoNewProd" id="grupoNewProd" name="grupoNewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="presentacionNewProd" class="col-md-2 control-label">Presentaci&oacute;n</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control presentacionNewProd" id="presentacionNewProd" name="presentacionNewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="paisNewProd" class="col-md-2 control-label">Pa&iacute;s</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control paisNewProd" id="paisNewProd" name="paisNewProd"/>	
+						</div>
+					</div>
+					<div class="label-field onlyNewDesign">
+						<label for="titularidadNewProd" class="col-md-2 control-label">Titularidad</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control titularidadNewProd" id="titularidadNewProd" name="titularidadNewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="elaboradorNewProd" class="col-md-2 control-label">Elaborador</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control elaboradorNewProd" id="elaboradorNewProd" name="elaboradorNewProd"/>	
+						</div>
+					</div>
+					<div class="label-field">
+						<label for="acondicionadorNewProd" class="col-md-2 control-label">Acondicionador</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control acondicionadorNewProd" id="acondicionadorNewProd" name="acondicionadorNewProd"/>	
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="fichaTecnicaNewProd" class="col-md-2 control-label">Ficha T&eacute;cnica</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control fichaTecnicaNewProd" id="fichaTecnicaNewProd" name="fichaTecnicaNewProd"/>	
+						</div>
+					</div>
+				</div>
+				
+				<div class='row'>
+					<div class="table-responsive col-sm-10 col-sm-offset-2">
+						<table class="table table-bordered table-condensed" id="tblProdTypes" tablename="tblProdTypes" noaddbutton="true" nodeletebutton="true">
+							<thead>
+								<tr>
+									<th width="35%"><label class="control-label">Tipo de Producto</label></th>
+									<th width="10%"><label class="control-label">Nro. L&iacute;nea</label></th>
+									<th width="16%"><label class="control-label">Estado en QAD</label></th>
+									<th width="34%"><label class="control-label">Observaciones</label></th>
+									<th width="5%" class="hidden-print">
+										<span class="fluigicon fluigicon-plus action-fluigicon" title="Nuevo" id="newProdType"></span>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="label-field">
+										<input type="text" class="form-control tipoNewProd" id="tipoNewProd" name="tipoNewProd" data-parsley-required="true"/>	
+									</td>
+									<td class="label-field">
+										<input type="text" class="form-control nroLineaNewProd" id="nroLineaNewProd" name="nroLineaNewProd" readonly />	
+									</td>									
+									<td class="label-field">
+										<input type="text" class="form-control estadoQADNewProd" id="estadoQADNewProd" name="estadoQADNewProd"readonly/>	
+									</td>
+									<td class="label-field">
+										<textarea rows="3" class="form-control observacionesQADNewProd" name="observacionesQADNewProd" id="observacionesQADNewProd" data-parsley-maxlength="255" readonly></textarea>
+									</td>
+									<td class="hidden-print label-field">					
+										<span class="fluigicon fluigicon-trash action-fluigicon deleteRow" title="Eliminar"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+											
+			</fieldset>
+				
+			<fieldset class="onlyDesignChange">
+				<legend>Productos</legend>
+				
+				<script type="text/template" id="multisearchProdsFilters">
+					<div class="form-group">
+						<div class="label-field">
+							<label for="filterCod" class="col-md-2 control-label">C&oacute;digo</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="cod" id="filterCod"/>	
+							</div>
+						</div>
+						<div class="label-field">
+							<label for="filterDesc" class="col-md-2 control-label">Descripci&oacute;n</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="descr" id="filterDesc"/>	
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="label-field">
+							<label for="filterMarca" class="col-md-2 control-label">Marca</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="marca" id="filterMarca"/>	
+							</div>
+						</div>
+						<div class="label-field">
+							<label for="filterPrActivo" class="col-md-2 control-label">Principio Activo</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="prActivos" id="filterPrActivo"/>	
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="label-field">
+							<label for="filterTipoProd" class="col-md-2 control-label">Tipo de Producto</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="tipoProd" id="filterTipoProd"/>	
+							</div>
+						</div>
+						<div class="label-field">
+							<label for="filterGrupoProd" class="col-md-2 control-label">Grupo de Producto</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="grupoProd" id="filterGrupoProd"/>	
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="label-field">
+							<label for="filterPais" class="col-md-2 control-label">Pa&iacute;s</label>
+							<div class="col-md-3">
+								<input type="text" class="form-control" data-filter-field="pais" id="filterPais"/>	
+							</div>
+						</div>
+					</div>
+				</script>
+
+				<div class='row hidden-print'>
+					<div class="col-sm-12 multisearchHeader">
+						<button type="button" class="btn btn-primary" id="btnMultiSearchProd">Buscar</button>
+						<button type="button" class="btn btn-default" id="btnCleanAllProd">Limpiar</button>
+					</div>
+					<br/><br/>
+				</div>
+				
+				<div class='row'>
+					<div class="table-responsive col-sm-12">
+						<table class="table table-bordered table-condensed" id="tblProds" tablename="tblProds" noaddbutton="true" nodeletebutton="true">
+							<thead>
+								<tr>
+									<th width="95%"><label class="control-label">Producto</label></th>
+									<th width="5%" class="hidden-print">
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="label-field">
+										<div class="form-group">
+											<div class="label-field">
+												<label for="nroLinea" class="col-md-2 control-label">Nro. L&iacute;nea</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control nroLinea" id="nroLinea" name="nroLinea" readonly/>	
+												</div>
+											</div>
+											<div class="label-field">
+												<label for="estadoQAD" class="col-md-2 control-label">Estado en QAD</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control estadoQAD" id="estadoQAD" name="estadoQAD" readonly/>	
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label-field">
+												<label for="codigoProd" class="col-md-2 control-label">Codigo</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control codigoProd" data-field="cod" id="codigoProd" name="codigoProd"/>	
+												</div>
+											</div>
+											<div class="label-field">
+												<label for="descProd" class="col-md-2 control-label">Descripci&oacute;n</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control descProd" data-field="descr" id="descProd" name="descProd"/>	
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label-field">
+												<label for="tipoProd" class="col-md-2 control-label">Tipo de Producto</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control tipoProd" data-field="tipoProd" id="tipoProd" name="tipoProd"/>	
+												</div>
+											</div>
+											<div class="label-field">
+												<label for="marcaProd" class="col-md-2 control-label">Marca</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control marcaProd" data-field="marca" id="marcaProd" name="marcaProd"/>	
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label-field">
+												<label for="prActivosProd" class="col-md-2 control-label">Principios Activos</label>
+												<div class="col-md-10">
+													<input type="text" class="form-control prAcivotProd" data-field="prActivos" id="prActivosProd" name="prActivosProd"/>	
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label-field">
+												<label for="grupoProd" class="col-md-2 control-label">Grupo de Producto</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control grupoProd" data-field="grupoProd" id="grupoProd" name="grupoProd"/>	
+												</div>
+											</div>
+											<div class="label-field">
+												<label for="paisProd" class="col-md-2 control-label">Pa&iacute;s</label>
+												<div class="col-md-4">
+													<input type="text" class="form-control paisProd" data-field="pais" id="paisProd" name="paisProd"/>	
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="label-field">
+												<label for="observaciones" class="col-md-2 control-label">Observaciones</label>
+												<div class="col-md-10">
+													<textarea rows="2" class="form-control observaciones" name="observaciones" id="observaciones" readonly data-parsley-maxlength="255"></textarea>									
+												</div>
+											</div>
+										</div>
+									</td>
+									<td class="hidden-print">							
+										<span class="fluigicon fluigicon-trash action-fluigicon deleteRow" title="Eliminar"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</fieldset>		
+						
+		</form>
+		<br>
+	</div> 
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+function validateForm(form) {		var activity = getValue('WKNumState');if ((form.getValue("Sede") == null || form.getValue("Sede") ==  "") && ( getValue('WKNumProces') == null || (getValue('WKNumProces') > 0 && getValue('WKCompletTask') == 'true') )) {throw "Sede: no puede estar vac\u00EDo";}}

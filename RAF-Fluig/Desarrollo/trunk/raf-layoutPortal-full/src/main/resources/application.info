@@ -1,0 +1,14 @@
+application.type=layout
+application.code=raf_layoutPortal_full
+application.title=Portal Raffo Full
+application.description=Layout de la intranet de Raffo con un único slot.
+application.category=SYSTEM
+application.renderer=freemarker
+developer.code=ARQ
+developer.name=Arquimeda S.R.L.
+developer.url=http://www.arquimeda.com/
+layout.defaultSlot=Slot
+layout.file=layout.ftl
+locale.file.base.name=raf-layoutPortal-full
+application.icon=icon.png
+slot.SlotLogin=sociallogin

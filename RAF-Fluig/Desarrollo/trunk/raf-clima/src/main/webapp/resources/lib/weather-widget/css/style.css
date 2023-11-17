@@ -1,0 +1,52 @@
+.block {
+  display: flex;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 7px 1px rgba(0,0,0, 0.2);
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 560px) {
+  .grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .block {
+    flex-basis: 48%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .block {
+    flex-basis: 19%;
+  }
+}
+
+.wi {
+ font-family: -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
+               Oxygen,
+               Ubuntu,
+               Cantarell,
+               "Open Sans",
+               "Helvetica Neue",
+               sans-serif;
+  text-align: center;
+  font-size: 4rem;
+}
+.wi:before {
+  line-height: 92px;
+  vertical-align: middle;
+}
+.today .wi {
+  text-align: center;
+  font-size: 6rem;
+  margin: 0 30px 0 20px;
+}
+.today .wi:before {
+  line-height: 144px;
+}

@@ -1,0 +1,10 @@
+SD_TIP_01: Tipología 01 - API, Prod. Terminado - Produccion
+SD_TIP_02: Tipología 02 - API, Prod. Terminado - I+D
+SD_TIP_03: Tipología 03 - API, Alternativos
+SD_TIP_04: Tipología 04 - IT
+SD_TIP_05: Tipología 05 - Licencias
+SD_TIP_06: Tipología 06 - Eventos
+SD_TIP_07: Tipología 07 - Maquinarias
+SD_TIP_08: Tipología 08 - Minutas I+D
+SD_TIP_09: Tipología 09 - Minutas Lanzamientos
+SD_TIP_10: Tipología 10 - Registros y Documentación

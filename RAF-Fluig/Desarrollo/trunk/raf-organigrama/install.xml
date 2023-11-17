@@ -1,0 +1,8 @@
+<project name="RAFv1.0.0">
+
+	<datasets>
+		<dataset name="colleagueData" file="colleagueData.js"></dataset>
+		<dataset name="raf-empleados" file="raf-empleados.js"></dataset>
+	</datasets>
+	
+</project>

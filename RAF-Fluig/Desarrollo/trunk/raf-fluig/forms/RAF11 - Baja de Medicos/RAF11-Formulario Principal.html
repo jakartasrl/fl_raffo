@@ -1,0 +1,292 @@
+<html lang="en">
+<head>
+
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.js"></script>
+
+	<style type="text/css">
+		textarea {
+			resize: vertical;
+		}
+		fieldset {
+			padding-top: 20px !important;
+		}
+		legend{
+			border-bottom: 1px solid #bbb !important;
+			margin-bottom: 25px !important;
+		}	
+		
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #7F201C !important;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 5px !important;
+			margin-top: 40px !important;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		
+		.table-responsive{
+			overflow: visible !important;
+		}
+		
+		table td{
+			padding: 15px 10px !important;
+		}
+
+		table td .form-group:last-child {
+			margin-bottom: 0;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+	
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-4">
+				<h3>Baja de M&eacute;dico</h3> 
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">
+			<input type="hidden" id="__error" name="__error">	
+			<input type="hidden" id="numeroSolicitud" name="numeroSolicitud">
+			<input type="hidden" id="fechaSolicitud" name="fechaSolicitud">
+			<input type="hidden" id="fechaFinSolicitud" name="fechaFinSolicitud">
+			<input type="hidden" id="matriculaSolicitante" name="matriculaSolicitante">
+			
+			<input type="hidden" id="matriculaAPM" name="matriculaAPM"> 
+			<input type="hidden" id="emailAPM" name="emailAPM">  
+			<input type="hidden" id="nombreAPM" name="nombreAPM"> 
+			
+			<input type="hidden" id="areaCodigo" name="areaCodigo"> 
+			<input type="hidden" id="distritoCodigo" name="distritoCodigo"> 
+			<input type="hidden" id="codGrupoGteDistrito" name="codGrupoGteDistrito">
+			<input type="hidden" id="matriculaGteDistrito" name="matriculaGteDistrito">
+			<input type="hidden" id="mailGteDistrito" name="mailGteDistrito"> 
+			<input type="hidden" id="codGrupoGteArea" name="codGrupoGteArea">  
+			<input type="hidden" id="codGrupoGtePromocion" name="codGrupoGtePromocion">  
+			<input type="hidden" id="codGrupoAsistDistrito" name="codGrupoAsistDistrito"> 
+			<input type="hidden" id="tarea" name="tarea">
+			<input type="hidden" id="delegado" name="delegado">
+			<input type="hidden" id="cuit" name="cuit">
+			<input type="hidden" id="lugarCongreso" name="lugarCongreso">
+			
+			<fieldset>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="nroInversionComercial" class="col-md-3 control-label">Solicitudes Abiertas por Posible Baja</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nroInversionComercial" id="nroInversionComercial" data-parsley-required="true">									
+						</div>		
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="solicitante" class="col-md-3 control-label">Solicitante</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="solicitante" id="solicitante" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="area" class="col-md-3 control-label">&Aacute;rea</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="area" name="area" readonly>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="distrito" class="col-md-3 control-label">Distrito</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="distrito" name="distrito" readonly>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="label-field">
+						<label for="apellido" class="col-md-3 control-label">Apellido</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="apellido" id="apellido" readonly>									
+						</div>
+						<div>							
+							<p>(Como figura en el DNI)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="nombre" class="col-md-3 control-label">Nombre</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nombre" id="nombre" readonly>									
+						</div>
+						<div>							
+							<p>(Como figura en el DNI)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="tipoInversion" class="col-md-3 control-label">Tipo de Inversi&oacute;n</label>
+						<div class="col-md-5">
+							<select class="form-control" name="tipoInversion" id="tipoInversion">
+								<option></option>
+								<option value="alojamientos">ALOJAMIENTO CONGRESO O EVENTO CIENTIFICO</option>
+								<option value="aereosNac">AEREO CONGRESO NACIONAL</option>
+								<option value="inscripciones">INSCRIPCION A CONGRESO</option>
+								<option value="aereosInt">AEREO CONGRESO INTERNACIONAL</option>
+								<option value="equipamientos">EQUIPAMIENTO MEDICO</option>
+								<option value="patrocinio">PATROCINIO EDUCACION MEDICA</option>
+								<option value="becaNac">BECA COMPLETA/PARCIAL NACIONAL</option>
+								<option value="becaInt">BECA COMPLETA/PARCIAL INTERNACIONAL</option>
+							</select>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="nombreCongreso" class="col-md-3 control-label">Congreso</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nombreCongreso" id="nombreCongreso" readonly>									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="fechaDesdeCongreso" class="col-md-3 control-label">Fecha Desde</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fechaDesdeCongreso" id="fechaDesdeCongreso">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="fechaHastaCongreso" class="col-md-3 control-label">Fecha Hasta</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fechaHastaCongreso" id="fechaHastaCongreso">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="mesInversion" class="col-md-3 control-label">Mes de la Inversi&oacute;n</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="mesInversion" id="mesInversion">									
+						</div>
+					</div>
+				</div>		
+				<div>
+					<div class="form-group">
+						<div class="label-field">
+							<label for="incluyeAlojamiento" class="col-md-3 control-label">Alojamiento</label>
+							<div class="col-md-2">
+								<select class="form-control" name="incluyeAlojamiento" id="incluyeAlojamiento" readonly>
+									<option value=""></option>
+									<option value="SI">SI</option>
+									<option value="NO">NO</option>
+								</select>					
+							</div>
+							<div class="col-md-2">
+								  <select class="form-control" name="selAlojamientoPresupuesto" id="selAlojamientoPresupuesto" readonly>
+									<option value=""></option>
+									<option value="MARKETING">Marketing</option>
+									<option value="DELEGADO">Delegado</option>
+								</select>	
+							</div>						
+						</div>
+					</div>	
+					<div class="form-group">
+						<div class="label-field">
+							<label for="seleccionTraslado" class="col-md-3 control-label">Medio de Transporte</label>
+							<div class="col-md-2">
+								<select class="form-control" name="incluyeTraslado" id="incluyeTraslado" readonly>
+									<option value=""></option>
+									<option value="SI">SI</option>
+									<option value="NO">NO</option>
+								</select>					
+							</div>
+							<div class="col-md-2">
+								  <select class="form-control" name="selTrasladoPresupuesto" id="selTrasladoPresupuesto" readonly>
+									<option value=""></option>
+									<option value="MARKETING">Marketing</option>
+									<option value="DELEGADO">Delegado</option>
+								</select>							
+							</div>						
+						</div>
+					</div>						
+					<div class="form-group">
+						<div class="label-field">
+							<label for="seleccionInscripcion" class="col-md-3 control-label">Inscripci&oacute;n</label>
+							<div class="col-md-2">
+								<select class="form-control" name="incluyeInscripcion" id="incluyeInscripcion" readonly>
+									<option value=""></option>
+									<option value="SI">SI</option>
+									<option value="NO">NO</option>
+								</select>					
+							</div>
+							<div class="col-md-2">
+								  <select class="form-control" name="selInscripcionPresupuesto" id="selInscripcionPresupuesto" readonly>
+									<option value=""></option>
+									<option value="MARKETING">Marketing</option>
+									<option value="DELEGADO">Delegado</option>
+								</select>							
+							</div>							
+						</div>
+					</div>	
+				</div>
+				
+				<br>
+				
+				<fieldset class="motivoBaja">	
+					<br>
+					<legend>Motivo de Baja</legend>
+					<br>
+
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+								<label for="motivoBaja" class="col-md-2 control-label">Motivo de Baja</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control motivoBaja" name="motivoBaja" id="motivoBaja" placeholder="Detallar..."  data-parsley-required="true" data-parsley-maxlength="1000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>	
+				</fieldset>
+			</fieldset>		
+						
+		</form>
+		<br>
+	</div> 
+</div>
+</body>
+</html>

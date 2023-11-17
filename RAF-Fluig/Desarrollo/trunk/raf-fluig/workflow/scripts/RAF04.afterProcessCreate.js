@@ -1,0 +1,1 @@
+function afterProcessCreate(processId){		hAPI.setCardValue("aten_nroSolicitud", processId);	hAPI.setCardValue("companyID", getValue("WKCompany"));		var dateParser = new java.text.SimpleDateFormat("yyyy-MM-dd");	hAPI.setCardValue("fechaInicioSolicitud", dateParser.format(new Date()));	}

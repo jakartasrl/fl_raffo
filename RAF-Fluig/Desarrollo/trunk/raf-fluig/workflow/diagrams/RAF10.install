@@ -1,0 +1,97 @@
+Grupos:
+
+RAF10-GTOR-PROCESO		Gestor del Proceso de Petitorio y Carta Acuerdo
+RAF10-ADM 				Administrador de ficheros del Proceso de Petitorio y Carta Acuerdo: Adminstradores de Fichero , agregarlo al fichero APM y Area de RAF08, Administrador del Proceso
+RAF10-AUDITORIA 		Auditoría de Petitorio y Carta Acuerdo
+
+Derivaciones (para consultar con Melina)
+----------------------------------------
+RAF10-DER-DIR-MEDICA Dirección Médica
+RAF10-DER-MEDICAL Medical
+
+Solicitantes de Línea
+---------------------
+
+RAF10-SOL-LINEA-CARDIO Solicitantes de Línea Cardiología
+RAF10-SOL-LINEA-OSTEO Solicitantes de Línea Osteología
+RAF10-GTE-MARKETING Gerente de Marketing
+
+GED
+------------
+Crear carpeta 
+Petitorio y Carta Acuerdo
+	Documentos
+	Ficheros
+
+Reporte			(FALTA)
+-------------
+RAF10-AUDITORIA
+
+Mecanismos de atribución custom en Petitorio y Carta Acuerdo:
+
+RAF10-Solicitante: Permite determinar si en que inicia la solicitud es Gte de Distrito y Solicitantes de Línea. En tarea #4.
+
+Permisos		
+--------------
+Configurar en ficheros RAF08-AgentePropagandaMedica, RAF08-Distrito y RAF08-Area el permiso lectura para el grupo Todos, esto es para que al iniciar solicitudes si esGteDistrito
+se completen los campos ocultos: area, areaCodigo, codGrupoGteArea, codGrupoGtePromocion necesarios para los permisos de creación de carpeta en el GED  y envío del correo al asistente.
+ 
+
+
+
+Datasets custom
+---------------
+parametros.js configurar carpeta en GED
+	 RAF10.usuarioSistema.id: SYS08
+	 RAF10.usuarioSistema.login: SYS08
+	 RAF10.usuarioSistema.pass: 80SYS
+	 RAF10.carpetaAdjuntos.docId: XXX
+
+
+Exportación de Ficheros:
+1.	Código: 	 RAF10-Linea
+	Descripción: RAF10-Linea
+	Dataset: 	 RAF10-Linea
+	Descriptor: descripcion
+	Seguridad: Todos (L)
+2.	Código: 	 RAF10-TipoInversion
+	Descripción: RAF10-TipoInversion
+	Dataset: 	 RAF10-TipoInversion
+	Descriptor: descripcion
+	Seguridad: Todos (L)
+3.	Código: 	 RAF10-TipoProducto
+	Descripción: RAF10-TipoProducto
+	Dataset: 	 RAF10-TipoProducto
+	Descriptor: descripcion
+	Seguridad: Todos (L)
+4.	Código: 	 RAF10-Formulario Principal
+	Descripción: RAF10-Formulario Principal	
+	Dataset: 	 RAF10-Formulario Principal
+	Descriptores:  apellido, nombre, tipo inversion
+
+Proceso
+----------	
+
+En el proceso > Properties > Pestaña Gral > Property Complementos > NO (Esto pemite que no se agreguen complementos si no se tiene la solicitud.) Esto tambièn se puede modificar desde el Fluig en 
+Configurar Procesos > ¿Complementar Solicitudes? NO
+
+Formulario:	Campo descriptor: Apellido
+	
+Exportación de Templates (Mail Custom)
+----------------------------------------
+
+Código: RAF10-Aprobada
+Código: RAF10-Rechazada
+Exportar: Se deben subir desde el fuig los templates.
+
+
+6. ECMFolderService verificar a que ip apunta el servicio de creación de carpetas del GED.
+
+7. Correr scritp vistas 1.0.0.sql, ver permisos
+V_RAF10_LINEA
+V_RAF10_TIPO_INVERSION
+V_RAF10_TIPO_PRODUCTO
+
+
+
+		

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.arquimeda.raf.ic</groupId>
+	<artifactId>raf-inversioncomercialadmin-web</artifactId>
+	<version>2.3.1-SNAPSHOT</version>
+	<name>raf-inversioncomercialadmin-web</name>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>com.arquimeda.maven</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>1.6</version>
+	</parent>
+
+	<properties>
+		<buildTime>${maven.build.timestamp}</buildTime>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<frontend-src-dir>${project.basedir}/src/main/frontend</frontend-src-dir>
+		<node.version>v10.16.0</node.version>
+		<yarn.version>v1.17.3</yarn.version>
+		<frontend-maven-plugin.version>1.8.0</frontend-maven-plugin.version>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:https://svn.arquimeda.com/arquimeda/Proyectos/RAFFO/RAF-Fluig/Desarrollo/trunk/raf-inversioncomercialadmin-web</connection>
+		<developerConnection>scm:svn:https://svn.arquimeda.com/arquimeda/Proyectos/RAFFO/RAF-Fluig/Desarrollo/trunk/raf-inversioncomercialadmin-web</developerConnection>
+		<url>scm:svn:https://svn.arquimeda.com/arquimeda/Proyectos/RAFFO/RAF-Fluig/Desarrollo/trunk/raf-inversioncomercialadmin-web</url>
+	</scm>
+
+	<dependencies>
+
+		<!-- Provided -->
+
+		<!-- JavaEE 7 -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>${frontend-maven-plugin.version}</version>
+
+				<configuration>
+					<nodeVersion>${node.version}</nodeVersion>
+					<yarnVersion>${yarn.version}</yarnVersion>
+					<workingDirectory>${frontend-src-dir}</workingDirectory>
+					<installDirectory>${project.build.directory}</installDirectory>
+				</configuration>
+
+				<executions>
+					<execution>
+						<id>install-frontend-tools</id>
+						<goals>
+							<goal>install-node-and-yarn</goal>
+						</goals>
+					</execution>
+
+					<execution>
+						<id>yarn-install</id>
+						<goals>
+							<goal>yarn</goal>
+						</goals>
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+
+					<execution>
+						<id>build-frontend</id>
+						<goals>
+							<goal>yarn</goal>
+						</goals>
+						<phase>prepare-package</phase>
+						<configuration>
+							<arguments>build</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>
+					<webResources>
+						<resource>
+							<!-- this is relative to the pom.xml directory -->
+							<directory>${frontend-src-dir}/dist</directory>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>2.0.1.Final</version>
+				<configuration>
+					<server-args>
+						<server-arg>-Djboss.server.base.dir=/C:/TMP/WildFly/standalone/</server-arg>
+						<server-arg>-b=0.0.0.0</server-arg>
+					</server-args>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

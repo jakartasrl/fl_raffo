@@ -1,0 +1,1 @@
+function enableFields(form) {		var activity = getValue('WKNumState');if (activity == 3 || activity == 0) {form.setEnabled('Legajo', false);form.setEnabled('Nombre', false);}}

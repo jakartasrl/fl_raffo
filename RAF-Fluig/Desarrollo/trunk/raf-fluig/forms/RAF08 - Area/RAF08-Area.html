@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.js"></script>
+
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>&Aacute;rea</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="codigo" class="col-md-4 control-label">C&oacute;digo:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="codigo" name="codigo" data-parsley-required>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="descripcion" class="col-md-4 control-label">Descripci&oacute;n:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="descripcion" name="descripcion"  data-parsley-required> 
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="grupoGteArea" class="col-md-4 control-label">Grupo de Gerente de &Aacute;rea:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="grupoGteArea" name="grupoGteArea" data-parsley-required>  
+						<input type="hidden" class="form-control" id="codGrupoGteArea" name="codGrupoGteArea">  
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="grupoGtePromocion" class="col-md-4 control-label">Grupo de Gerente de Promoci&oacute;n:</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control" id="grupoGtePromocion" name="grupoGtePromocion" data-parsley-required>  
+						<input type="hidden" class="form-control" id="codGrupoGtePromocion" name="codGrupoGtePromocion">  
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="limiteAprGtePromo" class="col-md-4 control-label">L&iacute;mite Aprobaci&oacute;n Gte. Promoci&oacute;n:</label>
+					<div class="col-md-2">
+						<div class="input-group">
+							<span class="input-group-addon">USD</span>
+							<input type="text" class="form-control" id="limiteAprGtePromo" name="limiteAprGtePromo" data-parsley-required> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<br>
+	</div> 
+</div> 
+</body>
+</html>

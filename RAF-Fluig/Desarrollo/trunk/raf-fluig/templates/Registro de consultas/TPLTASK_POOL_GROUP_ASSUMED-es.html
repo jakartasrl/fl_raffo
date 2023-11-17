@@ -1,0 +1,290 @@
+<!-- TPLTASK_POOL_GROUP_ASSUMED - Notificación de tarea de Pool de Grupo asumida - Español - HTML -->
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Fluig</title>
+    <link href="${SERVER_URL!''}/globalmailsender/resources/global.css" type="text/css" rel="stylesheet" />
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+    <div align="left">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+						<img src="${SERVER_URL!''}/globalmailsender/mailSenderHeader?tenantId=${TENANT_ID!''}">
+					</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+		
+	<#if document2UserMap?has_content>
+		<div style="margin-left: 25px;">
+			<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;"><br/></span>
+				Existen adjuntos en la consulta: <br/>
+				<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+					<tbody>
+						<#list document2UserMap?keys as key> 
+							<tr>
+								<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">
+									<a href="${document2LinkMap[key]}" class="${WDK_ClassLink!''}" style="font-size: 14px;padding: 0.5em;font-family: Helvetica Neue,Helvetica,Arial,sans-serif"> 
+										${key}
+									</a>(${document2UserMap[key]})
+								</th>
+							</tr>
+						</#list> 
+					</tbody>
+				</table>
+			<br/>
+		</div>
+	</#if>
+		
+	<br>
+	<#setting locale="es_AR"/> 
+	<#if rc_template??>
+	
+		<br>
+		<div style="margin-left: 25px;">
+			<span style="font-size: 14px;padding: 0.5em;font-family: Helvetica Neue,Helvetica,Arial,sans-serif">La siguiente actividad del Grupo <b>${WDK_TaskGroup!""}</b> del que usted forma parte fue asumida por <b>${WDK_User!""}</b>.</span><br><br>
+			<div align="left">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr><td>
+						<img src="${WDK_TaskIconImage}" align="absmiddle" border="0">
+						<a href="${WDK_TaskLink}" class="${WDK_ClassLink!''}"  style="font-size: 14px;padding: 0.5em;font-family: Helvetica Neue,Helvetica,Arial,sans-serif"> 
+						Solicitud: ${WDK_TaskNumber} - Tarea de Workflow:</a>
+						<font style="font-size: 16px;">  ${WDK_TaskDescription}: ${aten_nroConsulta!?xml} Producto: ${aten_producto!?xml}  </font>
+					</td></tr>
+					<tr><td>
+						<img src="${WDK_TaskIconImage}" align="absmiddle" border="0">
+						<a href="${host}" class="${WDK_ClassLink!''}" style="font-size: 14px;padding: 0.5em;font-family: Helvetica Neue,Helvetica,Arial,sans-serif"> 
+						Link a FLUIG</a> <br/><br/>
+					</td></tr>
+				</table>
+			</div>
+		</div>
+		
+		<div style="margin-left: 25px;">
+			<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;"><br/></span>
+				
+				<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+					<thead>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Fecha</th>
+							<td><#if padre_fecha??>${padre_fecha!?xml}</#if></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Hora</th>
+							<td><#if padre_hora??>${padre_hora!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Origen</th>
+							<td><#if padre_origen??>${padre_origen!?xml}</#if></td>
+						</tr>
+					</tbody>
+				</table>
+			<br />
+		</div>
+	
+		<br />
+		<div style="margin-left: 25px;">
+			<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#7f201c;font-size: 14px;">DATOS DEL CONTACTO<br/></span>
+				<br/>
+				<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+					<thead>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Apellido y Nombre</th>
+							<td><#if padre_nombre??>${padre_nombre!?xml}</#if></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Tel&eacute;fono</th>
+							<td><#if padre_telefono??>${padre_telefono!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Mail</th>
+							<td><#if padre_mail??>${padre_mail!?xml}</#if> </td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Direcci&oacute;n</th>
+							<td><#if padre_direccion??>${padre_direccion!?xml}</#if> </td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Otro</th>
+							<td><#if padre_otro??>${padre_otro!?xml}</#if>  </td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Observaciones</th>
+							<td><#if padre_observaciones??>${padre_observaciones!?xml}</#if></td>
+						</tr>
+					</tbody>
+				</table>
+			<br />
+		</div>
+		
+		<br />
+		<div style="margin-left: 25px;">
+			<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#7f201c;font-size: 14px;">CONSULTA / OBSERVACI&Oacute;N <br/></span>
+				<br/>
+				<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+					<thead>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Nro. Solicitud de la Atenci&oacute;n </th>
+							<td><#if aten_nroSolicitud??>${aten_nroSolicitud!?xml}</#if></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Nro. de Consulta </th>
+							<td><#if aten_nroConsulta??>${aten_nroConsulta!?xml}</#if> </td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Descripci&oacute;n del Producto</th>
+							<td><#if aten_producto??>${aten_producto!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Principio Activo</th>
+							<td><#if aten_activo??>${aten_activo!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">N&uacute;mero de Lote</th>
+							<td><#if aten_nroLote??>${aten_nroLote!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Vencimiento</th>
+							<td><#if aten_vencimiento??>${aten_vencimiento!?xml} </#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Tipo</th>
+							<td><#if aten_tipo??>${aten_tipo!?xml}</#if> </td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Consulta / Observaci&oacute;n</th>
+							<td><#if aten_observacion??>${aten_observacion!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Derivaci&oacute;n</th>
+							<td><#if aten_derivacion??>${aten_derivacion!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Llamada Reiterada</th>
+							<td><#if aten_rellamada??>${aten_rellamada!?xml}</#if></td>
+						</tr>
+					</tbody>
+				</table>
+			<br />
+		</div>
+		
+		<br />
+		<div style="margin-left: 25px;">
+			<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#7f201c;font-size: 14px;">RESOLUCI&Oacute;N<br/></span>
+				<br/>
+				<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+					<thead>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Resoluci&oacute;n</th>
+							<td><#if aten_resolucion??>${aten_resolucion!?xml}</#if></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Motivo Atraso</th>
+							<td><#if aten_motivoAtraso??>${aten_motivoAtraso!?xml}</#if></td>
+						</tr>
+					</tbody>
+				</table>
+			<br />
+		</div>
+		
+		<br />
+		<div style="margin-left: 25px;">
+			<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#7f201c;font-size: 14px;">REVISI&Oacute;N Y CIERRE<br/></span>
+				<br/>
+				<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+					<thead>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Licenciante</th>
+							<td><#if aten_licenciante??>${aten_licenciante!?xml}</#if></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Contiene Evento Adverso</th>
+							<td><#if aten_contieneEventoAdverso??>${aten_contieneEventoAdverso!?xml}</#if> - <#if aten_contieneEventoAdversoMotivo??>${aten_contieneEventoAdversoMotivo!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Observaciones</th>
+							<td><#if aten_revobservacion??>${aten_revobservacion!?xml}</#if></td>
+						</tr>
+						<tr>
+							<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 150px;padding: 0.5em;">Conclusi&oacute;n</th>
+							<td><#if aten_conclusion??>${aten_conclusion!?xml}</#if></td>
+						</tr>
+					</tbody>
+				</table>
+			<br />
+		</div>
+		
+		<br>
+		<div style="margin-left: 25px;">
+			<span style="color: grey;font-size: 14px;"><br>Este es un mail autom&aacute;tico generado por el Sistema SRC. <br>
+			No responder sobre este mail. Cualquier duda comunicarse con Farmacovigilancia. </span>
+			<br><br>
+		</div>
+		
+	<#else>
+
+		<p class="DescrMsgForum">Hola, ${RECEIVER!''}</p>
+	    <br />
+	    <div align="left">
+	        <table cellspacing="0" cellpadding="0" border="0">
+	            <tbody>
+	                <tr>
+	                    <td>
+	                    	<p class="DescrMsgForum">La siguiente actividad del Grupo <b>${WDK_TaskGroup!""}</b> del que usted forma parte fue asumida por <b>${WDK_User!""}</b>.</p>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                    	<img src="${WDK_TaskIconImage!''}" align="absmiddle" border="0">
+	                    	<a href="${WDK_TaskLink!''}" class="${WDK_ClassLink!''}">
+	                    		<b>Solicitud</b>: ${WDK_TaskNumber!''} - ${WDK_ProcessDescription!''} - ${WDK_TaskDescription!''}
+	                    	</a>
+	
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                    	<p class="DescrMsgDocto"><b>Plazo:</b> ${WDK_TaskDeadLine!''}</p>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                    	<p class="DescrMsgForum"><b>Comentarios:</b> ${WDK_TaskComments!''}</p>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                    	<p class="DescrMsgDocto"><b>Identificador:</b> ${WDK_CardDescriptorField!''}</p>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+							<div class="DescrMsgForum actions">
+								<a class="action" href="${LINK!''}">Ir a Notificaciones</a>
+								<div style="clear: both; line-height: 1px">&nbsp;</div>
+							</div>
+	                    </td>
+	                </tr>
+					
+				</tbody>
+	        </table>
+	    </div>
+	    <br />
+		
+	</#if>	
+</body>
+</html>

@@ -1,0 +1,203 @@
+<project name="RAFv1.0.0">
+	<ged>
+		<folder name="Legajo Electronico">
+			<folder name="Ficheros">
+				<document name="Solicitud de Puesto" dataset="RAF05-FormularioPrincipal" descriptor="legajo?" type="form"></document>
+				<document name="Solicitud de Alta de Empleado" dataset="RAF06-FormularioPrincipal" descriptor="legajo?" type="form"></document>
+			</folder>
+			<folder name="Legajos">
+				<security>
+					<permission attributionType="GROUP" attributionValue="TODOS" securityLevel="RECORDING"></permission>
+				</security>
+			</folder>
+			<folder name="Reportes">
+				<document name="Reporte de Solicitud de Puesto" type="report"></document>
+				<document name="Reporte de Solicitud de Alta de Empleado" type="report"></document>
+			</folder>
+		</folder>
+	</ged>
+	
+	<services>
+		<service code="ECMFolderService" description="ECMFolderService" url="http://localhost:9080/webdesk/ECMFolderService?wsdl"></service>
+		<service code="ECMColleagueService" description="ECMColleagueService" url="http://localhost:9080/webdesk/ECMColleagueService?wsdl"></service>
+	</services>
+
+	<datasets>
+		<dataset name="parametros" description="Parametros del Sistema." file="parametros.js"></dataset>
+
+		<dataset name="RAF05-CompetenciasPorNivel-sorted" description="Muestra las competencias por nivel ordenadas." file="RAF05-CompetenciasPorNivel-sorted.js"></dataset>
+		<dataset name="RAF05-FormularioPrincipal-filtered" description="Muestra las solicitudes iniciadas por el usuario según los grupos en que esté." file="RAF05-FormularioPrincipal-filtered.js"></dataset>
+		<dataset name="RAF05-aperturasPorSector" description="Dataset que devuelve un listado de Aperturas por Sector." file="RAF05-aperturasPorSector.js"></dataset>
+		<dataset name="RAF05-areas" description="Dataset que devuelve un listado de Areas." file="RAF05-areas.js"></dataset>
+		<dataset name="RAF05-carreras" description="Dataset que devuelve un listado de Carreras." file="RAF05-carreras.js"></dataset>
+		<dataset name="RAF05-categorias" description="Dataset que devuelve un listado de Categorias." file="RAF05-categorias.js"></dataset>
+		<dataset name="RAF05-categoriasConvenio" description="Dataset que devuelve un listado de Categorias Convenio." file="RAF05-categoriasConvenio.js"></dataset>
+		<dataset name="RAF05-centrosCosto" description="Dataset que devuelve un listado de Centros de Costo." file="RAF05-centrosCosto.js"></dataset>
+		<dataset name="RAF05-convenios" description="Dataset que devuelve un listado de Convenios." file="RAF05-convenios.js"></dataset>
+		<dataset name="RAF05-empleados" description="Devuelve matrícula, nombre y mail de los empleados." file="RAF05-empleados.js"></dataset>
+		<dataset name="RAF05-gerencias" description="Dataset que devuelve un listado de Gerencias." file="RAF05-gerencias.js"></dataset>
+		<dataset name="RAF05-gerentesN1" description="Devuelve matrícula, nombre y mail de los usuarios del grupo ROL-GTE-N1." file="RAF05-gerentesN1.js"></dataset>
+		<dataset name="RAF05-gerentesN2" description="Devuelve matrícula, nombre y mail de los usuarios del grupo ROL-GTE-N2." file="RAF05-gerentesN2.js"></dataset>
+		<dataset name="RAF05-jefes" description="Devuelve matrícula, nombre y mail de los usuarios del grupo ROL-JFE." file="RAF05-jefes.js"></dataset>
+		<dataset name="RAF05-lineasEspecialidad" description="Dataset que devuelve un listado de Lineas/Especialidad." file="RAF05-lineasEspecialidad.js"></dataset>
+		<dataset name="RAF05-puestos" description="Dataset que devuelve un listado de Puestos." file="RAF05-puestos.js"></dataset>
+		<dataset name="RAF05-sectores" description="Dataset que devuelve un listado de Sectores." file="RAF05-sectores.js"></dataset>
+		<dataset name="RAF05-subsectores" description="Dataset que devuelve un listado de Subsectores." file="RAF05-subsectores.js"></dataset>
+		<dataset name="RAF05-zonas.js" description="Dataset que devuelve un listado de Zonas." file="RAF05-zonas.js"></dataset>
+		
+		<dataset name="raf-documentsIntoFolderRecursive" description="Devuelve los documentos que se encuentran dentro de una carpea y sus subcarpetas." file="raf-documentsIntoFolderRecursive.js"></dataset>
+		<dataset name="RAF06-GrupoDeUsuarios" description="Devuelve todos los usuarios que pertenecen a un papel pasado por parámetro." file="RAF06-GrupoDeUsuarios.js"></dataset>
+		<dataset name="RAF06-PapelesStartLike" description="Devuelve todos los papales cuyos código comiencen con lo que se pasa por parámetro." file="RAF06-PapelesStartLike.js"></dataset>
+		<dataset name="RAF05-FormularioPrincipal-filteredProcesoSeleccion" description="Muestra las solicitudes iniciadas por el usuario según los grupos en que esté, en la tarea REALIZAR PROCESO DE SELECCION." file="RAF05-FormularioPrincipal-filteredProcesoSeleccion.js"></dataset>
+		<dataset name="RAF06-aperturasPorSector" description="Dataset que devuelve un listado de Aperturas por Sector." file="RAF06-aperturasPorSector.js"></dataset>
+		<dataset name="RAF06-areas" description="Dataset que devuelve un listado de Areas." file="RAF06-areas.js"></dataset>
+		<dataset name="RAF06-carreras" description="Dataset que devuelve un listado de Carreras." file="RAF06-carreras.js"></dataset>
+		<dataset name="RAF06-categorias" description="Dataset que devuelve un listado de Categorias." file="RAF06-categorias.js"></dataset>
+		<dataset name="RAF06-categoriasConvenio" description="Dataset que devuelve un listado de Categorias Convenio." file="RAF06-categoriasConvenio.js"></dataset>
+		<dataset name="RAF06-centrosCosto" description="Dataset que devuelve un listado de Centros de Costo." file="RAF06-centrosCosto.js"></dataset>
+		<dataset name="RAF06-convenios" description="Dataset que devuelve un listado de Convenios." file="RAF06-convenios.js"></dataset>
+		<dataset name="RAF06-empleados" description="Devuelve matrícula, nombre y mail de los empleados." file="RAF06-empleados.js"></dataset>
+		<dataset name="RAF06-gerencias" description="Dataset que devuelve un listado de Gerencias." file="RAF06-gerencias.js"></dataset>
+		<dataset name="RAF06-gerentesN1" description="Devuelve matrícula, nombre y mail de los usuarios del grupo ROL-GTE-N1." file="RAF06-gerentesN1.js"></dataset>
+		<dataset name="RAF06-gerentesN2" description="Devuelve matrícula, nombre y mail de los usuarios del grupo ROL-GTE-N2." file="RAF06-gerentesN2.js"></dataset>
+		<dataset name="RAF06-jefes" description="Devuelve matrícula, nombre y mail de los usuarios del grupo ROL-JFE." file="RAF06-jefes.js"></dataset>
+		<dataset name="RAF06-lineasEspecialidad" description="Dataset que devuelve un listado de Lineas/Especialidad." file="RAF06-lineasEspecialidad.js"></dataset>
+		<dataset name="RAF06-puestos" description="Dataset que devuelve un listado de Puestos." file="RAF06-puestos.js"></dataset>
+		<dataset name="RAF06-sectores" description="Dataset que devuelve un listado de Sectores." file="RAF06-sectores.js"></dataset>
+		<dataset name="RAF06-subsectores" description="Dataset que devuelve un listado de Subsectores." file="RAF06-subsectores.js"></dataset>
+		<dataset name="RAF06-zonas.js" description="Dataset que devuelve un listado de Zonas." file="RAF06-zonas.js"></dataset>
+		<dataset name="RAF06-estadoCivil" description="Dataset que devuelve un listado de estados civil." file="RAF06-estadoCivil.js"></dataset>
+		<dataset name="RAF06-modalidadContratacion" description="Dataset que devuelve un listado de modalidades de contratacion." file="RAF06-modalidadContratacion.js"></dataset>
+		<dataset name="RAF06-nacionalidades" description="Dataset que devuelve un listado de Nacionalidades." file="RAF06-nacionalidades.js"></dataset>
+		<dataset name="RAF06-regimenHorario" description="raf-regimenHorario" file="RAF06-regimenHorario.js"></dataset>
+		<dataset name="RAF06-transporte" description="Dataset que devuelve un listado de Areas." file="RAF06-transporte.js"></dataset>
+		
+	</datasets>
+	
+	<mechanisms>
+		<mechanism task="Iniciar Solicitud de Alta de Empleado" type="AtribucionPorGrupo" more="SeleccionDePersonal"></mechanism>
+		<mechanism task="Completar Remuneraciones y Beneficios" type="MecanismoAtribucionCustom" more="RAF06-CompYAdmPersonal"></mechanism>
+		<mechanism task="Aprobar Solicitud de Alta de Empleado (Jefe)" type="AtribucionPorCampoDeFormulario" more="jefeMatricula"></mechanism>
+		<mechanism task="Aprobar Solicitud de Alta de Empleado (Gte. N-2)" type="AtribucionPorCampoDeFormulario" more="gerenteN2Matricula"></mechanism>
+		<mechanism task="Aprobar Solicitud de Alta de Empleado (Gte. RRHH)" type="AtribucionPorAsociacion" more="Grupos: GerenteDeNivelN-1 y GerenciadeRRHH"></mechanism>
+		<mechanism task="Revisar Solicitud de Alta de Empleado" type="MecanismoAtribucionCustom" more="RAF06-SeleccionPersonal"></mechanism>
+		<mechanism task="Aprobar Solicitud de Alta de Empleado (Gte. N-1)" type="AtribucionPorCampoDeFormulario" more="gerenteN1Matricula"></mechanism>
+		<mechanism task="Aprobar Solicitud de Alta de Empleado (Gte. Gral.)" type="AtribucionPorGrupo" more="gerenteGeneral"></mechanism>
+		<mechanism task="Confirmar Fecha de Ingreso" type="MecanismoAtribucionCustom" more="RAF06-SeleccionPersonal"></mechanism>
+		<mechanism task="Notificar Ingreso de Empleado" type="MecanismoAtribucionCustom" more="RAF06-SeleccionPersonal"></mechanism>
+		<mechanism task="Dar de Alta Empleado en AFIP" type="AtribucionParaUnGrupo" more="GerenciaDeCompYAdmDePersonal"></mechanism>
+		<mechanism task="Completar Información en RHPRO" type="AtribucionPorEjecutorDeActividad" more="DardeAltaEmpleadoenAFIP UltimaEjecucion"></mechanism>
+		<mechanism task="Imprimir Documentación" type="AtribucionPorEjecucionDeActividad" more="DardeAltaEmpleadoenAFIP UltimaEjecucion"></mechanism>
+		<mechanism task="Ingresar Nuevo Usuario" type="AtribucionParaUnGrupo" more="Sistemas"></mechanism>
+		<mechanism task="Adjuntar Documentación al Legajo" type="AtribucionParaUnGrupo" more="GerenciaDeCompYAdmDePersonal"></mechanism>
+	</mechanisms>
+	
+	<controlPanel>
+		<roles>
+			<role code="RAF06-GPO-SYS" description="Usuarios destinatarios para la notificación de ingresos"></role>
+			<role code="RAF-PER-REQINF" description="Permiso Reporte de Requerimientos Informáticos"></role>
+			<role code="RAF-PER-HISTLMS" description="Permiso Reporte de Histórico LMS"></role>
+		</roles>
+		<groups>
+			<group code="ROL-GTE-N0" description="Gerente General"></group>
+			<group code="ROL-GTE-N1" description="Gerente de Nivel N-1"></group>
+			<group code="ROL-GTE-N2" description="Gerente de Nivel N-2"></group>
+			<group code="ROL-JFE" description="Jefe"></group>
+			<group code="ROL-SOR" description="Supervisor"></group>
+			<group code="UN2-RRHH" description="Gerencia de Recursos Humanos"></group>
+			<group code="UN3-RRHH-SELE" description="Selección de Personal"></group>
+			<group code="UN3-RRHH-COMP" description="Gerencia de Comp. y Adm. de Personal"></group>
+			<group code="ROL-STE-APF" description="Solicitantes de Agente de Propaganda Farmacéutica"></group>
+			<group code="ROL-STE-APM" description="Solicitante de Agente de Propaganda Médica"></group>
+			<group code="ROL-SIS" description="Sistemas"></group>
+			<!-- v1.1.0  -->
+			<group code="UN4-RRHH-COMP-ADMP" description="Administración de Personal"></group>
+			
+		</groups>
+	</controlPanel>
+	
+	<workflows>
+		<workflow name="RAF01" process="RAF01.process">
+			<descriptorFields>
+				<descriptorField>N° de Solicitud</descriptorField>
+				<descriptorField>N° de Requerimiento</descriptorField>
+				<descriptorField>N° de Contrato</descriptorField>
+				<descriptorField>Sector</descriptorField>
+				<descriptorField>Rubro</descriptorField>
+				<descriptorField>Fecha de entrada en vigencia</descriptorField>
+				<descriptorField>Fecha de fin de vigencia</descriptorField>
+				<descriptorField>Fecha de revisión</descriptorField>
+				<descriptorField>Proveedor Seleccionado</descriptorField>
+				<descriptorField>Moneda</descriptorField>
+				<descriptorField>Motivo de adjudicación</descriptorField>
+				<descriptorField>Solicitante</descriptorField>
+				<descriptorField>Responsable</descriptorField>
+				<descriptorField>Estado (ubicación)</descriptorField>
+				<descriptorField>Observaciones de la cabecera (Título)</descriptorField>
+			</descriptorFields>
+		</workflow>
+		<workflow name="RAF03" process="RAF03.process">
+			<descriptorFields>
+				<descriptorField>Nro. de Solicitud (Padre)</descriptorField>
+				<descriptorField>Fecha</descriptorField>
+				<descriptorField>Hora</descriptorField>
+				<descriptorField>Origen</descriptorField>
+				<descriptorField>Nombre y Apellido</descriptorField>
+				<descriptorField>Teléfono</descriptorField>
+				<descriptorField>Mail</descriptorField>
+				<descriptorField>Dirección</descriptorField>
+				<descriptorField>Otro</descriptorField>
+			</descriptorFields>
+		</workflow>
+		<workflow name="RAF04" process="RAF04.process">
+			<descriptorFields>
+				<descriptorField>Nro. de Solicitud (Padre)</descriptorField>
+				<descriptorField>Fecha de alta</descriptorField>
+				<descriptorField>Origen</descriptorField>
+				<descriptorField>Nombre y Apellido</descriptorField>
+				<descriptorField>Nro. de Consulta Fluig (Hijo)</descriptorField>
+				<descriptorField>Nro. de Consulta Raffo</descriptorField>
+				<descriptorField>Descripción del producto</descriptorField>
+				<descriptorField>Principio Activo</descriptorField>
+				<descriptorField>Tipo de Consulta</descriptorField>
+				<descriptorField>Derivación o Responsable</descriptorField>
+				<descriptorField>Solicitante - que me figure quien lo empezó, no el sistema</descriptorField>
+				<descriptorField>Plazo</descriptorField>
+				<descriptorField>Descripción del proceso</descriptorField>
+				<descriptorField>Tarea (Estado o Ubicación)</descriptorField>
+				<descriptorField>Telefono</descriptorField>
+			</descriptorFields>
+		</workflow>
+		<workflow name="RAF05" process="RAF05.process">
+			<descriptorFields>
+				<descriptorField>N° de Solicitud</descriptorField>
+				<descriptorField>Ingreso de Personal</descriptorField>
+				<descriptorField>Sector</descriptorField>
+				<descriptorField>Reporta a</descriptorField>
+			</descriptorFields>
+		</workflow>
+		<workflow name="RAF06" process="RAF06.process">
+			<descriptorFields>
+				<descriptorField>legajo</descriptorField>
+				<descriptorField>cuil</descriptorField>
+				<descriptorField>nombre</descriptorField>
+				<descriptorField>apellido</descriptorField>
+				<descriptorField>a quien reporta</descriptorField>
+				<descriptorField>puesto</descriptorField>
+				<descriptorField>nombrePuestoNuevo</descriptorField>
+			</descriptorFields>
+		</workflow>
+	</workflows>
+	
+	<sql>
+		<script file="creates-sqlserver-1.0.sql"></script>
+	</sql>
+	
+	<pages>
+		<page codigo="RAF-Reportes" titulo="Reportes" seguridad="RAF-PER-REQINF, RAF-PER-HISTLMS">			
+			<page codigo="RAF06-HistoricoLMS" titulo="Histórico LMS" descripcion="Reporte de Histórico LMS" seguridad="RAF-PER-HISTLMS"></page>
+			<page codigo="RAF06-RequerimientosInformaticos" titulo="Requerimientos Informáticos" descripcion="Reporte de Requerimientos Informáticos" seguridad="RAF-PER-REQINF"></page>		
+		</page>
+	</pages>
+	
+</project>

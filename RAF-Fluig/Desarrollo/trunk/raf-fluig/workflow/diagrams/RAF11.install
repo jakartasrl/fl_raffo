@@ -1,0 +1,47 @@
+GED:
+ - Crear estructura de carpetas:
+ Baja de Médico > Ficheros >  RAF11-FormularioPrincipal
+ Almacenar en: RAF11-FormularioPrincipal
+ Campo descriptor: Apellido
+
+Grupos:
+RAF08-APM				Agentes de Propaganda Médica
+RAF08-GTE-DIST-*		Gerente de Distrito
+RAF08-ASIST-DIST-*		Asistente de Distrito
+RAF08-GTE-PROMO-*		Gerente de Promoción
+RAF11-GTOR-PROCESO		Gestor del Proceso de Baja de Médico
+RAF11-CASILLA-EVENTOS	Casilla de Eventos
+
+Mecanismos de atribución custom:
+RAF11-Solicitante: Permite determinar si en que inicia la solicitud es APM o Gte de Distrito. En tarea #4.
+
+Datasets custom: 
+ - Código: RAF11-SolicitudesPosibleBaja > Asignar permiso?? NO
+ - Descripción: Devuelde el dataset  de las solicitudes con posible baja de médicos.
+ Utilizado para popular el campo Solicitudes Abiertas por Posible Baja del formulario ppal.
+ 
+Exportación de Ficheros: N/A
+
+Exportación de Formulario: 	
+RAF11-Formulario Principal
+- Campo descriptor: Apellido
+	
+Exportación de Templates:
+Código:RAF11-BajaMedico
+Descripción: Notificación por baja de mpedico
+Exportar: Se deben subir desde el fuig los templates.
+
+Programador de tareas:
+	Descripción: Finalizador de solicitudes por baja de médicos
+	Tipo: Sincronización de dataset
+	Dataset: 
+# Crear cron del programador de tareas para el cierre masivo de solicitudes de baja de médicos exportado como RAF08-ProcesoBackgroundFinalizacionSolicitudesPorBajaMedico
+
+Reporte: N/A
+
+Mis Páginas: N/A
+
+Scripts: N/A
+
+
+		

@@ -1,0 +1,15 @@
+application.type=widget
+application.code=raf_navegadorGED
+application.title=Navegador GED
+application.description=Crea un listado con las subcarpetas y documentos de la carpeta indicada y permitiendo navegar por las subcarpetas.
+application.category=Portal Web
+application.renderer=freemarker
+application.icon=icon.png
+developer.code=ARQ
+developer.name=Arquimeda S.R.L.
+developer.url=http://www.arquimeda.com/
+application.uiwidget=true
+application.mobileapp=true
+view.file=view.ftl
+edit.file=edit.ftl
+locale.file.base.name=raf-navegadorGED

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.min.js"></script>
+	<style>
+	</style>
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>Competencias por Nivel</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+	
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nivel" class="col-md-3 control-label">Nivel</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="nivel" id="nivel" data-parsley-required="true">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="tipoPuesto" class="col-md-3 control-label">Tipo de Puesto</label>
+					<div class="col-md-5">
+						<select class="form-control" name="tipoPuesto" id="tipoPuesto">
+							<option value="PE">Puesto Estándar</option>
+							<option value="APM">Fuerza de Venta (APM)</option>
+							<option value="APF">Fuerza de Venta (APF)</option>
+						</select>					
+					</div>		
+				</div>
+			</div>
+			<br/>
+			<br/>
+			
+			<div class="row">
+				<label for="competenciasLabel" class="col-md-3 control-label">Competencias </label>
+				<div class="col-md-1 col-md-offset-8">
+					<button type="button" class="btn btn-default btnNuevo" id="btnNuevo">Nuevo</button>
+				</div>
+			</div>
+
+			<br/>
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed" id="tablaCompetenciasNivel" tablename="tablaComp" noaddbutton="true" nodeletebutton="true">
+					<thead>
+						<tr>
+							<th width="50%"><label class="control-label">Competencia</label></th>
+							<th width="45%"><label class="control-label">Nivel por Defecto</label></th>
+							<th width="5%"></th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td class="label-field"><input type="text" class="form-control competencia" id="competencia" name="competencia" data-parsley-required="true"/></td>
+							<td class="label-field">
+								<select class="form-control" name="nivelPorDefecto" id="nivelPorDefecto">
+									<option value=""></option>
+									<option value="medio">Medio</option>
+									<option value="alto">Alto</option>
+								</select>	
+							</td>
+							<td>							
+								<div class="col-sm-12" style="padding:0 5">
+									<div class="pull-right">
+										<span class="fluigicon fluigicon-trash deleteRow" title="Eliminar"></span>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				
+				</table>
+
+			</div>
+
+		</form>
+		<br>
+	</div> 
+	</div> 
+  </body>
+</html>

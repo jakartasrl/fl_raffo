@@ -1,0 +1,840 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>RAF04</processId>
+    </processDefinitionPK>
+    <processDescription>RAF-Atención de Consultas</processDescription>
+    <instruction>&amp;nbsp;</instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>Registro de Consultas</categoryId>
+    <managerEngineAllocationId>Associado</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssociatedController ConditionAssociated=&quot;OR&quot;&gt;&lt;ControlXML TypeAssociated=&quot;Usuário&quot;&gt;&lt;AssignmentController&gt;&lt;User&gt;SYS02&lt;/User&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;ControlXML TypeAssociated=&quot;Usuário&quot;&gt;&lt;AssignmentController&gt;&lt;User&gt;adm&lt;/User&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;/AssociatedController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>1</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>0</complementsLevel>
+    <notifyRequisitionerComplements>false</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <notifyAuthorityComplements>false</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>RAF-Atención de Consultas</processId>
+      <version>10</version>
+    </processDefinitionVersionPK>
+    <versionDescription>Versión 1.1.1 </versionDescription>
+    <formId>137</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>true</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>1</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>true</inheritFormSecurity>
+    <mobileReady>false</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </processStatePK>
+      <stateName>Iniciar Consulta</stateName>
+      <stateDescription>Iniciar Consulta</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Usuário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;SYS02&lt;/User&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>0</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>86</positionX>
+      <positionY>280</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </processStatePK>
+      <stateName>Corregir Datos</stateName>
+      <stateDescription>Corregir Datos</stateDescription>
+      <instruction>&lt;ul&gt;&lt;li&gt;Adjuntos y Observaciones - Los adjuntos y las observaciones para que sean visualizadas en el mail que recibe el pool, deberán ser cargados en la pantalla Atención de Consultas. &lt;/li&gt;&#xd;
+&lt;li&gt;Adjuntar un documento - Ir a la solapa Adjuntos y elegir las opciones “Nuevo Adjunto Upload” – “Upload”,  seleccionar el documento y elegir la opción “Confirmar”. Vuelve a comenzar el circuito.&lt;/li&gt;&#xd;
+&lt;li&gt;Cargar una observación - Ir a la solapa Observaciones y cargar la misma.&lt;/li&gt;&#xd;
+&lt;li&gt;“Salvar” o “Cerrar” – Si eligió dicha opción,  la consulta se podrá visualizar dirigiéndose a la pantalla de Inicio - Procesos – Central de Tareas – Tareas a Concluir. Si elige la opción “Cerrar” los datos cargados o modificados se perderán. &lt;/li&gt;&lt;/ul&gt;</instruction>
+      <deadlineTime>28800</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;RC_ATE_FCIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>270</positionX>
+      <positionY>261</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </processStatePK>
+      <stateName>Revisar Consulta</stateName>
+      <stateDescription>Revisar Consulta</stateDescription>
+      <instruction>&lt;ul&gt;&lt;li&gt;Complementar Consulta – permite devolver la consulta a la persona que lo atendio. Se podrá ingresar en la solapa Observaciones algún comentario y luego elegir las opciones &quot;Complementar Consulta&quot; – &quot;Enviar&quot;.&lt;/li&gt;&#xd;
+&lt;li&gt;Corregir Datos – Permite devolver la consulta al asistente de Farmacovigilancia. Ingresar en la solapa Observaciones el dato corregir y elegir las opciones &quot;Corregir Datos&quot; – &quot;Enviar&quot;. Vuelve a comenzar el circuito.&lt;/li&gt;&#xd;
+&lt;li&gt;Transfer -  Permite devolver al pool la consulta, elegir las opciones &quot;Transfer&quot; – selecionar el pool en el campo “Nombre” y &quot;Enviar&quot;.&lt;/li&gt;&#xd;
+&lt;li&gt;Adjuntar un documento - Ir a la solapa Adjuntos y elegir las opciones “Nuevo Adjunto Upload” – “Upload”,  seleccionar el documento y elegir la opción “Confirmar”. &lt;/li&gt;&#xd;
+&lt;li&gt;“Salvar” o “Cerrar” – Si eligió dicha opción,  la consulta se podrá visualizar dirigiéndose a la pantalla de Inicio - Procesos – Central de Tareas – Tareas a Concluir. Si elige la opción “Cerrar” los datos cargados o modificados se perderán.&lt;/li&gt;&lt;/ul&gt;</instruction>
+      <deadlineTime>28800</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;RC_ROR_FCIA&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>830</positionX>
+      <positionY>442</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </processStatePK>
+      <stateName>Complementar Consulta</stateName>
+      <stateDescription>Complementar Consulta</stateDescription>
+      <instruction>&lt;ul&gt;&lt;li&gt;Adjuntar un documento - Ir a la solapa Adjuntos y elegir las opciones “Nuevo Adjunto Upload” – “Upload”,  seleccionar el documento y elegir la opción “Confirmar”. Vuelve a comenzar el circuito.&lt;/li&gt;&#xd;
+&lt;li&gt;Cargar una observación - Ir a la solapa Observaciones y cargar la misma.&lt;/li&gt;&#xd;
+&lt;li&gt;“Salvar” o “Cerrar” – Si eligió dicha opción,  la consulta se podrá visualizar dirigiéndose a la pantalla de Inicio - Procesos – Central de Tareas – Tareas a Concluir. Si elige la opción “Cerrar” los datos cargados o modificados se perderán. &lt;/li&gt;&lt;/ul&gt;</instruction>
+      <deadlineTime>28800</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;6&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>830</positionX>
+      <positionY>62</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>6</sequence>
+      </processStatePK>
+      <stateName>Atender Consulta</stateName>
+      <stateDescription>Atender Consulta</stateDescription>
+      <instruction>&lt;ul&gt;&lt;li&gt;Corregir Datos – Permite devolver la consulta al asistente de Farmacovigilancia. Ingresar en la solapa Observaciones el dato a corregir y elegir las opciones &quot;Corregir Datos&quot; – &quot;Enviar&quot;.&lt;/li&gt;&#xd;
+&lt;li&gt;Derivar – permite derivar la consulta a otro sector. Se podra ingresar en la solapa Observaciones algún comentario, elegir en el campo “Grupo derivación” la nueva area a derivar  y elegir las opciones “Derivar” – “Enviar”.&lt;/li&gt;&#xd;
+&lt;li&gt;Transfer -  Permite devolver al pool la consulta, elegir las opciones &quot;Transfer&quot; – selecionar el pool en el campo “Nombre” y &quot;Enviar&quot;. &lt;/li&gt;&#xd;
+&lt;li&gt;Adjuntar un documento - Ir a la solapa Adjuntos y elegir las opciones “Nuevo Adjunto Upload” – “Upload”,  seleccionar el documento y elegir la opción “Confirmar”.&lt;/li&gt;&#xd;
+&lt;li&gt;Cargar Observación - Ir a la solapa Observaciones y cargar la misma.&lt;/li&gt;&#xd;
+&lt;li&gt;“Salvar” o “Cerrar” – Si eligió dicha opción,  la consulta se podrá visualizar dirigiéndose a la pantalla de Inicio - Procesos – Central de Tareas – Tareas a Concluir. Si elige la opción “Cerrar” los datos cargados o modificados se perderán.&lt;/li&gt;&lt;/ul&gt;</instruction>
+      <deadlineTime>28800</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;derivacionCodigoGrupo&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>200</positionX>
+      <positionY>62</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>7</sequence>
+      </processStatePK>
+      <stateName>Derivar Consulta</stateName>
+      <stateDescription>Derivar Consulta</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>550</positionX>
+      <positionY>46</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </processStatePK>
+      <stateName>Consulta Cerrada</stateName>
+      <stateDescription>Consulta Cerrada</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1120</positionX>
+      <positionY>460</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>10</version>
+        <sequence>7</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>6</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;derivacionCodigoGrupo&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>2</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>1</initialStateSequence>
+      <finalStateSequence>6</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>6</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>5</initialStateSequence>
+      <finalStateSequence>3</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>9</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>6</initialStateSequence>
+      <finalStateSequence>3</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>10</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>2</initialStateSequence>
+      <finalStateSequence>6</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>12</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>6</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>13</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>6</initialStateSequence>
+      <finalStateSequence>2</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>14</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>7</initialStateSequence>
+      <finalStateSequence>6</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>15</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>3</initialStateSequence>
+      <finalStateSequence>4</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>17</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>3</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>18</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>3</initialStateSequence>
+      <finalStateSequence>2</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>19</linkSequence>
+      </processLinkPK>
+      <actionLabel> </actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>2</initialStateSequence>
+      <finalStateSequence>7</finalStateSequence>
+      <returnLabel> </returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeCancelProcess</eventId>
+        <processId>RAF04</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeCancelProcess(colleagueId,processId){&#xd;	throw &quot;No se puede cancelar la solicitud. Si desea cancelar la consulta debe enviarla al revisor.&quot;;	&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>onNotify</eventId>
+        <processId>RAF04</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function onNotify(subject, receivers, template, params){&#xd;&#xd;	log.info(&quot;*****Ejecutando onNotify(&quot; + subject + &quot;, &quot; + receivers + &quot;,  &quot; + template + &quot; , &quot; + params + &quot;);&quot;);&#xd;	&#xd;	var nroSolicitud = params.get(&quot;processInstanceId&quot;);&#xd;	var descripcionTarea = params.get(&quot;WDK_TaskDescription&quot;);&#xd;	&#xd;	if(template == &quot;TPLNEW_TASK&quot;){ // Nueva Tarea de Workflow&#xd;		&#xd;		subject.add(&quot;Nueva Tarea - &quot; + descripcionTarea + &quot;: &quot; + hAPI.getCardValue(&quot;aten_nroConsulta&quot;) + &quot; Producto: &quot; + hAPI.getCardValue(&quot;aten_producto&quot;));		&#xd;		&#xd;	}else if(template == &quot;TPLNEW_TASK_POOL_GROUP&quot;){ // Nueva Tarea Workflow para Grupo&#xd;		&#xd;		subject.add(&quot;Nueva Tarea en Pool - &quot; + descripcionTarea + &quot;: &quot; + hAPI.getCardValue(&quot;aten_nroConsulta&quot;) + &quot; Producto: &quot; + hAPI.getCardValue(&quot;aten_producto&quot;));&#xd;		&#xd;	}else if(template == &quot;TPLOVERDUE_TASK_USER_RESPONSIBLE&quot;){ // Tarea Atrasada para Responsable&#xd;		&#xd;		subject.add(&quot;Tarea Atrasada - &quot; + descripcionTarea + &quot;: &quot; + hAPI.getCardValue(&quot;aten_nroConsulta&quot;) + &quot; Producto: &quot; + hAPI.getCardValue(&quot;aten_producto&quot;));&#xd;		&#xd;	}else if(template == &quot;TPLOVERDUE_TASK_TO_MANAGER&quot;){ // Tarea Atrasada para Gerente  &#xd;		&#xd;		subject.add(&quot;Tarea Sobre Gerencia Atrasada - &quot; + descripcionTarea + &quot;: &quot; + hAPI.getCardValue(&quot;aten_nroConsulta&quot;) + &quot; Producto: &quot; + hAPI.getCardValue(&quot;aten_producto&quot;));&#xd;		&#xd;	}else if(template == &quot;TPLOVERDUE_TASK_TO_GROUP&quot;){ // Tarea Atrasada para Grupo&#xd;		&#xd;		subject.add(&quot;Tarea en Pool Atrasada - &quot; + descripcionTarea + &quot;: &quot; + hAPI.getCardValue(&quot;aten_nroConsulta&quot;) + &quot; Producto: &quot; + hAPI.getCardValue(&quot;aten_producto&quot;));&#xd;		&#xd;	} else if(template == &quot;TPLTASK_POOL_GROUP_ASSUMED&quot;){ // Tarea de Pool de Grupo asumida &#xd;		&#xd;		subject.add(&quot;Tarea en Pool Asumida - &quot; + descripcionTarea + &quot;: &quot; + hAPI.getCardValue(&quot;aten_nroConsulta&quot;) + &quot; Producto: &quot; + hAPI.getCardValue(&quot;aten_producto&quot;));&#xd;		&#xd;	}&#xd; &#xd;	&#xd;	var host = params.get(&quot;WDK_VirtualDir&quot;).slice(0,-8);    // &lt;- http://host/websesk&#xd;	log.info(&quot;******HOST: &quot; + host);&#xd;	&#xd;	params.put(&quot;host&quot;, host);&#xd;	params.put(&quot;padre_fecha&quot;, hAPI.getCardValue(&quot;padre_fecha&quot;));&#xd;	params.put(&quot;padre_hora&quot;, hAPI.getCardValue(&quot;padre_hora&quot;));&#xd;	params.put(&quot;padre_origen&quot;, hAPI.getCardValue(&quot;padre_origen&quot;));&#xd;	params.put(&quot;padre_nombre&quot;, hAPI.getCardValue(&quot;padre_nombre&quot;));&#xd;	params.put(&quot;padre_telefono&quot;, hAPI.getCardValue(&quot;padre_telefono&quot;));&#xd;	params.put(&quot;padre_mail&quot;, hAPI.getCardValue(&quot;padre_mail&quot;));&#xd;	params.put(&quot;padre_direccion&quot;, hAPI.getCardValue(&quot;padre_direccion&quot;));&#xd;	params.put(&quot;padre_otro&quot;, hAPI.getCardValue(&quot;padre_otro&quot;));&#xd;	params.put(&quot;padre_observaciones&quot;, hAPI.getCardValue(&quot;padre_observaciones&quot;));&#xd;	params.put(&quot;aten_nroSolicitud&quot;, nroSolicitud);&#xd;	params.put(&quot;aten_nroConsulta&quot;, hAPI.getCardValue(&quot;aten_nroConsulta&quot;));	&#xd;	params.put(&quot;aten_producto&quot;, hAPI.getCardValue(&quot;aten_producto&quot;));&#xd;	params.put(&quot;aten_activo&quot;, hAPI.getCardValue(&quot;aten_activo&quot;));&#xd;	params.put(&quot;aten_nroLote&quot;, hAPI.getCardValue(&quot;aten_nroLote&quot;));&#xd;	params.put(&quot;aten_vencimiento&quot;, hAPI.getCardValue(&quot;aten_vencimiento&quot;));&#xd;	params.put(&quot;aten_tipo&quot;, hAPI.getCardValue(&quot;aten_tipo&quot;));&#xd;	params.put(&quot;aten_observacion&quot;, hAPI.getCardValue(&quot;aten_observacion&quot;));&#xd;	params.put(&quot;aten_derivacion&quot;, hAPI.getCardValue(&quot;aten_derivacion&quot;));&#xd;	params.put(&quot;aten_rellamada&quot;, hAPI.getCardValue(&quot;aten_rellamada&quot;));&#xd;	params.put(&quot;aten_resolucion&quot;, hAPI.getCardValue(&quot;aten_resolucion&quot;));&#xd;	params.put(&quot;aten_motivoAtraso&quot;, hAPI.getCardValue(&quot;aten_motivoAtraso&quot;));&#xd;	params.put(&quot;aten_licenciante&quot;, hAPI.getCardValue(&quot;aten_licenciante&quot;));&#xd;	params.put(&quot;aten_contieneEventoAdverso&quot;, hAPI.getCardValue(&quot;aten_contieneEventoAdverso&quot;));&#xd;	params.put(&quot;aten_contieneEventoAdversoMotivo&quot;, hAPI.getCardValue(&quot;aten_contieneEventoAdversoMotivo&quot;));&#xd;	params.put(&quot;aten_conclusion&quot;, hAPI.getCardValue(&quot;aten_conclusion&quot;));&#xd;	params.put(&quot;aten_revobservacion&quot;, hAPI.getCardValue(&quot;aten_revobservacion&quot;));&#xd;	params.put(&quot;rc_template&quot;, &quot;rc_template&quot;);&#xd;	params.put(&quot;taskComments&quot;, hAPI.getCardValue(&quot;historicoObservacionesInput&quot;));	&#xd;	&#xd;&#xd;	var nroSolicitud = params.get(&quot;processInstanceId&quot;);&#xd;&#xd;	var c01 = DatasetFactory.createConstraint(&quot;workflowProcessPK.processInstanceId&quot;, nroSolicitud, nroSolicitud, ConstraintType.MUST); &#xd;	var workflowProcessDataset = DatasetFactory.getDataset(&quot;workflowProcess&quot;, null, [c01], null);&#xd;&#xd;	var attachmentSeqId = workflowProcessDataset.getValue(0, &quot;attachmentSeqId&quot;);&#xd;&#xd;	var c02 = DatasetFactory.createConstraint(&quot;processAttachmentPK.processInstanceId&quot;, nroSolicitud, nroSolicitud, ConstraintType.MUST); &#xd;	var c03 = DatasetFactory.createConstraint(&quot;processAttachmentPK.attachmentSequence&quot;, attachmentSeqId, attachmentSeqId, ConstraintType.MUST); &#xd;	var processAttachmentDataset = DatasetFactory.getDataset(&quot;processAttachment&quot;, null, [c02,c03], null);&#xd;	var fichaDocumentId = processAttachmentDataset.getValue(0, &quot;documentId&quot;);&#xd;	&#xd;	var sortingFields = [&quot;documentId&quot;, &quot;version&quot;];&#xd;	var c04 = DatasetFactory.createConstraint(&quot;documentId&quot;, fichaDocumentId, fichaDocumentId, ConstraintType.MUST_NOT);&#xd;	var c05 = DatasetFactory.createConstraint(&quot;processAttachmentPK.processInstanceId&quot;, nroSolicitud, nroSolicitud, ConstraintType.MUST); &#xd;	var attachmentDataset = DatasetFactory.getDataset(&quot;processAttachment&quot;, null, [c04,c05], sortingFields);&#xd;&#xd;	var document2UserMap = new java.util.HashMap();&#xd;	var document2LinkMap = new java.util.HashMap();&#xd;	&#xd;	log.info(&quot;************ attachmentDataset.rowsCount: &quot; + attachmentDataset.rowsCount + &quot; fichaDocumentId: &quot; + fichaDocumentId);&#xd;	&#xd;	for(var j = 0; j &lt; attachmentDataset.rowsCount; j++) { &#xd;	&#xd;		var documentId = attachmentDataset.getValue(j, &quot;documentId&quot;);&#xd;		&#xd;		if(fichaDocumentId != documentId){&#xd;&#xd;			var version = attachmentDataset.getValue(j, &quot;version&quot;);&#xd;			var documentLink = host + &quot;/webdesk/streamcontrol/?companyId=1&amp;WDNrDocto=&quot; + documentId + &quot;&amp;WDNrVersao=&quot; + version;&#xd;			&#xd;			log.info(&quot;*********************** documentId: &quot; + documentId + &quot; version: &quot; + version + &quot; j: &quot; + j);&#xd;&#xd;			var c2 = DatasetFactory.createConstraint(&quot;documentPK.documentId&quot;, documentId, documentId, ConstraintType.MUST); &#xd;			var c3 = DatasetFactory.createConstraint(&quot;documentPK.version&quot;, version, version, ConstraintType.MUST); &#xd;			var documentDataset = DatasetFactory.getDataset(&quot;document&quot;, null, [c2,c3], null);&#xd;				&#xd;			var documentDescription = documentDataset.getValue(0, &quot;documentDescription&quot;);&#xd;			var publisherId  = documentDataset.getValue(0, &quot;publisherId&quot;);&#xd;			&#xd;			var c4 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, publisherId, publisherId, ConstraintType.MUST); &#xd;			var datasetColleague = DatasetFactory.getDataset(&quot;colleague&quot;, null, [c4], null);&#xd;		&#xd;			log.info(&quot;****Document: &quot; + documentDescription + &quot; Empleado: &quot; + datasetColleague.getValue(0, &quot;colleagueName&quot;) + &quot; Link: &quot; + documentLink);&#xd;			document2UserMap.put(documentDescription, datasetColleague.getValue(0, &quot;colleagueName&quot;));&#xd;			document2LinkMap.put(documentDescription, documentLink);&#xd;		}&#xd;	}&#xd;	&#xd;	params.put(&quot;document2UserMap&quot;,document2UserMap);&#xd;	params.put(&quot;document2LinkMap&quot;,document2LinkMap);&#xd;&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessFinish</eventId>
+        <processId>RAF04</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessFinish(processId){&#xd;	&#xd;	&#xd;	var fecha = new Date();&#xd;	var dateParser = new java.text.SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xd;	hAPI.setCardValue(&quot;fechaFinSolicitud&quot;, dateParser.format(fecha));&#xd;	hAPI.setCardValue(&quot;horaFinSolicitud&quot;, fecha.getHours() + &quot;:&quot; + fecha.getMinutes() + &quot;:&quot; + fecha.getSeconds());&#xd;&#xd;	var userId = getValue(&quot;WKUser&quot;);&#xd;	var companyId = getValue(&quot;WKCompany&quot;);&#xd;	var nroSolicitudPadre = hAPI.getCardValue(&quot;padre_nroSolicitud&quot;);&#xd;	var nroSolicitud = hAPI.getCardValue(&quot;aten_nroSolicitud&quot;);&#xd;	&#xd;	var c1 = DatasetFactory.createConstraint(&quot;metadata#active&quot;, &quot;true&quot;, &quot;true&quot;, ConstraintType.MUST); &#xd;	var c2 = DatasetFactory.createConstraint(&quot;padre_nroSolicitud&quot;, nroSolicitudPadre, nroSolicitudPadre, ConstraintType.MUST); &#xd;	var c3 = DatasetFactory.createConstraint(&quot;aten_nroSolicitud&quot;, nroSolicitud, nroSolicitud, ConstraintType.MUST_NOT); &#xd;	var datasetAtenciones = DatasetFactory.getDataset(&quot;raf-atencion-consultas&quot;, null, [c1,c2,c3], null); &#xd;	&#xd;	for(j = 0; j &lt; datasetAtenciones.rowsCount; j++) { &#xd;		if((datasetAtenciones.getValue(j, &quot;tarea&quot;) != &quot;CONSULTA CERRADA&quot; ) &amp;&amp; (datasetAtenciones.getValue(j, &quot;tarea&quot;) != &quot;CONSULTA CANCELADA&quot;)){&#xd;			return;	&#xd;		}&#xd;	}&#xd;	&#xd;	var tareasRAF03 = {&#xd;			REGISTRAR_CONSULTA : 9,	&#xd;			MODIFICAR_CONSULTA : 10,&#xd;			VERIF_CONSULTA_CERRADA : 8&#xd;	}&#xd;	&#xd;	try {&#xd;		var arq = arqLoadLib([&quot;com.arquimeda.fluig.js.ws.BPM-v1&quot;,&quot;com.arquimeda.fluig.js.Properties-v1&quot;]);&#xd;		arq.prop.load({&#xd;			datasetName: &quot;parametros&quot;&#xd;		});&#xd;		var cardData = arq.bpm.getCardData(nroSolicitudPadre);&#xd;		cardData.cerrarConsulta = &quot;1&quot;;&#xd;		&#xd;		var ret = arq.bpm.saveAndSendTask({&#xd;			username: arq.prop.get(&quot;RAF03.usuarioSistema.login&quot;),&#xd;			password: arq.prop.get(&quot;RAF03.usuarioSistema.pass&quot;),&#xd;			companyId: getValue(&quot;WKCompany&quot;),&#xd;			processInstanceId: nroSolicitudPadre,&#xd;			choosedState: tareasRAF03.VERIF_CONSULTA_CERRADA,&#xd;			colleagueIds: [&quot;System:Auto&quot;],&#xd;			comments: &quot;Tarea de Registro de Consulta movida automaticamente nro: &quot;+nroSolicitudPadre,&#xd;			userId: arq.prop.get(&quot;RAF03.usuarioSistema.id&quot;),&#xd;			completeTask: true, &#xd;			attachments: [],&#xd;	        cardData: cardData,&#xd;	        managerMode: true,&#xd;	        workflowServiceName: &quot;ECMWorkflowEngineService&quot;,&#xd;	        log: 1,&#xd;		});&#xd;		&#xd;&#xd;	} catch(e) {&#xd;		log.info(&quot;########## Error saveAndSendTask: &quot; + e);&#xd;		throw &quot;Se produjo un error al finalizar la solicitud desde Atención de Consultas. Por favor, consulte con el administrador del sistema.&quot;;&#xd;	}&#xd;	&#xd;}&#xd;&#xd;//arqLoadLib - v1.0&#xd;function arqLoadLib(e){var t={};if(e==null){return t}var n=function(e,t){for(var n=0;n&lt;e.length;n++){if(e[n]==t)return true}return false};var r=DatasetFactory.getDataset(&quot;arq_libreriaJS&quot;,null,null,null);for(var i=0;i&lt;r.rowsCount;i++){var s=r.getValue(i,&quot;lib&quot;);if(n(e,s)){var o=r.getValue(i,&quot;src&quot;);var u=r.getValue(i,&quot;name&quot;);try{var a=new Function(&quot;lib&quot;,&quot;return &quot;+o);t[u]=a(t)}catch(f){log.error(&quot;*** Error compilando libreria &quot;+s+&quot;:&quot;+f)}}}return t}&#xd;</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeTaskSave</eventId>
+        <processId>RAF04</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;&#xd;	var tareaActual = getValue(&quot;WKNumState&quot;);&#xd;	var completo = getValue(&quot;WKCompletTask&quot;);&#xd;	var nroSolicitud = getValue(&quot;WKNumProces&quot;);&#xd;	&#xd;	if (tareaActual != 7) {&#xd;		var c1 = DatasetFactory.createConstraint(&quot;NRO_SOLICITUD&quot;, nroSolicitud, nroSolicitud, ConstraintType.MUST),&#xd;		c2 = DatasetFactory.createConstraint(&quot;LAST_MOV&quot;, true, true, ConstraintType.MUST); &#xd;		var obsDts = DatasetFactory.getDataset(&quot;raf-observaciones&quot;, null, [c1,c2], null); &#xd;		&#xd;		var observaciones = obsDts.getValue(0, &quot;OBSERVACIONES&quot;);&#xd;		hAPI.setCardValue(&quot;historicoObservacionesInput&quot;, observaciones);&#xd;		hAPI.setCardValue(&quot;mostrarHistoricoObservaciones&quot;, &quot;1&quot;);		&#xd;	}&#xd;	&#xd;	if (tareaActual == 6 &amp;&amp; nextSequenceId == 3 &amp;&amp; completo == &quot;true&quot;) {&#xd;	&#xd;		var c1 = DatasetFactory.createConstraint(&quot;processTaskPK.processInstanceId&quot;, nroSolicitud, nroSolicitud, ConstraintType.MUST); &#xd;		var c2 = DatasetFactory.createConstraint(&quot;active&quot;, &quot;true&quot;, &quot;true&quot;, ConstraintType.MUST); &#xd;		&#xd;		var processTaskDataset = DatasetFactory.getDataset(&quot;processTask&quot;, null, [c1,c2], null); &#xd;		 &#xd;		var nroSolicitud = processTaskDataset.getValue(0, &quot;processTaskPK.processInstanceId&quot;);&#xd;		var deadlineDate = processTaskDataset.getValue(0, &quot;deadlineDate&quot;);  &#xd;		var deadlineHour = processTaskDataset.getValue(0, &quot;deadlineHour&quot;); &#xd;		  &#xd;		log.info(&quot;nroSolicitud: &quot; + nroSolicitud + &quot; deadlineDate: &quot; + deadlineDate + &quot; deadlineHour: &quot; + deadlineHour);&#xd;		&#xd;		var ahora = formatDate(new Date());&#xd;		var vencimiento = formatDateMinutes(deadlineDate,deadlineHour);&#xd;		var motivoAtraso = hAPI.getCardValue(&quot;aten_motivoAtraso&quot;);&#xd;			&#xd;		log.info(&quot;ahora: &quot; + ahora + &quot; vencimiento: &quot; + vencimiento + &quot; motivoAtraso: &quot; + motivoAtraso);		&#xd;		&#xd;		if((ahora &gt; vencimiento) &amp;&amp; (motivoAtraso == &quot;&quot;)){&#xd;			throw &quot;Debe completar el motivo del atraso.&quot;;&#xd;		}&#xd;&#xd;	}&#xd;	&#xd;	if (tareaActual == 3 &amp;&amp; (nextSequenceId == 4 || nextSequenceId == 8) &amp;&amp; completo == &quot;true&quot;) {&#xd;		&#xd;		var aten_contieneEventoAdverso = hAPI.getCardValue(&quot;aten_contieneEventoAdverso&quot;);&#xd;		var aten_conclusion = hAPI.getCardValue(&quot;aten_conclusion&quot;);&#xd;		var aten_licenciante = hAPI.getCardValue(&quot;aten_licenciante&quot;);&#xd;	&#xd;		if(aten_contieneEventoAdverso == &quot;&quot; || aten_conclusion == &quot;&quot; || aten_licenciante == &quot;&quot;){&#xd;			throw &quot;Los campos Licenciante, Evento Adverso y Conclución son obligatorios.&quot;;&#xd;		}&#xd;		&#xd;	}&#xd;	&#xd;	if (tareaActual == 1 &amp;&amp; completo == &quot;false&quot;) {&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;INICIAR CONSULTA&quot;);&#xd;	}else if (nextSequenceId == 2 &amp;&amp; completo == &quot;true&quot;) {&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;CORREGIR DATOS&quot;);&#xd;	}else if (nextSequenceId == 3 &amp;&amp; completo == &quot;true&quot;) {&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;REVISAR CONSULTA&quot;);&#xd;	}else if (nextSequenceId == 4 &amp;&amp; completo == &quot;true&quot;) {&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;CONSULTA CERRADA&quot;);&#xd;	}else if (nextSequenceId == 5 &amp;&amp; completo == &quot;true&quot;) {&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;COMPLETAR CONSULTA&quot;);&#xd;	}else if (nextSequenceId == 6 &amp;&amp; completo == &quot;true&quot;) {&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;ATENDER CONSULTA&quot;);		&#xd;	}else if (nextSequenceId == 8 &amp;&amp; completo == &quot;true&quot;) {&#xd;		hAPI.setCardValue(&quot;tarea&quot;, &quot;CONSULTA CANCELADA&quot;);&#xd;	}	&#xd;	&#xd;	if (tareaActual == 1 &amp;&amp; nextSequenceId == 6 &amp;&amp; completo == &quot;true&quot;) {&#xd;		hAPI.setCardValue(&quot;anexoPrincipal&quot;, hAPI.getCardValue(&quot;anexoPrincipal&quot;) + &quot;(&quot; + nroSolicitud + &quot;)&quot;);&#xd;		log.info(&quot;########## Estableciendo Anexo Principal: &quot; + hAPI.getCardValue(&quot;anexoPrincipal&quot;));&#xd;	}&#xd;	&#xd;	if (hAPI.getCardValue(&quot;fechaInicioSolicitud&quot;)!=null){&#xd;		var fechaInicioArray = hAPI.getCardValue(&quot;fechaInicioSolicitud&quot;).split(&quot;/&quot;);&#xd;		if (fechaInicioArray.length &gt; 1) {&#xd;			hAPI.setCardValue(&quot;fechaInicioSolicitud&quot;, fechaInicioArray[2]+&quot;-&quot;+fechaInicioArray[1]+&quot;-&quot;+fechaInicioArray[0]);&#xd;		}		&#xd;	}&#xd;	&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>customizaciones</eventId>
+        <processId>RAF04</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function pad(num) {&#xd;    num = num + &apos;&apos;;&#xd;    return num.length &lt; 2 ? &apos;0&apos; + num : num;&#xd;}&#xd;&#xd;function formatDate(d){&#xd;&#xd;   var yyyy = d.getFullYear().toString();&#xd;   var mm = (d.getMonth()+1).toString(); // getMonth() is zero-based&#xd;   var dd  = d.getDate().toString();&#xd;   var hh = d.getHours();&#xd;   var mi = d.getMinutes();&#xd;   var ss = d.getSeconds();&#xd;   return yyyy + pad(mm) + pad(dd) + pad(hh) + pad(mi) + pad(ss);&#xd;&#xd;}&#xd;&#xd;function formatDateMinutes(d,time){&#xd;&#xd;	var dataArr = d.toString().split(&quot;-&quot;);&#xd;	var yyyy = dataArr[0];&#xd;	var mm = dataArr[1];&#xd;	var dd  = dataArr[2]; &#xd;	var hh = Math.floor( time / 3600 );  &#xd;	var mi = Math.floor( (time % 3600) / 60 );&#xd;	var ss = time % 60;&#xd;	return yyyy + pad(mm) + pad(dd) + pad(hh) + pad(mi) + pad(ss);&#xd;&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessCreate</eventId>
+        <processId>RAF04</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessCreate(processId){&#xd;	&#xd;	hAPI.setCardValue(&quot;aten_nroSolicitud&quot;, processId);&#xd;	hAPI.setCardValue(&quot;companyID&quot;, getValue(&quot;WKCompany&quot;));&#xd;	&#xd;	var dateParser = new java.text.SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xd;&#xd;	hAPI.setCardValue(&quot;fechaInicioSolicitud&quot;, dateParser.format(new Date()));&#xd;	&#xd;}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFFCC</color>
+      <height>189</height>
+      <width>1320</width>
+      <positionX>0</positionX>
+      <positionY>381</positionY>
+      <stateName>Revisor de Farmacovigilancia</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFF99</color>
+      <height>193</height>
+      <width>1320</width>
+      <positionX>0</positionX>
+      <positionY>190</positionY>
+      <stateName>Asistente de Farmacovigilancia</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFFCC</color>
+      <height>190</height>
+      <width>1320</width>
+      <positionX>0</positionX>
+      <positionY>0</positionY>
+      <stateName>Área Responsable</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>1180</positionX>
+      <positionY>400</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <componGrafSequence>1</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Consulta Cerrada</stateName>
+    </ProcessComponGraf>
+  </list>
+  <list>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <version>1</version>
+        <linkSequence>1</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>1</initialStateSequence>
+      <finalStateSequence>4</finalStateSequence>
+    </ProcessLinkAssoc>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>aten_activo</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Principio Activo</fieldDescription>
+      <slotId>1</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>aten_derivacion</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Derivación io Responsable</fieldDescription>
+      <slotId>2</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>aten_nroConsulta</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nro Consulta Raffo</fieldDescription>
+      <slotId>3</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>aten_nroSolicitud</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nro Solicitud (Hijo)</fieldDescription>
+      <slotId>4</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>aten_producto</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Descripción del Producto</fieldDescription>
+      <slotId>5</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>aten_tipo</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Tipo de Consulta</fieldDescription>
+      <slotId>6</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>padre_fecha</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Fecha de Alta</fieldDescription>
+      <slotId>7</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>padre_nombre</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nombre y Apellido</fieldDescription>
+      <slotId>8</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>padre_nroSolicitud</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nro Solicitud (Padre)</fieldDescription>
+      <slotId>9</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>padre_origen</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Origen</fieldDescription>
+      <slotId>10</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>padre_telefono</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Teléfono</fieldDescription>
+      <slotId>11</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>solicitante</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Solicitante</fieldDescription>
+      <slotId>12</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF04</processId>
+        <fieldId>tarea</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Tarea</fieldDescription>
+      <slotId>13</slotId>
+    </ProcessFormField>
+  </list>
+  <list/>
+  <list/>
+</list>

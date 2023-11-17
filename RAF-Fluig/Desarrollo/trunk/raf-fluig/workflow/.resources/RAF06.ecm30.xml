@@ -1,0 +1,3512 @@
+<list>
+  <ProcessDefinition>
+    <processDefinitionPK>
+      <companyId>1</companyId>
+      <processId>RAF06</processId>
+    </processDefinitionPK>
+    <processDescription>RAF-Solicitud de Alta de Empleado</processDescription>
+    <instruction></instruction>
+    <active>true</active>
+    <publicProcess>false</publicProcess>
+    <volumeId>Default</volumeId>
+    <categoryId>RRHH</categoryId>
+    <managerEngineAllocationId>Usuário</managerEngineAllocationId>
+    <managerEngineAllocationConfiguration>&lt;AssignmentController&gt;&lt;User&gt;procesobpm&lt;/User&gt;&lt;/AssignmentController&gt;</managerEngineAllocationConfiguration>
+    <snapshotFrequency>0</snapshotFrequency>
+    <baseDay>0</baseDay>
+    <baseMonth>0</baseMonth>
+    <periodId>Default</periodId>
+    <uniqueCardVersion>false</uniqueCardVersion>
+    <keyWord></keyWord>
+    <complementsLevel>0</complementsLevel>
+    <notifyRequisitionerComplements>false</notifyRequisitionerComplements>
+    <notifyManagerComplements>false</notifyManagerComplements>
+    <deadlineTime>0</deadlineTime>
+    <warningDeadlineTime>0</warningDeadlineTime>
+    <notifyAuthorityComplements>false</notifyAuthorityComplements>
+  </ProcessDefinition>
+  <ProcessDefinitionVersion>
+    <processDefinitionVersionPK>
+      <companyId>1</companyId>
+      <processId>RAF-Solicitud de Alta de Empleado</processId>
+      <version>74</version>
+    </processDefinitionVersionPK>
+    <versionDescription>Nueva Versión.</versionDescription>
+    <formId>4081</formId>
+    <editionMode>true</editionMode>
+    <updateAttachmentsVersion>false</updateAttachmentsVersion>
+    <controlsAttachmentsSecurity>false</controlsAttachmentsSecurity>
+    <active>true</active>
+    <blockedVersion>false</blockedVersion>
+    <counterSign>false</counterSign>
+    <openInstances>0</openInstances>
+    <bpmnVersion>1</bpmnVersion>
+    <processStates/>
+    <favorito>false</favorito>
+    <inheritFormSecurity>false</inheritFormSecurity>
+    <mobileReady>true</mobileReady>
+  </ProcessDefinitionVersion>
+  <list>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>10</sequence>
+      </processStatePK>
+      <stateName>Iniciar Solicitud de Alta de Empleado</stateName>
+      <stateDescription>Iniciar Solicitud de Alta de Empleado</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;UN3-RRHH-SELE&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>true</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>52</positionX>
+      <positionY>384</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>10</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>11</sequence>
+      </processStatePK>
+      <stateName>Completar Remuneraciones y Beneficios</stateName>
+      <stateDescription>Completar Remuneraciones y Beneficios</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF06-CompYAdmPersonal</engineAllocationId>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>157</positionX>
+      <positionY>504</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>15</sequence>
+      </processStatePK>
+      <stateName>Aprobar Solicitud de Alta de Empleado (Primer Autorizante)</stateName>
+      <stateDescription>Aprobar Solicitud de Alta de Empleado (Primer Autorizante)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;primerAutorizanteMatricula&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>290</positionX>
+      <positionY>195</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>20</sequence>
+      </processStatePK>
+      <stateName>Aprobar Solicitud de Alta de Empleado (Gte. RRHH)</stateName>
+      <stateDescription>Aprobar Solicitud de Alta de Empleado (Gte. RRHH)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>28800</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Associado</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssociatedController ConditionAssociated=&quot;AND&quot;&gt;&lt;ControlXML TypeAssociated=&quot;Grupo&quot;&gt;&lt;AssignmentController&gt;&lt;Group&gt;ROL-GTE-N1&lt;/Group&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;ControlXML TypeAssociated=&quot;Grupo&quot;&gt;&lt;AssignmentController&gt;&lt;Group&gt;UN2-RRHH&lt;/Group&gt;&lt;/AssignmentController&gt;&lt;/ControlXML&gt;&lt;/AssociatedController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>640</positionX>
+      <positionY>58</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>22</sequence>
+      </processStatePK>
+      <stateName>Aprobar Solicitud de Alta de Empleado (Segundo Autorizante)</stateName>
+      <stateDescription>Aprobar Solicitud de Alta de Empleado (Segundo Autorizante)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;segundoAutorizanteMatricula&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>540</positionX>
+      <positionY>195</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>25</sequence>
+      </processStatePK>
+      <stateName>Revisar Solicitud de Alta de Empleado</stateName>
+      <stateDescription>Revisar Solicitud de Alta de Empleado</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>28800</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF06-SeleccionPersonal</engineAllocationId>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>144000</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>790</positionX>
+      <positionY>367</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>32</sequence>
+      </processStatePK>
+      <stateName>Aprobar Solicitud de Alta de Empleado (Gte. N-1)</stateName>
+      <stateDescription>Aprobar Solicitud de Alta de Empleado (Gte. N-1)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Campo Formulário</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;FormField&gt;gerenteN1Matricula&lt;/FormField&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1010</positionX>
+      <positionY>202</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>40</sequence>
+      </processStatePK>
+      <stateName>Aprobar Solicitud de Alta de Empleado (Gte. Gral.)</stateName>
+      <stateDescription>Aprobar Solicitud de Alta de Empleado (Gte. Gral.)</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;ROL-GTE-N0&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>false</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1270</positionX>
+      <positionY>202</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>43</sequence>
+      </processStatePK>
+      <stateName>Notificar Ingreso de Empleado</stateName>
+      <stateDescription>Notificar Ingreso de Empleado</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>28800</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF06-SeleccionPersonal</engineAllocationId>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1950</positionX>
+      <positionY>360</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>45</sequence>
+      </processStatePK>
+      <stateName>Dar de Alta Empleado en AFIP</stateName>
+      <stateDescription>Dar de Alta Empleado en AFIP</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>3599940</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;UN4-RRHH-COMP-ADMP&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1240</positionX>
+      <positionY>648</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>47</sequence>
+      </processStatePK>
+      <stateName>Completar Información en RHPRO</stateName>
+      <stateDescription>Completar Información en RHPRO</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>3599940</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;45&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1520</positionX>
+      <positionY>760</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>54</sequence>
+      </processStatePK>
+      <stateName>Ingresar Nuevo Usuario</stateName>
+      <stateDescription>Ingresar Nuevo Usuario</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>28800</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;ROL-SIS&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1900</positionX>
+      <positionY>926</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>true</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>95</sequence>
+      </processStatePK>
+      <stateName>Confirmar Fecha de Ingreso</stateName>
+      <stateDescription>Confirmar Fecha de Ingreso</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>57600</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>RAF06-SeleccionPersonal</engineAllocationId>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>28800</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1430</positionX>
+      <positionY>360</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>105</sequence>
+      </processStatePK>
+      <stateName>Completar Información en RHPRO</stateName>
+      <stateDescription>Completar Información en RHPRO</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <deadlineFieldName></deadlineFieldName>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;UN3-RRHH-COMP&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>1</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1520</positionX>
+      <positionY>640</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>12</sequence>
+      </processStatePK>
+      <stateName>Requiere Aprobación Primer Autorizante?</stateName>
+      <stateDescription>Requiere Aprobación Primer Autorizante?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>180</positionX>
+      <positionY>56</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>17</sequence>
+      </processStatePK>
+      <stateName>Requiere Aprobación Segundo Autorizante?</stateName>
+      <stateDescription>Requiere Aprobación Segundo Autorizante?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>450</positionX>
+      <positionY>56</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>30</sequence>
+      </processStatePK>
+      <stateName>Requiere Aprobación Gte. N-1?</stateName>
+      <stateDescription>Requiere Aprobación Gte. N-1?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>860</positionX>
+      <positionY>56</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>37</sequence>
+      </processStatePK>
+      <stateName>Requiere Aprobación Gte Gral.?</stateName>
+      <stateDescription>Requiere Aprobación Gte Gral.?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>1160</positionX>
+      <positionY>56</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>69</sequence>
+      </processStatePK>
+      <stateName>Join</stateName>
+      <stateDescription>Join</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>2140</positionX>
+      <positionY>646</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>4</stateType>
+      <bpmnType>127</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>80</sequence>
+      </processStatePK>
+      <stateName>Paralelo</stateName>
+      <stateDescription>Paralelo</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>false</automatic>
+      <positionX>1680</positionX>
+      <positionY>214</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>3</stateType>
+      <bpmnType>126</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>85</sequence>
+      </processStatePK>
+      <stateName>Solicitud Confidencial?</stateName>
+      <stateDescription>Solicitud Confidencial?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>120</positionX>
+      <positionY>344</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>86</sequence>
+      </processStatePK>
+      <stateName>Seleccionar Solicitante</stateName>
+      <stateDescription>Seleccionar Solicitante</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>40</positionX>
+      <positionY>488</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>97</sequence>
+      </processStatePK>
+      <stateName>Empl. Interno?</stateName>
+      <stateDescription>Empl. Interno?</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>1400</positionX>
+      <positionY>495</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>58</sequence>
+      </processStatePK>
+      <stateName>Alta de Empleado Finalizada</stateName>
+      <stateDescription>Alta de Empleado Finalizada</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>2370</positionX>
+      <positionY>672</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>6</stateType>
+      <bpmnType>60</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+  </list>
+  <list>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>74</version>
+        <sequence>12</sequence>
+      </conditionProcessStatePK>
+      <condition>requiereAprobacionPrimerAutorizante()</condition>
+      <destinationSequenceId>15</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>74</version>
+        <sequence>12</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>17</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>74</version>
+        <sequence>17</sequence>
+      </conditionProcessStatePK>
+      <condition>requiereAprobacionSegundoAutorizante()</condition>
+      <destinationSequenceId>22</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>74</version>
+        <sequence>17</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>20</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>74</version>
+        <sequence>30</sequence>
+      </conditionProcessStatePK>
+      <condition>requiereAprobacionGteN1()</condition>
+      <destinationSequenceId>32</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>74</version>
+        <sequence>30</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>37</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>74</version>
+        <sequence>37</sequence>
+      </conditionProcessStatePK>
+      <condition>requiereAprobacionGteGral()</condition>
+      <destinationSequenceId>40</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>74</version>
+        <sequence>37</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>95</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>74</version>
+        <sequence>85</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>11</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>74</version>
+        <sequence>86</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>10</destinationSequenceId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;BaseActivity&gt;10&lt;/BaseActivity&gt;&lt;Returns&gt;Last&lt;/Returns&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationId>Executor Atividade</engineAllocationId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>1</expressionOrder>
+        <version>74</version>
+        <sequence>97</sequence>
+      </conditionProcessStatePK>
+      <condition>hAPI.getCardValue(&quot;vacanteACubrirConColaborador&quot;) == &quot;vacanteInterno&quot;</condition>
+      <destinationSequenceId>105</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <expressionOrder>2</expressionOrder>
+        <version>74</version>
+        <sequence>97</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>45</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
+  <list>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>14</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Iniciar Circuito de Aprobación</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>12</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <expression></expression>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>16</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>18</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>12</initialStateSequence>
+      <finalStateSequence>17</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>19</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Aprobar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>17</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>21</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>17</initialStateSequence>
+      <finalStateSequence>20</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>23</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>17</initialStateSequence>
+      <finalStateSequence>22</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>24</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Aprobar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>22</initialStateSequence>
+      <finalStateSequence>20</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>27</linkSequence>
+      </processLinkPK>
+      <actionLabel>2. Revisar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>15</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+      <returnLabel>2. Devolver Solicitud al Jefe</returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <expression></expression>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>29</linkSequence>
+      </processLinkPK>
+      <actionLabel>2. Revisar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>20</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+      <returnLabel>2. Devolver Solicitud al Gte. RRHH</returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>31</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Aprobar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>20</initialStateSequence>
+      <finalStateSequence>30</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>33</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>30</initialStateSequence>
+      <finalStateSequence>32</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>38</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>30</initialStateSequence>
+      <finalStateSequence>37</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>39</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Aprobar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>32</initialStateSequence>
+      <finalStateSequence>37</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>41</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>37</initialStateSequence>
+      <finalStateSequence>40</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>71</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>54</initialStateSequence>
+      <finalStateSequence>69</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>77</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Completar Información en RHPRO</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>45</initialStateSequence>
+      <finalStateSequence>47</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>78</linkSequence>
+      </processLinkPK>
+      <actionLabel>Proceso de Alta Finalizado</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>69</initialStateSequence>
+      <finalStateSequence>58</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>79</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>43</initialStateSequence>
+      <finalStateSequence>69</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>81</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Notificar Ingreso de Empleado</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>80</initialStateSequence>
+      <finalStateSequence>43</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>82</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Confirmar Fecha de Ingreso</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>40</initialStateSequence>
+      <finalStateSequence>95</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <expression></expression>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>84</linkSequence>
+      </processLinkPK>
+      <actionLabel>1. Completar Remuneraciones y Beneficios</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>25</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>87</linkSequence>
+      </processLinkPK>
+      <actionLabel>Completar Remuneraciones y Beneficios</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>10</initialStateSequence>
+      <finalStateSequence>85</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>88</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>85</initialStateSequence>
+      <finalStateSequence>11</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>89</linkSequence>
+      </processLinkPK>
+      <actionLabel>2. Devolver al Solicitante</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>11</initialStateSequence>
+      <finalStateSequence>86</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>90</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>86</initialStateSequence>
+      <finalStateSequence>10</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>91</linkSequence>
+      </processLinkPK>
+      <actionLabel>2. Revisar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>22</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+      <returnLabel>2. Devolver Solicitud al Gerente N-2</returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>92</linkSequence>
+      </processLinkPK>
+      <actionLabel>2. Revisar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>32</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+      <returnLabel>2. Devolver Solicitud al Gte. N-1</returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>93</linkSequence>
+      </processLinkPK>
+      <actionLabel>2. Revisar Solicitud de Alta de Empleado</actionLabel>
+      <returnPermited>true</returnPermited>
+      <initialStateSequence>40</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+      <returnLabel>2. Devolver Solicitud al Gte. Gral.</returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+      <expression></expression>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>94</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>37</initialStateSequence>
+      <finalStateSequence>95</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>96</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>95</initialStateSequence>
+      <finalStateSequence>80</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>98</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>80</initialStateSequence>
+      <finalStateSequence>97</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>99</linkSequence>
+      </processLinkPK>
+      <actionLabel>2. Dar de Alta Empleado en AFIP</actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>97</initialStateSequence>
+      <finalStateSequence>45</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>NO</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>106</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>97</initialStateSequence>
+      <finalStateSequence>105</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name>SI</name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>109</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>47</initialStateSequence>
+      <finalStateSequence>54</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>110</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>105</initialStateSequence>
+      <finalStateSequence>54</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+  </list>
+  <list/>
+  <list>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessCreate</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessCreate(processId){
+	
+	hAPI.setCardValue(&quot;nroSolicitud&quot;, processId);
+	
+	var dateParser = new java.text.SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+
+	hAPI.setCardValue(&quot;fechaInicioSolicitud&quot;, dateParser.format(new Date()));
+
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterProcessFinish</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterProcessFinish(processId){&#xd;
+	&#xd;
+	var fecha = new Date();&#xd;
+	var dateParser = new java.text.SimpleDateFormat(&quot;yyyy-MM-dd&quot;);&#xd;
+	hAPI.setCardValue(&quot;fechaFinSolicitud&quot;, dateParser.format(fecha));&#xd;
+	&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>beforeTaskSave</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function beforeTaskSave(colleagueId,nextSequenceId,userList){&#xd;
+ &#xd;
+ var tareaActual = getValue(&quot;WKNumState&quot;);&#xd;
+ var completo = getValue(&quot;WKCompletTask&quot;);&#xd;
+ var nroProceso = getValue(&quot;WKNumProces&quot;);&#xd;
+ var tareaDestino = getValue(&quot;WKNextState&quot;);&#xd;
+ var companyId = getValue(&quot;WKCompany&quot;);&#xd;
+ &#xd;
+ var tareas = {&#xd;
+  inicio: 10,&#xd;
+  seleccionarSolicitante: 86,&#xd;
+  completarRemuneracionesYBeneficios: 11,&#xd;
+  aprobarSolicitudAltaEmpleadoPrimerAutorizante: 15,&#xd;
+  aprobarSolicitudAltaEmpleadoGteRRHH: 20,&#xd;
+  aprobarSolicitudAltaEmpleadoSegundoAutorizante: 22,&#xd;
+  revisarSolicitudAltaEmpleado: 25,&#xd;
+  aprobarSolicitudAltaEmpleadoN1: 32,&#xd;
+  aprobarSolicitudAltaEmpleadoGteGral: 40,&#xd;
+  notificarIngresoEmpleado: 43,&#xd;
+  darAltaEmpleadoEnAFIP: 45,&#xd;
+  completarInformacionRHPRO: 47,&#xd;
+  completarInformacionRHPRO2: 105,&#xd;
+  imprimirDocumentacion: 52,&#xd;
+  ingresarNuevoUsuario: 54,&#xd;
+  adjuntarDocumentacionAlLegajo: 56,&#xd;
+  fin: 58&#xd;
+ };&#xd;
+ &#xd;
+ &#xd;
+ if(hAPI.getCardValue(&quot;ingresoPersonal&quot;) == &quot;PE&quot; &amp;&amp; hAPI.getCardValue(&quot;cantidadTareasOrdenPrioridad&quot;) &lt; 4 &amp;&amp; completo == &quot;true&quot;){&#xd;
+  throw &quot;Debe cargar al menos 4 tareas.&quot;;&#xd;
+ }&#xd;
+ &#xd;
+ if(hAPI.getCardValue(&quot;nivelEstudioSeleccionados&quot;) &lt; 0 &amp;&amp; completo == &quot;true&quot;){&#xd;
+  throw &quot;Debe seleccionar al menos un nivel de estudio.&quot;;&#xd;
+ }&#xd;
+ &#xd;
+ if ( (tareaActual == tareas.completarInformacionRHPRO || tareaActual == tareas.completarInformacionRHPRO2) &amp;&amp; completo == &quot;true&quot;){&#xd;
+  &#xd;
+  // Valida que los de recursos humanos hayan movido la carpeta legajo en caso de cambio de sede&#xd;
+  validarTrasladoDeLegajo();&#xd;
+  &#xd;
+  var crearEstructuraLegajo = function() {&#xd;
+	  var legajo = hAPI.getCardValue(&quot;legajo&quot;);&#xd;
+	  var carpetaLegajo = legajo + &quot; &quot; + hAPI.getCardValue(&quot;nombre&quot;) + &quot; &quot; + hAPI.getCardValue(&quot;apellido&quot;);&#xd;
+	  var esturctura = crearEstructuraCarpetas(legajo, carpetaLegajo);&#xd;
+	  hAPI.setCardValue(&quot;carpetaLegajo&quot;, esturctura[&quot;Legajo&quot;]);&#xd;
+	  hAPI.setCardValue(&quot;carpetaDocumentos&quot;, esturctura[&quot;Documentos&quot;]);&#xd;
+  }&#xd;
+  &#xd;
+  if(hAPI.getCardValue(&quot;vacanteACubrirConColaborador&quot;).equals(&quot;vacanteExterno&quot;)) {&#xd;
+	   if (existeColleague(&quot;colleaguePK.colleagueId&quot;, hAPI.getCardValue(&quot;legajo&quot;))){&#xd;
+	    throw &quot;Existe un usuario con este legajo.&quot;;&#xd;
+	   }&#xd;
+	   if(existeCarpetaLegajo(hAPI.getCardValue(&quot;legajo&quot;))){&#xd;
+	    throw &quot;La carpeta de ese Legajo ya existe.&quot;;&#xd;
+	   }&#xd;
+	   crearEstructuraLegajo();&#xd;
+  } else {&#xd;
+	   var carpetaLegajo = existeCarpetaLegajo(hAPI.getCardValue(&quot;legajo&quot;));&#xd;
+	  &#xd;
+	   if(carpetaLegajo){&#xd;
+		    hAPI.setCardValue(&quot;carpetaLegajo&quot;, carpetaLegajo);&#xd;
+		    var c1 = DatasetFactory.createConstraint(&quot;parentDocumentId&quot;, carpetaLegajo, carpetaLegajo, ConstraintType.MUST);&#xd;
+		    var c2 = DatasetFactory.createConstraint(&quot;documentDescription&quot;, &quot;Documentos&quot;, &quot;Documentos&quot;, ConstraintType.MUST);&#xd;
+		    var dts = DatasetFactory.getDataset(&quot;document&quot;, null, [c1,c2], null);&#xd;
+		   &#xd;
+		    if(dts.rowsCount &gt; 0) {&#xd;
+		    	hAPI.setCardValue(&quot;carpetaDocumentos&quot;, dts.getValue(0, &quot;documentPK.documentId&quot;));     &#xd;
+		    } else {&#xd;
+		    	throw &quot;Estructura de carpeta incorrecta.&quot;&#xd;
+		    }&#xd;
+	   } else {&#xd;
+		   crearEstructuraLegajo();&#xd;
+	   }&#xd;
+  }&#xd;
+ }&#xd;
+ &#xd;
+ if (tareaActual == tareas.ingresarNuevoUsuario &amp;&amp; completo == &quot;true&quot;){&#xd;
+  var arq = arqMarvinLoad(&quot;v1&quot;, {&#xd;
+	   prop: &quot;com.arquimeda.marvin.server.js.Properties-v1&quot;&#xd;
+	  });&#xd;
+	  arq.prop.load({&#xd;
+	   datasetName: &quot;parametros&quot;&#xd;
+  });&#xd;
+  &#xd;
+  var crearColleague = function() {&#xd;
+	   colleagueService.create({&#xd;
+	    user: arq.prop.get(&quot;RAF06.usuarioSistema.login&quot;),&#xd;
+	    password: arq.prop.get(&quot;RAF06.usuarioSistema.pass&quot;),&#xd;
+	    companyId: getValue(&quot;WKCompany&quot;),  &#xd;
+	    &#xd;
+	    newUsrColleagueId: hAPI.getCardValue(&quot;legajo&quot;),&#xd;
+	    newUsrLogin: hAPI.getCardValue(&quot;nombreUsuario&quot;),&#xd;
+	    newUsrPassword: &quot;1234&quot;,&#xd;
+	    newUsrName: hAPI.getCardValue(&quot;nombre&quot;) + &quot; &quot; + hAPI.getCardValue(&quot;apellido&quot;),&#xd;
+	    newUsrMail: hAPI.getCardValue(&quot;mailCorporativo&quot;),&#xd;
+	    aditionalData: {&#xd;
+	     &quot;FechaNacimiento&quot;: hAPI.getCardValue(&quot;fechaNacimiento&quot;),&#xd;
+	    }&#xd;
+	   });&#xd;
+  }&#xd;
+  &#xd;
+  if(hAPI.getCardValue(&quot;vacanteACubrirConColaborador&quot;)==&quot;vacanteExterno&quot;) {&#xd;
+	   if (existeColleague(&quot;login&quot;, hAPI.getCardValue(&quot;nombreUsuario&quot;))) {&#xd;
+		   throw &quot;El login ingresado ya existe. Por favor verifíquelo.&quot;&#xd;
+	   } else if (existeColleague(&quot;colleaguePK.colleagueId&quot;, hAPI.getCardValue(&quot;legajo&quot;))){&#xd;
+		   throw &quot;El legajo ingresado ya existe. Por favor verifíquelo.&quot;&#xd;
+	   } else {&#xd;
+		   crearColleague();&#xd;
+	   }&#xd;
+  } else {&#xd;
+	  if (existeColleague(&quot;colleaguePK.colleagueId&quot;, hAPI.getCardValue(&quot;legajo&quot;))) {&#xd;
+		    userId = getValue(&quot;WKUser&quot;); &#xd;
+		    var codigoCarpeta = getCodigoDeCarpetaLugarPagoODeGrupoAdmin(userId,1);   &#xd;
+		    &#xd;
+		    var ret = ged.findFolder({&#xd;
+		     companyId: getValue(&quot;WKCompany&quot;),      &#xd;
+		     parentId: codigoCarpeta,&#xd;
+		     name: hAPI.getCardValue(&quot;legajo&quot;)+&quot; %&quot;,&#xd;
+		    });   &#xd;
+		    &#xd;
+		    if (ret != null) {&#xd;
+		    	log.info(&quot;*** ged createFolderIfNotExist: carpeta encontrada ! parentId:&quot; + codigoCarpeta + &quot; documentId:&quot; + ret.getDocumentId());    &#xd;
+		    } else {&#xd;
+		    	log.info(&quot;*** ged createFolderIfNotExist: carpeta NO encontrada ! parentId:&quot; + codigoCarpeta);   &#xd;
+		    	throw &quot;No se pudo habilitar el usuario: No se movió la carpeta existente a la nueva sede, hablar con RRHH&quot;;&#xd;
+		    }&#xd;
+		    &#xd;
+		    colleagueService.activate({&#xd;
+			     user: arq.prop.get(&quot;RAF06.usuarioSistema.login&quot;),&#xd;
+			     password: arq.prop.get(&quot;RAF06.usuarioSistema.pass&quot;),&#xd;
+			     companyId: getValue(&quot;WKCompany&quot;),&#xd;
+			     usrColleagueId: hAPI.getCardValue(&quot;legajo&quot;),&#xd;
+		    });&#xd;
+		    &#xd;
+		    colleagueService.update({&#xd;
+			     user: arq.prop.get(&quot;RAF06.usuarioSistema.login&quot;),&#xd;
+			     password: arq.prop.get(&quot;RAF06.usuarioSistema.pass&quot;),&#xd;
+			     companyId: getValue(&quot;WKCompany&quot;),&#xd;
+			     usrColleagueId: hAPI.getCardValue(&quot;legajo&quot;),&#xd;
+			     usrActive: true,&#xd;
+			     usrMail: hAPI.getCardValue(&quot;mailCorporativo&quot;),&#xd;
+		    });&#xd;
+	   } else {&#xd;
+		   crearColleague();&#xd;
+	   }&#xd;
+  }&#xd;
+&#xd;
+  agregarPermisosUsuario(hAPI.getCardValue(&quot;legajo&quot;), hAPI.getCardValue(&quot;carpetaLegajo&quot;), hAPI.getCardValue(&quot;carpetaDocumentos&quot;));&#xd;
+ }&#xd;
+ &#xd;
+ var c1 = DatasetFactory.createConstraint(&quot;NRO_SOLICITUD&quot;, nroProceso, nroProceso, ConstraintType.MUST),&#xd;
+     c2 = DatasetFactory.createConstraint(&quot;LAST_MOV&quot;, true, true, ConstraintType.MUST); &#xd;
+ var obsDts = DatasetFactory.getDataset(&quot;raf-observaciones&quot;, null, [c1,c2], null);&#xd;
+ &#xd;
+ var ultimaObservacion = obsDts.getValue(0, &quot;OBSERVACIONES&quot;);&#xd;
+ &#xd;
+ if(ultimaObservacion == &quot;&quot;){&#xd;
+  &#xd;
+	  if(completo == &quot;true&quot;){&#xd;
+	   &#xd;
+		   if((tareaActual == tareas.completarRemuneracionesYBeneficios &amp;&amp; nextSequenceId == tareas.seleccionarSolicitante) ||&#xd;
+		     (tareaActual == tareas.revisarSolicitudAltaEmpleado &amp;&amp; nextSequenceId == tareas.completarRemuneracionesYBeneficios) ||&#xd;
+		     ((tareaActual == tareas.aprobarSolicitudAltaEmpleadoPrimerAutorizante || tareaActual == tareas.aprobarSolicitudAltaEmpleadoGteRRHH || &#xd;
+		       tareaActual == tareas.aprobarSolicitudAltaEmpleadoSegundoAutorizante || tareaActual == tareas.aprobarSolicitudAltaEmpleadoN1 || &#xd;
+		       tareaActual == tareas.aprobarSolicitudAltaEmpleadoGteGral)&#xd;
+		       &amp;&amp; nextSequenceId == tareas.revisarSolicitudAltaEmpleado)){&#xd;
+		    &#xd;
+			   throw &quot;Debe realizar una observación para devolver la solicitud.&quot;;&#xd;
+		   }&#xd;
+	  }&#xd;
+  }&#xd;
+ &#xd;
+ &#xd;
+ if (tareaActual == tareas.inicio &amp;&amp; completo == &quot;false&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;INICIAR SOLICITUD DE ALTA DE EMPLEADO&quot;);&#xd;
+ }else if (nextSequenceId == tareas.completarRemuneracionesYBeneficios &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;COMPLETAR REMUNERACIONES Y BENEFICIOS&quot;);&#xd;
+ }else if (nextSequenceId == tareas.revisarSolicitudAltaEmpleado &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;REVISAR SOLICITUD DE ALTA DE EMPLEADO&quot;);&#xd;
+ }else if (nextSequenceId == tareas.aprobarSolicitudAltaEmpleadoPrimerAutorizante &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;APROBAR SOLICITUD DE ALTA DE EMPLEADO PRIMER AUTORIZANTE&quot;);&#xd;
+ }else if (nextSequenceId == tareas.aprobarSolicitudAltaEmpleadoGteRRHH &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;APROBAR SOLICITUD DE ALTA DE EMPLEADO GTE RRHH&quot;);  &#xd;
+ }else if (nextSequenceId == tareas.aprobarSolicitudAltaEmpleadoSegundoAutorizante &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;APROBAR SOLICITUD DE ALTA DE EMPLEADO SEGUNDO AUTORIZANTE&quot;);&#xd;
+ }else if (nextSequenceId == tareas.aprobarSolicitudAltaEmpleadoN1 &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;APROBAR SOLICITUD DE ALTA DE EMPLEADO GTE N-1&quot;);&#xd;
+ }else if (nextSequenceId == tareas.aprobarSolicitudAltaEmpleadoGteGral &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;APROBAR SOLICITUD DE ALTA DE EMPLEADO GTE GRAL&quot;);&#xd;
+ }else if (nextSequenceId == tareas.notificarIngresoEmpleado &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;NOTIFICAR INGRESO DE EMPLEADO&quot;);&#xd;
+ }else if (nextSequenceId == tareas.darAltaEmpleadoEnAFIP &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;DAR DE ALTA EMPLEADO EN AFIP&quot;);&#xd;
+ }else if ( (nextSequenceId == tareas.completarInformacionRHPRO || nextSequenceId == tareas.completarInformacionRHPRO2) &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;COMPLETAR INFORMACION EN RHPRO&quot;);&#xd;
+ }else if (nextSequenceId == tareas.imprimirDocumentacion &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;IMPRIMIR DOCUMENTACION&quot;);&#xd;
+ }else if (nextSequenceId == tareas.ingresarNuevoUsuario &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;INGRESAR NUEVO USUARIO&quot;);&#xd;
+ }else if (nextSequenceId == tareas.adjuntarDocumentacionAlLegajo &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;ADJUNTAR DOCUMENTACION AL LEGAJO&quot;);&#xd;
+ }else if (nextSequenceId == tareas.fin &amp;&amp; completo == &quot;true&quot;) {&#xd;
+  hAPI.setCardValue(&quot;tarea&quot;, &quot;ALTA DE EMPLEADO FINALIZADA&quot;);&#xd;
+ }&#xd;
+   &#xd;
+ &#xd;
+ if (tareaActual == tareas.notificarIngresoEmpleado &amp;&amp; completo == &quot;true&quot;) { &#xd;
+    &#xd;
+	  var mails = hAPI.getCardValue(&quot;destinatarios&quot;).split(&quot;;&quot;);&#xd;
+	  &#xd;
+	  var subject = &quot;Ingreso &quot; + hAPI.getCardValue(&quot;sede&quot;) + &quot; - &quot; + hAPI.getCardValue(&quot;fechaIngreso&quot;);&#xd;
+	  var descripcion = &quot;Estimados, adjuntamos los datos de un/a colaborador/a que ingresará a la compañía: &quot;;&#xd;
+	  &#xd;
+	  var idTemplate = &quot;RAF06-MailNotificaAlta&quot;;&#xd;
+	  var archivoTemplate = &quot;RAF06-MailNotificaAlta.html&quot;;&#xd;
+	  var mimeType = &quot;text/html&quot;;&#xd;
+	  &#xd;
+	  var data = {  &#xd;
+	    &quot;descripcion&quot;: descripcion,&#xd;
+	    &quot;empresa&quot;: hAPI.getCardValue(&quot;empresa&quot;).toUpperCase(),&#xd;
+	    &quot;apellidoYnombre&quot;: hAPI.getCardValue(&quot;apellido&quot;) + &quot;, &quot; + hAPI.getCardValue(&quot;nombre&quot;),&#xd;
+	    &quot;cuil&quot;: hAPI.getCardValue(&quot;cuil&quot;),&#xd;
+	    &quot;nacionalidad&quot;: hAPI.getCardValue(&quot;nacionalidad&quot;),&#xd;
+	    &quot;fechaIngreso&quot;: hAPI.getCardValue(&quot;fechaIngreso&quot;),&#xd;
+	    &quot;modalidadContratacion&quot;: hAPI.getCardValue(&quot;modalidadContratacion&quot;) + &quot; - &quot; + hAPI.getCardValue(&quot;detalleModalidadContratacion&quot;),&#xd;
+	    &quot;convenio&quot;: hAPI.getCardValue(&quot;convenio&quot;),&#xd;
+	    &quot;fechaNacimiento&quot;: hAPI.getCardValue(&quot;fechaNacimiento&quot;),&#xd;
+	    &quot;gerencia&quot;: hAPI.getCardValue(&quot;gerencia&quot;),&#xd;
+	    &quot;sectorYCentroCosto&quot;: hAPI.getCardValue(&quot;sector&quot;) + &quot; / &quot; + hAPI.getCardValue(&quot;centroCosto&quot;),&#xd;
+	    &quot;puesto&quot;: ((hAPI.getCardValue(&quot;puestoNuevo&quot;)!=null &amp;&amp; (hAPI.getCardValue(&quot;puestoNuevo&quot;)!=&quot;&quot;)) ? hAPI.getCardValue(&quot;nombrePuestoNuevo&quot;) : hAPI.getCardValue(&quot;puesto&quot;)),&#xd;
+	    &quot;reportaA&quot;: hAPI.getCardValue(&quot;reportaa&quot;), &#xd;
+	    &quot;horario&quot;: hAPI.getCardValue(&quot;horarioDesde&quot;) + &quot; a &quot; + hAPI.getCardValue(&quot;horarioHasta&quot;), &#xd;
+	    &quot;sedeAdministrativa&quot;: hAPI.getCardValue(&quot;sede&quot;), &#xd;
+	    &quot;obraSocialOfrecida&quot;: hAPI.getCardValue(&quot;obraSocial&quot;),&#xd;
+	    &quot;comedor&quot;: hAPI.getCardValue(&quot;comedor&quot;).toUpperCase(),&#xd;
+	    &quot;tarjetaAcceso&quot;: hAPI.getCardValue(&quot;tarjetaAcceso&quot;).toUpperCase(),&#xd;
+	    &quot;tarjetaCafeteria&quot;: hAPI.getCardValue(&quot;tarjetaCafeteria&quot;).toUpperCase(),&#xd;
+	    &quot;induccion&quot;: hAPI.getCardValue(&quot;induccion&quot;).toUpperCase(),&#xd;
+	    &quot;entregaDocumentacion&quot;: hAPI.getCardValue(&quot;entregaDocumentacion&quot;),&#xd;
+	    &quot;responsableAltaUsuario&quot;: hAPI.getCardValue(&quot;responsableAltaUsuario&quot;),&#xd;
+	    &quot;responsableTarjetaAcceso&quot;: hAPI.getCardValue(&quot;responsableTarjetaAcceso&quot;),&#xd;
+	    &quot;responsableTarjetaCafeteria&quot;: hAPI.getCardValue(&quot;responsableTarjetaCafeteria&quot;),&#xd;
+	    &quot;responsableTarjetasPersonales&quot;: hAPI.getCardValue(&quot;responsableTarjetasPersonales&quot;),&#xd;
+	   }&#xd;
+	  &#xd;
+	  // Aca se envia el mail a los destinatarios.&#xd;
+	  log.info(&quot;***** enviando mail a destinatarios: &quot; + mails);&#xd;
+	  for(var j in mails){&#xd;
+		   sendCustomEmail({&#xd;
+		     companyId: companyId, &#xd;
+		     subject: subject, &#xd;
+		     //from: &quot;procesobpm@raffo.com.ar&quot;, &#xd;
+		     from: &quot;admin@totvsecm.com.ar&quot;, &#xd;
+		     to: mails[j], &#xd;
+		     templateId: idTemplate,&#xd;
+		     templateDialect: &quot;es&quot;,&#xd;
+		     templateHtml: archivoTemplate,&#xd;
+		     datos: data&#xd;
+		   });&#xd;
+	  }&#xd;
+  &#xd;
+ }&#xd;
+ &#xd;
+ if (tareaActual == tareas.completarInformacionRHPRO &amp;&amp; completo == &quot;true&quot;) {&#xd;
+	 &#xd;
+	 log.info(&quot;***** enviando mail a destinatarios de completarInformacionRHPRO.. &quot;);&#xd;
+	 &#xd;
+	  var mails = [];&#xd;
+	 &#xd;
+	  var usuariosRHPRO2 = getUserList(&quot;RAF06-CompletarInformacionRHPRO&quot;);&#xd;
+	    &#xd;
+      for(var i = 0; i &lt; usuariosRHPRO2.size(); i++) { &#xd;
+    	var mailsAux = getMailList(usuariosRHPRO2.get(i));&#xd;
+    	 for(var j = 0; j &lt; mailsAux.size(); j++) {  &#xd;
+    		 log.info(&quot;***** enviando mail a completarInformacionRHPRO: &quot; + mailsAux.get(j));&#xd;
+    		 mails.push(mailsAux.get(j));&#xd;
+    	}&#xd;
+      }&#xd;
+	  &#xd;
+	  var subject = &quot;Datos de nuevo ingresante&quot;;&#xd;
+	  var descripcion = &quot;Estimados, adjuntamos los datos de un/a colaborador/a que ingresará a la compañía: &quot;;&#xd;
+	  &#xd;
+	  var idTemplate = &quot;RAF06-MailNotificacionLegajo&quot;;&#xd;
+	  var archivoTemplate = &quot;RAF06-MailNotificacionLegajo.html&quot;;&#xd;
+	  var mimeType = &quot;text/html&quot;;&#xd;
+	  &#xd;
+	  var data = {  &#xd;
+		&quot;descripcion&quot;: descripcion,&#xd;
+	    &quot;nombre&quot;: hAPI.getCardValue(&quot;nombre&quot;),&#xd;
+	    &quot;apellido&quot;: hAPI.getCardValue(&quot;apellido&quot;),&#xd;
+	    &quot;legajo&quot;: hAPI.getCardValue(&quot;legajo&quot;),&#xd;
+	    &quot;cuil&quot;: hAPI.getCardValue(&quot;cuil&quot;),&#xd;
+	    &quot;gerencia&quot;: hAPI.getCardValue(&quot;gerencia&quot;),&#xd;
+	    &quot;reportaA&quot;: hAPI.getCardValue(&quot;reportaa&quot;), &#xd;
+	    &quot;sector&quot;: hAPI.getCardValue(&quot;sector&quot;),&#xd;
+	    &quot;centroCosto&quot;: hAPI.getCardValue(&quot;centroCosto&quot;),&#xd;
+	    &quot;convenio&quot;: hAPI.getCardValue(&quot;convenio&quot;),&#xd;
+	    &quot;categoria&quot;: hAPI.getCardValue(&quot;categoria&quot;),&#xd;
+	    &quot;puesto&quot;: ((hAPI.getCardValue(&quot;puestoNuevo&quot;)!=null &amp;&amp; (hAPI.getCardValue(&quot;puestoNuevo&quot;)!=&quot;&quot;)) ? hAPI.getCardValue(&quot;nombrePuestoNuevo&quot;) : hAPI.getCardValue(&quot;puesto&quot;)),&#xd;
+	    &quot;lugarPago&quot;: hAPI.getCardValue(&quot;lugarPago&quot;),&#xd;
+	    &quot;sedeAdministrativa&quot;: hAPI.getCardValue(&quot;sede&quot;), &#xd;
+	   }&#xd;
+	  &#xd;
+	  &#xd;
+	  // Aca se envia el mail a los destinatarios.&#xd;
+	  log.info(&quot;***** enviando mail MailNotificacionLegajo a destinatarios: &quot; + mails);&#xd;
+	  for(var j in mails){&#xd;
+	   sendCustomEmail({&#xd;
+	     companyId: companyId, &#xd;
+	     subject: subject, &#xd;
+	     from: &quot;admin@totvsecm.com.ar&quot;, &#xd;
+	     to: mails[j], &#xd;
+	     templateId: idTemplate,&#xd;
+	     templateDialect: &quot;es&quot;,&#xd;
+	     templateHtml: archivoTemplate,&#xd;
+	     datos: data&#xd;
+	   });&#xd;
+	  }&#xd;
+	  &#xd;
+ }&#xd;
+ &#xd;
+ corregirCamposFecha(&quot;fechaInicioSolicitud&quot;);&#xd;
+ corregirCamposFecha(&quot;fechaFinSolicitud&quot;);&#xd;
+ &#xd;
+}&#xd;
+&#xd;
+var crearEstructuraCarpetas = function(legajo, carpetaLegajo) {&#xd;
+&#xd;
+	 var arq = arqMarvinLoad(&quot;v1&quot;, {&#xd;
+	  prop: &quot;com.arquimeda.marvin.server.js.Properties-v1&quot;&#xd;
+	 });&#xd;
+	 arq.prop.load({&#xd;
+	  datasetName: &quot;parametros&quot;&#xd;
+	 });&#xd;
+	 &#xd;
+	 var companyId = getValue(&quot;WKCompany&quot;),&#xd;
+	  login = arq.prop.get(&quot;RAF06.usuarioSistema.login&quot;),&#xd;
+	  password = arq.prop.get(&quot;RAF06.usuarioSistema.pass&quot;),&#xd;
+	  sysCollegueId = arq.prop.get(&quot;RAF06.usuarioSistema.id&quot;),&#xd;
+	  userId = getValue(&quot;WKUser&quot;);&#xd;
+	 var res = {};&#xd;
+	 &#xd;
+	 var codigoGrupoAdmin = getCodigoDeCarpetaLugarPagoODeGrupoAdmin(userId,2);&#xd;
+	 var codigoCarpeta = getCodigoDeCarpetaLugarPagoODeGrupoAdmin(userId,1);&#xd;
+	   &#xd;
+	 var permisoMueveLegajo = {permission: true, attributionType: &quot;GROUP&quot;, attributionValue: &quot;RRHH-MUEVELEGAJO&quot;, securityLevel: &quot;ALL&quot;};&#xd;
+	 &#xd;
+	 var permisos = [&#xd;
+	  {permission: true, attributionType: &quot;GROUP&quot;, attributionValue: &quot;UN3-RRHH-SELE&quot;, securityLevel: &quot;READING&quot;},&#xd;
+	  {permission: true, attributionType: &quot;GROUP&quot;, attributionValue: &quot;UN3-RRHH-COMP&quot;, securityLevel: &quot;MODIFICATION&quot;},&#xd;
+	  {permission: true, attributionType: &quot;GROUP&quot;, attributionValue: &quot;UN4-RRHH-COMP-ADMP&quot;, securityLevel: &quot;MODIFICATION&quot;},&#xd;
+	  permisoMueveLegajo&#xd;
+	    ];&#xd;
+	    if (codigoGrupoAdmin != null){&#xd;
+	    	permisos.push({permission: true, attributionType: &quot;GROUP&quot;, attributionValue: codigoGrupoAdmin, securityLevel: &quot;MODIFICATION&quot;});&#xd;
+	    }&#xd;
+	 var carpetaLegajoUsr = ged.createFolderIfNotExist({&#xd;
+		  user: login,&#xd;
+		  password: password,&#xd;
+		  colleagueId: sysCollegueId,&#xd;
+		  publisherId: userId,&#xd;
+		  companyId: companyId,&#xd;
+		  searchName: legajo + &quot;%&quot;,&#xd;
+		  name: carpetaLegajo,&#xd;
+		  additionalComments: &quot;&quot;,&#xd;
+		//  parentId: arq.prop.get(&quot;RAF06.carpetaLegajos.docId&quot;),&#xd;
+		  parentId: codigoCarpeta,&#xd;
+		  inheritSecurity: false,&#xd;
+		  security: permisos&#xd;
+	 });&#xd;
+	 &#xd;
+	 if (carpetaLegajoUsr.getDocumentId() &gt; 0){&#xd;
+		 log.info(&quot;-- carpetaLegajoUsr.getDocumentId: &quot;+carpetaLegajoUsr.getDocumentId());&#xd;
+	 }&#xd;
+	 &#xd;
+	 res[&quot;Legajo&quot;] = carpetaLegajoUsr.getDocumentId();&#xd;
+	 &#xd;
+	 var seguridadDeCarpetaDocs = permisos;&#xd;
+	 &#xd;
+	 &#xd;
+	 if(hAPI.getCardValue(&quot;vacanteACubrirConColaborador&quot;) != &quot;vacanteExterno&quot;){&#xd;
+		 seguridadDeCarpetaDocs.push({permission: true, attributionType: &quot;USER&quot;, attributionValue: hAPI.getCardValue(&quot;legajo&quot;), securityLevel:&quot;ALL&quot;});&#xd;
+	 }&#xd;
+	 &#xd;
+	 var docAprovelMode = 1;&#xd;
+	 &#xd;
+	 var carpetaDocsUsr = ged.createFolderIfNotExist({&#xd;
+		  user: login,&#xd;
+		  password: password,&#xd;
+		  colleagueId: sysCollegueId,&#xd;
+		  publisherId: userId,&#xd;
+		  companyId: companyId,&#xd;
+		  &#xd;
+		  name: &quot;Documentos&quot;,&#xd;
+		  additionalComments: &quot;&quot;,&#xd;
+		  parentId: carpetaLegajoUsr.getDocumentId(),&#xd;
+		  inheritSecurity: false,&#xd;
+		  approvers: [&#xd;
+			  			{approvelMode: docAprovelMode, colleagueId: sysCollegueId, levelDescription: &quot;Aprobacion Administracion de Personal&quot;},   //UN4-RRHH-COMP-ADMP&#xd;
+			  		],&#xd;
+		  security: seguridadDeCarpetaDocs&#xd;
+	 });&#xd;
+	&#xd;
+	 res[&quot;Documentos&quot;] = carpetaDocsUsr.getDocumentId();&#xd;
+	 &#xd;
+	 &#xd;
+	 //actualizarAprobador se creó debido a que Fluig tiene un bug en la parte del servicio web en donde le agrega un aprobador a la carpeta: &#xd;
+	 // No funciona si el nuevo aprobador es un grupo, este chequeo está bien hecho en la parte de seguridad pero no en la de aprobación.&#xd;
+	 actualizarAprobador(hAPI.getCardValue(&quot;grupoAprobadorRRHH&quot;),res[&quot;Documentos&quot;],docAprovelMode);  //(codigoGrupo,codigoCarpeta,approverType)&#xd;
+	 &#xd;
+	 var carpetaConfidencialUsr = ged.createFolderIfNotExist({&#xd;
+	  user: login,&#xd;
+	  password: password,&#xd;
+	  colleagueId: sysCollegueId,&#xd;
+	  publisherId: userId,&#xd;
+	  companyId: companyId,&#xd;
+	  &#xd;
+	  name: &quot;Confidencial&quot;,&#xd;
+	  additionalComments: &quot;&quot;,&#xd;
+	  parentId: carpetaLegajoUsr.getDocumentId(),&#xd;
+	  inheritSecurity: false,&#xd;
+	  security: permisos&#xd;
+	 });&#xd;
+	 res[&quot;Confidencial&quot;] = carpetaConfidencialUsr.getDocumentId();&#xd;
+	 &#xd;
+	 var carpetaSPUsr = ged.createFolderIfNotExist({&#xd;
+	  user: login,&#xd;
+	  password: password,&#xd;
+	  colleagueId: sysCollegueId,&#xd;
+	  publisherId: userId,&#xd;
+	  companyId: companyId,&#xd;
+	  name: &quot;Desarrollo organizacional&quot;,&#xd;
+	  additionalComments: &quot;&quot;,&#xd;
+	  parentId: carpetaConfidencialUsr.getDocumentId(),&#xd;
+	  inheritSecurity: false,&#xd;
+	  security: [&#xd;
+	            {permission: true, attributionType: &quot;GROUP&quot;, attributionValue: &quot;UN3-RRHH-SELE&quot;, securityLevel: &quot;MODIFICATION&quot;},&#xd;
+	            permisoMueveLegajo&#xd;
+	            ]&#xd;
+	 });&#xd;
+	 res[&quot;Seleccion de Personal&quot;] = carpetaSPUsr.getDocumentId();&#xd;
+	 &#xd;
+	 var carpetaAPUsr = ged.createFolderIfNotExist({&#xd;
+	  user: login,&#xd;
+	  password: password,&#xd;
+	  colleagueId: sysCollegueId,&#xd;
+	  publisherId: userId,&#xd;
+	  companyId: companyId,&#xd;
+	  &#xd;
+	  name: &quot;Administracion de Personal&quot;,&#xd;
+	  additionalComments: &quot;&quot;,&#xd;
+	  parentId: carpetaConfidencialUsr.getDocumentId(),&#xd;
+	  inheritSecurity: false,&#xd;
+	  security: [&#xd;
+	            {permission: true, attributionType: &quot;GROUP&quot;, attributionValue: &quot;UN3-RRHH-COMP&quot;, securityLevel: &quot;MODIFICATION&quot;},&#xd;
+	            {permission: true, attributionType: &quot;GROUP&quot;, attributionValue: &quot;UN4-RRHH-COMP-ADMP&quot;, securityLevel: &quot;MODIFICATION&quot;},&#xd;
+	            permisoMueveLegajo&#xd;
+	            ]&#xd;
+	 });&#xd;
+	 res[&quot;Administracion de Personal&quot;] = carpetaAPUsr.getDocumentId();&#xd;
+	 &#xd;
+	 return res;&#xd;
+}&#xd;
+&#xd;
+var agregarPermisosUsuario = function(matricula, carpetaLegajo, carpetaDocumentos){&#xd;
+	 var arq = arqMarvinLoad(&quot;v1&quot;, {&#xd;
+	  prop: &quot;com.arquimeda.marvin.server.js.Properties-v1&quot;&#xd;
+	 });&#xd;
+	 arq.prop.load({&#xd;
+	  datasetName: &quot;parametros&quot;&#xd;
+	 });&#xd;
+	 &#xd;
+	 var companyId = getValue(&quot;WKCompany&quot;),&#xd;
+	  login = arq.prop.get(&quot;RAF06.usuarioSistema.login&quot;),&#xd;
+	  password = arq.prop.get(&quot;RAF06.usuarioSistema.pass&quot;),&#xd;
+	  sysColleagueId = arq.prop.get(&quot;RAF06.usuarioSistema.id&quot;);&#xd;
+	 &#xd;
+	 ged.updateFolder({&#xd;
+	  user: login,&#xd;
+	  password: password,&#xd;
+	  colleagueId: sysColleagueId,&#xd;
+	  companyId: companyId,&#xd;
+	  &#xd;
+	  docId: carpetaLegajo,&#xd;
+	  security: [{permission:true, attributionType:&quot;USER&quot;, attributionValue: matricula, securityLevel:&quot;READING&quot;}]&#xd;
+	 });&#xd;
+	 &#xd;
+	 var docAprovelMode = 1;&#xd;
+	 &#xd;
+	 var respuestaDoc = ged.updateFolder({&#xd;
+	  user: login,&#xd;
+	  password: password,&#xd;
+	  colleagueId: sysColleagueId,&#xd;
+	  companyId: companyId,&#xd;
+	  &#xd;
+	  docId: carpetaDocumentos,&#xd;
+	  approvers: [&#xd;
+	         {approvelMode: docAprovelMode, colleagueId: sysColleagueId, levelDescription: &quot;Aprobacion Administracion de Personal&quot;},&#xd;
+	      ],&#xd;
+	  security: [{permission:true, attributionType:&quot;USER&quot;, attributionValue: matricula, securityLevel:&quot;MODIFICATION&quot;}]&#xd;
+	 });&#xd;
+	 &#xd;
+	 /* Al existir un bug en fluig que no permite poner de aprobador a un grupo por ws. Se le asigna un aprobador del systema (random)&#xd;
+	  * Y despues se sobrescribe manualmente con la función de abajo */&#xd;
+	 actualizarAprobador(hAPI.getCardValue(&quot;grupoAprobadorRRHH&quot;),carpetaDocumentos,docAprovelMode);&#xd;
+	 &#xd;
+	 log.info(&quot;***** el mensaje de respuesta al actualizar la carpeta de documentos es: &quot; + respuestaDoc.getWebServiceMessage());&#xd;
+ &#xd;
+}&#xd;
+&#xd;
+var colleagueService = {&#xd;
+  create: function(params){&#xd;
+   var opts = this.simpleMerge({&#xd;
+    user: &quot;adm&quot;, //login do usuário.&#xd;
+    password: &quot;adm&quot;, //senha do usuário.&#xd;
+    companyId: getValue(&quot;WKCompany&quot;), //código da empresa.&#xd;
+    &#xd;
+    newUsrColleagueId: &quot;&quot;,&#xd;
+    newUsrLogin: &quot;&quot;, //login do novo usuário.&#xd;
+    newUsrPassword: &quot;&quot;, //senha do novo usuário.&#xd;
+    newUsrName: &quot;&quot;,&#xd;
+    newUsrMail: &quot;&quot;,&#xd;
+    newUsrLenguaje: &quot;es&quot;,&#xd;
+    &#xd;
+    aditionalData: {},&#xd;
+    jndiName: &quot;java:/jdbc/FluigDS&quot;,&#xd;
+    &#xd;
+    workflowPackage: &quot;com.totvs.technology.ecm.foundation.ws&quot;,&#xd;
+    workflowServiceName: &quot;ECMColleagueService&quot;,&#xd;
+    &#xd;
+    log: 0&#xd;
+   }, params);&#xd;
+   &#xd;
+   if (opts.log) log.info(&quot;** Obteniendo Servicio: &quot; + opts.workflowServiceName + &quot; Package: &quot; + opts.workflowPackage);&#xd;
+&#xd;
+   var serviceHelper = ServiceManager.getService(opts.workflowServiceName).getBean(),&#xd;
+   serviceLocator = serviceHelper.instantiate(opts.workflowPackage + &quot;.ECMColleagueServiceService&quot;),&#xd;
+   service = serviceLocator.getColleagueServicePort();&#xd;
+   &#xd;
+   // Configuro el usuario&#xd;
+   var colleagueDtoArray = serviceHelper.instantiate(opts.workflowPackage + &quot;.ColleagueDtoArray&quot;);&#xd;
+   &#xd;
+   var colleagueDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.ColleagueDto&quot;); &#xd;
+   colleagueDto.setColleagueId(opts.newUsrColleagueId);&#xd;
+   colleagueDto.setLogin(opts.newUsrLogin);&#xd;
+   colleagueDto.setColleagueName(opts.newUsrName);&#xd;
+   colleagueDto.setPasswd(this.passwordDigest(opts.newUsrPassword));&#xd;
+   colleagueDto.setCompanyId(opts.companyId);&#xd;
+   colleagueDto.setMail(opts.newUsrMail);&#xd;
+   colleagueDto.setActive(true);&#xd;
+         colleagueDto.setAdminUser(false);&#xd;
+         colleagueDto.setDialectId(opts.newUsrLenguaje);&#xd;
+         colleagueDto.setDefaultLanguage(opts.newUsrLenguaje);&#xd;
+         &#xd;
+         // Adiciona colaborador no array de colaboradores.&#xd;
+         colleagueDtoArray.getItem().add(colleagueDto);&#xd;
+   &#xd;
+         // Creo el usuario&#xd;
+         if (opts.log) log.info(&quot;** Creando Usuario: &quot; + opts.newUsrColleagueId);&#xd;
+         var result = service.createColleague(opts.user, opts.password, parseInt(opts.companyId), colleagueDtoArray);&#xd;
+         if (opts.log) log.info(&quot;** Resultado: &quot; + result);&#xd;
+        &#xd;
+         if (result.equals(&quot;ok&quot;)) {&#xd;
+          if (Object.keys(opts.aditionalData).length &gt; 0) {&#xd;
+           if (opts.log) log.info(&quot;** Añadiendo data al usuario&quot;);&#xd;
+           this.addUserData({&#xd;
+         jndiName: opts.jndiName,&#xd;
+         usrCode: opts.newUsrColleagueId,&#xd;
+         userData: opts.aditionalData,&#xd;
+         log: opts.log,&#xd;
+        });&#xd;
+          }&#xd;
+         } else {&#xd;
+          throw result;&#xd;
+         }&#xd;
+         return result;&#xd;
+  },&#xd;
+  &#xd;
+  update: function(params){&#xd;
+   var opts = this.simpleMerge({&#xd;
+    user: &quot;adm&quot;, //login do usuário.&#xd;
+    password: &quot;adm&quot;, //senha do usuário.&#xd;
+    companyId: getValue(&quot;WKCompany&quot;), //código da empresa.&#xd;
+    usrColleagueId: &quot;&quot;, //matricula del usuario a updetear&#xd;
+    &#xd;
+    usrActive: null,&#xd;
+    usrPassword: null, &#xd;
+    usrName: null,&#xd;
+    usrMail: null,&#xd;
+    &#xd;
+    workflowPackage: &quot;com.totvs.technology.ecm.foundation.ws&quot;,&#xd;
+    workflowServiceName: &quot;ECMColleagueService&quot;,&#xd;
+    &#xd;
+    log: 0&#xd;
+   }, params);&#xd;
+   &#xd;
+   if (opts.log) log.info(&quot;** Obteniendo Servicio: &quot; + opts.workflowServiceName + &quot; Package: &quot; + opts.workflowPackage);&#xd;
+&#xd;
+   var serviceHelper = ServiceManager.getService(opts.workflowServiceName).getBean(),&#xd;
+   serviceLocator = serviceHelper.instantiate(opts.workflowPackage + &quot;.ECMColleagueServiceService&quot;),&#xd;
+   service = serviceLocator.getColleagueServicePort();&#xd;
+   &#xd;
+   // Obtengo el usuario&#xd;
+   var colleagueDtoArray = service.getColleague(opts.user, opts.password, parseInt(opts.companyId), opts.usrColleagueId);&#xd;
+   var colleagueDto = colleagueDtoArray.getItem().get(0);&#xd;
+   &#xd;
+   if(colleagueDto.getCompanyId()==0) {&#xd;
+    throw &quot;El usuario no existe.&quot;&#xd;
+   }&#xd;
+   &#xd;
+   // Configuro el usuario&#xd;
+   if (opts.usrActive != null) colleagueDto.setActive(opts.usrActive);&#xd;
+   if (opts.usrMail != null) colleagueDto.setMail(opts.usrMail);&#xd;
+   if (opts.usrName != null) colleagueDto.setColleagueName(opts.usrName);&#xd;
+         if (opts.usrPassword != null) colleagueDto.setPasswd(opts.usrPassword);&#xd;
+         &#xd;
+         // Creo el usuario&#xd;
+         if (opts.log) log.info(&quot;** Actualizando Usuario: &quot; + opts.newUsrColleagueId);&#xd;
+         var result = service.updateColleague(opts.user, opts.password, parseInt(opts.companyId), colleagueDtoArray);&#xd;
+         if (opts.log) log.info(&quot;** Resultado: &quot; + result);&#xd;
+        &#xd;
+         return result;&#xd;
+  },&#xd;
+  &#xd;
+  activate: function(params){&#xd;
+   var opts = this.simpleMerge({&#xd;
+    user: &quot;adm&quot;, //login do usuário.&#xd;
+    password: &quot;adm&quot;, //senha do usuário.&#xd;
+    companyId: getValue(&quot;WKCompany&quot;), //código da empresa.&#xd;
+    usrColleagueId: &quot;&quot;, //matricula del usuario a updetear&#xd;
+    &#xd;
+    workflowPackage: &quot;com.totvs.technology.ecm.foundation.ws&quot;,&#xd;
+    workflowServiceName: &quot;ECMColleagueService&quot;,&#xd;
+    &#xd;
+    log: 0&#xd;
+   }, params);&#xd;
+   &#xd;
+   if (opts.log) log.info(&quot;** Obteniendo Servicio: &quot; + opts.workflowServiceName + &quot; Package: &quot; + opts.workflowPackage);&#xd;
+&#xd;
+   var serviceHelper = ServiceManager.getService(opts.workflowServiceName).getBean(),&#xd;
+   serviceLocator = serviceHelper.instantiate(opts.workflowPackage + &quot;.ECMColleagueServiceService&quot;),&#xd;
+   service = serviceLocator.getColleagueServicePort();&#xd;
+   &#xd;
+   // Activo el usuario&#xd;
+         var result = service.activateColleague(opts.user, opts.password, parseInt(opts.companyId), opts.usrColleagueId);&#xd;
+         if (opts.log) log.info(&quot;** Resultado: &quot; + result);&#xd;
+        &#xd;
+         return result;&#xd;
+  },&#xd;
+  &#xd;
+  addUserData: function(params){&#xd;
+   var opts = this.simpleMerge({&#xd;
+    jndiName: &quot;java:/jdbc/FluigDS&quot;,&#xd;
+    usrCode: &quot;&quot;,&#xd;
+    userData: {},&#xd;
+    log: 0,&#xd;
+   }, params);&#xd;
+   &#xd;
+   var conn = null,&#xd;
+    pstmt = null;&#xd;
+   &#xd;
+   try {&#xd;
+    &#xd;
+    if (opts.log) log.info(&quot;** Obteniendo conexion &quot; + opts.jndiName);&#xd;
+    &#xd;
+    conn = new javax.naming.InitialContext().lookup(opts.jndiName).getConnection();   &#xd;
+          &#xd;
+    var sql = &quot;INSERT INTO FDN_USERDATA &quot; +&#xd;
+       &quot; (DATA_KEY, DATA_VALUE, USER_TENANT_ID) &quot; +&#xd;
+       &quot;VALUES ( &quot; +&#xd;
+       &quot; ?, &quot; +&#xd;
+       &quot; ?,&quot; +&#xd;
+       &quot; (SELECT USER_TENANT_ID FROM FDN_USERTENANT WHERE USER_CODE=?) &quot; + &#xd;
+       &quot;) &quot;;&#xd;
+       &#xd;
+    pstmt = conn.prepareStatement(sql);&#xd;
+    pstmt.setString(3, opts.usrCode);&#xd;
+    &#xd;
+    for (userDataKey in opts.userData) {&#xd;
+     pstmt.setString(1, userDataKey);&#xd;
+     pstmt.setString(2, opts.userData[userDataKey]);&#xd;
+     &#xd;
+     if (opts.log) log.info(&quot;** Ejecutando Statement &quot; + sql);&#xd;
+     if (opts.log) log.info(&quot;**** Con Parametros: [&quot; + tenantId + &quot;,&quot; + strData + &quot;]&quot;);&#xd;
+     &#xd;
+     pstmt.executeUpdate();     &#xd;
+    }&#xd;
+&#xd;
+   } catch (ex) {&#xd;
+    log.error(&quot;*** colleagueService addUserData: &quot; + ex);&#xd;
+      } finally {&#xd;
+          if (pstmt != null) { pstmt.close(); }&#xd;
+          if (conn != null) { conn.close(); }&#xd;
+      }&#xd;
+  },&#xd;
+  &#xd;
+  passwordDigest: function(password){&#xd;
+   var md = java.security.MessageDigest.getInstance(&quot;MD5&quot;);&#xd;
+         var javaPass = new java.lang.String(password);&#xd;
+   var hash = new java.math.BigInteger(1, md.digest(javaPass.getBytes()));&#xd;
+         var s = hash.toString(16);&#xd;
+         if (s.length() %2 != 0) {&#xd;
+             s = &quot;0&quot; + s;&#xd;
+         }&#xd;
+         return s;&#xd;
+  },&#xd;
+  &#xd;
+  simpleMerge: function (obj1,obj2) {&#xd;
+   // realizar merge solo del 1er nivel de atributos&#xd;
+   var obj3 = {};    &#xd;
+   for (attrname in obj1) { &#xd;
+    obj3[attrname] = obj1[attrname]; &#xd;
+   }    &#xd;
+   for (attrname in obj2) { &#xd;
+    obj3[attrname] = obj2[attrname]; &#xd;
+   }    &#xd;
+   return obj3;&#xd;
+  }&#xd;
+}&#xd;
+&#xd;
+var ged = {&#xd;
+ attributionTypes: {&#xd;
+  &quot;USER&quot;: 1,&#xd;
+  &quot;GROUP&quot;: 2,&#xd;
+  &quot;ALL&quot;: 3 &#xd;
+ },&#xd;
+ securityLevels: {&#xd;
+  &quot;READING&quot;: 0,&#xd;
+  &quot;RECORDING&quot;: 1,&#xd;
+  &quot;MODIFICATION&quot;: 2,&#xd;
+  &quot;ALL&quot;: 3  &#xd;
+ },&#xd;
+ &#xd;
+ createSimpleFolder: function(params){&#xd;
+  var opts = this.simpleMerge({&#xd;
+   name: &quot;Nueva Carpeta&quot;,&#xd;
+   additionalComments: &quot;Nueva Carpeta&quot;,&#xd;
+   parentId: &quot;0&quot;,&#xd;
+   inheritSecurity: true,&#xd;
+   security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+  }, params);&#xd;
+  &#xd;
+  //Instancia um novo documento e define as propriedades básicas&#xd;
+     var dto = docAPI.newDocumentDto();&#xd;
+        dto.setDocumentDescription(opts.name);&#xd;
+        dto.setAdditionalComments(opts.additionalComments);&#xd;
+        dto.setDocumentType(&quot;1&quot;);&#xd;
+        dto.setParentDocumentId(parseInt(opts.parentId));&#xd;
+        dto.setInheritSecurity(opts.inheritSecurity);&#xd;
+        &#xd;
+        //Definindo permissãos&#xd;
+     var dtosSecurity = [];&#xd;
+     &#xd;
+     for(var i=0; i&lt;opts.security.length; i++){&#xd;
+      var dtoConfigSecurity = docAPI.newDocumentSecurityConfigDto();&#xd;
+      &#xd;
+      dtoConfigSecurity.setPermission(opts.security[i].permission);&#xd;
+      dtoConfigSecurity.setShowContent(true);&#xd;
+      dtoConfigSecurity.setAttributionType(this.attributionTypes[opts.security[i].attributionType]);&#xd;
+      dtoConfigSecurity.setAttributionValue(opts.security[i].attributionValue);&#xd;
+      dtoConfigSecurity.setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);    &#xd;
+      &#xd;
+      dtosSecurity.push(dtoConfigSecurity); &#xd;
+     }   &#xd;
+        log.info(&quot;DEBUG - parentId &quot; + opts.parentId);&#xd;
+        log.info(&quot;DEBUG - name &quot; + opts.name);&#xd;
+        return docAPI.createFolder(dto, dtosSecurity, null);&#xd;
+ },&#xd;
+ &#xd;
+ // Busca si existe una carpeta y si no la crea&#xd;
+ // Busca por nombre de carpeta y &quot;padre&quot;&#xd;
+ // Si se define serchName busca por ese valor&#xd;
+ createFolderIfNotExist: function(params){&#xd;
+  var opts = this.simpleMerge({&#xd;
+   user: &quot;adm&quot;, //login do usuário.&#xd;
+   password: &quot;adm&quot;, //senha do usuário.&#xd;
+   companyId: &quot;1&quot;, //código da empresa.&#xd;
+   colleagueId: &quot;adm&quot;,&#xd;
+   publisherId: &quot;adm&quot;,&#xd;
+  &#xd;
+   searchName: false,  // patrón del nombre&#xd;
+   &#xd;
+   name: &quot;Nueva Carpeta&quot;,&#xd;
+   additionalComments: &quot;Nueva Carpeta&quot;,&#xd;
+   parentId: &quot;0&quot;,&#xd;
+   inheritSecurity: true,&#xd;
+   security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+   approvers: [],&#xd;
+   workflowPackage: &quot;com.totvs.technology.ecm.dm.ws&quot;,&#xd;
+   workflowServiceName: &quot;ECMFolderService&quot;,&#xd;
+  }, params);&#xd;
+  &#xd;
+  log.info(&quot;*** ged createFolderIfNotExist: buscando carpeta parentId:&quot; + opts.parentId &#xd;
+     + &quot; name:&quot; + opts.name &#xd;
+     + &quot; searchName:&quot; + opts.searchName);&#xd;
+  &#xd;
+  var ret = ged.findFolder({&#xd;
+   companyId: opts.companyId,&#xd;
+   name: opts.searchName? opts.searchName : opts.name,&#xd;
+   parentId: opts.parentId&#xd;
+  });&#xd;
+  &#xd;
+  if (ret != null) {&#xd;
+   log.info(&quot;*** ged createFolderIfNotExist: carpeta encontrada ! parentId:&quot; + opts.parentId &#xd;
+     + &quot; name:&quot; + opts.name &#xd;
+     + &quot; searchName:&quot; + opts.searchName&#xd;
+     + &quot; documentId:&quot; + ret.getDocumentId()&#xd;
+     );&#xd;
+   return ret;&#xd;
+  } else {&#xd;
+   log.info(&quot;*** ged createFolderIfNotExist: carpeta NO encontrada ! parentId:&quot; + opts.parentId &#xd;
+     + &quot; name:&quot; + opts.name &#xd;
+     + &quot; searchName:&quot; + opts.searchName&#xd;
+     + &quot; - Creando carpeta ...&quot;&#xd;
+     );   &#xd;
+   return ged.createFolder(params);&#xd;
+  }&#xd;
+  &#xd;
+ },&#xd;
+ findFolder: function(params){&#xd;
+  var opts = this.simpleMerge({&#xd;
+   companyId: &quot;1&quot;, //código da empresa.&#xd;
+   name: &quot;Nombre&quot;, // nombre del &#xd;
+   parentId: &quot;0&quot;,&#xd;
+   jndiName: &quot;java:/jdbc/FluigDS&quot;,&#xd;
+  }, params);&#xd;
+  &#xd;
+  var conn = null,&#xd;
+   pstmt = null,&#xd;
+   documentId = null,&#xd;
+   version = null;&#xd;
+  &#xd;
+  try {&#xd;
+   &#xd;
+   if (opts.log) log.info(&quot;** Obteniendo conexion &quot; + opts.jndiName);&#xd;
+   &#xd;
+   conn = new javax.naming.InitialContext().lookup(opts.jndiName).getConnection();   &#xd;
+         &#xd;
+   var sql = &quot;SELECT [NR_DOCUMENTO] AS documentId,&quot; +&#xd;
+      &quot;       [NR_VERSAO] AS version&quot; +&#xd;
+      &quot;  FROM [dbo].[DOCUMENTO] d &quot; +&#xd;
+      &quot; WHERE [d].[COD_EMPRESA] = ? &quot; +&#xd;
+      &quot;   AND [d].[LOG_DELETE] = 0 &quot; +&#xd;
+      &quot;   AND [d].[NR_DOCUMENTO_PAI] = ?&quot; +&#xd;
+      &quot;   AND [d].[VERSAO_ATIVA] = 1&quot; +&#xd;
+      &quot;   AND [d].[TP_DOCUMENTO] = 1&quot; +&#xd;
+      &quot;   AND [DS_PRINCIPAL_DOCUMENTO] LIKE ?&quot; +&#xd;
+      &quot;  ORDER BY [NR_DOCUMENTO] DESC&quot;;&#xd;
+   &#xd;
+      &#xd;
+   pstmt = conn.prepareStatement(sql);&#xd;
+   pstmt.setString(1, opts.companyId);&#xd;
+   pstmt.setString(2, opts.parentId);&#xd;
+   pstmt.setString(3, opts.name);&#xd;
+   &#xd;
+   var rs = pstmt.executeQuery();&#xd;
+   while (rs.next()) {&#xd;
+    documentId = rs.getString(&quot;documentId&quot;);&#xd;
+    version = rs.getString(&quot;version&quot;); &#xd;
+   }&#xd;
+&#xd;
+  } catch (ex) {&#xd;
+   log.error(&quot;*** ged findFolder: &quot; + ex);&#xd;
+     } finally {&#xd;
+         if (pstmt != null) { pstmt.close(); }&#xd;
+         if (conn != null) { conn.close(); }&#xd;
+     }&#xd;
+  &#xd;
+     if (documentId == null){&#xd;
+      return null;&#xd;
+     } else {&#xd;
+      return {&#xd;
+       getDocumentId: function(){return documentId;},&#xd;
+       getVersion: function(){return version;}&#xd;
+      };&#xd;
+     }&#xd;
+  &#xd;
+ }, &#xd;
+ createFolder: function(params){&#xd;
+  var opts = this.simpleMerge({&#xd;
+   user: &quot;adm&quot;, //login do usuário. //soy cra&#xd;
+   password: &quot;adm&quot;, //senha do usuário.&#xd;
+   companyId: &quot;1&quot;, //código da empresa.&#xd;
+   colleagueId: &quot;adm&quot;,&#xd;
+   publisherId: &quot;adm&quot;,&#xd;
+   &#xd;
+   name: &quot;Nueva Carpeta&quot;,&#xd;
+   additionalComments: &quot;Nueva Carpeta&quot;,&#xd;
+   parentId: &quot;0&quot;,&#xd;
+   inheritSecurity: true,&#xd;
+   security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+   approvers: [],&#xd;
+   workflowPackage: &quot;com.totvs.technology.ecm.dm.ws&quot;,&#xd;
+   workflowServiceName: &quot;ECMFolderService&quot;,&#xd;
+  }, params);&#xd;
+  &#xd;
+  var serviceHelper = ServiceManager.getService(opts.workflowServiceName).getBean(),&#xd;
+  serviceLocator = serviceHelper.instantiate(opts.workflowPackage + &quot;.ECMFolderServiceService&quot;),&#xd;
+  service = serviceLocator.getFolderServicePort();&#xd;
+  &#xd;
+  // Configuro el documento&#xd;
+  var documentDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentDtoArray&quot;);&#xd;
+  &#xd;
+  var documentDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentDto&quot;);&#xd;
+  documentDto.setColleagueId(opts.colleagueId);&#xd;
+  documentDto.setCompanyId(parseInt(opts.companyId));&#xd;
+  documentDto.setDeleted(false);&#xd;
+  documentDto.setDocumentDescription(opts.name);&#xd;
+  documentDto.setAdditionalComments(opts.additionalComments);&#xd;
+  documentDto.setDownloadEnabled(true);&#xd;
+  documentDto.setInheritSecurity(opts.inheritSecurity);&#xd;
+  documentDto.setParentDocumentId(parseInt(opts.parentId));&#xd;
+  documentDto.setPublisherId(opts.publisherId);&#xd;
+  documentDto.setDocumentType(&quot;1&quot;);&#xd;
+  documentDto.setIconId(0);&#xd;
+ &#xd;
+  documentDtoArr.getItem().add(documentDto);&#xd;
+&#xd;
+  // Configuro seguridad&#xd;
+  var securityDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentSecurityConfigDtoArray&quot;);;&#xd;
+  for (var i=0; i&lt;opts.security.length; i++) {&#xd;
+   var securityDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentSecurityConfigDto&quot;);&#xd;
+   securityDto.setPermission(opts.security[i].permission);&#xd;
+   securityDto.setShowContent(true);&#xd;
+   securityDto.setAttributionType(this.attributionTypes[opts.security[i].attributionType]);&#xd;
+   securityDto.setAttributionValue(opts.security[i].attributionValue);&#xd;
+   securityDto.setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);&#xd;
+   securityDto.setDownloadEnabled(true);&#xd;
+   securityDtoArr.getItem().add(securityDto);     &#xd;
+  }&#xd;
+  &#xd;
+  // Configuro Aprobadores&#xd;
+  var approversDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.ApproverDtoArray&quot;);&#xd;
+  for (var i=0; i&lt;opts.approvers.length; i++) {&#xd;
+   var approverDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.ApproverDto&quot;);   &#xd;
+   approverDto.setCompanyId(parseInt(opts.companyId));&#xd;
+   approverDto.setColleagueId(opts.approvers[i].colleagueId);  &#xd;
+   approverDto.setApproverType(opts.approvers[i].approvelMode);&#xd;
+   approverDto.setLevelDescription(opts.approvers[i].levelDescription);&#xd;
+   approversDtoArr.getItem().add(approverDto);  &#xd;
+  }&#xd;
+  var webServiceMessageArray = serviceHelper.instantiate(opts.workflowPackage + &quot;.WebServiceMessageArray&quot;);&#xd;
+  webServiceMessageArray = service.createFolder(opts.user, opts.password, parseInt(opts.companyId), documentDtoArr, securityDtoArr, approversDtoArr);&#xd;
+  return webServiceMessageArray.getItem().get(0);&#xd;
+ },&#xd;
+ &#xd;
+ updateFolder: function(params){&#xd;
+  var opts = this.simpleMerge({&#xd;
+   user: &quot;adm&quot;, //login do usuário.&#xd;
+   password: &quot;adm&quot;, //senha do usuário.&#xd;
+   companyId: &quot;1&quot;, //código da empresa.&#xd;
+   colleagueId: &quot;adm&quot;,&#xd;
+   docId: &quot;0&quot;,&#xd;
+   &#xd;
+   name: &quot;&quot;,&#xd;
+   additionalComments: &quot;&quot;,&#xd;
+   parentId: &quot;0&quot;,&#xd;
+   inheritSecurity: true,&#xd;
+   security: [], // [{permission:true, attributionType:&quot;USER&quot;, attributionValue:&quot;adm&quot;, securityLevel:&quot;ALL&quot;}]&#xd;
+   approvers: [],&#xd;
+   workflowPackage: &quot;com.totvs.technology.ecm.dm.ws&quot;,&#xd;
+   workflowServiceName: &quot;ECMFolderService&quot;,&#xd;
+  }, params);&#xd;
+  &#xd;
+  var serviceHelper = ServiceManager.getService(opts.workflowServiceName).getBean(),&#xd;
+  serviceLocator = serviceHelper.instantiate(opts.workflowPackage + &quot;.ECMFolderServiceService&quot;),&#xd;
+  service = serviceLocator.getFolderServicePort();&#xd;
+  &#xd;
+  var documentDtoArr = service.getFolder(opts.user, opts.password, parseInt(opts.companyId), parseInt(opts.docId), opts.colleagueId);&#xd;
+  &#xd;
+  log.error(&quot;opts.user: &quot; + opts.user + &quot; opts.password: &quot; + opts.password + &quot; opts.companyId: &quot; + opts.companyId + &quot; opts.docId: &quot; + opts.docId);&#xd;
+  log.error(&quot;opts.user: &quot; + opts.user + &quot; opts.password: &quot; + opts.password + &quot; parseInt(opts.companyId): &quot; + parseInt(opts.companyId) + &quot; parseInt(opts.docId): &quot; + parseInt(opts.docId));&#xd;
+  &#xd;
+  var securityDtoArr = service.getSecurity(opts.user, opts.password, parseInt(opts.companyId), parseInt(opts.docId));&#xd;
+ &#xd;
+  // configuro seguridad&#xd;
+  for (var i=0; i&lt;opts.security.length; i++) {&#xd;
+   var index;&#xd;
+   for (var j=0; j&lt;securityDtoArr.getItem().size(); j++) {&#xd;
+    var exists = opts.security[i].permission == securityDtoArr.getItem().get(j).isPermission() &amp;&amp;&#xd;
+        this.attributionTypes[opts.security[i].attributionType] == securityDtoArr.getItem().get(j).getAttributionType() &amp;&amp;&#xd;
+        opts.security[i].attributionValue == securityDtoArr.getItem().get(j).getAttributionValue();&#xd;
+    if (exists) index = j;&#xd;
+   }&#xd;
+    &#xd;
+   if (index) {&#xd;
+    securityDtoArr.getItem().get(index).setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);&#xd;
+   } else {&#xd;
+    var securityDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.DocumentSecurityConfigDto&quot;);&#xd;
+    securityDto.setPermission(opts.security[i].permission);&#xd;
+    securityDto.setShowContent(true);&#xd;
+    securityDto.setAttributionType(this.attributionTypes[opts.security[i].attributionType]);&#xd;
+    securityDto.setAttributionValue(opts.security[i].attributionValue);&#xd;
+    securityDto.setSecurityLevel(this.securityLevels[opts.security[i].securityLevel]);  &#xd;
+    securityDto.setDownloadEnabled(true);&#xd;
+    securityDtoArr.getItem().add(securityDto);     &#xd;
+   }&#xd;
+  }&#xd;
+  &#xd;
+  // experimentar con el getAproveers que viene del servicio soap&#xd;
+  var approversDtoArr = serviceHelper.instantiate(opts.workflowPackage + &quot;.ApproverDtoArray&quot;);&#xd;
+  &#xd;
+  // configuro aprobadores (tal que cada vez que se hace un update se borran los previos aprobadores y se ponen los nuevos)&#xd;
+  for (var i=0; i&lt;opts.approvers.length; i++) {&#xd;
+   var approverDto = serviceHelper.instantiate(opts.workflowPackage + &quot;.ApproverDto&quot;);   &#xd;
+   approverDto.setCompanyId(parseInt(opts.companyId));&#xd;
+   approverDto.setColleagueId(opts.approvers[i].colleagueId);  &#xd;
+   approverDto.setApproverType(opts.approvers[i].approvelMode);&#xd;
+   approverDto.setLevelDescription(opts.approvers[i].levelDescription); &#xd;
+   approversDtoArr.getItem().add(approverDto);  &#xd;
+  }&#xd;
+  &#xd;
+  &#xd;
+  var webServiceMessageArray = serviceHelper.instantiate(opts.workflowPackage + &quot;.WebServiceMessageArray&quot;);&#xd;
+  &#xd;
+  webServiceMessageArray = service.updateFolder(opts.user, opts.password, parseInt(opts.companyId), documentDtoArr, securityDtoArr, approversDtoArr);&#xd;
+  // tirar excepcion y loguear&#xd;
+  return webServiceMessageArray.getItem().get(0);&#xd;
+ },&#xd;
+ &#xd;
+ simpleMerge: function (obj1,obj2) {&#xd;
+  // realizar merge solo del 1er nivel de atributos&#xd;
+  var obj3 = {};    &#xd;
+  for (attrname in obj1) { &#xd;
+   obj3[attrname] = obj1[attrname]; &#xd;
+  }    &#xd;
+  for (attrname in obj2) { &#xd;
+   obj3[attrname] = obj2[attrname]; &#xd;
+  }    &#xd;
+  return obj3;&#xd;
+ }&#xd;
+};&#xd;
+&#xd;
+&#xd;
+/*! arqMarvinLoad - v1 - All rights reserverd */&#xd;
+function arqMarvinLoad(a,h){var b={};if(h==null){return b}var d=new javax.naming.InitialContext().lookup(&quot;java:global/arq-marvin-&quot;+a+&quot;/MarvinLibLoaderEJB&quot;);for(var c in h){try{var g=new Function(&quot;lib&quot;,&quot;return &quot;+d.getLib(h[c]));b[c]=g(b)}catch(i){log.error(&quot;*** Error compilando libreria &quot;+lib+&quot;:&quot;+i)}}return b};&#xd;
+&#xd;
+</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>onNotify</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function onNotify(subject, receivers, template, params){&#xd;
+&#xd;
+	log.info(&quot;*****Ejecutando onNotify(&quot; + subject + &quot;, &quot; + receivers + &quot;,  &quot; + template + &quot; , &quot; + params + &quot;);&quot;);&#xd;
+	&#xd;
+	var descripcionTarea = params.get(&quot;WDK_TaskDescription&quot;);&#xd;
+	var senders = params.get(&quot;SENDERS&quot;);&#xd;
+	&#xd;
+	var customSubject = descripcionTarea + &quot; - &quot; + hAPI.getCardValue(&quot;nombreBusqueda&quot;);&#xd;
+	&#xd;
+	if(!&quot;&quot;.equals(senders) &amp;&amp; senders != null){&#xd;
+		customSubject += &quot; - &quot; + senders;&#xd;
+	}&#xd;
+	&#xd;
+	if(hAPI.getCardValue(&quot;busquedaConfidencial&quot;).equals(&quot;si&quot;)){&#xd;
+		customSubject += &quot; - Confidencial&quot;;&#xd;
+	}&#xd;
+	&#xd;
+	if(template == &quot;TPLNEW_TASK&quot;){ // Nueva Tarea de Workflow&#xd;
+		&#xd;
+		subject.add(&quot;Tarea &quot; + customSubject);		&#xd;
+		&#xd;
+	}else if(template == &quot;TPLNEW_TASK_POOL_GROUP&quot;){ // Nueva Tarea Workflow para Grupo&#xd;
+		&#xd;
+		subject.add(&quot;Tarea en Pool &quot; + customSubject);&#xd;
+		&#xd;
+	}else if(template == &quot;TPLOVERDUE_TASK_USER_RESPONSIBLE&quot;){ // Tarea Atrasada para Responsable&#xd;
+&#xd;
+		subject.add(&quot;Tarea Atrasada &quot; + customSubject);&#xd;
+		&#xd;
+	}else if(template == &quot;TPLOVERDUE_TASK_TO_MANAGER&quot;){ // Tarea Atrasada para Gerente  &#xd;
+		&#xd;
+		subject.add(&quot;Tarea sobre Gerencia Atrasada &quot; + customSubject);&#xd;
+		&#xd;
+	}else if(template == &quot;TPLOVERDUE_TASK_TO_GROUP&quot;){ // Tarea Atrasada para Grupo&#xd;
+&#xd;
+		subject.add(&quot;Tarea en Pool Atrasada &quot; + customSubject);&#xd;
+		&#xd;
+	} else if(template == &quot;TPLTASK_POOL_GROUP_ASSUMED&quot;){ // Tarea de Pool de Grupo asumida &#xd;
+		&#xd;
+		subject.add(&quot;Tarea en Pool Asumida &quot; + customSubject);&#xd;
+		&#xd;
+	}&#xd;
+&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>requiereAprobacionGteGral</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function requiereAprobacionGteGral(){&#xd;
+	&#xd;
+	var gteGral = hAPI.getCardValue(&quot;gerenteGeneral&quot;);&#xd;
+	&#xd;
+	return gteGral == &quot;SI&quot;;&#xd;
+ &#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>requiereAprobacionSegundoAutorizante</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function requiereAprobacionSegundoAutorizante(){&#xd;
+	&#xd;
+	var matricula = hAPI.getCardValue(&quot;segundoAutorizanteMatricula&quot;);&#xd;
+	&#xd;
+	return matricula != &quot;&quot;;&#xd;
+ &#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>requiereAprobacionGteN1</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function requiereAprobacionGteN1(){&#xd;
+	&#xd;
+	var matricula = hAPI.getCardValue(&quot;gerenteN1Matricula&quot;);&#xd;
+	&#xd;
+	return matricula != &quot;&quot;;&#xd;
+ &#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>customizaciones</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function sendCustomEmail(params) {&#xd;
+ &#xd;
+	var mimeType = &quot;text/html&quot;, &#xd;
+	    data = new java.util.HashMap(), &#xd;
+	    separador = java.io.File.separator,&#xd;
+	    globalParam = new javax.naming.InitialContext().lookup(&quot;java:global/fluig/ecm-ejb/wdk/GlobalParam&quot;),&#xd;
+	    templatesFolder = globalParam.read(params.companyId).getTemplatesFolder() + separador + &quot;tplmail&quot; + separador + params.templateId + separador + params.templateDialect,&#xd;
+	    sdk = new javax.naming.InitialContext().lookup(&quot;java:global/fluig/wcm-core/service/SDK&quot;);&#xd;
+	  &#xd;
+	 // Valores default&#xd;
+	data.put(&quot;SERVER_URL&quot;, sdk.getServerURL());&#xd;
+	data.put(&quot;SERVER_EXTERNAL_URL&quot;, sdk.getServerContextURL());&#xd;
+	data.put(&quot;SERVER_PROTECTED_URL&quot;, sdk.getProtectedTenantContextPath());&#xd;
+	data.put(&quot;COMPANY_ID&quot;, params.companyId);&#xd;
+	data.put(&quot;TENANT_ID&quot;,sdk.getCurrentTenantID());&#xd;
+	 &#xd;
+	// Copio datos propios del template&#xd;
+	if (params.datos) {&#xd;
+		for(param in params.datos) {&#xd;
+			data.put(param, params.datos[param]);&#xd;
+		}&#xd;
+	}&#xd;
+	 &#xd;
+	com.fluig.foundation.mail.EMailSenderFactory.getEMailSender().customEmail(new java.lang.Long(params.companyId), params.subject, params.from, params.to, templatesFolder, params.templateHtml, mimeType, data);&#xd;
+	log.info(&quot;**** Mail enviado a: &quot;+ params.to);&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function existeColleague(constraintrKey, constraintValue){&#xd;
+	 &#xd;
+	var c1 = DatasetFactory.createConstraint(constraintrKey, constraintValue, constraintValue, ConstraintType.MUST);&#xd;
+	 var dts = DatasetFactory.getDataset(&quot;colleague&quot;, null, [c1], null);&#xd;
+	 &#xd;
+	 return dts.rowsCount &gt; 0;&#xd;
+}&#xd;
+&#xd;
+function existeCarpetaLegajo(legajo){&#xd;
+	 &#xd;
+	var arq = arqMarvinLoad(&quot;v1&quot;, {&#xd;
+	  prop: &quot;com.arquimeda.marvin.server.js.Properties-v1&quot;&#xd;
+	 });&#xd;
+	 arq.prop.load({&#xd;
+	  datasetName: &quot;parametros&quot;&#xd;
+	 });&#xd;
+	 &#xd;
+	 var carpetaLegajosId = arq.prop.get(&quot;RAF06.carpetaLegajos.docId&quot;);&#xd;
+	 &#xd;
+	 var c1 = DatasetFactory.createConstraint(&quot;parentDocumentId&quot;, carpetaLegajosId, carpetaLegajosId, ConstraintType.MUST);&#xd;
+	 var c2 = DatasetFactory.createConstraint(&quot;documentDescription&quot;, &quot;%&quot;+legajo+&quot; &quot;, &quot;%&quot;+legajo+&quot; &quot;, ConstraintType.MUST);&#xd;
+	 &#xd;
+	 c2.setLikeSearch(true);&#xd;
+	 &#xd;
+	 var dts = DatasetFactory.getDataset(&quot;document&quot;, null, [c1,c2], null);&#xd;
+	 &#xd;
+	 return (dts.rowsCount &gt; 0 ? dts.getValue(0, &quot;documentPK.documentId&quot;) : false);&#xd;
+}&#xd;
+&#xd;
+function corregirCamposFecha(nombreCampo){&#xd;
+	 &#xd;
+	 if (hAPI.getCardValue(nombreCampo) != null &amp;&amp; hAPI.getCardValue(nombreCampo) != &quot;&quot;){&#xd;
+	  var fechaArray = hAPI.getCardValue(nombreCampo).split(&quot;/&quot;);&#xd;
+	  if (fechaArray.length &gt; 1) {&#xd;
+	   hAPI.setCardValue(nombreCampo, fechaArray[2]+&quot;-&quot;+fechaArray[1]+&quot;-&quot;+fechaArray[0]);&#xd;
+	   log.error(&quot;*** Fue modificado el campo &quot; + nombreCampo + &quot; valor: &quot; + hAPI.getCardValue(nombreCampo) + &quot; solicitud: &quot; + hAPI.getCardValue(&quot;nroSolicitud&quot;));&#xd;
+	  }  &#xd;
+	 }&#xd;
+	 &#xd;
+	}&#xd;
+&#xd;
+function getCodigoDeCarpetaLugarPagoODeGrupoAdmin(userId,flag){&#xd;
+&#xd;
+	var sitioEmpleado = hAPI.getCardValue(&quot;lugarPago&quot;);&#xd;
+	 var c1 = DatasetFactory.createConstraint(&quot;descripcion&quot;,sitioEmpleado,sitioEmpleado, ConstraintType.MUST);&#xd;
+	 var dataset = DatasetFactory.getDataset(&quot;RAF05-Sedes&quot;, [&quot;codigoCarpeta&quot;,&quot;codigoGrupoAdministrador&quot;] , [c1], null);&#xd;
+	 /*&#xd;
+	  * Aparentemente si el flag es uno se devuelve el valor de la carpeta donde se guardan cosas de una sede&#xd;
+	  * Si es distinto de uno entonces devuelve el codigoGrupoAdministrador q esun grupo que tiene permiso especial en la carpeta de una sede&#xd;
+	  * No lo toco porque el proceso es lo suficientemente complejo, pero espero que este comentario te haya ayudado&#xd;
+	  * */&#xd;
+	 if(flag == 1){&#xd;
+	  log.error(&quot;*** Codigo carpeta:  &quot; + dataset.getValue(0, &quot;codigoCarpeta&quot;));&#xd;
+	  return dataset.getValue(0, &quot;codigoCarpeta&quot;);  &#xd;
+	 }&#xd;
+	 else{&#xd;
+	  if(dataset.rowsCount &gt; 0) {&#xd;
+	   log.error(&quot;*** Codigo grupo admin:  &quot; + dataset.getValue(0, &quot;codigoGrupoAdministrador&quot;));&#xd;
+	   if ((dataset.getValue(0, &quot;codigoGrupoAdministrador&quot;) == null) || (dataset.getValue(0, &quot;codigoGrupoAdministrador&quot;) == &quot;&quot;)){&#xd;
+	    log.error(&quot;*** Codigo grupo admin esta vacio&quot;);&#xd;
+	    return null;&#xd;
+	   }&#xd;
+	   return dataset.getValue(0, &quot;codigoGrupoAdministrador&quot;);   &#xd;
+	  }&#xd;
+	  else{&#xd;
+	   return null;&#xd;
+	  }&#xd;
+	 }&#xd;
+&#xd;
+}&#xd;
+&#xd;
+function actualizarAprobador(codigoGrupo,codigoCarpeta,approverType){&#xd;
+	 var jndiName = &quot;java:/jdbc/FluigDS&quot;;&#xd;
+	 var conn = null;&#xd;
+	 var pstmt;&#xd;
+	 try {  &#xd;
+	  &#xd;
+	  conn = new javax.naming.InitialContext().lookup(jndiName).getConnection();&#xd;
+	  &#xd;
+	 // var sql = &quot;UPDATE [dbo].[APROVADOR] SET [CD_MATRICULA] = \&quot;&quot; + codigoGrupo + &quot;\&quot; WHERE [NR_DOCUMENTO] = &quot; + codigoCarpeta + &quot;;&quot; ;&#xd;
+	 // var sql2 = &quot;UPDATE [dbo].[NIVEL_APROVACAO] SET [IDI_TIP_APROVAC] = &quot; + approverType + &quot; WHERE [NR_DOCUMENTO] = &quot; + codigoCarpeta + &quot;;&quot;;&#xd;
+	  &#xd;
+	  var sql = &quot;UPDATE [dbo].[APROVADOR] SET [CD_MATRICULA] = ? WHERE [NR_DOCUMENTO] = ?&quot; ;&#xd;
+	  &#xd;
+	  pstmt = conn.prepareStatement(sql);     &#xd;
+	  pstmt.setString(1,codigoGrupo);&#xd;
+	  pstmt.setInt(2,codigoCarpeta);&#xd;
+	  &#xd;
+	  pstmt.executeUpdate();     &#xd;
+	  &#xd;
+	 } catch (ex) {&#xd;
+	  &#xd;
+		 log.error(&quot;actualizarAprobador: &quot; + ex);&#xd;
+		 &#xd;
+	    } finally {&#xd;
+	        if (pstmt != null) { pstmt.close(); }&#xd;
+	        if (conn != null) { conn.close(); }&#xd;
+	    }&#xd;
+&#xd;
+&#xd;
+}&#xd;
+&#xd;
+function validarTrasladoDeLegajo(){&#xd;
+	 &#xd;
+	 if(hAPI.getCardValue(&quot;vacanteACubrirConColaborador&quot;) != &quot;vacanteExterno&quot;){&#xd;
+	  &#xd;
+	  var lugarPago = hAPI.getCardValue(&quot;lugarPago&quot;);&#xd;
+	  var sedeOriginal = hAPI.getCardValue(&quot;sedeOriginal&quot;);&#xd;
+	  &#xd;
+	  if(lugarPago!= sedeOriginal) {&#xd;
+	   &#xd;
+	   var carpeta = ged.findFolder({&#xd;
+	    companyId: getValue(&quot;WKCompany&quot;),&#xd;
+	    parentId: getCodigoDeCarpetaLugarPagoODeGrupoAdmin(getValue(&quot;WKUser&quot;),1),&#xd;
+	    name: hAPI.getCardValue(&quot;legajo&quot;)+&quot; %&quot;,&#xd;
+	   });&#xd;
+	   &#xd;
+	   if(carpeta == null){&#xd;
+	    throw &quot;Por favor mover la carpeta legajo del usuario que debería estar en la carpeta de la sede: &quot; + sedeOriginal + &#xd;
+	    &quot; a la carpeta de la sede de: &quot; + lugarPago + &quot;. En caso de no encontrarse en la sede original. &quot; +&#xd;
+	    &quot;Contactarse con un administrador ya que significa que nunca se creó en primer lugar.&quot;;&#xd;
+	   }&#xd;
+	  }&#xd;
+	  &#xd;
+	 }&#xd;
+	 &#xd;
+}&#xd;
+&#xd;
+function getUserList(codigoGrupo){&#xd;
+&#xd;
+    var userList = new java.util.HashSet(); &#xd;
+    var c1 = DatasetFactory.createConstraint(&apos;colleagueGroupPK.groupId&apos;, codigoGrupo, codigoGrupo, ConstraintType.MUST);          &#xd;
+    var dataset = DatasetFactory.getDataset(&apos;colleagueGroup&apos;, null, [c1], null);&#xd;
+&#xd;
+	for(var i = 0; i &lt; dataset.rowsCount; i++) {         &#xd;
+      var colleagueId = dataset.getValue(i, &apos;colleagueGroupPK.colleagueId&apos;);            &#xd;
+      userList.add(colleagueId);&#xd;
+    }&#xd;
+	&#xd;
+	return new java.util.ArrayList(userList);&#xd;
+	&#xd;
+}&#xd;
+&#xd;
+function getMailList(colleagueId){&#xd;
+&#xd;
+    var mailList = new java.util.HashSet(); &#xd;
+    var c1 = DatasetFactory.createConstraint(&apos;colleaguePK.colleagueId&apos;, colleagueId, colleagueId, ConstraintType.MUST);          &#xd;
+    var dataset = DatasetFactory.getDataset(&apos;colleague&apos;, null, [c1], null);&#xd;
+&#xd;
+	for(var i = 0; i &lt; dataset.rowsCount; i++) {         &#xd;
+      var mail = dataset.getValue(i, &apos;mail&apos;);            &#xd;
+      mailList.add(mail);&#xd;
+    }&#xd;
+	&#xd;
+	return new java.util.ArrayList(mailList);&#xd;
+	&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>afterTaskCreate</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function afterTaskCreate(colleagueId){&#xd;
+&#xd;
+ 	var tareaActual = getValue(&quot;WKNumState&quot;);&#xd;
+    var proximaTarea = getValue(&quot;WKNextState&quot;);&#xd;
+    var nroProceso = getValue(&quot;WKNumProces&quot;);&#xd;
+    var numEmpresa = getValue(&quot;WKCompany&quot;);&#xd;
+    &#xd;
+	var fechaIngresoString = hAPI.getCardValue(&quot;fechaIngreso&quot;);&#xd;
+	var simpleDateFormat = new java.text.SimpleDateFormat(&quot;dd/MM/yyyy&quot;);&#xd;
+	&#xd;
+	if(fechaIngresoString != null){&#xd;
+		var fechaIngreso = simpleDateFormat.parse(fechaIngresoString);&#xd;
+	}	&#xd;
+&#xd;
+    var calendar = java.util.Calendar.getInstance();&#xd;
+&#xd;
+	//Plazo para &quot;Dar de Alta Empleado en AFIP&quot;&#xd;
+	if (tareaActual == 80 &amp;&amp; proximaTarea == 45){&#xd;
+			&#xd;
+		calendar.setTime(fechaIngreso);&#xd;
+		calendar.add(java.util.Calendar.DATE,-3);&#xd;
+		fechaIngreso = calendar.getTime();&#xd;
+	&#xd;
+		hAPI.setDueDate(nroProceso, hAPI.getActualThread(numEmpresa, nroProceso, proximaTarea), colleagueId, fechaIngreso, 28800);&#xd;
+	}&#xd;
+	&#xd;
+	//Plazo para &quot;Completar Informacion en RHPRO&quot;&#xd;
+	if (proximaTarea == 47 || proximaTarea == 105 ){&#xd;
+			&#xd;
+		calendar.setTime(fechaIngreso);&#xd;
+		calendar.add(java.util.Calendar.DATE,-1);&#xd;
+		fechaIngreso = calendar.getTime();&#xd;
+	&#xd;
+		hAPI.setDueDate(nroProceso, hAPI.getActualThread(numEmpresa, nroProceso, proximaTarea), colleagueId, fechaIngreso, 28800);&#xd;
+	}&#xd;
+	&#xd;
+	//Plazo para &quot;Imprimir Documentacion&quot;&#xd;
+	if (tareaActual == 73  &amp;&amp; proximaTarea == 52){&#xd;
+			&#xd;
+		calendar.setTime(fechaIngreso);&#xd;
+		calendar.add(java.util.Calendar.DATE,-1);&#xd;
+		fechaIngreso = calendar.getTime();&#xd;
+	&#xd;
+		hAPI.setDueDate(nroProceso, hAPI.getActualThread(numEmpresa, nroProceso, proximaTarea), colleagueId, fechaIngreso, 28800);&#xd;
+	}&#xd;
+	&#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
+        <eventId>requiereAprobacionPrimerAutorizante</eventId>
+        <processId>RAF06</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function requiereAprobacionPrimerAutorizante(){&#xd;
+	&#xd;
+	var matricula = hAPI.getCardValue(&quot;primerAutorizanteMatricula&quot;);&#xd;
+	&#xd;
+	return matricula != &quot;&quot;;&#xd;
+ &#xd;
+}</eventDescription>
+    </WorkflowProcessEvent>
+  </list>
+  <list/>
+  <list>
+    <SwimLane>
+      <color>FFFF80</color>
+      <height>158</height>
+      <width>2431</width>
+      <positionX>10</positionX>
+      <positionY>880</positionY>
+      <stateName>Área de Sistemas</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>1</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFF80</color>
+      <height>145</height>
+      <width>2431</width>
+      <positionX>10</positionX>
+      <positionY>472</positionY>
+      <stateName>Gerencia de Comp. y Adm. de Personal</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>2</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFF80</color>
+      <height>145</height>
+      <width>2431</width>
+      <positionX>10</positionX>
+      <positionY>184</positionY>
+      <stateName>Área Solicitante</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFDD7</color>
+      <height>145</height>
+      <width>2431</width>
+      <positionX>10</positionX>
+      <positionY>328</positionY>
+      <stateName>Selección de Personal</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFDD7</color>
+      <height>145</height>
+      <width>2431</width>
+      <positionX>10</positionX>
+      <positionY>40</positionY>
+      <stateName>Gerencia de RRHH</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>5</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>FFFDD7</color>
+      <height>264</height>
+      <width>2431</width>
+      <positionX>10</positionX>
+      <positionY>616</positionY>
+      <stateName>Adminitración de Personal</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <sequence>6</sequence>
+      </swimLanePK>
+    </SwimLane>
+  </list>
+  <list>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>940</positionX>
+      <positionY>430</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <componGrafSequence>34</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>Si algún aprobador retorna la solicitud se asigna a selección de personal en esta tarea.</stateName>
+    </ProcessComponGraf>
+    <ProcessComponGraf>
+      <componType>1</componType>
+      <positionX>1260</positionX>
+      <positionY>780</positionY>
+      <processComponGrafPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <componGrafSequence>50</componGrafSequence>
+      </processComponGrafPK>
+      <stateName>En esta tarea el usuario ingresará en el Fuig el número de legajo asignado por RHPRO.</stateName>
+    </ProcessComponGraf>
+  </list>
+  <list>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>35</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>34</initialStateSequence>
+      <finalStateSequence>25</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>51</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>50</initialStateSequence>
+      <finalStateSequence>47</finalStateSequence>
+    </ProcessLinkAssoc>
+    <ProcessLinkAssoc>
+      <processLinkAssocPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <version>1</version>
+        <linkSequence>108</linkSequence>
+      </processLinkAssocPK>
+      <initialStateSequence>50</initialStateSequence>
+      <finalStateSequence>105</finalStateSequence>
+    </ProcessLinkAssoc>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>apellido</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Apellido</fieldDescription>
+      <slotId>1</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>busquedaConfidencial</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Búsqueda Confidencial</fieldDescription>
+      <slotId>2</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>codigoBusqueda</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Código de Búsqueda</fieldDescription>
+      <slotId>3</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>cuil</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>CUIL</fieldDescription>
+      <slotId>4</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>dni</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>DNI</fieldDescription>
+      <slotId>5</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>fechaIngreso</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Fecha Ingreso</fieldDescription>
+      <slotId>6</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>legajo</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Legajo</fieldDescription>
+      <slotId>7</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>nombre</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nombre</fieldDescription>
+      <slotId>8</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>nombrePuestoNuevo</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Nombre Puesto Nuevo</fieldDescription>
+      <slotId>9</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>puesto</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Puesto</fieldDescription>
+      <slotId>10</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>reportaa</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Reporta A</fieldDescription>
+      <slotId>11</slotId>
+    </ProcessFormField>
+    <ProcessFormField>
+      <processFormFieldPK>
+        <companyId>1</companyId>
+        <processId>RAF06</processId>
+        <fieldId>sede</fieldId>
+      </processFormFieldPK>
+      <fieldDescription>Sede</fieldDescription>
+      <slotId>12</slotId>
+    </ProcessFormField>
+  </list>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+  <list/>
+</list>

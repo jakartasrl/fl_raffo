@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Fluig</title>
+    <link href="${SERVER_URL!''}/globalmailsender/resources/global.css" type="text/css" rel="stylesheet" />
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+    
+    <div align="left">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+						<img src="${SERVER_URL!''}/globalmailsender/mailSenderHeader?tenantId=${TENANT_ID!''}">
+					</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+	
+	<div style="margin-left: 25px;">
+		<p>${descripcion!}</p>
+		<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;"><br/></span>
+			<br/>
+			<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+				<thead>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Nro. Solicitud Registro </th>
+						<td><strong>${padre_nroSolicitud!}</strong></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Fecha </th>
+						<td>${padre_fecha!}  ${padre_hora!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Origen</th>
+						<td>${padre_origen!}</td>
+					</tr>
+				</tbody>
+			</table>
+		<br />
+	</div>
+
+	<br />
+	<div style="margin-left: 25px;">
+		<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#7f201c;font-size: 14px;">DATOS DEL CONTACTO<br/></span>
+			<br/>
+			<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+				<thead>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Apellido y Nombre</th>
+						<td><strong>${padre_nombre!}</strong></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Tel&eacute;fono</th>
+						<td>${padre_telefono!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Mail</th>
+						<td>${padre_mail!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Direcci&oacute;n</th>
+						<td>${padre_direccion!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Otro</th>
+						<td>${padre_otro!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Observaciones</th>
+						<td>${padre_observaciones!}</td>
+					</tr>
+				</tbody>
+			</table>
+    <br />
+	</div>
+
+	<br />
+	<div style="margin-left: 25px;">
+		<span style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; color:#7f201c;font-size: 14px;">CONSULTA / OBSERVACI&Oacute;N <br/></span>
+			<br/>
+			<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 710px;box-sizing: border-box;">
+				<thead>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Nro. Solicitud de la Atenci&oacute;n </th>
+						<td><strong>${aten_nroSolicitud!}</strong></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Nro. de Consulta </th>
+						<td>${aten_nroConsulta!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Descripci&oacute;n del Producto</th>
+						<td>${aten_producto!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Principio Activo</th>
+						<td>${aten_activo!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">N&uacute;mero de Lote</th>
+						<td>${aten_nroLote!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Vencimiento</th>
+						<td>${aten_vencimiento!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Tipo</th>
+						<td>${aten_tipo!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Consulta / Observaci&oacute;n</th>
+						<td>${aten_observacion!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Derivaci&oacute;n</th>
+						<td>${aten_derivacion!}</td>
+					</tr>
+					<tr>
+						<th style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 180px;padding: 0.5em;">Llamada Reiterada</th>
+						<td>${aten_rellamada!}</td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+	
+</body>
+</html>

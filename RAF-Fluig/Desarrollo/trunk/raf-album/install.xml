@@ -1,0 +1,12 @@
+<project name="RAFv1.0.0">
+	<ged>
+		<folder name="Portal Intranet">
+			<folder name="Galerías"></folder>
+		</folder>
+	</ged>
+	
+	<datasets>
+		<dataset name="raf-allDocumentsIntoFolderRecursive" file="raf-allDocumentsIntoFolderRecursive.js"></dataset>
+		<dataset name="raf-foldersNotEmpty" file="raf-foldersNotEmpty.js"></dataset>
+	</datasets>
+</project>

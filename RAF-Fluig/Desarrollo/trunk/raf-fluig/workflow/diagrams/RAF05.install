@@ -1,0 +1,38 @@
+1. No olvidar dar permisos de lectura a Todos sobre todos los ficheros, incluso sobre el fichero principal.
+2. El dataset del formulario principal debe llamarse "RAF05-FormularioPrincipal".
+3. Cargar los ficheros de parámetros. Sobre todo el de competencias por nivel. Del resto no tenemos datos.
+4. Cargar los siguientes grupos de usuarios.
+ROL-SOR: Supervisor
+UN2-RRHH: Gerencia de Recursos Humanos
+UN3-RRHH-SELE: Selección de Personal
+UN3-RRHH-COMP: Gerencia de Comp. y Adm. de Personal
+ROL-STE-APM: Solicitantes de Agente de Propaganda Médica
+ROL-STE-APF: Solicitantes de Agente de Propaganda Farmacéutica
+Ojo con los nombres de los datasets:
+RAF05-ProgramasInformatica
+
+Unificar dataset observaciones.
+Ver por que no funciona bien el historial de búsquedas cuando no hay datos.
+
+
+Tareas:
+
+	* Inicio: Atribución por Asociación > Grupo: Supervisor, Jefe, Gerente de Nivel N-1, Gerente de Nivel N-2, Gerente General, Solicitante de Agente de Propaganda Médica, Solicitante de Agente de Propaganda Farmacéutica.
+	* Aprobar Solicitud de Puesto (Gte. RRHH): Atribución por Asociación > Grupo: Gerente Nivel N-1 y Gerencia de Recursos Humanos
+	* Aprobar Solicitud de Puesto (Jefe): Atribuição por Campo de Formulário (jefeMatricula)
+	* Aprobar Solicitud de Puesto (Gte. N-2): Atribuição por Campo de Formulário (gerenteN2Matricula)
+	* Aprobar Solicitud de Puesto (Gte. N-1): Atribuição por Campo de Formulário (gerenteN1Matricula)
+	* Aprobar Solicitud de Puesto (Gte. Gral.): Atribución por Grupo: Gerente General
+	* Seleccionar Solicitante? Atribución por Ejecutor de Actividad > Iniciar Solicitud de Puesto > Última Ejecución
+	* Revisar y Relevar Perfil: RAF05-SeleccionPersonal 
+	* Revisar y Confirmar Perfil: RAF05-SeleccionPersonal
+	* Suspender Solicitud de Puesto: RAF05-SeleccionPersonal
+	* Cancelar Solicitud de Puesto: RAF05-SeleccionPersonal
+	* Realizar Proceso de Selección: RAF05-SeleccionPersonal
+	* Completar Remuneraciones y Beneficios: RAF05-CompYAdmPersonal
+	
+Configurar Permisos de punto de menú
+PAGE > Por Papel
+
+	
+	 

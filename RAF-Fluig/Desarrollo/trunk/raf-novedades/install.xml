@@ -1,0 +1,19 @@
+<project name="RAFv1.0.0">
+	<datasets>
+		<dataset name="raf-allDocumentsIntoFolderRecursive" file="raf-allDocumentsIntoFolderRecursive.js"></dataset>
+		<dataset name="documentType" file="documentType.js"></dataset>
+		<dataset name="raf-novedades" file="raf-novedades.js"></dataset>
+	</datasets>
+
+	<controlPanel>
+		<documentTypes>
+			<documentType code="RSE" description="RSE"></documentType>
+			<documentType code="BusquedasInternas" description="Búsquedas Internas"></documentType>
+			<documentType code="Ingresos" description="Ingresos"></documentType>
+			<documentType code="Felicitaciones" description="Felicitaciones"></documentType>
+			<documentType code="Eventos" description="Eventos"></documentType>
+			<documentType code="Beneficios" description="Beneficios"></documentType>
+			<documentType code="InteresGeneral" description="De interés general"></documentType>
+		</documentTypes>
+	</controlPanel>
+</project>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Seguimiento de Documentaci&oacute;n</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="/arq-ecm-v2/lib/bs/css/bootstrap.css" rel="stylesheet">    
+	<link href="/arq-ecm-v2/lib/bs/css/datepicker3.css" rel="stylesheet">    
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<style>
+		fieldset {
+			margin-top: 20px;
+		}
+		.title {
+			margin-bottom: 15px;
+		}
+		#logo {
+			width: auto;
+		}
+		.monto,.total {
+			text-align: right;
+		}
+		#tableActivos tfoot {
+			background-color: lightgrey;
+		}
+		.deleteRow {
+			display: none;
+		}
+	</style>
+	
+	<script src="/arq-ecm-v2/lib/js/jquery.min.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery-ui.core.min.js"></script>
+    <script src="/arq-ecm-v2/lib/bs/js/bootstrap.js"></script>
+	<script src="/arq-ecm-v2/lib/js/moment-with-langs.min.js"></script>
+	<script src="/arq-ecm-v2/lib/bs/js/bootstrap-datepicker.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/parsley.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/pt-br.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/es.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery.url.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-lib.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-masterdetail.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-zoom.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-datepicker.min.js"></script>
+	
+	<script src="custom.min.js"></script>
+	
+</head>
+
+<body>
+
+<div class="container">
+	<br/>
+	<div class="row title">
+			<div class="col-md-3">
+				<img src="raffo_logo.jpg" class="img-responsive col-md-offset-4" id="logo"/>
+			</div>	
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<h3>Seguimiento de Documentaci&oacute;n</h3> 
+			</div>	  
+		</div>
+
+	<br/>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div id="globalErrors" class=""></div>
+		</div>
+	</div>
+	
+<form class="form-horizontal" id="form" role="form" novalidate="novalidate">
+
+	<input type="hidden" name="__error">	
+	<input type="hidden" name="nroSolicitud">
+	<input type="hidden" name="matricula" id="matricula">
+	<input type="hidden" name="usuarios" id="usuarios">
+	<input type="hidden" name="anexoPrincipal" id="anexoPrincipal">
+	<input type="hidden" name="codigo" id="codigo">
+	<input type="hidden" name="soloConfirmacionLectura" id="soloConfirmacionLectura">
+	<input type="hidden" name="plazoAvanceAutomatico" id="plazoAvanceAutomatico">
+	<input type="hidden" name="codigoGrupo" id="codigoGrupo">				
+	<input type="hidden" name="pool" id="pool">	
+	<input type="hidden" name="solicitante" id="solicitante">
+	<input type="hidden" name="fechaInicioSolicitud" id="fechaInicioSolicitud">
+	<input type="hidden" name="fechaFinSolicitud" id="fechaFinSolicitud">
+	<input type="hidden" name="tarea" id="tarea">	
+	
+	<div class="form-group">
+		<div class="label-field">
+			<label for="asunto" class="col-md-2 control-label">ASUNTO</label>
+			<div class='col-md-8'>
+					<input type="text" class="form-control" name="asunto" id="asunto" placeholder="ASUNTO" data-parsley-required="true">					
+			</div>
+		</div>		
+	</div>
+	<div class="form-group">
+		<div class="label-field">
+			<label for="tipologia" class="col-md-2 control-label">TIPOLOG&Iacute;A</label>
+			<div class='col-md-4'>
+				<input type="text" class="form-control tipologia" name="tipologia" id="tipologia" data-parsley-required="true" readonly>
+			</div>
+		</div>		
+		<div class="label-field">
+			<label for="estado" class="col-md-1 control-label">ESTADO</label>
+			<div class='col-md-3'>
+				<input type="text" class="form-control estado" name="estado" id="estado" data-parsley-required="true" readonly>	
+			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="label-field">
+			<div class='col-md-1 col-md-offset-2'>
+				<input type="checkbox" style="height:11px;margin-top: 10px;" class="form-control" name="requiereConfirmacion" id="requiereConfirmacion" value="true">					
+			</div>
+			<label for="requiereConfirmacion" class="col-md-4 control-label" style="text-align: left; font-weight: normal; padding-left: 0;">S&oacute;lo con confirmaci&oacute;n de lectura</label>
+		</div>		
+	</div>
+</form>
+	  
+</div>
+
+  </body>
+</html>

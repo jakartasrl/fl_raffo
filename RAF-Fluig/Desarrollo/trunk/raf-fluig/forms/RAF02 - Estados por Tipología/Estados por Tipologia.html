@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Estados por Tipolog&iacute;a</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+ <link href="/arq-ecm-v2/lib/bs/css/bootstrap.css" rel="stylesheet">    
+	<link href="/arq-ecm-v2/lib/bs/css/datepicker3.css" rel="stylesheet">    
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<style>
+		fieldset {
+			margin-top: 20px;
+		}
+		.title {
+			margin-bottom: 15px;
+		}
+		#logo {
+			width: auto;
+		}
+		.monto,.total {
+			text-align: right;
+		}
+		#tableActivos tfoot {
+			background-color: lightgrey;
+		}
+		.deleteRow {
+			display: none;
+		}
+	</style>
+	
+	<script src="/arq-ecm-v2/lib/js/jquery.min.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery-ui.core.min.js"></script>
+    <script src="/arq-ecm-v2/lib/bs/js/bootstrap.js"></script>
+	<script src="/arq-ecm-v2/lib/js/moment-with-langs.min.js"></script>
+	<script src="/arq-ecm-v2/lib/bs/js/bootstrap-datepicker.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/parsley.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/pt-br.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/es.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery.url.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-lib.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-masterdetail.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-zoom.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-datepicker.min.js"></script>
+	
+	<script src="custom.min.js"></script>
+	
+</head>
+
+<body>
+
+	<div class="container">
+		<br/>
+		<div class="row title">
+			<div class="col-md-3">
+				<img src="raffo_logo.jpg" class="img-responsive col-md-offset-4" id="logo"/>
+			</div>	
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<h3>Estados por Tipolog&iacute;a</h3> 
+			</div>	  
+		</div>
+		
+		<br/>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div id="globalErrors" class=""></div>
+			</div>
+		</div>
+		
+		<form class="form-horizontal" id="form" role="form" novalidate="novalidate">
+			<input type="hidden" name="__error">
+
+			<div class="form-group">
+				<div class="label-field">
+					<label for="codigoTipologia" class="col-md-2 control-label">TIPOLOG&Iacute;A</label>
+					<div class='col-md-2'>
+						<div class="input-group">
+							<input type="text" class="form-control" name="codigoTipologia" id="codigoTipologia" placeholder="C&Oacute;DIGO" data-parsley-required="true" readonly>	
+						</div>
+					</div>
+					<div class="col-md-4">
+						<input type="text" class="form-control" name="nombreTipologia" id="nombreTipologia" placeholder="DESCRIPCI&Oacute;N" data-parsley-required="true" readonly>		
+						<input type="hidden" name="soloConfirmacionLectura" id="soloConfirmacionLectura">	
+						<input type="hidden" name="plazoAvanceAutomatico" id="plazoAvanceAutomatico">	
+						<input type="hidden" name="codigoGrupo" id="codigoGrupo">							
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">	
+				<label for="nombreEstado" class="col-md-2 control-label">ESTADO</label>
+				<div class="col-md-6">
+				  <input type="text" class="form-control" name="nombreEstado" id="nombreEstado" data-parsley-required="true">
+				</div>		
+			</div>		
+
+		</form>
+		  
+	</div>  
+
+  </body>
+</html>

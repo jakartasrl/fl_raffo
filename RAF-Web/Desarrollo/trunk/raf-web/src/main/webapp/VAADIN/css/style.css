@@ -1,0 +1,517 @@
+div#all {
+	margin: -15px auto 0 auto;
+	width: 100%;
+	height: 100%;
+	position: fixed;	
+}
+
+div#menu {
+	display: block;
+	width: 100%;
+}
+
+div#page {
+	width: 100%;
+	clear: both;
+	height: inherit;
+	overflow-y: auto;
+	height: calc(100% - 128px);
+	padding-top:10px;
+}
+
+div#header {
+	background: url("../img/logo_270x80.png") no-repeat scroll 0 0;
+	clear: both;
+	height: 80px;
+	margin: 15px auto auto;
+	width: 100%;
+	z-index: 1;
+}
+
+div#logout a {
+    display: block;
+    background:url(../img/close-white-32x32.png) no-repeat;
+    width: 32px;
+    height: 32px;
+}
+
+div#logout a:hover {
+   background:url(../img/close-black-32x32.png) no-repeat;
+}
+
+div#user {
+	float: right;
+	margin: 30px 5px 0 0;
+}
+
+div#footer {
+	font-size: 11px;
+	height: 20px;
+	padding-top: 4px;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	width: inherit;
+	clear: both;
+	box-shadow: 0 18px 18px -21px rgba(0, 0, 0, 0.6) inset, 0 -10px 18px -18px rgba(0, 0, 0, 0.6) inset;
+	z-index: 1;
+	color: #5F5F5F;
+}
+
+div#footerLogin {
+	background-color: white;
+	color: grey;
+	font-size: 13px;
+	height: 20px;
+	padding-top: 80px;
+	text-align: center;
+	bottom: 0px;
+	width: inherit;
+	clear: both;
+}
+
+div#maintab {
+	margin: auto auto auto auto;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: rgb(245, 245, 245);
+	font-family: sans;
+}
+
+a:link {
+	color: #5f5f5f;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #5f5f5f;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #919191;
+	text-decoration: none;
+}
+
+body#login {
+	text-align: center;
+	background-color: white;
+	font-family: arial;
+}
+
+div#login {
+	background-color: white;
+	width: 390px;
+	height: 250px;
+	margin: 150px auto auto auto;
+}
+
+.loginMsgError {
+	color: #53649a;
+	width: 100%;
+	height: 15px;
+	font-size: 12px;
+}
+
+.v-verticallayout {
+	background-color: #f5f5f5;
+}
+
+.v-form {
+	background-color: #f5f5f5;
+}
+
+.v-form fieldset {
+	margin: 6px;
+}
+
+.v-filterselect.v-readonly {
+	background-color: #f5f5f5;
+	border-color: #e0e0e0;
+	border-style: solid;
+	border-width: 1px;
+	color: #8f8f8f;
+}
+
+.v-filterselect.v-readonly,.v-filterselect.v-readonly .v-filterselect-input
+	{
+	color: #8f8f8f;
+}
+
+.v-datefield.v-readonly input.v-datefield-textfield {
+	background-color: #f5f5f5;
+	color: #8f8f8f;
+}
+
+#v-textfield v-readonly v-textfield-readonly {
+	background-color: blue;
+	border-color: #e0e0e0;
+	border-style: solid;
+	border-width: 1px;
+	color: red;
+}
+
+.v-app input.v-textfield,.v-window input.v-textfield,.v-app textarea.v-textarea,.v-window textarea.v-textarea
+	{
+	border-color: #e0e0e0;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.v-app,.v-window,.v-popupview-popup,.v-tooltip,.v-app input,.v-app select,.v-app button,.v-app textarea,.v-window input,.v-window select,.v-window button,.v-window textarea,.v-popupview-popup input,.v-popupview-popup select,.v-popupview-popup button,.v-popupview-popup textarea,.v-filterselect-suggestpopup,.v-datefield-popup,.v-contextmenu,.v-Notification,.v-menubar-submenu,.v-drag-element
+	{
+	font-family: Verdana, Helvetica, Tahoma, sans-serif;
+	font-size: 12px;
+}
+
+.v-gridlayout-margin-left {
+	padding-left: 24px;
+	padding: 6px;
+}
+
+.collapsed-legend {
+	background: url("../VAADIN/themes/infogaba/icons/arrow_collapsed.png")
+		no-repeat;
+	padding-left: 15px;
+}
+
+.expanded-legend {
+	background: url("tree/img/arrows.png") no-repeat scroll 6px -14px
+		transparent no-repeat;
+	padding-left: 15px;
+}
+
+.v-caption-application-header-label {
+	font-weight: bold;
+}
+
+.application-header {
+	display: inline;
+}
+
+.dialog-box-embedded {
+	margin-right: 10px;
+}
+
+div#user {
+	float: right;
+	margin: 30px 5px 0 0;
+}
+
+.background-white-layout {
+	background-color: white;
+}
+
+.cell-negative {
+	color: red;
+}
+
+.v-verticallayout-EtapaForm {
+	background-color: #ffffff;
+}
+
+.v-table .v-table-cell-content-red {
+	color: #FF0000;
+	background-color: #FFBABA;
+}
+
+.v-table .v-table-cell-content-blue {
+	color: #00529B;
+	background-color: #BDE5F8;
+}
+
+.v-table .v-table-cell-content-green {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+
+.v-table .v-table-cell-content-orange {
+	color: #FFA500;
+	background-color: #FEEFB3;
+}
+
+.v-table .v-selected .v-table-cell-content-red {
+	background-color: #197de1;
+    background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
+    background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+    background-origin: border-box;
+    color: #ecf2f8;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.v-table .v-selected .v-table-cell-content-blue {
+	background-color: #197de1;
+    background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
+    background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+    background-origin: border-box;
+    color: #ecf2f8;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.v-table .v-selected .v-table-cell-content-green {
+	background-color: #197de1;
+    background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
+    background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+    background-origin: border-box;
+    color: #ecf2f8;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.v-table .v-selected .v-table-cell-content-orange {
+	background-color: #197de1;
+    background-image: -webkit-linear-gradient(top, #1b87e3 2%, #166ed5 98%);
+    background-image: linear-gradient(to bottom,#1b87e3 2%, #166ed5 98%);
+    background-origin: border-box;
+    color: #ecf2f8;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* .v-table .v-selected .v-table-cell-content-blue {
+	color: lightblue;
+} */
+
+.v-link-GraphicalMenu img {
+	vertical-align: middle;
+	border: none;
+	padding: 34px 10px 10px 36px;
+	float: left;
+}
+
+.v-link-GraphicalMenu a:link span {
+	background: url("../img/screenshot-frame.png") no-repeat scroll 4px 2px
+		transparent;
+	color: #222222;
+	cursor: pointer;
+	display: block;
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	height: 30px;
+	line-height: normal;
+	padding-top: 84px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	white-space: normal;
+	width: 87px;
+	margin: 30px 88px 50px 30px;
+}
+
+.v-link-GraphicalMenu a:visited span {
+	color: #5C7485;
+}
+
+.v-link-GraphicalMenu a:hover span {
+	color: #2483C4;
+	background: url("../img/screenshot-frame-hover.png") no-repeat scroll 0
+		1px transparent;
+}
+
+.CarEcommerceMainLayout {
+	display: inline;
+}
+
+input#inputLogin {
+	background-clip: padding-box;
+	background-image: -moz-linear-gradient(center bottom, #FFFFFF 0%, #F2F2F2 100%);
+	border: 1px solid #08779c;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0 1px 0 #D9D9D9 inset;
+	color: #444444;
+	font-size: 14px;
+	font-family: sans-serif;
+	margin-top: 7px;
+	outline: medium none;
+	padding-left: 20px;
+	transition: all 0.1s ease-in-out 0s;
+	width: 220px;
+	height: 40px;
+}
+
+input#submitLogin {
+	background-clip: padding-box;
+	background-color: #5466DA;
+	background-image: -moz-linear-gradient(center bottom, #858689 0%, #B4B6B9 100%);
+	border: 1px solid #858689;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0 1px 0 #CACBCC inset;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 7px;
+	outline: medium none;
+	text-shadow: 0 -1px 0 #5B6DDC;
+	transition: all 0.1s ease-in-out 0s;
+	width: 240px;
+	height: 50px;
+	background-image: -webkit-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: -moz-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: -o-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: -ms-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	-webkit-box-shadow: inset 0px 1px 0px #CACBCC;
+	cursor: pointer;
+}
+
+input#submitLogin:hover {
+	background-clip: padding-box;
+	background-color: #5466DA;
+	background-image: -moz-linear-gradient(center bottom, #C9CACE 0%, #B4B6B9 100%);
+	border: 1px solid #B4B6B9;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 0 1px 0 #B4B6B9 inset;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 7px;
+	outline: medium none;
+	text-shadow: 0 -1px 0 #5B6DDC;
+	transition: all 0.1s ease-in-out 0s;
+	width: 240px;
+	height: 50px;
+	background-image: -webkit-linear-gradient(bottom, #C9CACE 0%, #B4B6B9 100%);
+	background-image: -moz-linear-gradient(bottom, #C9CACE 0%, #B4B6B9 100%);
+	background-image: -o-linear-gradient(bottom, #C9CACE 0%, #B4B6B9 100%);
+	background-image: -ms-linear-gradient(bottom, #C9CACE 0%, #B4B6B9 100%);
+	background-image: linear-gradient(bottom, #C9CACE 0%, #B4B6B9 100%);
+	-webkit-box-shadow: inset 0px 1px 0px #aab9f4;
+}
+
+input#submitLogin:active {
+	background-color: #5466DA;
+	background-image: -webkit-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: -moz-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: -o-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: -ms-linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	background-image: linear-gradient(bottom, #858689 0%, #B4B6B9 100%);
+	-webkit-box-shadow: inset 0px 1px 0px #CACBCC;
+	box-shadow: inset 0px 1px 0px #CACBCC;
+}
+
+.background-white {
+	background-color: white;
+}
+
+.v-window-contents>div {
+	background-color: #f5f5f5;
+}
+
+.v-customlayout-CarEcommerceMainWindow{
+	margin: 0px !important;	
+}
+
+.v-panel-UserPicturePanel{
+	padding-left: 39px !important;
+    padding-right: 30px !important;
+    padding-top: 15px !important;
+}
+
+.v-panel-content-UserPicturePanel {
+	padding: 0px;
+}
+.v-panel-content-UserPicturePanel div{
+ 	margin: 0px !important; 	 
+ 	overflow: hidden !important;
+ 	width: 100px !important;
+ 	height: 100px !important;	
+}
+ 
+.v-csslayout-UserPicureUploadField{
+	height: 45px;	
+}
+
+.v-panel-content-UserPicturePanel img{
+ 	width: 100px !important;
+ 	height: 100px !important;
+ 	padding: 0px !important;	
+}
+
+.v-csslayout-UserPicureUploadField .UserUploadFieldLabel{
+	display: block !important;	
+	color: red;
+	margin: 3px;
+}
+
+.v-button-UserUploadDeleteButtom{
+  	float: right !important;
+    margin-right: 65px !important;
+}
+
+.v-caption-ImportComponent{
+	text-align: left;
+    width: 50px;		
+}
+
+.v-upload-ImportComponent input{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 3px;
+    margin-right: 330px;
+    padding: 0;
+    width: 400px;
+}
+
+.v-caption-PasswordField{
+	width: 100px;
+}
+
+.v-textfield-readonly{
+	background-color: #f5f5f5;
+	border-color: #e0e0e0;
+	border-style: solid;
+	border-width: 1px;
+	color: #8f8f8f;
+}
+
+.large-text-cell {
+	text-overflow: ellipsis;
+	overflow: hidden;
+ 	white-space: nowrap !important;
+}
+
+/* Small size */
+.myResponsiveField[width-range~="0-300px"] {
+    background-color: orange;
+    font-size: 16pt;
+}
+
+/* Medium size */
+.myResponsiveField[width-range~="301px-600px"] {
+    background-color: azure;
+    font-size: 24pt;
+}
+
+/* Anything bigger */
+.myResponsiveField[width-range~="601px-"] {
+    background-color: palegreen;
+    font-size: 36pt;
+}
+
+.valo.v-app, .valo.v-app-loading {
+  font: 300 12px/1.55 "Open Sans",sans-serif  !important;;
+}
+
+body{
+	font-size: 11px !important;
+}
+
+.valo .v-caption{
+	font-size: 12px !important;
+}
+
+/* Solicitud Disenio*/
+.linkLayout {
+	background-color: transparent;
+}
+.linkLayout .v-label {
+	text-align: center;
+} 
+.linkLayout .v-button {
+	height: 25px !important;
+} 
+

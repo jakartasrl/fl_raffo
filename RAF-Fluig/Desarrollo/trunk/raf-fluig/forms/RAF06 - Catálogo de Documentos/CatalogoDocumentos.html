@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<style>
+	</style>
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>Cat&aacute;logo de Documentos</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+
+		<div class="row">
+			<div class="col-md-10 col-md-offset-2">
+				<div id="globalErrors" class=""></div>
+			</div>
+		</div>
+		
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="codigo" class="col-md-3 control-label">C&oacute;digo</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="codigo" id="codigo" data-parsley-required="true">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nombre" class="col-md-3 control-label">Nombre</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="nombre" id="nombre" data-parsley-required="true">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="descripcion" class="col-md-3 control-label">Descripci&oacute;n</label>
+					<div class="col-md-5">
+						<textarea rows="8" class="form-control height-text" name="descripcion" id="descripcion" ></textarea>									
+					</div>		
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="label-field">
+					<label for="documentoEstandar" class="col-md-3 control-label">Documento Est&aacute;ndar</label>
+					<div class="col-md-2">
+						<select class="form-control" name="documentoEstandar" id="documentoEstandar">
+							<option value="SI">Si</option>
+							<option value="NO">No</option>
+						</select>									
+					</div>	
+				</div>
+			</div>
+		</form>
+
+		<br>
+	</div> 
+</div> 
+</body>
+</html>

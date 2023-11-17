@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.arquimeda.raf.fluig</groupId>
+	<artifactId>raf-customresources-web</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
+	<name>raf-customresources-web</name>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>com.arquimeda.maven</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>1.2</version>
+	</parent>
+
+	<properties>
+		<buildTime>${maven.build.timestamp}</buildTime>
+		<!-- Vaadin 7 Properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<vaadin.version>7.3.1</vaadin.version>
+		<vaadin-cdi.version>1.0.3</vaadin-cdi.version>
+		<vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:svn://192.168.0.5:43467/svn/arquimeda/Proyectos/RAFFO/RAF-Fluig/Desarrollo/trunk/raf-customresources-web</connection>
+		<developerConnection>scm:svn:svn://192.168.0.5:43467/svn/arquimeda/Proyectos/RAFFO/RAF-Fluig/Desarrollo/trunk/raf-customresources-web</developerConnection>
+	  <url>scm:svn:svn://192.168.0.5:43467/svn/arquimeda/Proyectos/ARQ-Parent Pom/Desarrollo/tags/parent-pom-1.2/raf-customresources-web</url>
+  </scm>
+
+	<dependencies>
+	
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<!-- As we are doing "inplace" GWT compilation, ensure the widgetset -->
+			<!-- directory is cleaned properly <plugin> <artifactId>maven-clean-plugin</artifactId> 
+				<version>2.4.1</version> <configuration> <filesets> <fileset> <directory>src/main/webapp/VAADIN/widgetsets</directory> 
+				</fileset> </filesets> </configuration> </plugin> -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+			</plugin>
+			<!-- Plugin para obtener el buildNumber del SCM (svn) -->
+			<!-- <plugin> -->
+			<!-- <groupId>org.codehaus.mojo</groupId> -->
+			<!-- <artifactId>buildnumber-maven-plugin</artifactId> -->
+			<!-- <version>1.0-beta-4</version> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <phase>validate</phase> -->
+			<!-- <goals> -->
+			<!-- <goal>create</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- <configuration> -->
+			<!-- <doCheck>false</doCheck> -->
+			<!-- <doUpdate>true</doUpdate> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
+			<!-- Agrego el buildNumber al Manifest del war -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+						</manifest>
+						<manifestEntries>
+							<Implementation-Build>${buildNumber}</Implementation-Build>
+							<BuildTime>${maven.build.timestamp}</BuildTime>
+						</manifestEntries>
+					</archive>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+					<webResources>
+						<resource>
+							<filtering>true</filtering>
+							<directory>src/main/webapp</directory>
+							<includes>
+								<include>**/About.html</include>
+							</includes>
+						</resource>
+					</webResources>
+				</configuration>
+				<executions>
+					<execution>
+						<!-- "desactivo" el package-dev execution del default build -->
+						<id>package-dev</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Plugin para obtener el buildNumber del SCM (svn) -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<doCheck>false</doCheck>
+					<doUpdate>false</doUpdate>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.glassfish.maven.plugin</groupId>
+				<artifactId>maven-glassfish-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<glassfishDirectory>${glassfish-home}</glassfishDirectory>
+					<user>admin</user>
+					<passwordFile>${glassfish-home}/domains/${project.artifactId}/config/domain-passwords</passwordFile>
+					<!-- <adminPassword>admin</adminPassword> -->
+					<debug>true</debug>
+					<echo>true</echo>
+					<domain>
+						<name>${project.artifactId}</name>
+						<adminPort>4848</adminPort>
+						<httpPort>8080</httpPort>
+						<httpsPort>8443</httpsPort>
+						<resourceDescriptor>src/main/setup/glassfish_resources.xml</resourceDescriptor>
+					</domain>
+					<components>
+						<component>
+							<name>${project.artifactId}</name>
+							<artifact>${project.build.directory}/${project.build.finalName}.war</artifact>
+						</component>
+					</components>
+				</configuration>
+			</plugin>
+			<plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.1.0.Alpha6</version>
+                <configuration>
+                	<force>true</force>
+               		<port>9999</port>
+               		<hostname>localhost</hostname>
+              		<username>admin</username>
+              		<password>admin@123</password>
+                </configuration>
+            </plugin>			
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.vaadin</groupId>
+										<artifactId>vaadin-maven-plugin</artifactId>
+										<versionRange>[7.1.12,)</versionRange>
+										<goals>
+											<goal>resources</goal>
+											<goal>update-widgetset</goal>
+											<goal>compile</goal>
+											<goal>update-theme</goal>
+											<goal>compile-theme</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>**/*.xml</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>repository.jboss.org</id>
+			<name>JBoss Repository</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>codehaus-snapshots</id>
+			<url>http://nexus.codehaus.org/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>

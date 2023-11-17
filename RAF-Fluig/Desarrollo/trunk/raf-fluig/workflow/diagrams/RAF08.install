@@ -1,0 +1,98 @@
+Grupos:
+RAF08-APM	Agentes de Propaganda Médica
+RAF08-GTE-AREA-*	Gerente de Área
+RAF08-GTE-DIST-*	Gerente de Distrito
+RAF08-ASIST-DIST-*	Asistente de Distrito
+RAF08-GTE-PROMO-*	Gerente de Promoción
+RAF08-GTOR-PROCESO	Gestor del Proceso de Inversiones Comercial: agregar SYS08 para mover solicitudes de IC al aprobar CA.
+RAF08-ADM	Administrador del Proceso
+RAF09-AUDITORIA: Usuarios del Auditoría Interna
+RAF09-GTOR-PROCESO	Gestor del Proceso de Carta Acuerdo
+RAF08-MARKETING	Gerentes de Distrito y APMs habilitados para ABM de Congresos.
+
+
+Mecanismos de atribución custom:
+RAF08-Solicitante: Permite determinar si en que inicia la solicitud es APM o Gte de Distrito. En tarea #4.
+RAF08-GerenteDistrito: En tarea #7, #53 y #63.
+RAF08-GerenteArea: En tarea #9.
+RAF08-GerentePromocion: En tarea #19.
+RAF08-AsistenteDistrito: En tarea #41.
+La tarea #12 es por campo de formulario: matriculaSolicitante
+
+Datasets custom:
+Inversiones Comerciales 
+1.	Código: 	 RAF08-APM
+	Descripción: RAF08-APM
+2.	Código: 	 RAF08-monedas
+	Descripción: RAF08-monedas
+3.  Código: RAF08-Congresos
+	Descripción: RAF08-Congresos
+4.  Código: RAF08-Medicos
+	Descripción: RAF08-Medicos
+5.  Código: RAF08-ProcesoBackgroundFinalizacionSolicitudesPorBajaMedico
+	Descripción: RAF08-ProcesoBackgroundFinalizacionSolicitudesPorBajaMedico
+	Es utilizado para llamar a este dataset se debe configurar el programador de tareas 
+ 	de Fluig > Sinfronizacion de dataset para que ejecute en background. Luego buscarlo desde Fluig > Datasets > Setear Sincronización Si
+6. Código:		 RAF08-Adjuntos
+   Descripción:  RAF08-Adjuntos
+
+Exportación de Ficheros:
+1.	Código: 	 RAF08-Region
+	Descripción: RAF08-Region
+	Dataset: 	 RAF08-Region
+2.	Código: 	 RAF08-Distrito
+	Descripción: RAF08-Distrito
+	Dataset: 	 RAF08-Distrito
+3.	Código: 	 RAF08-AgentePropagandaMedica
+	Descripción: RAF08-AgentePropagandaMedica
+	Dataset: 	 RAF08-AgentePropagandaMedica
+4.	Código: 	 RAF08-FormaPago
+	Descripción: RAF08-FormaPago	
+	Dataset: 	 RAF08-FormaPago
+5.	Código: 	 RAF08-Formulario Principal
+	Descripción: RAF08-Formulario Principal	
+	Dataset: 	 RAF08-Formulario Principal
+	Descriptor:  apellido, nombre, tipo inversion
+	
+Ambos formularios:	Campo descriptor: Apellido
+	
+Exportación de Templates:
+Código: RAF08-Rechazada
+Código: RAF08-Medicos
+Exportar: Se deben subir desde el fuig los templates.
+
+6. ECMFolderService verificar a que ip apunta el servicio de creación de carpetas del GED.
+
+7. Reporte:
+Puede ser visualizado por
+RAF08-ADM	Administrador del Proceso
+RAF08-GTE-AREA-*	Gerente de Área
+RAF08-GTE-DIST-*	Gerente de Distrito
+RAF08-ASIST-DIST-*	Asistente de Distrito
+RAF08-GTE-PROMO-*	Gerente de Promoción
+RAF08-GTOR-PROCESO
+
+8. Mis Páginas
+La página del alta de congresos debe tener el Identificador único RAF08-Congreso porque sino falla cuando se da de alta desde el formulario un nuevo evento.
+Título de la página: Congresos
+Descripción: Alta de Congresos
+Identificador único: RAF08-Congreso
+Página raíz: Inversiones Comerciales y Carta..
+Permisos:
+	user: Visualizar página > Este grupo se sacó porque todos podian visualizar las páginas
+	procesobpm: Alterar y Eliminar página
+	RAF08-ADM: Visualizar página
+	RAF08-APM: Visualizar página
+	RAF08-MARKETING: Visualizar página
+	RAF08-GTE-DIST-*: Visualizar página
+Widget > Dirección WEb
+2do Slot:
+	Título: Alta de Congreso
+	URL: /raf-inversioncomercialadmin-web/congreso
+	Altura: 800
+
+9. Scripts
+alters 2.2.0.sql
+inserts 2.2.0.sql
+
+		

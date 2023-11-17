@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<script type="text/javascript" src="custom.js"></script>
+
+	<style type="text/css">
+		textarea {
+			resize: vertical;
+		}
+		fieldset {
+			padding-top: 20px !important;
+		}
+		legend{
+			border-bottom: 1px solid #bbb !important;
+			margin-bottom: 25px !important;
+		}	
+		
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #7F201C !important;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 5px !important;
+			margin-top: 40px !important;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		
+		.table-responsive{
+			overflow: visible !important;
+		}
+		
+		table td{
+			padding: 15px 10px !important;
+		}
+
+		table td .form-group:last-child {
+			margin-bottom: 0;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+	
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-4">
+				<h3>Petitorio y Carta Acuerdo</h3> 
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">
+			<input type="hidden" id="__error" name="__error">	
+			
+			<input type="hidden" id="nroSolicitud" name="nroSolicitud">
+			<input type="hidden" id="fechaSolicitud" name="fechaSolicitud">
+
+			<input type="hidden" id="esGteDistrito" name="esGteDistrito">
+				
+			<input type="hidden" id="carpetaAdjuntosId" name="carpetaAdjuntosId">
+			<input type="hidden" id="tarea" name="tarea">
+			
+			<fieldset>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="solicitante" class="col-md-3 control-label">Solicitante</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="solicitante" id="solicitante" readonly>	
+							<input type="hidden" id="matriculaSolicitante" name="matriculaSolicitante">
+							<input type="hidden" id="mailSolicitante" name="mailSolicitante"> 								
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="apm" class="col-md-3 control-label">APM</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="nombreAPM" name="nombreAPM" readonly> 
+							<input type="hidden" id="matriculaAPM" name="matriculaAPM"> 
+ 						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="lineaRegion" class="col-md-3 control-label">L&iacute;nea o Regi&oacute;n</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" id="lineaRegion" name="lineaRegion" readonly>
+							<input type="hidden" id="lineaRegionCodigo" name="lineaRegionCodigo"> 
+							<input type="hidden" id="codGrupoSolicitante" name="codGrupoSolicitante">
+							<input type="hidden" id="codGrupoAsistDistrito" name="codGrupoAsistDistrito"> 
+							<input type="hidden" id="area" name="area">
+							<input type="hidden" id="areaCodigo" name="areaCodigo">
+							<input type="hidden" id="codGrupoGteArea" name="codGrupoGteArea"> 
+							<input type="hidden" id="codGrupoGtePromocion" name="codGrupoGtePromocion">
+							<input type="hidden" id="codGrupoGteMKT" name="codGrupoGteMKT">
+							<input type="hidden" id="grupoGteMKT" name="grupoGteMKT">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="fecha" class="col-md-3 control-label">Fecha</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="fecha" id="fecha" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>		
+				<div class="form-group">
+					<div class="label-field">
+						<label for="apellido" class="col-md-3 control-label">Apellido del M&eacute;dico</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="apellido" id="apellido" data-parsley-required="true">									
+						</div>
+						<div>							
+							<p>(Como figura en el DNI)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="nombre" class="col-md-3 control-label">Nombre del M&eacute;dico</label>
+						<div class="col-md-5">
+							<input type="text" class="form-control" name="nombre" id="nombre" data-parsley-required="true">									
+						</div>
+						<div>							
+							<p>(Como figura en el DNI)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="label-field">
+						<label for="tipoInversion" class="col-md-3 control-label">Tipo de Inversi&oacute;n</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control tipoInversion" name="tipoInversion" id="tipoInversion" data-parsley-required="true">
+							<input type="hidden" class="form-control" name="tipoInversionCodigo" id="tipoInversionCodigo">									
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-11 col-md-offset-1 label-field">
+						<div class="col-md-12">
+							<label for="detalleInversion" class="col-md-2 control-label">Detalle de la Inversi&oacute;n/Observaci&oacute;n</label>
+							<div class="col-md-8">
+								<textarea rows="8" class="form-control detalleInversion" name="detalleInversion" id="detalleInversion" placeholder="Detallar..." data-parsley-maxlength="4000" data-parsley-required="true"></textarea>									
+							</div>
+						</div>
+					</div>
+				</div>	
+				<div class="form-group">
+					<div class="label-field">
+						<label for="mesInversion" class="col-md-3 control-label">Mes de la Inversi&oacute;n</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control" name="mesInversion" id="mesInversion" data-parsley-required="true">									
+						</div>
+					</div>
+				</div>	
+				<div class="form-group">
+					<div class="label-field">
+						<label for="tipoProducto" class="col-md-3 control-label">Tipo de Producto</label>
+						<div class="col-md-2">
+							<input type="text" class="form-control tipoProducto" name="tipoProducto" id="tipoProducto" data-parsley-required="true">
+							<input type="hidden" class="form-control" name="tipoProductoCodigo" id="tipoProductoCodigo">
+							<input type="hidden" class="form-control" name="grupoDerivacion" id="grupoDerivacion">
+							<input type="hidden" class="form-control" name="codGrupoDerivacion" id="codGrupoDerivacion">									
+						</div>
+					</div>
+				</div>
+				<br>
+				
+				<fieldset class="motivoRechazo" style="display:none;">	
+					<br>
+					<legend>Motivo de Rechazo</legend>
+					<br>
+
+					<div class="form-group">
+						<div class="col-md-10 col-md-offset-1 label-field">
+							<div class="col-md-12">
+								<label for="motivoRechazo" class="col-md-2 control-label">Motivo de Rechazo</label>
+								<div class="col-md-8">
+									<textarea rows="8" class="form-control motivoRechazo" name="motivoRechazo" id="motivoRechazo" placeholder="Detallar motivo" data-parsley-maxlength="4000"></textarea>									
+								</div>
+							</div>
+						</div>
+					</div>	
+				</fieldset>
+			</fieldset>		
+						
+		</form>
+		<br>
+	</div> 
+</div>
+</body>
+</html>

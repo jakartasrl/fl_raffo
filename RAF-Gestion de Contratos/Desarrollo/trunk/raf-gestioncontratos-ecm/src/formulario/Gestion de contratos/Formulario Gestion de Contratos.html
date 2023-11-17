@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gestión de Contratos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<link href="/arq-ecm-v2/lib/bs/css/bootstrap.css" rel="stylesheet">    
+	<link href="/arq-ecm-v2/lib/bs/css/datepicker3.css" rel="stylesheet">    
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<style>
+		fieldset {
+			margin-top: 20px;
+		}
+		.title {
+			margin-bottom: 15px;
+		}
+		#logo {
+			width: auto;
+		}
+		.monto,.total {
+			text-align: right;
+		}
+		#tableActivos tfoot {
+			background-color: lightgrey;
+		}
+		.deleteRow {
+			display: none;
+		}
+	</style>
+	
+	<script src="/arq-ecm-v2/lib/js/jquery.min.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery-ui.core.min.js"></script>
+    <script src="/arq-ecm-v2/lib/bs/js/bootstrap.js"></script>
+	<script src="/arq-ecm-v2/lib/js/moment-with-langs.min.js"></script>
+	<script src="/arq-ecm-v2/lib/bs/js/bootstrap-datepicker.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/parsley.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/pt-br.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/es.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery.url.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-lib.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-masterdetail.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-zoom.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-datepicker.min.js"></script>
+	<script src="../ecm_datasets.js"></script>
+	
+	<script src="jquery.number.js"></script>	
+	<script src="custom.min.js"></script>
+
+	<style>
+		.light-grey-brackground {
+			background-color: #FAFAFA !important;		
+		}
+		
+		.btn-primary , .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+			background-color: #7f201c;
+			border-color: #7f201c;
+			color: #fff;
+		}
+		
+	    /* fieldset*/
+		.bs-box {
+			border-color: #e5e5e5 #eee #eee;
+			border-style: solid;
+			border-width: 1px 0;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05) inset;
+			margin: 0 -15px 15px;
+			padding: 45px 15px 15px;
+			position: relative;
+		}
+		.bs-box:after {
+			color: #959595;
+			content: "";
+			font-size: 12px;
+			font-weight: 700;
+			left: 15px;
+			letter-spacing: 1px;
+			position: absolute;
+			text-transform: uppercase;
+			top: 15px;
+		}
+		.bs-box + .highlight {
+			border-radius: 0;
+			border-width: 0 0 1px;
+			margin: -15px -15px 15px;
+		}
+		@media (min-width: 768px) {
+			.bs-box {
+				background-color: #fff;
+				border-color: #ddd;
+				border-radius: 4px 4px 0 0;
+				border-width: 1px;
+				box-shadow: none;
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.bs-box + .highlight {
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+				border-width: 1px;
+				margin-left: 0;
+				margin-right: 0;
+				margin-top: -16px;
+			}
+		}
+		.bs-box .container {
+			width: auto;
+		}
+		fieldset {
+			margin-top: 20px;
+		}
+		.title {
+			margin-bottom: 15px;
+		}
+		#logo {
+			width: auto;
+		}
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #7F201C;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 20px;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+			padding-left:4px;
+			padding-right:2px;
+		}
+		.form-control{
+			padding: 3px !important;
+			font-size: 12px !important;
+		}
+		td{
+			padding: 3px !important;
+			line-height: 0.8 !important;
+		}
+		body{
+			 font-size: 12px !important;
+		}
+		.documentoAsociadoNombre1,.documentoAsociadoNombre2{
+			background: none repeat scroll 0 0 white !important;
+			border: 0 none;
+			box-shadow: unset;
+		}
+		.text-align-right{
+			text-align: right;
+		}
+		.height-observaciones{
+			height: 165px;
+		}
+
+		.height-textArea{
+			height: 90px;
+		}
+		.colLabel{
+			background:inherit;
+			background-color:transparent;
+			border-width:0px;
+			border-radius:0px;
+			box-shadow:0 0 0 0;
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: #ffffff;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #333;
+			display: block;
+			line-height: inherit;
+			margin-bottom: 0px;
+			padding: 0;
+			width: 100%;
+			text-transform: uppercase;
+			text-align:center;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 12px;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+	<div class="container">
+		</br>
+		<div class="row title">
+			<div class="col-md-3">
+				<img src="raffo_logo.jpg" class="img-responsive col-md-offset-4" id="logo"/>
+			</div>	
+			<div class="col-md-1"></div>
+			<div class="col-md-8">
+				<h3>Gesti&oacute;n de Contratos</h3> 
+			</div>	  
+		</div>
+
+		<br/>
+
+		<div class="row">
+			<div class="col-md-10 col-md-offset-2">
+				<div id="globalErrors" class=""></div>
+			</div>
+		</div>
+
+		<form class="form-horizontal" id="form" name="form" role="form" novalidate="novalidate">
+			<input type="hidden" name="__error" id="__error"/>	
+			<input type="hidden" class="form-control" name="nroSolicitud" id="nroSolicitud">
+			<input type="hidden" class="form-control" name="wf_estado" id="wf_estado">
+			<input type="hidden" class="form-control" name="__titulo1" id="__titulo1">	
+			<input type="hidden" class="form-control" name="__titulo2" id="__titulo2">	
+			<input type="hidden" class="form-control" name="__titulo3" id="__titulo3">	
+			<input type="hidden" class="form-control" name="__titulo4" id="__titulo4">	
+			<input type="hidden" class="form-control" name="__titulo5" id="__titulo5">				
+			<input type="hidden" class="form-control" name="__detProdTotal1" id="__detProdTotal1">	
+			<input type="hidden" class="form-control" name="__detProdTotal2" id="__detProdTotal2">	
+			<input type="hidden" class="form-control" name="__detProdTotal3" id="__detProdTotal3">	
+			<input type="hidden" class="form-control" name="__detProdTotal4" id="__detProdTotal4">	
+			<input type="hidden" class="form-control" name="__detProdTotal5" id="__detProdTotal5">
+			<input type="hidden" class="form-control" name="__detProdTotal11" id="__detProdTotal11">	
+			<input type="hidden" class="form-control" name="__detProdTotal22" id="__detProdTotal22">	
+			<input type="hidden" class="form-control" name="__detProdTotal33" id="__detProdTotal33">	
+			<input type="hidden" class="form-control" name="__detProdTotal44" id="__detProdTotal44">	
+			<input type="hidden" class="form-control" name="__detProdTotal55" id="__detProdTotal55">	
+			<input type="hidden" class="form-control" name="__sumatoria_porcentaje" id="__sumatoria_porcentaje">
+						
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nroRequerimiento" class="col-md-2 control-label">Nro de Requerimiento</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control text-align-right" name="nroRequerimiento" id="nroRequerimiento" readonly>									
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nroContrato" class="col-md-2 control-label ">Nro de Contrato</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control text-align-right" name="nroContrato" id="nroContrato" readonly>									
+					</div>	
+				</div>
+				<div class="label-field">
+					<label for="sector" class="col-md-2 col-md-offset-2 control-label">Sector</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control light-grey-brackground" name="sector" id="sector" readonly>									
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="fechaFirmaContrato" class="col-md-2 control-label">Fecha Firma Contrato</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="fechaFirmaContrato" id="fechaFirmaContrato">									
+					</div>	
+				</div>
+				<div class="label-field">
+					<label for="rubro" class="col-md-2 col-md-offset-2 control-label">Rubro</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control light-grey-brackground" name="rubro" id="rubro" readonly>									
+					</div>	
+				</div>	
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="fechaEntradaVigencia" class="col-md-2 control-label">Entrada en Vigencia</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="fechaEntradaVigencia" id="fechaEntradaVigencia">									
+					</div>	
+				</div>
+				<div class="label-field">
+					<label for="referenciaControl" class="col-md-2 col-md-offset-2 control-label">Referencia de Control</label>
+					<div class="col-md-4">
+						<input type="text" class="form-control light-grey-brackground" name="referenciaControl" id="referenciaControl" readonly>									
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="fechaFinVigencia" class="col-md-2 control-label">Fin de Vigencia</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="fechaFinVigencia" id="fechaFinVigencia">									
+					</div>	
+				</div>
+				<div class="label-field">
+					<label for="desvioPermitido" class="col-md-2 col-md-offset-2 control-label">Desv&iacute;o Permitido</label>
+					<div class='col-md-2'>
+						<div class="input-group">
+							<input type="text" class="form-control text-align-right" name="desvioPermitido" id="desvioPermitido" data-parsley-range="[0, 100]">	
+							<span class="input-group-addon">&#37;</span>
+						</div>										
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="fechaRegistracion" class="col-md-2 control-label">Fecha de Registraci&oacute;n</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="fechaRegistracion" id="fechaRegistracion">									
+					</div>	
+				</div>
+				<div class="label-field">
+					<label for="fechaRevision" class="col-md-2 col-md-offset-2 control-label">Fecha de Revisi&oacute;n</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="fechaRevision" id="fechaRevision" data-parsley-required="true">									
+					</div>	
+				</div>
+			</div>
+			
+			<br><br>
+			<div class="form-group">
+				<div class="col-md-3" style="padding-left:15px">			
+					<div class="panel panel-default">
+						<div class="panel-heading">Tipo de Contrato</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="radio col-md-offset-2"><label><input name="tipoContrato" value="BIENES" type="radio">BIENES </label></div>						
+							</div>
+							<div class="form-group">
+								<div class="radio col-md-offset-2"><label><input name="tipoContrato" value="SERVICIO" type="radio">SERVICIOS </label></div>						
+							</div>
+							<div class="form-group">
+								<div class="radio col-md-offset-2"><label><input name="tipoContrato" value="BIENES Y SERVICIOS" type="radio">BIENES y SERVICIOS </label></div>						
+							</div>
+						</div>
+					</div>			
+				</div>	
+				<label for="observaciones" class="col-md-2 control-label">Observaciones</label>
+				<div class="col-md-7"  style="padding-right:15px">
+				  <textarea rows="8" class="form-control height-observaciones" name="observaciones" id="observaciones"></textarea>		  
+				</div>		
+			</div>		
+			<div id="divProveedores">
+				<legend>Detalle de Proveedores</legend>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-striped table-bordered table-hover" id="tablaProveedores" name="tablaProveedores" style="width:100%">
+							<thead>
+								<tr>
+									<th class="col-md-4" style="text-align:center">PROVEEDOR</th>
+									<th class="col-md-2" style="text-align:center">MONEDA</th>
+									<th class="col-md-3" style="text-align:center">FORMA DE PAGO</th>
+									<th class="col-md-3" style="text-align:center">DETALLE DE LA FORMA DE PAGO</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="label-field">
+											<div class="col-md-12">
+												<input type="text" class="form-control" name="provs_codDesc1" id="provs_codDesc1"><br>
+												<input type="hidden" class="form-control" name="provs_codigo1" id="provs_codigo1">
+												<input type="hidden" class="form-control" name="provs_razonSocial1" id="provs_razonSocial1">
+												<input type="hidden" class="form-control" name="provs_estado1" id="provs_estado1">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground provs_monedaDesc" name="provs_monedaDesc1" id="provs_monedaDesc1" readonly>
+											<input type="hidden" class="form-control" name="provs_monedaCodigo1" id="provs_monedaCodigo1">
+											<input type="hidden" class="form-control" name="provs_ultimaCotizacion1" id="provs_ultimaCotizacion1">
+											<input type="hidden" class="form-control" name="provs_fechaUltimaCotizacion1" id="provs_fechaUltimaCotizacion1">
+										</div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground" name="provs_formaPagoDesc1" id="provs_formaPagoDesc1" readonly>
+											<input type="hidden" class="form-control" name="provs_formaPagoCodigo1" id="provs_formaPagoCodigo1" >
+										</div></div>
+									</td>
+									<td><div class="label-field"><div class="col-md-12"><textarea rows="2" class="form-control height-textArea" name="provs_detalle1" id="provs_detalle1"></textarea></div></div></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="label-field">
+											<div class="col-md-12">
+												<input type="text" class="form-control" name="provs_codDesc2" id="provs_codDesc2">
+												<input type="hidden" class="form-control" name="provs_codigo2" id="provs_codigo2">
+												<input type="hidden" class="form-control" name="provs_razonSocial2" id="provs_razonSocial2">
+												<input type="hidden" class="form-control" name="provs_estado2" id="provs_estado2">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground provs_monedaDesc" name="provs_monedaDesc2" id="provs_monedaDesc2" readonly>
+											<input type="hidden" class="form-control" name="provs_monedaCodigo2" id="provs_monedaCodigo2">
+											<input type="hidden" class="form-control" name="provs_ultimaCotizacion2" id="provs_ultimaCotizacion2">
+											<input type="hidden" class="form-control" name="provs_fechaUltimaCotizacion2" id="provs_fechaUltimaCotizacion2">
+										</div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground" name="provs_formaPagoDesc2" id="provs_formaPagoDesc2" readonly>
+											<input type="hidden" class="form-control" name="provs_formaPagoCodigo2" id="provs_formaPagoCodigo2">
+										</div></div>
+									</td>
+									<td><div class="label-field"><div class="col-md-12"><textarea rows="2" class="form-control height-textArea" name="provs_detalle2" id="provs_detalle2"></textarea></div></div></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="label-field">
+											<div class="col-md-12">
+												<input type="text" class="form-control" name="provs_codDesc3" id="provs_codDesc3">
+												<input type="hidden" class="form-control" name="provs_codigo3" id="provs_codigo3">
+												<input type="hidden" class="form-control" name="provs_razonSocial3" id="provs_razonSocial3">
+												<input type="hidden" class="form-control" name="provs_estado3" id="provs_estado3">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground provs_monedaDesc" name="provs_monedaDesc3" id="provs_monedaDesc3" readonly>
+											<input type="hidden" class="form-control" name="provs_monedaCodigo3" id="provs_monedaCodigo3">
+											<input type="hidden" class="form-control" name="provs_ultimaCotizacion3" id="provs_ultimaCotizacion3">
+											<input type="hidden" class="form-control" name="provs_fechaUltimaCotizacion3" id="provs_fechaUltimaCotizacion3">
+										</div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground" name="provs_formaPagoDesc3" id="provs_formaPagoDesc3" readonly>
+											<input type="hidden" class="form-control" name="provs_formaPagoCodigo3" id="provs_formaPagoCodigo3">
+										</div></div>
+									</td>
+									<td><div class="label-field"><div class="col-md-12"><textarea rows="2" class="form-control height-textArea" name="provs_detalle3" id="provs_detalle3"></textarea></div></div></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="label-field">
+											<div class="col-md-12">
+												<input type="text" class="form-control" name="provs_codDesc4" id="provs_codDesc4">
+												<input type="hidden" class="form-control" name="provs_codigo4" id="provs_codigo4">
+												<input type="hidden" class="form-control" name="provs_razonSocial4" id="provs_razonSocial4">
+												<input type="hidden" class="form-control" name="provs_estado4" id="provs_estado4">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground provs_monedaDesc" name="provs_monedaDesc4" id="provs_monedaDesc4" readonly>
+											<input type="hidden" class="form-control" name="provs_monedaCodigo4" id="provs_monedaCodigo4">
+											<input type="hidden" class="form-control" name="provs_ultimaCotizacion4" id="provs_ultimaCotizacion4">
+											<input type="hidden" class="form-control" name="provs_fechaUltimaCotizacion4" id="provs_fechaUltimaCotizacion4">
+										</div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground" name="provs_formaPagoDesc4" id="provs_formaPagoDesc4" readonly>
+											<input type="hidden" class="form-control" name="provs_formaPagoCodigo4" id="provs_formaPagoCodigo4">
+										</div></div>
+									</td>
+									<td><div class="label-field"><div class="col-md-12"><textarea rows="2" class="form-control height-textArea" name="provs_detalle4" id="provs_detalle4"></textarea></div></div></td>
+								</tr>
+								<tr>
+									<td>
+										<div class="label-field">
+											<div class="col-md-12">
+												<input type="text" class="form-control" name="provs_codDesc5" id="provs_codDesc5">
+												<input type="hidden" class="form-control" name="provs_codigo5" id="provs_codigo5">
+												<input type="hidden" class="form-control" name="provs_razonSocial5" id="provs_razonSocial5">
+												<input type="hidden" class="form-control" name="provs_estado5" id="provs_estado5">
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground provs_monedaDesc" name="provs_monedaDesc5" id="provs_monedaDesc5" readonly>
+											<input type="hidden" class="form-control" name="provs_monedaCodigo5" id="provs_monedaCodigo5">
+											<input type="hidden" class="form-control" name="provs_ultimaCotizacion5" id="provs_ultimaCotizacion5">
+											<input type="hidden" class="form-control" name="provs_fechaUltimaCotizacion5" id="provs_fechaUltimaCotizacion5">
+										</div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control light-grey-brackground" name="provs_formaPagoDesc5" id="provs_formaPagoDesc5" readonly>
+											<input type="hidden" class="form-control" name="provs_formaPagoCodigo5" id="provs_formaPagoCodigo5">
+										</div></div>
+									</td>
+									<td><div class="label-field"><div class="col-md-12"><textarea rows="2" class="form-control height-textArea" name="provs_detalle5" id="provs_detalle5"></textarea></div></div></td>
+								</tr>
+							</tbody>
+						</table>
+						<input type="hidden" class="form-control" name="provs_countProveedores" id="provs_countProveedores">
+					</div>
+				</div>
+			</div>
+			<div id="divDetalleProducto">
+				<div id="proveedorTemporal" style="visibility: hidden;" class="alert alert-warning alert-dismissible" role="alert">
+					<strong>Atenci&oacute;n</strong> No es posible seleccionar proveedores temporales.
+				</div>
+				<br>				
+				<legend>Detalle de Productos por Proveedor</legend>
+				<div class="row">
+					<div class="col-md-1">
+						<button type="button" class="btn btn-default" id="btnNuevoDetalleProducto">Nuevo</button>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table  table-striped table-bordered table-hover" id="tablaDetalleProducto" tablename="tablaDetalleProd" noaddbutton="true" nodeletebutton="false">
+							<thead>
+								<tr>
+									<th style="text-align:center; width: 120px;">B&Uacute;SQUEDA</th>
+									<th style="text-align:center; width: 220px;">PRODUCTO</th>
+									<th style="text-align:center; width: 150px;">CANTIDAD</th>
+									<!--th style="text-align:center; width: 120px;">MONEDA</th-->
+									<th style="text-align:center">
+										<input type="text" class="colLabel" name="titulo1" id="titulo1" placeholder="PROV 1">								
+										<span class="glyphicon glyphicon-hand-left btnProveedor1" id="btnProveedor1" style="padding-top:10px;cursor:pointer;"></span>
+									</th>
+									<th style="text-align:center">
+										<input type="text" class="colLabel" name="titulo2" id="titulo2" placeholder="PROV 2">
+										<span class="glyphicon glyphicon-hand-left btnProveedor2" id="btnProveedor2" style="padding-top:10px;cursor:pointer;"></span>
+									</th>
+									<th style="text-align:center">
+										<input type="text" class="colLabel" name="titulo3" id="titulo3" placeholder="PROV 3">									
+										<span class="glyphicon glyphicon-hand-left btnProveedor3" id="btnProveedor3" style="padding-top:10px;cursor:pointer;"></span>
+									</th>
+									<th style="text-align:center">
+										<input type="text" class="colLabel" name="titulo4" id="titulo4" placeholder="PROV 4">
+										<span class="glyphicon glyphicon-hand-left btnProveedor4" id="btnProveedor4" style="padding-top:10px;cursor:pointer;"></span>
+									</th>
+									<th style="text-align:center"> 
+										<input type="text" class="colLabel" name="titulo5" id="titulo5" placeholder="PROV 5">
+										<span class="glyphicon glyphicon-hand-left btnProveedor5" id="btnProveedor5" style="padding-top:10px;cursor:pointer;"></span>
+									</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="checkbox"  class="noCodificado" name="noCodificado" id="noCodificado" value="true"> No Codificado</input><br><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_buscar" name="det_prod_buscar" id="det_prod_buscar" placeholder="BUSCAR"></div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_codigo light-grey-brackground" name="det_prod_codigo" id="det_prod_codigo" placeholder="C&Oacute;DIGO" readonly><br></div></div>
+										<div class="label-field"><div class="col-md-12"><textarea rows="3" class="form-control height-textArea det_prod_descripcion light-grey-brackground" name="det_prod_descripcion" id="det_prod_descripcion" placeholder="DESCRIPCI&Oacute;N"></textarea></div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control text-align-right det_prod_cantidad" name="det_prod_cantidad" id="det_prod_cantidad" placeholder="CANTIDAD"><br></div></div>
+										<div class="label-field"><div class="col-md-12">
+											<input type="text" class="form-control det_prod_unidadMedida light-grey-brackground" name="det_prod_unidadMedida" id="det_prod_unidadMedida" placeholder="UM" readonly>
+											<input type="hidden" class="form-control det_prod_unidadMedidaDesc" name="det_prod_unidadMedidaDesc" id="det_prod_unidadMedidaDesc">
+										</div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_precioUnitario text-align-right" name="det_prod_precioUnitario1" id="det_prod_precioUnitario1" placeholder="PU"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control rowProvTotalPesos colProvTotalPesos1 text-align-right" name="det_prod_totalPesos1" id="det_prod_totalPesos1" placeholder="TOTAL"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_moneda1" name="det_prod_moneda1" id="det_prod_moneda1" placeholder="MONEDA" readonly></div></div>
+										<input type="hidden" class="form-control colProvTotalDolares1 rowProvTotalDolares" name="det_prod_totalDolares1" id="det_prod_totalDolares1">
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_precioUnitario text-align-right" name="det_prod_precioUnitario2" id="det_prod_precioUnitario2" placeholder="PU"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control rowProvTotalPesos colProvTotalPesos2 text-align-right" name="det_prod_totalPesos2" id="det_prod_totalPesos2" placeholder="TOTAL"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_moneda2" name="det_prod_moneda2" id="det_prod_moneda2" placeholder="MONEDA" readonly></div></div>
+										<input type="hidden" class="form-control colProvTotalDolares2 rowProvTotalDolares" name="det_prod_totalDolares2" id="det_prod_totalDolares2">
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_precioUnitario text-align-right" name="det_prod_precioUnitario3" id="det_prod_precioUnitario3" placeholder="PU"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control rowProvTotalPesos colProvTotalPesos3 text-align-right" name="det_prod_totalPesos3" id="det_prod_totalPesos3" placeholder="TOTAL"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_moneda3" name="det_prod_moneda3" id="det_prod_moneda3" placeholder="MONEDA" readonly></div></div>
+										<input type="hidden" class="form-control colProvTotalDolares3 rowProvTotalDolares" name="det_prod_totalDolares3" id="det_prod_totalDolares3">
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_precioUnitario text-align-right" name="det_prod_precioUnitario4" id="det_prod_precioUnitario4" placeholder="PU"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control rowProvTotalPesos colProvTotalPesos4 text-align-right" name="det_prod_totalPesos4" id="det_prod_totalPesos4" placeholder="TOTAL"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_moneda4" name="det_prod_moneda4" id="det_prod_moneda4" placeholder="MONEDA" readonly></div></div>
+										<input type="hidden" class="form-control colProvTotalDolares4 rowProvTotalDolares" name="det_prod_totalDolares4" id="det_prod_totalDolares4">
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_precioUnitario text-align-right" name="det_prod_precioUnitario5" id="det_prod_precioUnitario5" placeholder="PU"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control rowProvTotalPesos colProvTotalPesos5 text-align-right" name="det_prod_totalPesos5" id="det_prod_totalPesos5" placeholder="TOTAL"><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control det_prod_moneda5" name="det_prod_moneda5" id="det_prod_moneda5" placeholder="MONEDA" readonly></div></div>
+										<input type="hidden" class="form-control colProvTotalDolares5 rowProvTotalDolares" name="det_prod_totalDolares5" id="det_prod_totalDolares5">
+									</td>
+									<td>
+										<span class="glyphicon glyphicon-remove deleteRow btnEliminarDetalleProducto"></span>
+										<span class="glyphicon glyphicon-comment" id="btnAgregarComentario" data-toggle="modal" data-target="#myModal" style="display: block;padding-top:10px;cursor:pointer;"></span>
+										<textarea rows="8" class="form-control height-textArea ampliada" name="ampliada" id="ampliada" style="display:none;"></textarea>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td></td>
+									<td></td>
+									<td style="font-weight: bold; vertical-align: middle;">Total Moneda Cotizada</td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal11" id="detProdTotal11" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal22" id="detProdTotal22" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal33" id="detProdTotal33" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal44" id="detProdTotal44" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal55" id="detProdTotal55" readonly></div></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td style="font-weight: bold; vertical-align: middle;">Total USD</td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal1" id="detProdTotal1" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal2" id="detProdTotal2" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal3" id="detProdTotal3" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal4" id="detProdTotal4" readonly></div></td>
+									<td><div class="label-field"><input type="text" class="form-control text-align-right detProdTotal" name="detProdTotal5" id="detProdTotal5" readonly></div></td>
+								</tr>
+							</tfoot>
+						</table>
+						<input type="hidden" name="proveedorSeleccionado" id="proveedorSeleccionado">
+					</div>
+				</div>
+			</div>
+			<br><br>
+			<!-- pop up -->
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h4 class="modal-title" id="myModalLabel">Descripci&oacute;n Ampliada </h4>
+						</div>
+						<div class="modal-body">
+							<textarea rows="8" class="form-control height-textArea" name="descripcionAmpliada" id="descripcionAmpliada"></textarea>	
+							<input type="hidden" id="indexAmpliada">
+						</div>
+						<div class="modal-footer">
+							<button id="btnCerrar" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+							<button id="btnGuardar" type="button" class="btn btn-primary">Guardar</button>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<!-- fin pop up-->
+			<legend>Datos del Proveedor Seleccionado</legend>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="pro_codigo" class="col-md-2 control-label">Proveedor</label>
+					<div class="col-md-3">
+							<input type="text" class="form-control" name="pro_codigo" id="pro_codigo" placeholder="C&Oacute;DIGO" readonly>
+					</div>		
+				</div>
+				<div class="label-field">
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="pro_razonSocial" id="pro_razonSocial" placeholder="RAZ&Oacute;N SOCIAL" readonly>
+					</div>				  			  
+				</div>	
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="moneda" class="col-md-2 control-label">Moneda</label>
+					<div class="col-md-2">
+							<input type="text" class="form-control"name="moneda" id="moneda" readonly>
+					</div>		
+				</div>
+				<div class="label-field">
+					<label for="ultimaCotizacion" class="col-md-2 control-label">Cotizaci&oacute;n USD</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control"name="ultimaCotizacion" id="ultimaCotizacion" readonly>
+					</div>		
+				</div>
+				<div class="label-field">
+					<label for="fechaUltimaCotizacion" class="col-md-2 control-label">Fecha &Uacute;ltima Cotizaci&oacute;n</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control"name="fechaUltimaCotizacion" id="fechaUltimaCotizacion" readonly>
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="formaPago_codigo" class="col-md-2 control-label">Forma de Pago</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="formaPago_codigo" id="formaPago_codigo" placeholder="C&Oacute;DIGO" readonly>
+					</div>		
+				</div>
+				<div class="label-field">
+					<div class="col-md-7">
+						<input type="text" class="form-control" name="formaPago_descripcion" id="formaPago_descripcion" placeholder="DESCRIPCI&Oacute;N" readonly>
+					</div>				  			  
+				</div>	
+			</div>
+
+			<div class="form-group">
+				<label for="formaPago_detalle" class="col-md-2 control-label">Detalle de la Forma de Pago</label>
+				<div class="col-md-10">
+				  <textarea rows="4" class="form-control height-textArea" name="formaPago_detalle" id="formaPago_detalle" readonly></textarea>		  
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="motivoAdjudicacion" class="col-md-2 control-label">Motivo de Adjudicaci&oacute;n</label>
+					<div class="col-md-4">
+							<input type="text" class="form-control light-grey-brackground" name="motivoAdjudicacion" id="motivoAdjudicacion" readonly data-parsley-required="true">
+					</div>		
+				</div>
+				<div class="label-field">
+					<label for="frecuenciaFacturacion" class="col-md-3 control-label">Frecuencia de Facturaci&oacute;n</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control light-grey-brackground" name="frecuenciaFacturacion" id="frecuenciaFacturacion" readonly data-parsley-required="true">
+					</div>				  			  
+				</div>	
+			</div>
+			
+			<div class="form-group">
+				<label for="descripcionMotivo" class="col-md-2 control-label">Descripci&oacute;n ampliada del motivo</label>
+				<div class="col-md-10">
+				  <textarea rows="4" class="form-control height-textArea" name="descripcionMotivo" id="descripcionMotivo"></textarea>		  
+				</div>
+			</div>
+
+			<br><br>
+			
+			<legend>Datos de Productos</legend>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="bs-box">
+						<table class="table" id="tablaProductos" tablename="tablaProd" noaddbutton="true" nodeletebutton="false" style="width:100%">
+							<thead>
+								<tr>
+									<th class="col-md-2" style="text-align:center">C&Oacute;DIGO</th>
+									<th class="col-md-3" style="text-align:center">DESCRIPCI&Oacute;N</th>
+									<th class="col-md-1" style="text-align:center">CANTIDAD</th>
+									<th class="col-md-1" style="text-align:center">PU</th>
+									<th class="col-md-1" style="text-align:center">TOTAL</th>
+									<th class="col-md-1" style="text-align:center">TOTAL USD</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control prod_code" name="prod_code" id="prod_code" readonly><br></div></div>
+										<input type="hidden" class="form-control prod_decripcion_ampliada_id" name="prod_decripcion_ampliada_id" id="prod_decripcion_ampliada_id" readonly>
+										Descripci&oacute;n Ampliada	<span class="glyphicon glyphicon-comment" id="btnVerComentario" data-toggle="modal" data-target="#myModal" style="display: inline;cursor:pointer;"></span>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><textarea class="form-control height-textArea prod_descripcion" name="prod_descripcion" id="prod_descripcion" readonly></textarea></div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control prod_cantidad text-align-right" name="prod_cantidad" id="prod_cantidad" placeholder="CANTIDAD" readonly><br></div></div>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control prod_unidadMedida" name="prod_unidadMedida" id="prod_unidadMedida" placeholder="UM" readonly></div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control prod_precioUnitario text-align-right" name="prod_precioUnitario" id="prod_precioUnitario" readonly></div></div>
+									</td>
+									<td>
+										<div class="label-field"><div class="col-md-12"><input type="text" class="form-control prod_total text-align-right" name="prod_total" id="prod_total" readonly></div></div>
+									</td>
+									<td>
+										<div class="label-field">
+											<div class="col-md-12">
+												<input type="text" class="form-control prod_totalDolares text-align-right" name="prod_totalDolares" id="prod_totalDolares" readonly>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table class="table table-striped table-bordered" id="tablaProductoFooter" style="width:100%">
+							<body>
+								<tr>
+									<td class="col-md-10"  style="text-align:right; font-weight: bold; vertical-align: middle;">TOTAL USD</td>
+									<td class="col-md-2">
+										<input type="text" class="form-control text-align-right" name="totalUSD" id="totalUSD" readonly>
+										<input type="hidden" class="form-control" name="montoTotalUSD" id="montoTotalUSD">
+									</td>
+								</tr>
+							</body>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<br><br>
+			
+			<legend>Documentaci&oacute;n Requerida</legend>
+			<div class="row">
+				<table class="table" id="tablaDocumentos" tablename="tablaDoc" noaddbutton="true" nodeletebutton="false" style="width:100%">
+					<thead>
+						<tr>
+							<th colspan="4" class="col-md-12">Seleccione los documentos a adjuntar.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="col-md-1" style="vertical-align: middle;">
+								<input type="checkbox" style="height:11px" class="form-control documentoAsociadoChk1" name="documentoAsociadoChk1" id="documentoAsociadoChk1" value="true">
+							</td>
+							<td class="col-md-5">
+								<input type="text" class="form-control documentoAsociadoNombre1" name="documentoAsociadoNombre1" id="documentoAsociadoNombre1" readonly>
+							</td>
+							<td class="col-md-1" style="vertical-align: middle;">
+								<input type="checkbox" style="height:11px" class="form-control documentoAsociadoChk2" name="documentoAsociadoChk2" id="documentoAsociadoChk2" value="true">
+							</td>
+							<td class="col-md-5">
+								<input type="text" class="form-control documentoAsociadoNombre2" name="documentoAsociadoNombre2" id="documentoAsociadoNombre2" readonly>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<br><br>
+			
+			<legend>Imputaci&oacute;n Contable</legend>
+			
+			<div class="form-group">
+				<div class="col-md-3">			
+					<div>
+						<div class="panel-body">
+							<div class="form-group">
+								<div class="radio col-md-offset-2">
+								 <label>
+									<input name="imputacionContable" value="imputacionContable1" type="radio">
+									C&oacute;digo de Inversi&oacute;n
+								  </label>
+								</div>						
+							</div>
+							<div class="form-group">
+								<div class="radio col-md-offset-2">
+								 <label>
+									<input name="imputacionContable" value="imputacionContable2" type="radio">
+									Clave de Asignaci&oacute;n
+								  </label>
+								</div>						
+							</div>
+							<div class="form-group">
+								<div class="radio col-md-offset-2">
+								 <label>
+									<input name="imputacionContable" value="imputacionContable3" type="radio">
+									Combinaci&oacute;n de Cuentas
+								  </label>
+								</div>						
+							</div>
+						</div>
+					</div>			
+				</div>	
+			</div>	
+			
+			<div id="divCodigoInversion">
+				<div class="bs-box">
+					<legend>C&oacute;digo de Inversi&oacute;n</legend>	
+					<div class="form-group">
+						<div class="label-field">
+							<div class="col-md-3 col-md-offset-1">
+								<input type="text" class="form-control light-grey-brackground" name="inversion_codigo" id="inversion_codigo" placeholder="C&Oacute;DIGO" readonly>
+							</div>		
+						</div>
+						<div class="label-field">
+							<div class="col-md-6">
+								<input type="text" class="form-control light-grey-brackground" name="inversion_descripcion" id="inversion_descripcion" placeholder="DESCRIPCI&Oacute;N" readonly>
+							</div>				  			  
+						</div>	
+					</div>
+				</div>
+			</div>
+			
+			<div id="divClaveAsignacion">
+				<div class="bs-box">
+					<legend>Clave de Asignaci&oacute;n</legend>	
+					
+					<div class="form-group">
+						<div class="label-field">
+							<div class="col-md-3 col-md-offset-1">
+								<input type="text" class="form-control light-grey-brackground" name="asignacion_codigo" id="asignacion_codigo" placeholder="C&Oacute;DIGO" readonly>
+							</div>		
+						</div>
+						<div class="label-field">
+							<div class="col-md-6">
+								<input type="text" class="form-control light-grey-brackground" name="asignacion_descripcion" id="asignacion_descripcion" placeholder="DESCRIPCI&Oacute;N" readonly>
+							</div>				  			  
+						</div>	
+					</div>
+				</div>
+			</div>
+			
+			<div id="divCombinacionCuentas">
+				<div class="bs-box">
+					<legend>Combinaci&oacute;n de Cuentas</legend>
+					<div class="row">
+						<div class="col-md-1">
+							<button type="button" class="btn btn-default btnNuevaCuenta" id="btnNuevaCuenta">Nuevo</button>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-12">
+							<table class="table table-striped table-bordered table-hover" id="tablaCuenta" tablename="tablaCta" noaddbutton="true" nodeletebutton="false" style="width:100%;">
+								<thead>
+									<tr>
+										<th class="col-md-2" style="text-align:center">CUENTA</th>
+										<th class="col-md-2" style="text-align:center">SUBCUENTA</th>
+										<th class="col-md-3" style="text-align:center">CENTRO DE COSTO</th>
+										<th class="col-md-3" style="text-align:center">PROYECTO</th>
+										<th class="col-md-2" style="text-align:center">PORCENTAJE</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="label-field"><div class="col-md-12">
+												<input type="text" class="form-control light-grey-brackground cta_codigo" name="cta_codigo" id="cta_codigo" placeholder="C&Oacute;DIGO" readonly>
+												<input type="hidden" class="form-control cta_descripcion" name="cta_descripcion" id="cta_descripcion">
+												<input type="hidden" class="form-control cta_activo" name="cta_activo" id="cta_activo">
+											</div></div>
+										</td>
+										<td>
+											<div class="label-field"><div class="col-md-12">
+												<input type="text" class="form-control light-grey-brackground cta_subcuenta_codigo" name="cta_subcuenta_codigo" id="cta_subcuenta_codigo" placeholder="C&Oacute;DIGO" readonly>
+												<input type="hidden" class="form-control cta_subcuenta_descripcion" name="cta_subcuenta_descripcion" id="cta_subcuenta_descripcion">
+												<input type="hidden" class="form-control cta_subcuenta_activo" name="cta_subcuenta_activo" id="cta_subcuenta_activo">
+											</div></div>
+										</td>
+										<td>
+											<div class="label-field"><div class="col-md-12">
+												<input type="text" class="form-control light-grey-brackground cta_centroCosto_codDesc" name="cta_centroCosto_codDesc" id="cta_centroCosto_codDesc" placeholder="C&Oacute;DIGO  + DESC." readonly>
+												<input type="hidden" class="form-control cta_centroCosto_codigo" name="cta_centroCosto_codigo" id="cta_centroCosto_codigo">
+												<input type="hidden" class="form-control cta_centroCosto_desc" name="cta_centroCosto_desc" id="cta_centroCosto_desc">
+												<input type="hidden" class="form-control cta_centroCosto_activo" name="cta_centroCosto_activo" id="cta_centroCosto_activo">
+											</div></div>
+										</td>
+										<td>
+											<div class="label-field"><div class="col-md-12">
+												<input type="text" class="form-control light-grey-brackground cta_proyecto_descripcion" name="cta_proyecto_descripcion" id="cta_proyecto_descripcion" placeholder="NOMBRE" readonly>
+												<input type="hidden" class="form-control cta_proyecto_codigo" name="cta_proyecto_codigo" id="cta_proyecto_codigo">
+												<input type="hidden" class="form-control cta_proyecto_activo" name="cta_proyecto_activo" id="cta_proyecto_activo">
+											</div></div>
+										</td>
+										<td>
+											<div class="label-field">
+												<div class="col-md-12">
+													<div class="input-group">
+															<input type="text" class="form-control cta_porcentaje text-align-right" name="cta_porcentaje" id="cta_porcentaje">
+															<span class="input-group-addon">&#37;</span>
+														</div>	
+												</div>
+											</div>
+										</td>
+										<td>
+											<div><span class="glyphicon glyphicon-remove deleteRow btnEliminarCuenta"></span></div>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>										
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="label-field">
+												<div class="col-md-12">
+													<div class="input-group">
+														<input type="text" class="form-control text-align-right" name="sumatoria_porcentaje" id="sumatoria_porcentaje" readonly>
+														<span class="input-group-addon">&#37;</span>
+													</div>	
+												</div>
+											</div>
+										</td>
+										<td></td>
+									</tr>										
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="divSumatoriaPorcentaje" style="visibility: hidden;" class="alert alert-danger alert-dismissible" role="alert">
+				<strong>Atenci&oacute;n</strong> La sumatoria de porcentajes debe ser igual a 100.
+			</div>
+		</form>
+		<br>
+	</div>  <!-- container-->
+  </body>
+</html>

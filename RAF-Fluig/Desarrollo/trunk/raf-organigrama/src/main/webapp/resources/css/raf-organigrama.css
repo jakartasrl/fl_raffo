@@ -1,0 +1,56 @@
+/* Coloque aqui seu codigo CSS */
+.message{
+    margin-top: 10px;
+}
+
+.sublabel {
+	margin-top: -5px !important;
+	margin-bottom: 5px !important;
+}
+
+textarea {
+	resize: vertical !important;
+}
+
+.raf-organigrama-chart .orgchart {
+	background-image: none;
+	background-color: transparent;
+	min-width: 100%;
+}
+
+.raf-organigrama-chart .oc-export-btn {
+    color: #fff;
+    background-color: #58595b;
+    border-color: #4b4c4e;
+}
+
+.raf-organigrama-chart .oc-export-btn:hover, .raf-organigrama-chart .oc-export-btn:active, .raf-organigrama-chart .oc-export-btn:focus {
+    background-color: #3f4041;
+    border-color: #2d2e2f;
+}
+
+.raf-organigrama-chart .node{
+	width: 180px;
+}
+
+.raf-organigrama-chart .node .content{
+	height: auto;
+	white-space: normal;
+	padding: 5px;	
+}
+
+.raf-organigrama-chart .rightLine, .raf-organigrama-chart .leftLine,  .raf-organigrama-chart .topLine, .raf-organigrama-chart .downLine {
+	border-color: #720023;
+}
+
+.raf-organigrama-chart .downLine {
+	background-color: #720023;
+}
+
+.raf-organigrama-chart .orgchart .node .edge {
+    color: #720023;
+}
+
+.raf-organigrama-chart .orgchart .node .edge:hover {
+    color: #b30155;
+}

@@ -1,0 +1,63 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Fluig</title>
+    <link href="${SERVER_URL!''}/globalmailsender/resources/global.css" type="text/css" rel="stylesheet" />
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+    <br />
+    <p class="DescrMsgForum">¡Hola, ${RECEIVER!''}</p>
+    <br />
+    <div align="left">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+                    	<p class="DescrMsgForum">
+							<b>${WDK_DocumentAuthor!''}</b> espera la aprobación del archivo <b>${WDK_DocumentDescription!''}</b>(Nr ${WDK_DocumentNumber!''}), el mismo ya fue aprobado por <b>${SENDERS_LINKS!''}</b>.
+							<br>Para que el documento este aprobado requerirá que las siguientes personas también lo aprueben:
+						</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    	<p class="DescrMsgForum"><b>Aprobadores restantes:</b> ${WDK_ApproverUserLack!''}</p>
+                    </td>
+                </tr>
+			</tbody>
+		</table>
+    </div>
+    <br />
+	<br />
+    <div align="left">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tbody>				
+                <tr>
+                    <td>
+                    	<p class="DescrMsgForum"><b>Comentarios:</b> Favor ingresar a la herramienta <a class="action" href="${SERVER_URL!''}/portal/p/1/pagecentraltask">Fluig</a> y verificar los documentos pendientes de aprobación. Si al ingresar no cuenta con ningún documento que debe ser aprobado, desestimar este mensaje.</p>
+                    </td>
+                </tr>
+			</tbody>
+        </table>
+    </div>
+    <br />
+	<br />
+    <div align="left">
+        <table cellspacing="0" cellpadding="0" border="0">
+            <tbody>				
+                 <tr>
+                    <td>
+						<div class="DescrMsgForum actions">
+							<a class="action" href="${LINK!''}">Ir a notificaciones</a>
+							<div style="clear: both; line-height: 1px">&nbsp;</div>
+						</div>
+                    </td>
+                </tr>
+				
+			</tbody>
+        </table>
+    </div>
+    
+    <br />
+</body>
+</html>

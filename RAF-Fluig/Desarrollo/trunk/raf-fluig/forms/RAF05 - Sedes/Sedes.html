@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<link rel="stylesheet" type="text/css"
+	href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	<style>
+	</style>
+
+<script type="text/javascript" src="custom.js"></script>
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+	<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>Sede</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+
+		<form enctype="" role="form" novalidate="" method="post"
+				name="arqForm" action="" style="padding-top: 30px" id="arqForm"
+				onsubmit="return false;" class="form-horizontal">
+			<input type="hidden" name="__error" id="__error"
+				value="Verifique los errores indicados en el formulario.">
+			<input type="hidden" class="form-control" name="codigoGrupoAdministrador" id="codigoGrupoAdministrador">
+						
+			<div class="form-group">
+				<div class="label-field">
+					<label for="descripcion" class="col-md-3 control-label">Descripci&oacute;n</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="descripcion" id="descripcion" data-parsley-required="true">							
+					</div>		
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="descripcion" class="col-md-3 control-label">C&oacute;digo Carpeta</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="codigoCarpeta" id="codigoCarpeta" data-parsley-required="true">							
+					</div>		
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="label-field">
+					<label for="grupoAprobadorRRHH" class="col-md-3 control-label">Grupo Aprobador de RRHH:</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="grupoAprobadorRRHH" id="grupoAprobadorRRHH">
+					</div>
+				</div>
+			</div>
+			
+		</form>
+		<br>
+	</div> 
+	</div> 
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Css y Scripts Fluig -->
+	<link rel="stylesheet" type="text/css" href="/portal/resources/style-guide/css/fluig-style-guide.min.css">
+	<script src="/portal/resources/js/jquery/jquery.js"></script>
+	<script src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script src="/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+
+	<!-- Css y Scripts Arq -->   
+ 	<link rel="stylesheet" type="text/css" href="/arq-marvin-v1/ui/arq-marvin-ui.min.css">
+ 	<script src="/arq-marvin-v1/ui/arq-marvin-ui.min.js"></script>
+
+	<!-- Links Custom -->
+	
+	<link rel="stylesheet" href="css/colorpicker.css" type="text/css"/>
+	<script type="text/javascript" src="js/colorpicker.js"></script>
+    <script type="text/javascript" src="js/eye.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="custom.min.js"></script>
+	<style>	
+	textarea {
+		resize: vertical !important;
+	}
+	#customWidget {
+	    position: relative;
+	    height: 36px;
+	}
+	#colorSelector {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 36px;
+	    height: 36px;
+	    background: url(images/select2.png);
+	}
+	#colorSelector div {
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		width: 28px;
+		height: 28px;
+		background: url(images/select2.png) center;
+	}
+	#colorPickerHolder {
+	    top: 32px;
+	    left: 0;
+	    width: 356px;
+	    height: 0;
+	    overflow: hidden;
+	    position: absolute;
+	}
+	#colorPickerHolder .colorpicker input {
+	    background-color: transparent;
+	    border: 1px solid transparent;
+	    position: absolute;
+	    font-size: 10px;
+	    font-family: Arial, Helvetica, sans-serif;
+	    color: #898989;
+	    top: 4px;
+	    right: 11px;
+	    text-align: right;
+	    margin: 0;
+	    padding: 0;
+	    height: 11px;
+	}
+	#colorPickerHolder .colorpicker {
+		background-image: url(images/custom_background.png);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	#colorPickerHolder .colorpicker_hue div {
+		background-image: url(images/custom_indic.gif);
+	}
+	#colorPickerHolder .colorpicker_hex {
+		background-image: url(images/custom_hex.png);
+	}
+	#colorPickerHolder .colorpicker_rgb_r {
+		background-image: url(images/custom_rgb_r.png);
+	}
+	#colorPickerHolder .colorpicker_rgb_g {
+		background-image: url(images/custom_rgb_g.png);
+	}
+	#colorPickerHolder .colorpicker_rgb_b {
+		background-image: url(images/custom_rgb_b.png);
+	}
+	#colorPickerHolder .colorpicker_hsb_s {
+		background-image: url(images/custom_hsb_s.png);
+		display: none;
+	}
+	#colorPickerHolder .colorpicker_hsb_h {
+		background-image: url(images/custom_hsb_h.png);
+		display: none;
+	}
+	#colorPickerHolder .colorpicker_hsb_b {
+		background-image: url(images/custom_hsb_b.png);
+		display: none;
+	}
+	#colorPickerHolder .colorpicker_submit {
+		background-image: url(images/custom_submit.png);
+	}
+	#colorPickerHolder .colorpicker input {
+		color: #778398;
+	}
+	</style>
+
+</head>
+
+<body>
+<div class="fluig-style-guide">
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-6 col-md-offset-5">
+				<h3>Nivel Jerárquico</h3> 
+			</div>
+			<div class="col-md-1">				
+			</div>
+		</div>
+
+		<br/>
+
+		<form class="form-horizontal" name="arqForm" id="arqForm" role="form">			 	   
+			<input type="hidden"  id="__error" name="__error">	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="descripcion" class="col-md-3 control-label">Descripción</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="descripcion" id="descripcion">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="color" class="col-md-3 control-label">Color</label>
+					<div class="col-md-5">
+						<input type="hidden" class="form-control" name="color" id="color">									
+						<div id="customWidget">
+							<div id="colorSelector">
+								<div style="background-color: #000000">
+								</div>
+							</div>
+			                <div id="colorPickerHolder">
+			                </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+	</div> 
+</div> 
+</body>
+</html>

@@ -1,0 +1,9 @@
+
+Campos para filtrar el formulario:
+	* aten_activo
+	* aten_nroConsulta
+	* aten_nroSolicitud
+	* aten_producto
+	* aten_tipo
+	* padre_nroSolicitud
+	* solicitante

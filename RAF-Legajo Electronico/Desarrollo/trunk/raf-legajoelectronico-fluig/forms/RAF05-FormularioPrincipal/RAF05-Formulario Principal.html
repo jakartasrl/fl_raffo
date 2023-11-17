@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Solicitud de Puesto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+	
+	
+	<link href="/arq-ecm-v2/lib/bs/css/bootstrap.css" rel="stylesheet">    
+	<link href="/arq-ecm-v2/lib/bs/css/datepicker3.css" rel="stylesheet">    
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 10]>
+		  <script src="/arq-ecm-v2/lib/bs/js/html5shiv.min.js"></script>
+		  <script src="/arq-ecm-v2/lib/bs/js/respond.min.js"></script>
+	<![endif]-->
+	
+
+	<style>
+		span.form-control.height-text { overflow-y: scroll; }
+		.height-text{
+			height: 100px;
+		}
+		
+		legend {
+			-moz-border-bottom-colors: none;
+			-moz-border-left-colors: none;
+			-moz-border-right-colors: none;
+			-moz-border-top-colors: none;
+			border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+			border-image: none;
+			border-style: none none solid;
+			border-width: 0 0 1px;
+			color: #7F201C;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 20px;
+			padding: 0;
+			text-transform: uppercase;
+		}
+		.subsecciones{
+			color: #7F201C;
+			display: block;
+			font-size: 15px;
+			line-height: inherit;
+			margin-bottom: 20px;
+			padding: 0;
+			text-transform: uppercase;
+		}
+	
+		#puestoNuevo{
+			margin-left:0px;
+		}
+		.busquedaConfidencialSi, .efectivo, .manejoInfoConfidencialSi, .esfuerzoFisicoBajo, .exposicionMaterialesQuimicosSi, .visitaInstitucionesSi, 
+		.administraMuestrasMedicasSi, .visitaFarmaciasSi, .gerenteGeneralSi{
+			margin-left:30px;
+		}
+		.busquedaConfidencialNo, .temporario, .manejoInfoConfidencialNo, .esfuerzoFisicoModerado, .exposicionMaterialesQuimicosNo, .visitaInstitucionesNo, 
+		.administraMuestrasMedicasNo, .visitaFarmaciasNo, .gerenteGeneralNo{
+			margin-left: -290px;
+		}
+		.esfuerzoFisicoIntenso{
+			margin-left: -370px;
+		}
+		.temporario{
+			margin-left: -240px;
+		}
+		.parsley-required{
+			font-weight:normal;
+		}
+		.ingresoPersonal, .tipoPosicion, .motivoReemplazo, .pea, .nivelCompetencia{
+			width:262px;
+		}
+		.sugiereAlguienLabel{
+			margin-left: -150px;
+		}
+
+	</style>
+	
+	<script src="/arq-ecm-v2/lib/js/jquery.min.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery-ui.core.min.js"></script>
+    <script src="/arq-ecm-v2/lib/bs/js/bootstrap.js"></script>
+	<script src="/arq-ecm-v2/lib/js/moment-with-langs.min.js"></script>
+	<script src="/arq-ecm-v2/lib/bs/js/bootstrap-datepicker.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/parsley.min.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/pt-br.js"></script>
+	<script src="/arq-ecm-v2/lib/parsley/i18n/es.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery.url.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-lib.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-masterdetail.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-zoom.min.js"></script>
+	<script src="/arq-ecm-v2/arq/js/arq-ecm-datepicker.min.js"></script>
+	<script src="/arq-ecm-v2/lib/js/jquery.number.min.js"></script>
+	<script type="text/javascript" src="../vcXMLRPC.js"></script>
+		
+	<script type="text/javascript" src="custom.js"></script>
+
+	
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div class="row title">
+			<div class="col-md-3">
+				
+			</div>	
+			<div class="col-md-8" style="padding-bottom:30px">
+				<h3 style="text-align:left"><u>Solicitud de Puesto</u></h3> 
+			</div>
+			<div class="col-md-1">
+			
+			</div>
+		</div>
+
+		<br/>
+
+		<div class="row">
+			<div class="col-md-10 col-md-offset-2">
+				<div id="globalErrors" class=""></div>
+			</div>
+		</div>
+
+		<form class="form-horizontal" id="form" name="form" role="form" novalidate="novalidate" style="padding-top:30px">
+			<input type="hidden" name="__error" id="__error"/>
+			<input type="hidden" name="nroSolicitud" id="nroSolicitud"/>
+			<input type="hidden" name="matriculaSolicitante" id="matriculaSolicitante"/>
+			<input type="hidden" name="cantidadTareasOrdenPrioridad" id="cantidadTareasOrdenPrioridad"/>
+			<input type="hidden" name="nivelEstudioSeleccionados" id="nivelEstudioSeleccionados"/>	
+			<input type="hidden" name="jefeMatricula" id="jefeMatricula"/>	
+			<input type="hidden" name="gerenteN1Matricula" id="gerenteN1Matricula"/>	
+			<input type="hidden" name="gerenteN2Matricula" id="gerenteN2Matricula"/>
+			<input type="hidden" name="fechaInicioSolicitud" id="fechaInicioSolicitud"/>	
+			<input type="hidden" name="fechaFinSolicitud" id="fechaFinSolicitud"/>
+			<input type="hidden" name="tarea" id="tarea"/>	
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="historialBusquedas" class="col-md-3 control-label">Historial de B&uacute;squedas</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="historialBusquedas" id="historialBusquedas" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="busquedaConfidencial" class="col-md-3 control-label">B&uacute;squeda Confidencial</label>
+					<div class="col-md-4">
+						<label class="busquedaConfidencialSi"><input type="radio" name="busquedaConfidencial" value="SI">&nbsp; Si </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="busquedaConfidencialNo"><input type="radio" name="busquedaConfidencial" value="NO" data-parsley-required="true">&nbsp; No </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="ingresoPersonal" class="col-md-3 control-label">Ingreso de Personal</label>
+					<div class="col-md-5">
+						<select class="form-control ingresoPersonal" name="ingresoPersonal" id="ingresoPersonal">
+							<option value="PE">Puesto Estándar</option>
+							<option value="APM">Fuerza de Venta (APM)</option>
+							<option value="APF">Fuerza de Venta (APF)</option>
+						</select>					
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="fechaRelevamientoPerfil" class="col-md-3 control-label">Fecha de Relevamiento de Perfil</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="fechaRelevamientoPerfil" id="fechaRelevamientoPerfil"/>	
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="fechaIngresoNecesaria" class="col-md-3 control-label">Fecha de Ingreso Necesaria</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="fechaIngresoNecesaria" id="fechaIngresoNecesaria"/>	
+					</div>
+				</div>
+			</div>			
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="codigoBusqueda" class="col-md-3 control-label">C&oacute;digo de la B&uacute;squeda</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="codigoBusqueda" id="codigoBusqueda">									
+					</div>		
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nombreBusqueda" class="col-md-3 control-label">Nombre de la B&uacute;squeda</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="nombreBusqueda" id="nombreBusqueda">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group aprobacionGteGral">
+				<div class="label-field">
+					<label for="puesto" class="col-md-3 control-label">Puesto</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="puesto" id="puesto" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="puestoNuevo" class="col-md-3 control-label"></label>
+					<div class="checkbox-inline col-md-3">
+					  	<input type="checkbox" class="puestoNuevo" id="puestoNuevo" name="puestoNuevo" value="true"/>&nbsp; Puesto Nuevo
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nombrePuestoNuevo" class="col-md-3 control-label"></label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="nombrePuestoNuevo" id="nombrePuestoNuevo" placeholder="Indicar el nombre del puesto" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="categoria" class="col-md-3 control-label">Categor&iacute;a</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="categoria" id="categoria" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="seniorityLabel" class="col-md-3 control-label">Seniority</label>
+					<div class="checkbox col-md-3">
+					  	<label><input type="checkbox" class="seniority" id="junior" name="junior" value="true"/>Junior</label><br>
+					  	<label><input type="checkbox" class="seniority" id="semiSenior" name="semiSenior" value="true"/>Semi Senior</label><br>
+					  	<label><input type="checkbox" class="seniority" id="senior" name="senior" value="true"/>Senior</label><br>
+					  	<label><input type="checkbox" class="seniority" id="noCorresponde" name="noCorresponde" value="true"/>No Corresponde</label><br>
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="gerencia" class="col-md-3 control-label">Gerencia</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="gerencia" id="gerencia" data-parsley-required="true" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="area" class="col-md-3 control-label">&Aacute;rea</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="area" id="area" data-parsley-required="true" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="sector" class="col-md-3 control-label">Sector</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="sector" id="sector" data-parsley-required="true" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="subsector" class="col-md-3 control-label">Subsector</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="subsector" id="subsector" data-parsley-required="true" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="aperturaPorSector" class="col-md-3 control-label">Apertura por Sector</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="aperturaPorSector" id="aperturaPorSector" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm aprobacionGteGralAPMAPF">
+				<div class="label-field">
+					<label for="lineaEspecialidad" class="col-md-3 control-label">L&iacute;nea/Especialidad</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="lineaEspecialidad" id="lineaEspecialidad" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+
+			<div class="form-group apmapf aprobacionGteGralAPMAPF">
+				<div class="label-field">
+					<label for="zona" class="col-md-3 control-label">Zona</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="zona" id="zona" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="centroCosto" class="col-md-3 control-label">Centro de costo</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="centroCosto" id="centroCosto" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group aprobacionGteGral">
+				<div class="label-field">
+					<label for="reportaa" class="col-md-3 control-label">Reporta a</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="reportaa" id="reportaa" readonly>									
+					</div>
+				</div>
+				<div class="label-field reportaaBuscar">
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="reportaaBuscar" id="reportaaBuscar" placeholder="Buscar...">									
+					</div>			
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="cargo" class="col-md-3 control-label">Cargo</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="cargo" id="cargo" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="label-field leyenda">
+				<label for="quienesEntrevistan" class="col-md-5 control-label">¿Qui&eacute;nes realizar&iacute;an las entrevistas de selecci&oacute;n? </label>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-1 col-md-offset-3">
+						<button type="button" class="btn btn-default btnNuevoQuienesEntrevistan" id="btnNuevoQuienesEntrevistan">Nuevo</button>
+					</div>
+				</div>
+				</br>
+				<div class='col-md-6 col-md-offset-3'>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered" id="tablaQuienesEntrevistan" tablename="tablaQuienesEntre" noaddbutton="true" nodeletebutton="false">
+							<thead>
+								<tr>
+									<th class="col-md-12"><label class="control-label">Nombre y Apellido</label></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="label-field"><input type="text" class="form-control quienesEntrevistan" id="quienesEntrevistan" name="quienesEntrevistan" placeholder="Ingrese parte del nombre para acotar la b&uacute;squeda"/></td>
+									<td><span class="glyphicon glyphicon-remove deleteRow"></span></td>
+								</tr>
+							</tbody>
+							<tfoot></tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="sugiereAlguien" class="col-md-8 control-label sugiereAlguienLabel">¿Sugiere a alguien que hoy trabaje en la compa&ntilde;&iacute;a para cubrir la posici&oacute;n?</label>
+					<div class="col-md-5 col-md-offset-3">
+						</br><input type="text" class="form-control" name="sugiereAlguien" id="sugiereAlguien" placeholder="En caso afirmativo indique nombre y apellido aqu&iacute;">									
+					</div>		
+				</div>
+			</div>
+			
+			
+			<legend class="aprobacionGteGral">Perfil del Puesto</legend>
+			
+			
+			<div class="form-group aprobacionGteGral">
+				<div class="label-field">
+					<label for="tipoPosicion" class="col-md-3 control-label">Tipo de Posici&oacute;n</label>
+					<div class="col-md-5">
+						<select class="form-control tipoPosicion" name="tipoPosicion" id="tipoPosicion" data-parsley-required="true">
+							<option value=""></option>
+							<option value="puestoNuevo">Puesto Nuevo</option>
+							<option value="reemplazo">Reemplazo</option>
+						</select>					
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group aprobacionGteGral">
+				<div class="label-field">
+					<label for="nombreReemplazo" class="col-md-3 control-label">Nombre del Reemplazado</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="nombreReemplazo" id="nombreReemplazo" placeholder="Ingrese parte del nombre para acotar la b&uacute;squeda" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="motivoReemplazo" class="col-md-3 control-label">Motivo del Reemplazo</label>
+					<div class="col-md-5">
+						<select class="form-control tipoPosicion" name="motivoReemplazo" id="motivoReemplazo">
+							<option value=""></option>
+							<option value="renuncia">Renuncia</option>
+							<option value="desvinculacion">Desvinculación</option>
+							<option value="jubilacion">Jubilación</option>
+							<option value="licenciaEnfermedad">Licencia por Enfermedad</option>
+							<option value="licenciaMaternidad">Licencia por Maternidad </option>
+							<option value="otros">Otros</option>
+						</select>					
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group imprCliente">
+				<div class="label-field">
+					<label for="observaciones" class="col-sm-3 control-label">Observaciones</label>
+					<div class="col-sm-5">
+						<textarea class="form-control height-text" name="observaciones" id="observaciones"  rows="3" data-parsley-required="true" placeholder="Indique las observaciones que considere necesarias."></textarea>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group aprobacionGteGral">
+				<div class="label-field">
+					<label for="efectivoTemporario" class="col-md-3 control-label"></label>
+					<div class="col-md-4">
+						<label class="efectivo"><input type="radio" name="efectivoTemporario" value="EFECTIVO">&nbsp; Efectivo </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="temporario"><input type="radio" name="efectivoTemporario" value="TEMPORARIO" data-parsley-required="true">&nbsp; Temporario </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="cantidadMeses" class="col-md-3 control-label">Cantidad de Meses</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="cantidadMeses" id="cantidadMeses">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="motivoPuestoNuevo" class="col-md-3 control-label">Motivo que genera el puesto nuevo</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="motivoPuestoNuevo" id="motivoPuestoNuevo"  rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group aprobacionGteGral">
+				<div class="label-field">
+					<label for="pea" class="col-md-3 control-label">PEA</label>
+					<div class="col-md-5">
+						<select class="form-control pea" name="pea" id="pea" data-parsley-required="true">
+							<option value=""></option>
+							<option value="dentro">Dentro</option>
+							<option value="fuera">Fuera</option>
+						</select>					
+					</div>		
+				</div>
+			</div>
+				
+			<div class="form-group">
+				<div class="label-field">
+					<label for="personalACargo" class="col-md-3 control-label">Personal a Cargo</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="personalACargo" id="personalACargo" data-parsley-type="integer" data-parsley-required="true" value="0">									
+					</div>		
+				</div>
+			</div>
+			
+			
+			<h4 class="subsecciones">Tareas y Responsabilidades</h4>
+			
+			
+			<div class="form-group pe">
+				<div class="row">
+					<label for="tareasOrdenPrioridad" class="col-md-3 control-label">Tareas en Orden de Prioridad</label>
+					<div class="col-md-1 col-md-offset-5">
+						<button type="button" class="btn btn-default btnNuevoTareasOrdenPrioridad" id="btnNuevoTareasOrdenPrioridad">Nuevo</button>
+					</div>
+				</div>
+				</br>
+				<div class='col-md-6 col-md-offset-3'>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered" id="tablaTareasOrdenPrioridad" tablename="tablaTareasOrdenPrio" noaddbutton="true" nodeletebutton="false">
+							<thead>
+								<tr>
+									<th class="col-md-12"><label class="control-label">Detalle de las Tareas</label></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="label-field"><input type="text" class="form-control detalleAccion" id="detalleAccion" name="detalleAccion" placeholder="Detallar la acci&oacute;n a realizar"/></td>
+									<td><span class="glyphicon glyphicon-remove deleteRow"></span></td>
+								</tr>
+							</tbody>
+							<tfoot></tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="clientesInternos" class="col-md-3 control-label">Sus clientes internos</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="clientesInternos" id="clientesInternos" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="proveedoresInternos" class="col-md-3 control-label">Sus proveedores internos</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="proveedoresInternos" id="proveedoresInternos" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="contactoConClientes" class="col-md-3 control-label">Contacto con clientes externos, proveedores, etc</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="contactoConClientes" id="contactoConClientes" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="detalleMaquinas" class="col-md-3 control-label">Detalle de las m&aacute;quinas, herramientas, materiales e instalaciones que utilizar&aacute;</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="detalleMaquinas" id="detalleMaquinas" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="manejoInfoConfidencial" class="col-md-3 control-label">Manejo de informaci&oacute;n confidencial</label>
+					<div class="col-md-4">
+						<label class="manejoInfoConfidencialSi"><input type="radio" name="manejoInfoConfidencial" value="SI">&nbsp; Si </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="manejoInfoConfidencialNo"><input type="radio" name="manejoInfoConfidencial" value="NO">&nbsp; No </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="esfuerzoFisico" class="col-md-3 control-label">Esfuerzo F&iacute;sico</label>
+					<div class="col-md-4">
+						<label class="esfuerzoFisicoBajo"><input type="radio" name="esfuerzoFisico" value="BAJO">&nbsp; Bajo </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="esfuerzoFisicoModerado"><input type="radio" name="esfuerzoFisico" value="MODERADO">&nbsp; Moderado </label>	
+					</div>	
+					<div class="col-md-2">
+						<label class="esfuerzoFisicoIntenso"><input type="radio" name="esfuerzoFisico" value="INTENSO">&nbsp; Intenso </label>	
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="exposicionMaterialesQuimicos" class="col-md-3 control-label">Exposici&oacute;n a materiales qu&iacute;micos</label>
+					<div class="col-md-4">
+						<label class="exposicionMaterialesQuimicosSi"><input type="radio" name="exposicionMaterialesQuimicos" value="SI">&nbsp; Si </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="exposicionMaterialesQuimicosNo"><input type="radio" name="exposicionMaterialesQuimicos" value="NO">&nbsp; No </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="proyeccionPosicion" class="col-md-3 control-label">Proyecci&oacute;n de la posici&oacute;n a mediano o largo plazo</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="proyeccionPosicion" id="proyeccionPosicion" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apmapf">
+				<div class="label-field">
+					<label for="ciudadZonasVisitar" class="col-md-3 control-label">Ciudad asiento y zonas a visitar</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="ciudadZonasVisitar" id="ciudadZonasVisitar" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apmapf">
+				<div class="label-field">
+					<label for="giras" class="col-md-3 control-label">Giras</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="giras" id="giras" rows="3" placeholder="Indicar d&oacute;nde y con qu&eacute; frecuencia"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="productosManejar" class="col-md-3 control-label">Productos a Manejar</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="productosManejar" id="productosManejar" data-parsley-type="integer" placeholder="Indicar cantidad">									
+					</div>		
+				</div>
+			</div>
+
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="visitaMedicos" class="col-md-3 control-label">Visita a m&eacute;dicos de las siguientes especialidades</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="visitaMedicos" id="visitaMedicos" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="visitaInstituciones" class="col-md-3 control-label">Visita a Instituciones</label>
+					<div class="col-md-4">
+						<label class="visitaInstitucionesSi"><input type="radio" name="visitaInstituciones" value="SI">&nbsp; Si </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="visitaInstitucionesNo"><input type="radio" name="visitaInstituciones" value="NO">&nbsp; No </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="administraMuestrasMedicas" class="col-md-3 control-label">Administra Muestras M&eacute;dicas</label>
+					<div class="col-md-4">
+						<label class="administraMuestrasMedicasSi"><input type="radio" name="administraMuestrasMedicas" value="SI">&nbsp; Si </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="administraMuestrasMedicasNo"><input type="radio" name="administraMuestrasMedicas" value="NO">&nbsp; No </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="visitaFarmacias" class="col-md-3 control-label">Visita a Farmacias</label>
+					<div class="col-md-4">
+						<label class="visitaFarmaciasSi"><input type="radio" name="visitaFarmacias" value="SI">&nbsp; Si </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="visitaFarmaciasNo"><input type="radio" name="visitaFarmacias" value="NO">&nbsp; No </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="coordinacionAccionesFidelizar" class="col-md-3 control-label">Coordinaci&oacute;n de acciones para fidelizar a los m&eacute;dicos</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="coordinacionAccionesFidelizar" id="coordinacionAccionesFidelizar" rows="3" placeholder="Eventos, charlas con speakers, etc."></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="analisisInformacionAuditoria" class="col-md-3 control-label">An&aacute;lisis de la informaci&oacute;n de las auditor&iacute;as</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="analisisInformacionAuditoria" id="analisisInformacionAuditoria" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="tareasAdministrativasVarias" class="col-md-3 control-label">Tareas administrativas varias</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="tareasAdministrativasVarias" id="tareasAdministrativasVarias" rows="3" placeholder="Vi&aacute;ticos, etc."></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			
+			<legend  class="leyenda">Perfil del Postulante</legend>
+			
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="franjaEdad" class="col-md-3 control-label">Franja de Edad</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="franjaEdadDesde" id="franjaEdadDesde" data-parsley-type="integer" data-parsley-required="true" placeholder="Desde">									
+					</div>	
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="franjaEdadHasta" id="franjaEdadHasta" data-parsley-type="integer" data-parsley-required="true" placeholder="Hasta">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="genero" class="col-md-3 control-label">G&eacute;nero</label>
+					<div class="col-md-4">
+						<select class="form-control genero" name="genero" id="genero" data-parsley-required="true">
+							<option value=""></option>
+							<option value="femenino">Femenino</option>
+							<option value="masculino">Masculino</option>
+							<option value="indistinto">Indistinto</option>
+						</select>					
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nivelEstudioLabel" class="col-md-3 control-label">Nivel de Estudio</label>
+					<div class="checkbox col-md-3">
+					  	<label><input type="checkbox" class="nivelEstudio" id="secundarioCompleto" name="secundarioCompleto" value="true"/>Secundario Completo</label><br>
+					  	<label><input type="checkbox" class="nivelEstudio" id="teciarioCurso" name="teciarioCurso" value="true"/>Terciario en Curso</label><br>
+					  	<label><input type="checkbox" class="nivelEstudio" id="terciarioGraduado" name="terciarioGraduado" value="true"/>Terciario Graduado</label><br>
+					  	<label><input type="checkbox" class="nivelEstudio" id="universitarioCurso" name="universitarioCurso" value="true"/>Universitario en Curso</label><br>
+						<label><input type="checkbox" class="nivelEstudio" id="universitarioGraduado" name="universitarioGraduado" value="true"/>Universitario Graduado</label><br>
+					  	<label><input type="checkbox" class="nivelEstudio" id="posgradoCurso" name="posgradoCurso" value="true"/>Posgrado en Curso</label><br>
+					  	<label><input type="checkbox" class="nivelEstudio" id="posgradoGraduado" name="posgradoGraduado" value="true"/>Posgrado Graduado</label><br>
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="carrera" class="col-md-3 control-label">Carrera</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="carrera" id="carrera" data-parsley-required="true" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apmapf">
+				<div class="label-field">
+					<label for="origenMatricula" class="col-md-3 control-label">Origen de Matr&iacute;cula</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="origenMatricula" id="origenMatricula">									
+					</div>		
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="row">
+					<label for="idiomas" class="col-md-3 control-label">Idiomas </label>
+					<div class="col-md-1 col-md-offset-8">
+						<button type="button" class="btn btn-default btnNuevoIdiomas" id="btnNuevoIdiomas">Nuevo</button>
+					</div>
+				</div>
+				</br>
+				<div class='col-md-9 col-md-offset-3'>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered" id="tablaIdiomas" tablename="tablaIdiom" noaddbutton="true" nodeletebutton="false">
+							<thead>
+								<tr>
+									<th class="col-md-3"><label class="control-label">Idioma</label></th>
+									<th class="col-md-3"><label class="control-label">Nivel de Lectura</label></th>
+									<th class="col-md-3"><label class="control-label">Nivel Escrito</label></th>
+									<th class="col-md-3"><label class="control-label">Nivel Oral</label></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="label-field"><input type="text" class="form-control idiomas" id="idiomas" name="idiomas"/></td>
+									<td class="label-field">
+										<div class="col-md-9">
+											<label class="nivelLecturaNA"><input type="radio" class="nivelLectura" name="nivelLectura" value="NA">&nbsp; N/A </label>	
+											<label class="nivelLecturaB"><input type="radio" class="nivelLectura" name="nivelLectura" value="BASICO">&nbsp; B&aacute;sico </label>	
+											<label class="nivelLecturaI"><input type="radio" class="nivelLectura" name="nivelLectura" value="INTERMEDIO">&nbsp; Intermedio </label>	
+											<label class="nivelLecturaA"><input type="radio" class="nivelLectura" name="nivelLectura" value="AVANZADO">&nbsp; Avanzado </label>	
+										</div>
+									</td>
+									<td class="label-field">
+										<div class="col-md-9">
+											<label class="nivelEscritoNA"><input type="radio" class="nivelEscrito" name="nivelEscrito" value="NA">&nbsp; N/A </label>	
+											<label class="nivelEscritoB"><input type="radio" class="nivelEscrito" name="nivelEscrito" value="BASICO">&nbsp; B&aacute;sico </label>	
+											<label class="nivelEscritoI"><input type="radio" class="nivelEscrito" name="nivelEscrito" value="INTERMEDIO">&nbsp; Intermedio </label>	
+											<label class="nivelEscritoA"><input type="radio" class="nivelEscrito" name="nivelEscrito" value="AVANZADO">&nbsp; Avanzado </label>	
+										</div>
+									</td>
+									<td class="label-field">
+										<div class="col-md-9">
+											<label class="nivelOralNA"><input type="radio" class="nivelOral" name="nivelOral" value="NA">&nbsp; N/A </label>	
+											<label class="nivelOralB"><input type="radio" class="nivelOral" name="nivelOral" value="BASICO">&nbsp; B&aacute;sico </label>	
+											<label class="nivelOralI"><input type="radio" class="nivelOral" name="nivelOral" value="INTERMEDIO">&nbsp; Intermedio </label>	
+											<label class="nivelOralA"><input type="radio" class="nivelOral" name="nivelOral" value="AVANZADO">&nbsp; Avanzado </label>	
+										</div>
+									</td>
+									<td><span class="glyphicon glyphicon-remove deleteRow"></span></td>
+								</tr>
+							</tbody>
+							<tfoot></tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="form-group">
+				<div class="row">
+					<label for="programasInformatica" class="col-md-3 control-label">Programas de Inform&aacute;tica </label>
+					<div class="col-md-1 col-md-offset-5">
+						<button type="button" class="btn btn-default btnNuevoprogramasInformatica" id="btnNuevoprogramasInformatica">Nuevo</button>
+					</div>
+				</div>
+				</br>
+				<div class='col-md-6 col-md-offset-3'>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered" id="tablaProgramasInformatica" tablename="tablaProgramasInformat" noaddbutton="true" nodeletebutton="false">
+							<thead>
+								<tr>
+									<th class="col-md-7"><label class="control-label">Programa</label></th>
+									<th class="col-md-5"><label class="control-label">Nivel</label></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="label-field"><input type="text" class="form-control programasInformatica" id="programasInformatica" name="programasInformatica" readonly/></td>
+									<td class="label-field">
+										<div class="col-md-8">
+											<label class="nivelNA"><input type="radio" class="programasInformaticaNivel" id="programasInformaticaNivel" name="programasInformaticaNivel" value="NA">&nbsp; N/A </label>	
+											<label class="nivelB"><input type="radio" class="programasInformaticaNivel" id="programasInformaticaNivel" name="programasInformaticaNivel" value="BASICO">&nbsp; B&aacute;sico </label>	
+											<label class="niveI"><input type="radio" class="programasInformaticaNivel" id="programasInformaticaNivel" name="programasInformaticaNivel" value="INTERMEDIO">&nbsp; Intermedio </label>	
+											<label class="nivelA"><input type="radio" class="programasInformaticaNivel" id="programasInformaticaNivel" name="programasInformaticaNivel" value="AVANZADO">&nbsp; Avanzado </label>	
+										</div>
+									</td>
+									<td><span class="glyphicon glyphicon-remove deleteRow"></span></td>
+								</tr>
+							</tbody>
+							<tfoot></tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			
+			<h4 class="subsecciones">Experiencia Laboral Requerida</h4>
+			
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="descExperienciaLaboralReq" class="col-md-3 control-label">Descripci&oacute;n de la Experiencia Laboral Requerida</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="descExperienciaLaboralReq" id="descExperienciaLaboralReq" rows="3" placeholder="Indicar cantidad de a&ntilde;os, tareas, sectores, industrias, etc."></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group pe">
+				<div class="label-field">
+					<label for="habilidadesNecesarias" class="col-md-3 control-label">Conocimientos/Habilidades Necesarias</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="habilidadesNecesarias" id="habilidadesNecesarias" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="experienciaPreviaComoAPM" class="col-md-3 control-label">Experiencia previa como APM</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="experienciaPreviaComoAPM" id="experienciaPreviaComoAPM" data-parsley-type="integer" placeholder="Indicar cantidad de a&ntilde;os.">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apf">
+				<div class="label-field">
+					<label for="experienciaPreviaEnVentas" class="col-md-3 control-label">Experiencia previa en ventas</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="experienciaPreviaEnVentas" id="experienciaPreviaEnVentas" placeholder="Indicar rubro y cantidad de a&ntilde;os.">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apf">
+				<div class="label-field">
+					<label for="experienciaPreviaComoAPF" class="col-md-3 control-label">Experiencia previa como APF</label>
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="experienciaPreviaComoAPF" id="experienciaPreviaComoAPF" data-parsley-type="integer" placeholder="Indicar cantidad de a&ntilde;os.">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="visitadoEspecialidadesMedicos" class="col-md-3 control-label">Que haya visitado las siguientes especialidades de m&eacute;dicos</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="visitadoEspecialidadesMedicos" id="visitadoEspecialidadesMedicos" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="visitadoInstituciones" class="col-md-3 control-label">Que haya visitado las siguientes instituciones</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="visitadoInstituciones" id="visitadoInstituciones" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="conocimientoLineasProductos" class="col-md-3 control-label">Con conocimiento de las siguientes líneas de productos</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="conocimientoLineasProductos" id="conocimientoLineasProductos" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apmapf">
+				<div class="label-field">
+					<label for="provengaDeLaboratorios" class="col-md-3 control-label">Que provenga de los siguientes laboratorios</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="provengaDeLaboratorios" id="provengaDeLaboratorios" rows="3" placeholder="Multinacional, nacional, nombres de laboratorios"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apm">
+				<div class="label-field">
+					<label for="conozcaLasAuditorias" class="col-md-3 control-label">Que conozca las siguientes auditor&iacute;as</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="conozcaLasAuditorias" id="conozcaLasAuditorias" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group apmapf">
+				<div class="label-field">
+					<label for="otros" class="col-md-3 control-label">Otros</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="otros" id="otros" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+						
+			
+			<h4 class="subsecciones">Competencias</h4>
+			
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="nivel" class="col-md-3 control-label">Nivel</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="nivel" id="nivel" readonly/>	
+					</div>
+				</div>
+			</div>
+			
+			<div class="label-field leyenda">
+				<label for="detalleCompetencias" class="col-md-3 control-label">Detalle de Competencias </label>
+			</div>
+			</br></br>
+			<div class="form-group">
+				<div class='col-md-10 col-md-offset-3'>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered" id="tablaDetalleCompetencias" tablename="tablaDetalleComp" noaddbutton="true" nodeletebutton="false">
+							<thead>
+								<tr>
+									<th class="col-md-6"><label class="control-label">Competencia</label></th>
+									<th class="col-md-1"><label class="control-label">Nivel</label></th>
+									<th class="col-md-5"><label class="control-label">Descripci&oacute;n Ampliada</label></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="label-field">
+										<div class="col-md-12">
+											<input type="text" class="form-control competencia" id="competencia" name="competencia" readonly/>
+										</div>		
+									</td>
+									<td class="label-field">
+										<div class="col-md-12">
+											<select class="form-control nivelCompetencia" name="nivelCompetencia" id="nivelCompetencia">
+												<option value=""></option>
+												<option value="medio">Medio</option>
+												<option value="alto">Alto</option>
+											</select>					
+										</div>		
+									</td>
+									<td class="label-field">
+										<div class="col-md-12">
+											<textarea class="form-control height-text descripcionAmpliada" name="descripcionAmpliada" id="descripcionAmpliada" rows="3"></textarea>
+										</div>		
+									</td>
+								</tr>
+							</tbody>
+							<tfoot></tfoot>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="otras" class="col-md-3 control-label">Otras</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="otras" id="otras" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="aspectosCriticosPuesto" class="col-md-3 control-label">Situaci&oacute;n y Aspectos Cr&iacute;ticos del Puesto</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text" name="aspectosCriticosPuesto" id="aspectosCriticosPuesto" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			
+			<legend class="aprobacionGteGral">Condiciones</legend>
+			
+			<div class="form-group aprobacionGteGral">
+				<div class="label-field">
+					<label for="sede" class="col-md-3 control-label">Sede</label>
+					<div class="col-md-5">
+						<select class="form-control ingresoPersonal" name="sede" id="sede" data-parsley-required="true">
+							<option value=""></option>
+							<option value="munro">Munro</option>
+							<option value="tortuguitas">Tortuguitas</option>
+							<option value="villaMartelli">Villa Martelli</option>
+							<option value="sanJuan">San Juan</option>
+						</select>					
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="ubicacionFisica" class="col-md-3 control-label">Ubicaci&oacute;n F&iacute;sica</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="ubicacionFisica" id="ubicacionFisica" placeholder="Escritorio">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="horario" class="col-md-3 control-label">Horario</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="horarioDesde" id="horarioDesde" data-parsley-type="integer" data-parsley-required="true" placeholder="Desde">									
+					</div>	
+					<div class="col-md-2">
+						<input type="text" class="form-control" name="horarioHasta" id="horarioHasta" data-parsley-type="integer" data-parsley-required="true" placeholder="Hasta">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="horasExtras" class="col-md-3 control-label">Horas Extras</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="horasExtras" id="horasExtras" placeholder="SI/NO, cantidad aprox. por semana, s&aacute;bados">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="viajes" class="col-md-3 control-label">Viajes</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="viajes" id="viajes" placeholder="Lugar y frecuencia">									
+					</div>		
+				</div>
+			</div>
+			
+			<legend class="leyenda">Remuneraciones y Beneficios</legend>
+			
+			<h6 class="leyenda">Esta secci&oacute;n deber&aacute; ser completada por RRHH.</h6></br>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="remuneracionBruta" class="col-md-3 control-label">Remuneraci&oacute;n Bruta</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control seccionBeneficios" name="remuneracionBrutaDesde" id="remuneracionBrutaDesde" data-parsley-type="integer" data-parsley-required="true" placeholder="Desde">									
+					</div>	
+					<div class="col-md-2">
+						<input type="text" class="form-control seccionBeneficios" name="remuneracionBrutaHasta" id="remuneracionBrutaHasta" data-parsley-type="integer" data-parsley-required="true" placeholder="Hasta">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="convenio" class="col-md-3 control-label">Convenio</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control seccionBeneficios" name="convenio" id="convenio" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="categoriaConvenio" class="col-md-3 control-label">Categor&iacute;a</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control seccionBeneficios" name="categoriaConvenio" id="categoriaConvenio" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="obraSocial" class="col-md-3 control-label">Obra Social</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control seccionBeneficios" name="obraSocial" id="obraSocial" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="planes" class="col-md-3 control-label">Plan</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control seccionBeneficios" name="planes" id="planes" placeholder="B&uacute;squeda en RHPRO" readonly>									
+					</div>		
+				</div>
+			</div>
+
+			<div class="seccionBeneficios">
+				<div class="label-field">
+					<label for="beneficios" class="col-md-3 control-label">Beneficios </label>
+				</div>
+				</br></br>
+				<div class="form-group">
+					<div class='col-md-6 col-md-offset-3'>
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered" id="tablaBeneficios" tablename="tablaBenef" noaddbutton="true" nodeletebutton="false">
+								<thead>
+									<tr>
+										<th class="col-md-12"><label class="control-label">Beneficio</label></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="label-field"><input type="text" class="form-control seccionBeneficios beneficios" id="beneficios" name="beneficios" readonly/></td>
+										<td class="label-field"><input type="checkbox" class="beneficiosChck seccionBeneficios beneficiosChck" id="beneficiosChck" name="beneficiosChck" value="true"/></td>
+									</tr>
+								</tbody>
+								<tfoot></tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="comentariosBeneficios" class="col-md-3 control-label">Comentarios</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text seccionBeneficios comentariosBeneficios" name="comentariosBeneficios" id="comentariosBeneficios" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+			
+			<legend class="leyenda">Otras Consideraciones</legend>
+			
+			<h6 class="leyenda">Esta secci&oacute;n deber&aacute; ser completada por RRHH.</h6></br>
+			
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="adicionalEstudioPreocupacional" class="col-md-3 control-label">Adicional al Estudio Preocupacional de Ley</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="adicionalEstudioPreocupacional" id="adicionalEstudioPreocupacional">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="tipoEstudioPsicotecnico" class="col-md-3 control-label">Tipo de Estudio Psicot&eacute;cnico</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="tipoEstudioPsicotecnico" id="tipoEstudioPsicotecnico">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="personasConDiscapacidad" class="col-md-3 control-label">Podr&iacute;an Aplicar Personas con Discapacidad</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="personasConDiscapacidad" id="personasConDiscapacidad" placeholder="Motriz, auditiva, visual, intelectual, visceral">									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="derivacionJobPosting" class="col-md-3 control-label">Derivaci&oacute;n a Job Posting</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="derivacionJobPosting" id="derivacionJobPosting">									
+					</div>		
+				</div>
+			</div>
+			
+			<legend class="leyenda">Aprobaciones</legend>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="jefe" class="col-md-3 control-label">Jefe</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="jefe" id="jefe" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="gerenteN2" class="col-md-3 control-label">Gerente N-2</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="gerenteN2" id="gerenteN2" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="gerenteN1" class="col-md-3 control-label">Gerente N-1</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" name="gerenteN1" id="gerenteN1" readonly>									
+					</div>		
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="gerenteGeneral" class="col-md-3 control-label">Gerente General</label>
+					<div class="col-md-4">
+						<label class="gerenteGeneralSi"><input type="radio" name="gerenteGeneral" value="SI">&nbsp; Si </label>	
+					</div>		
+					<div class="col-md-2">
+						<label class="gerenteGeneralNo"><input type="radio" name="gerenteGeneral" value="NO" data-parsley-required="true">&nbsp; No </label>	
+					</div>	
+				</div>
+			</div>
+			
+			<legend class="leyenda">Observaciones Generales del Proceso</legend>
+			
+			<div class="form-group">
+				<div class="label-field">
+					<label for="observacionesGralesProceso" class="col-md-3 control-label">Observaciones</label>
+					<div class="col-md-5">
+						<textarea class="form-control height-text observacionesGralesProceso" name="observacionesGralesProceso" id="observacionesGralesProceso" rows="3"></textarea>									
+					</div>		
+				</div>
+			</div>
+			
+		</form>
+		<br>
+	</div> 
+  </body>
+</html>

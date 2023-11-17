@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+    <module-name>raf-web</module-name>
+
+	<display-name>raf-web</display-name>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+	<security-constraint>
+		<display-name>Secure Zone</display-name>
+		<web-resource-collection>
+			<web-resource-name>Web</web-resource-name>
+			<description>Protected</description>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>TOTVSTech</realm-name>
+		<form-login-config>
+            <form-login-page>/login.do</form-login-page>
+            <form-error-page>/login.do?loginerro=true</form-error-page>
+		</form-login-config>
+	</login-config>
+	<security-role>
+		<description />
+		<role-name>totvstech</role-name>
+	</security-role>
+	<security-role>
+		<description />
+		<role-name>user</role-name>
+	</security-role>
+	<security-role>
+		<description />
+		<role-name>sysadmin</role-name>
+	</security-role>
+	
+	
+	<servlet>
+		<servlet-name>Default</servlet-name>
+		<servlet-class>com.arquimeda.vaadin.VaadinServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Default</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

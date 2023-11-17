@@ -1,0 +1,13 @@
+<jboss-deployment-structure>
+    <deployment>
+        <exclusions>
+           <module name="org.jboss.resteasy.resteasy-jackson-provider"/>
+           <module name="org.jboss.resteasy.resteasy-jettison-provider"/>
+        </exclusions>
+        <dependencies>
+            <module name="org.jboss.resteasy.resteasy-jackson2-provider" services="import"/>
+            <module name="org.apache.commons.io" services="import"/>
+            <module name="org.apache.commons.codec" services="import"/>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure> 

@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Fluig</title>
+    <link href="${SERVER_URL!''}/globalmailsender/resources/global.css" type="text/css" rel="stylesheet" />    
+</head>
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0">
+	
+	<div style="margin-left: 25px;">
+		
+		<p style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+			Notificaci&oacute;n por baja de un m&eacute;dico.
+		</p>
+		
+		<br/>
+		
+		<table style="border: 1px solid #d5d2ca;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;width: 600px;box-sizing: border-box;">
+			<tbody>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;">NRO. DE SOLICITUD</td>
+					<td style="padding: 0.5em;"> ${numeroSolicitud!}</td>
+				</tr>					
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;">CONGRESO </td>
+					<td style="padding: 0.5em;"> ${nombreCongreso!}</td>
+				</tr>				
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;"> </td>
+					<td style="padding: 0.5em;"> ${lugarCongreso!}</td>
+				</tr>					
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;"> </td>
+					<td style="padding: 0.5em;"> ${fechaDesdeCongreso!} - ${fechaHastaCongreso!}</td>
+				</tr>	
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;">MEDICO </td>
+					<td style="padding: 0.5em;"> ${nombre!}</td>
+				</tr>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;"> </td>
+					<td style="padding: 0.5em;"> ${apellido!}</td>
+				</tr>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;"> </td>
+					<td style="padding: 0.5em;"> ${cuit!}</td>
+				</tr>
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;">TIPO DE INVERSION</td>
+					<td style="padding: 0.5em;"> ${tipoInversion!}</td>
+				</tr>	
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;">COMPROMETIDO</td>
+					<td style="padding: 0.5em;"> 
+						<table>
+							<tbody>
+								<tr>
+									<td>TRASLADO: <b>${incluyeTraslado!}</b></td>
+									<td>INSCRIPCION: <b>${incluyeTraslado!}</b></td>
+									<td>ALOJAMIENTO: <b>${incluyeAlojamiento!}</b></td>
+								</tr>
+							</tbody>
+						</table>
+					
+					</td>
+				</tr>			
+				<tr>
+					<td style="border: 1px solid #d5d2ca;background:#f5f5f1;font-size: 14px;text-align: left;vertical-align: text-top;width: 200px;padding: 0.5em;">MOTIVO DE BAJA </td>
+					<td style="padding: 0.5em;"> ${motivoBaja!}</td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+	</div>	
+	<br/>
+	<div style="margin-left: 25px;">
+ 	     <span style="color: grey;font-size: 13px;"><br>Este es un mail autom&aacute;tico generado por el Sistema Fluig. <br>
+    		No responder sobre este mail. Cualquier duda comunicarse con el Administrador.
+         </span>
+	</div>
+</body>
+</html>
